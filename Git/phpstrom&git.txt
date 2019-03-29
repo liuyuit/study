@@ -1,0 +1,9 @@
+ctrl + t
+	git merge
+
+ctrl + k
+	git add .
+	git commit -m ''
+	
+ctrl + shift + k
+	git push origin master url
