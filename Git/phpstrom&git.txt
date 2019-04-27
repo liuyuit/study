@@ -7,5 +7,3 @@ ctrl + k
 	
 ctrl + shift + k
 	git push origin master url
-
-
