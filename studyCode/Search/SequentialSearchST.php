@@ -8,8 +8,8 @@ function example()
     $array = array(-11, 12, 13, 123, -128, -346, -1, -3425, 120, 8, 346, 3425);
     $sequentialSearchST =  new SequentialSearchST();
 
-    $num = $sequentialSearchST->ThreeSum($array);
-    echo 'TwoSum Result is:' . $num . "\n";
+   /* $num = $sequentialSearchST->ThreeSum($array);
+    echo 'TwoSum Result is:' . $num . "\n";*/
 }
 
 
