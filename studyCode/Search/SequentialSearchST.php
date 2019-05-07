@@ -2,11 +2,32 @@
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 
+example();
 
 function example()
 {
-    $array = array(-11, 12, 13, 123, -128, -346, -1, -3425, 120, 8, 346, 3425);
+    $array = array(-11, 12, 13, 123, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
     $sequentialSearchST =  new SequentialSearchST();
+
+    foreach ($array as $key => $value){
+        if ($sequentialSearchST->get($value)){
+            $sequentialSearchST->put($value, $sequentialSearchST->get($value) + 1);
+        } else {
+            $sequentialSearchST->put($value, 1);
+        }
+    }
+    var_dump($sequentialSearchST);
+
+    $maxNumber = 0;
+    $maxKey = $sequentialSearchST->first;
+    for ($node = $sequentialSearchST->first; $node->next != null; $node = $node->next){
+        if ($node->value > $maxNumber){
+            $maxNumber = $node->value;
+            $maxKey = $node->key;
+        }
+    }
+
+    echo 'maxKey:' . $maxKey . 'maxNumber:' . $maxNumber;
 
    /* $num = $sequentialSearchST->ThreeSum($array);
     echo 'TwoSum Result is:' . $num . "\n";*/
