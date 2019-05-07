@@ -16,7 +16,6 @@ function example()
             $sequentialSearchST->put($value, 1);
         }
     }
-    var_dump($sequentialSearchST);
 
     $maxNumber = 0;
     $maxKey = $sequentialSearchST->first;
@@ -29,8 +28,6 @@ function example()
 
     echo 'maxKey:' . $maxKey . 'maxNumber:' . $maxNumber;
 
-   /* $num = $sequentialSearchST->ThreeSum($array);
-    echo 'TwoSum Result is:' . $num . "\n";*/
 }
 
 
@@ -41,24 +38,6 @@ class SequentialSearchST
 {
     public $first = null; // 首结点
 
-
-    /**
-     * SequentialSearchST constructor.
-     * 对给定的数组构造一个以键值对存储的符号表
-     * @param $array @ array
-     */
-    /*public function __construct($array)
-    {
-        if (empty($array) || is_array($array)){
-            return false;
-        }
-
-        $node = null;
-        foreach ($array as $key => $value){
-            $node = new Node($key, $value, $node);
-            $this->first = $node;
-        }
-    }*/
 
     /**
      * 在链表中找到指定的键，如果未命中则返回false
@@ -84,7 +63,7 @@ class SequentialSearchST
             }
         }
 
-        new Node($key, $value, $this->first);
+        $this->first = new Node($key, $value, $this->first);
         return true;
     }
 }
