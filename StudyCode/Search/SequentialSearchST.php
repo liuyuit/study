@@ -7,7 +7,7 @@ example();
 function example()
 {
     $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
-    $sequentialSearchST =  new SequentialSearchST();
+    $sequentialSearchST =  new BinarySearchSt();
 
     foreach ($array as $key => $value){
         if ($sequentialSearchST->get($value)){
