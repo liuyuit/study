@@ -63,8 +63,31 @@ class BinarySearchSt
         return true;
     }
 
-    public function rank($key){
-        return 1;
+    /**
+     * 二分法递归查找
+     * @param $key
+     * @param $lo
+     * @param $hi
+     * @return bool|int
+     */
+    public function rank($key, $lo, $hi){
+        if (!isset($lo) || !isset($hi)){
+            $lo = 0;
+            $hi = $this->num - 1;
+        }
+
+        if ($lo > $hi){
+            return false;
+        }
+
+        $mid = $lo + (int)floor(($hi - $lo) / 2);
+        if ($key > $this->keys[$mid]){
+            return $this->rank($key, $mid + 1, $hi);
+        } elseif ($key < $this->keys[$mid]){
+            return $this->rank($key, $lo, $mid - 1);
+        } else {
+            return $mid;
+        }
     }
 
     public function isEmpty(){
