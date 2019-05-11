@@ -1,0 +1,12 @@
+{
+    "name": "administrator/composer-test",
+    "authors": [
+        {
+            "name": "liuyu",
+            "email": "liuyuit@aliyun.com"
+        }
+    ],
+    "require": {
+	"monolog/monolog": "1.0.*"
+    }
+}
