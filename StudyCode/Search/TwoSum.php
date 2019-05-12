@@ -2,7 +2,7 @@
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 
-$twoSum =  new BinarySearchSt();
+$twoSum =  new BinarySearchST();
 
 /**
  * 求为0的整数对的数量

@@ -7,19 +7,25 @@ example();
 function example()
 {
     $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
-    $binarySearchSt =  new BinarySearchSt();
+    $binarySearchST =  new BinarySearchST();
 
+    foreach ($array as $key => $value){
+        $binarySearchST->put($key, $value);
+    }
+    $binarySearchST->put(3, 23);
+
+    echo '<pre>';var_dump($binarySearchST->get(3));echo '<pre>';
 }
 
 
 /**
  * 二分查找（基于有序数组）
  */
-class BinarySearchSt
+class BinarySearchST
 {
     private $keys;
     private $vals;
-    private $num;
+    private $num = 0;
 
 
     public function size(){
@@ -60,7 +66,28 @@ class BinarySearchSt
 
         $this->keys[$i] = $key;
         $this->vals[$i] = $value;
+        $this->num++;
         return true;
+    }
+
+    public function rank($key){
+        $lo = 0;
+        $hi = $this->num - 1;
+
+        while ($hi >= $lo){
+            $mid = $lo + (int)floor(($hi - $lo) / 2);
+            $cmp = $key - $this->keys[$mid];
+
+            if ($cmp > 0){
+                $lo = $mid + 1;
+            } elseif ($cmp < 0){
+                $hi = $mid - 1;
+            } else {
+                return $mid;
+            }
+        }
+
+        return $lo;
     }
 
     /**
@@ -70,7 +97,7 @@ class BinarySearchSt
      * @param $hi
      * @return bool|int
      */
-    public function rank($key, $lo, $hi){
+    public function rankRecursion($key, $lo, $hi){
         if (!isset($lo) || !isset($hi)){
             $lo = 0;
             $hi = $this->num - 1;
@@ -82,9 +109,9 @@ class BinarySearchSt
 
         $mid = $lo + (int)floor(($hi - $lo) / 2);
         if ($key > $this->keys[$mid]){
-            return $this->rank($key, $mid + 1, $hi);
+            return $this->rankRecursion($key, $mid + 1, $hi);
         } elseif ($key < $this->keys[$mid]){
-            return $this->rank($key, $lo, $mid - 1);
+            return $this->rankRecursion($key, $lo, $mid - 1);
         } else {
             return $mid;
         }
