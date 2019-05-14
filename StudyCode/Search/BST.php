@@ -6,7 +6,8 @@ example();
 
 function example()
 {
-    $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
+//    $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
+    $array = array(-11, 12, 13, );
     $binarySearchST =  new BST();
 
     foreach ($array as $key => $value){
@@ -14,7 +15,7 @@ function example()
     }
     $binarySearchST->put(3, 23);
 
-    echo '<pre>';var_dump($binarySearchST->get(3));echo '<pre>';
+    echo '<pre>';var_dump($binarySearchST->get(5));echo '<pre>';
 }
 
 
@@ -27,7 +28,7 @@ class BST
 
 
     public function size(){
-        return $this->num;
+        return $this->root->num;
     }
 
     /**
@@ -61,7 +62,7 @@ class BST
 
     private function executePut($node, $key, $value){
         if ($node == null){
-            return new Node($key, $value);
+            return new Node($key, $value, 1);
         }
 
     }
@@ -79,9 +80,10 @@ class Node{
     public $left;
     public $right;
 
-    public function __construct($key, $value, $left = null, $right = null){
+    public function __construct($key, $value, $num, $left = null, $right = null){
         $this->key = $key;
         $this->value = $value;
+        $this->num = $num;
         $this->left = $left;
         $this->right = $right;
     }
