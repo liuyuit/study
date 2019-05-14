@@ -6,16 +6,16 @@ example();
 
 function example()
 {
-//    $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
-    $array = array(-11, 12, 13, );
+    $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
     $binarySearchST =  new BST();
 
     foreach ($array as $key => $value){
         $binarySearchST->put($key, $value);
     }
     $binarySearchST->put(3, 23);
+    $binarySearchST->put(2, 23);
 
-    echo '<pre>';var_dump($binarySearchST->get(5));echo '<pre>';
+    echo '<pre>';var_dump($binarySearchST->get(6));echo '<pre>';
 }
 
 
@@ -65,6 +65,16 @@ class BST
             return new Node($key, $value, 1);
         }
 
+        $mcd = $key - $node->key;
+        if ($mcd > 0){
+            $node->right = $this->executePut($node->right, $key, $value);
+        } elseif ($mcd < 0){
+            $node->left = $this->executePut($node->left, $key, $value);
+        } elseif ($mcd == 0){
+            $node->value = $value;
+        }
+
+        return $node;
     }
 
     public function isEmpty(){
