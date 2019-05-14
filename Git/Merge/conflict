@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+=======
+aadd to conflict
+>>>>>>> confict
 1
 2
 3
 4
-add to master
+add to conflict
+git diff test
+git to conflict
