@@ -28,7 +28,15 @@ class BST
 
 
     public function size(){
-        return $this->root->num;
+        return $this->executeSize($this->root);
+    }
+
+    private function executeSize($node){
+        if ($node == null){
+            return 0;
+        } else {
+            return $node->num;
+        }
     }
 
     /**
@@ -74,6 +82,10 @@ class BST
             $node->value = $value;
         }
 
+        /*$leftNum = isset($node->left->num) ? $node->left->num : 0;
+        $rightNum = isset($node->right->num) ? $node->right->num : 0;
+        $node->num = $leftNum + $rightNum + 1;*/
+        $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
         return $node;
     }
 
