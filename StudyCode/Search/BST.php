@@ -15,7 +15,10 @@ function example()
     $binarySearchST->put(3, 23);
     $binarySearchST->put(2, 23);
 
+    var_dump('min:  ' . $binarySearchST->min());
+    var_dump('max:  ' . $binarySearchST->max());
     echo '<pre>';var_dump($binarySearchST->get(6));echo '<pre>';
+    print_r($binarySearchST);
 }
 
 
@@ -87,6 +90,38 @@ class BST
         $node->num = $leftNum + $rightNum + 1;*/
         $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
         return $node;
+    }
+
+    public function min(){
+        return $this->executeMin($this->root);
+    }
+
+    private function executeMin($node){
+        if ($node == null){
+            return false;
+        }
+
+        if ($node->left === null){
+            return $node->key;
+        } else {
+            return $this->executeMin($node->left);
+        }
+    }
+
+    public function max(){
+        return $this->executeMax($this->root);
+    }
+
+    private function executeMax($node){
+        if ($node == null){
+            return false;
+        }
+
+        if ($node->right === null){
+            return $node->key;
+        } else {
+            return $this->executeMax($node->right);
+        }
     }
 
     public function isEmpty(){

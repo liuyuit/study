@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    function text(address, back) {
+        $.ajax({
+            type: 'POST',
+            url: 'http://studycode.com/Search/BST.php',
+            data: '1',
+            success: function (res) {
+                back(res)
+            }
+        });
+    }
+
+    text(2, (res) => {
+        console.log(res)
+    })
+</script>
+</html>
