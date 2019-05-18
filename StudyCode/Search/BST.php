@@ -6,19 +6,30 @@ example();
 
 function example()
 {
-    $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
-    $binarySearchST =  new BST();
+    $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
+    unset($array[2]);
+    unset($array[3]);
+    $binarySearchST = new BST();
 
-    foreach ($array as $key => $value){
+    foreach ($array as $key => $value) {
         $binarySearchST->put($key, $value);
     }
     $binarySearchST->put(3, 23);
     $binarySearchST->put(2, 23);
 
-    var_dump('min:  ' . $binarySearchST->min());
-    var_dump('max:  ' . $binarySearchST->max());
-    echo '<pre>';var_dump($binarySearchST->get(6));echo '<pre>';
+    $rankKey = 4;
+    $floorKey = 5;
+    $ceilKey = 1.5;
+
+    var_dump($rankKey . '  rank is:  ' . $binarySearchST->floor($rankKey));
+//    var_dump($floorKey . '  floorKey:  ' . $binarySearchST->floor($floorKey));
+//    var_dump($ceilKey . '  ceilKey:  ' . $binarySearchST->ceil($ceilKey));
+//    var_dump('min:  ' . $binarySearchST->min());
+//    var_dump('max:  ' . $binarySearchST->max());
+    echo '<pre>';
+    var_dump($binarySearchST->get(6));
     print_r($binarySearchST);
+    echo '<pre>';
 }
 
 
@@ -30,15 +41,50 @@ class BST
     private $root;
 
 
-    public function size(){
+    public function size()
+    {
         return $this->executeSize($this->root);
     }
 
-    private function executeSize($node){
-        if ($node == null){
+    private function executeSize($node)
+    {
+        if ($node == null) {
             return 0;
         } else {
             return $node->num;
+        }
+    }
+
+    /**
+     * 返回指定键的排名,也即有多少个键小于指定键
+     * @param $key
+     * @return bool
+     */
+    public function rank($key)
+    {
+        if ($this->get($key) === null) {
+            return false;
+        }
+
+        return $this->executeRank($this->root, $key, 0);
+    }
+
+    /**
+     * @param $node
+     * @param $key
+     * @param int $rank
+     * @return int
+     */
+    private function executeRank($node, $key, $rank)
+    {
+        $cmp = $key - $node->key;
+
+        if ($cmp == 0){
+            return $rank + $node->left->num + $rank;
+        } elseif ($cmp > 0){
+            return $this->executeRank($node->right, $key,$node->num + $rank);
+        } elseif ($cmp < 0){
+            return $this->executeRank($this->left, $key, $rank);
         }
     }
 
@@ -52,92 +98,168 @@ class BST
         return $this->executeGet($this->root, $key);
     }
 
-    private function executeGet($node, $key){
-        if ($node == null){
+    private function executeGet($node, $key)
+    {
+        if ($node == null) {
             return null;
         }
 
         $cmd = $key - $node->key;
-        if ($cmd > 0){
+        if ($cmd > 0) {
             return $this->executeGet($node->right, $key);
-        } elseif ($cmd < 0){
+        } elseif ($cmd < 0) {
             return $this->executeGet($node->left, $key);
-        } elseif ($cmd == 0){
+        } elseif ($cmd == 0) {
             return $node->value;
         }
     }
 
-    public function put($key, $value){
+    public function put($key, $value)
+    {
         $this->root = $this->executePut($this->root, $key, $value);
     }
 
-    private function executePut($node, $key, $value){
-        if ($node == null){
+    /**
+     * fix 插入结点位置错误
+     * @param $node
+     * @param $key
+     * @param $value
+     * @return Node
+     */
+    private function executePut($node, $key, $value)
+    {
+        if ($node == null) {
             return new Node($key, $value, 1);
         }
 
         $mcd = $key - $node->key;
-        if ($mcd > 0){
+        if ($mcd > 0) {
             $node->right = $this->executePut($node->right, $key, $value);
-        } elseif ($mcd < 0){
+        } elseif ($mcd < 0) {
             $node->left = $this->executePut($node->left, $key, $value);
-        } elseif ($mcd == 0){
+        } elseif ($mcd == 0) {
             $node->value = $value;
         }
 
-        /*$leftNum = isset($node->left->num) ? $node->left->num : 0;
-        $rightNum = isset($node->right->num) ? $node->right->num : 0;
-        $node->num = $leftNum + $rightNum + 1;*/
         $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
         return $node;
     }
 
-    public function min(){
+    public function floor($key)
+    {
+        $node = $this->executeFloor($this->root, $key);
+
+        if ($node == null) {
+            return null;
+        }
+
+        return $node->key;
+    }
+
+    private function executeFloor($node, $key)
+    {
+        if ($node == null) {
+            return null;
+        }
+
+        $cmp = $key - $node->key;
+        if ($cmp == 0) {
+            return $node;
+        } elseif ($cmp < 0) {
+            return $this->executeFloor($node->left, $key);
+        }
+
+        $rightNode = $this->executeFloor($node->right, $key);
+        if ($rightNode == null) {
+            return $node;
+        }
+        return $rightNode;
+    }
+
+    public function ceil($key)
+    {
+        $node = $this->executeCeil($this->root, $key);
+
+        if ($node == null) {
+            return null;
+        }
+
+        return $node->key;
+    }
+
+    private function executeCeil($node, $key)
+    {
+        if ($node == null) {
+            return null;
+        }
+
+        $cmp = $key - $node->key;
+        if ($cmp == 0) {
+            return $node;
+        } elseif ($cmp > 0) {
+            return $this->executeCeil($node->right, $key);
+        }
+
+        $leftNode = $this->executeCeil($node->left, $key);
+        if ($leftNode == null) {
+            return $node;
+        }
+        return $leftNode;
+    }
+
+    public function min()
+    {
         return $this->executeMin($this->root);
     }
 
-    private function executeMin($node){
-        if ($node == null){
+    private function executeMin($node)
+    {
+        if ($node == null) {
             return false;
         }
 
-        if ($node->left === null){
+        if ($node->left === null) {
             return $node->key;
         } else {
             return $this->executeMin($node->left);
         }
     }
 
-    public function max(){
+    public function max()
+    {
         return $this->executeMax($this->root);
     }
 
-    private function executeMax($node){
-        if ($node == null){
+    private function executeMax($node)
+    {
+        if ($node == null) {
             return false;
         }
 
-        if ($node->right === null){
+        if ($node->right === null) {
             return $node->key;
         } else {
             return $this->executeMax($node->right);
         }
     }
 
-    public function isEmpty(){
+    public function isEmpty()
+    {
         return empty($this->num);
     }
 }
 
 
-class Node{
+class Node
+{
     public $key;
     public $value;
     public $num;
-    public $left;
-    public $right;
+    public $left = null;
+    public $right = null;
 
-    public function __construct($key, $value, $num, $left = null, $right = null){
+    public function __construct($key, $value, $num, $left = null, $right = null)
+    {
         $this->key = $key;
         $this->value = $value;
         $this->num = $num;
