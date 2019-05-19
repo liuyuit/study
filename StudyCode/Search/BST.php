@@ -9,6 +9,7 @@ function example()
     $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
     unset($array[2]);
     unset($array[3]);
+    unset($array[1]);
     $binarySearchST = new BST();
 
     foreach ($array as $key => $value) {
@@ -17,11 +18,13 @@ function example()
     $binarySearchST->put(3, 23);
     $binarySearchST->put(2, 23);
 
-    $rankKey = 4;
+    $selectKey = 1;
+    $rankKey = 5;
     $floorKey = 5;
     $ceilKey = 1.5;
 
-    var_dump($rankKey . '  rank is:  ' . $binarySearchST->floor($rankKey));
+    var_dump($selectKey . '  select is:  ' . $binarySearchST->select($selectKey));
+//    var_dump($rankKey . '  rank is:  ' . $binarySearchST->rank($rankKey));
 //    var_dump($floorKey . '  floorKey:  ' . $binarySearchST->floor($floorKey));
 //    var_dump($ceilKey . '  ceilKey:  ' . $binarySearchST->ceil($ceilKey));
 //    var_dump('min:  ' . $binarySearchST->min());
@@ -40,6 +43,35 @@ class BST
 {
     private $root;
 
+
+
+    /**
+     * 找到排名为k的键，即树中正好有k个小于它的键
+     * @param $k
+     * @return  bool
+     */
+    public function select($k)
+    {
+        if ($k >= $this->size() || $k < 0) {
+            return false;
+        }
+
+        $node = $this->executeSelect($this->root, $k);
+        return $node->key;
+    }
+
+    private function executeSelect($node, $k)
+    {
+        $t = $this->executeSize($node->left);
+
+        if ($k > $t) {
+            return $this->executeSelect($node->right, $k - $this->executeSize($node->left) - 1);
+        } elseif ($k < $t) {
+            return $this->executeSelect($node->left, $k);
+        } else {
+            return $node;
+        }
+    }
 
     public function size()
     {
@@ -79,12 +111,12 @@ class BST
     {
         $cmp = $key - $node->key;
 
-        if ($cmp == 0){
-            return $rank + $node->left->num + $rank;
-        } elseif ($cmp > 0){
-            return $this->executeRank($node->right, $key,$node->num + $rank);
-        } elseif ($cmp < 0){
-            return $this->executeRank($this->left, $key, $rank);
+        if ($cmp > 0) {
+            return $this->executeRank($node->right, $key, $this->executeSize($node->left) + 1 + $rank);
+        } elseif ($cmp < 0) {
+            return $this->executeRank($node->left, $key, $rank);
+        } else {
+            return $this->executeSize($node->left) + $rank;
         }
     }
 
@@ -109,7 +141,7 @@ class BST
             return $this->executeGet($node->right, $key);
         } elseif ($cmd < 0) {
             return $this->executeGet($node->left, $key);
-        } elseif ($cmd == 0) {
+        } else {
             return $node->value;
         }
     }
