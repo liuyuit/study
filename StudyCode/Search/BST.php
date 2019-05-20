@@ -6,7 +6,7 @@ example();
 
 function example()
 {
-    $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
+    $array = array( -11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
     unset($array[2]);
     unset($array[3]);
     unset($array[1]);
@@ -22,6 +22,8 @@ function example()
     $rankKey = 5;
     $floorKey = 5;
     $ceilKey = 1.5;
+
+    $binarySearchST->deleteMin();
 
     var_dump($selectKey . '  select is:  ' . $binarySearchST->select($selectKey));
 //    var_dump($rankKey . '  rank is:  ' . $binarySearchST->rank($rankKey));
@@ -44,6 +46,18 @@ class BST
     private $root;
 
 
+    public function deleteMin(){
+        $this->root = $this->executeDeleteMin($this->root);
+    }
+
+    private function executeDeleteMin($node){
+        if ($node->left == null){
+            return $node->right;
+        } else {
+            $node->left = $this->executeDeleteMin($node->left);
+            return $node;
+        }
+    }
 
     /**
      * 找到排名为k的键，即树中正好有k个小于它的键
