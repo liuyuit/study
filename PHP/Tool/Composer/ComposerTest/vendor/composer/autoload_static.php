@@ -7,6 +7,13 @@ namespace Composer\Autoload;
 class ComposerStaticInita795b0b8c4e597dd6402826a649e3e82
 {
     public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'PHPExcel' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes',
+            ),
+        ),
         'M' => 
         array (
             'Monolog' => 
