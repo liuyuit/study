@@ -7,7 +7,7 @@ example();
 function example()
 {
 //    $array = array( -11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
-    $array = array( -11, 12, 13, 123, -128, -128);
+    $array = array(-11, 12, 13, 123, -128, -128);
     unset($array[2]);
     unset($array[3]);
     unset($array[1]);
@@ -19,22 +19,26 @@ function example()
     $binarySearchST->put(3, 23);
     $binarySearchST->put(2, 23);
 
+    $deleteKey = 2;
     $selectKey = 1;
     $rankKey = 5;
     $floorKey = 5;
     $ceilKey = 1.5;
 
-    $binarySearchST->deleteMin();
-    $binarySearchST->deleteMin();
+    $binarySearchST->delete($deleteKey);
+    $binarySearchST->delete(3);
+//    $binarySearchST->deleteMin();
+//    $binarySearchST->deleteMin();
 
-    var_dump($selectKey . '  select is:  ' . $binarySearchST->select($selectKey));
+//    var_dump($selectKey . '  select is:  ' . $binarySearchST->select($selectKey));
+//    var_dump($selectKey . '  select is:  ' . $binarySearchST->select($selectKey));
 //    var_dump($rankKey . '  rank is:  ' . $binarySearchST->rank($rankKey));
 //    var_dump($floorKey . '  floorKey:  ' . $binarySearchST->floor($floorKey));
 //    var_dump($ceilKey . '  ceilKey:  ' . $binarySearchST->ceil($ceilKey));
 //    var_dump('min:  ' . $binarySearchST->min());
 //    var_dump('max:  ' . $binarySearchST->max());
     echo '<pre>';
-    var_dump($binarySearchST->get(6));
+//    var_dump($binarySearchST->get(6));
     print_r($binarySearchST);
     echo '<pre>';
 }
@@ -48,8 +52,48 @@ class BST
     private $root;
 
 
-    public function deleteMin(){
-        if ($this->isEmpty()){
+    public function delete($key){
+        if (!$this->get($key)) {
+            return false;
+        }
+
+        $this->root = $this->executeDelete($this->root, $key);
+    }
+
+    private function executeDelete($node, $key){
+        $cmp = $key - $node->key;
+
+        if ($cmp > 0){
+            $node->right = $this->executeDelete($node->right, $key);
+            $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
+            return $node;
+        } elseif ($cmp < 0){
+            $node->left = $this->executeDelete($node->left, $key);
+            $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
+            return $node;
+        } else {
+            if ($node->right != null){
+                $minKey = $this->executeMin($node->right);
+                $followNodeValue = $this->get($minKey);
+                $this->put($minKey, null);
+            } elseif ($node->left != null) {
+                $maxKey = $this->executeMax($node->left);
+                $followNodeValue = $this->get($maxKey);
+                $this->put($maxKey, null);
+            } else {
+                return null;
+            }
+
+            $followNodeNum = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
+            $followNode = new Node($key, $followNodeValue, $followNodeNum, $node->left, $node->right);
+
+            return $followNode;
+        }
+    }
+
+    public function deleteMin()
+    {
+        if ($this->isEmpty()) {
             return false;
         }
 
@@ -58,8 +102,9 @@ class BST
         return true;
     }
 
-    private function executeDeleteMin($node){
-        if ($node->left == null){
+    private function executeDeleteMin($node)
+    {
+        if ($node->left == null) {
             return $node->right;
         } else {
             $node->left = $this->executeDeleteMin($node->left);
