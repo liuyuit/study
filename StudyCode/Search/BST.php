@@ -6,7 +6,8 @@ example();
 
 function example()
 {
-    $array = array( -11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
+//    $array = array( -11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
+    $array = array( -11, 12, 13, 123, -128, -128);
     unset($array[2]);
     unset($array[3]);
     unset($array[1]);
@@ -23,6 +24,7 @@ function example()
     $floorKey = 5;
     $ceilKey = 1.5;
 
+    $binarySearchST->deleteMin();
     $binarySearchST->deleteMin();
 
     var_dump($selectKey . '  select is:  ' . $binarySearchST->select($selectKey));
@@ -47,7 +49,13 @@ class BST
 
 
     public function deleteMin(){
+        if ($this->isEmpty()){
+            return false;
+        }
+
         $this->root = $this->executeDeleteMin($this->root);
+        $this->root->num = $this->executeSize($this->root->left) + $this->executeSize($this->root->right);
+        return true;
     }
 
     private function executeDeleteMin($node){
@@ -55,6 +63,7 @@ class BST
             return $node->right;
         } else {
             $node->left = $this->executeDeleteMin($node->left);
+            $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
             return $node;
         }
     }
@@ -166,7 +175,6 @@ class BST
     }
 
     /**
-     * fix 插入结点位置错误
      * @param $node
      * @param $key
      * @param $value
@@ -291,7 +299,7 @@ class BST
 
     public function isEmpty()
     {
-        return empty($this->num);
+        return empty($this->root->num);
     }
 }
 
