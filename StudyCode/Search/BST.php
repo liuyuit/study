@@ -6,8 +6,8 @@ example();
 
 function example()
 {
-//    $array = array( -11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
-    $array = array(-11, 12, 13, 123, -128, -128);
+    $array = array( -11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
+//    $array = array(-11, 12, 13, 123, -128, -128);
     unset($array[2]);
     unset($array[3]);
     unset($array[1]);
@@ -27,6 +27,7 @@ function example()
 
     $binarySearchST->delete($deleteKey);
     $binarySearchST->delete(3);
+    $binarySearchST->delete(4);
 //    $binarySearchST->deleteMin();
 //    $binarySearchST->deleteMin();
 
@@ -75,11 +76,11 @@ class BST
             if ($node->right != null){
                 $minKey = $this->executeMin($node->right);
                 $followNodeValue = $this->get($minKey);
-                $this->put($minKey, null);
+                $node->right = $this->executeDeleteMin($node->right);
             } elseif ($node->left != null) {
                 $maxKey = $this->executeMax($node->left);
                 $followNodeValue = $this->get($maxKey);
-                $this->put($maxKey, null);
+                $node->left = $this->executeDeleteMax($node->left);
             } else {
                 return null;
             }
@@ -108,6 +109,28 @@ class BST
             return $node->right;
         } else {
             $node->left = $this->executeDeleteMin($node->left);
+            $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
+            return $node;
+        }
+    }
+
+    public function deleteMax()
+    {
+        if ($this->isEmpty()) {
+            return false;
+        }
+
+        $this->root = $this->executeDeleteMax($this->root);
+        $this->root->num = $this->executeSize($this->root->left) + $this->executeSize($this->root->right);
+        return true;
+    }
+
+    private function executeDeleteMax($node)
+    {
+        if ($node->right == null) {
+            return $node->left;
+        } else {
+            $node->right = $this->executeDeleteMax($node->right);
             $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
             return $node;
         }
