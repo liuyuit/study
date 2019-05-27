@@ -2,11 +2,13 @@
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 
+//require_once '../Sort/Queue.php';
+
 example();
 
 function example()
 {
-    $array = array( -11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
+    $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346, 13, -1, -3425, 120, 8, 346, 3425,);
 //    $array = array(-11, 12, 13, 123, -128, -128);
     unset($array[2]);
     unset($array[3]);
@@ -28,6 +30,7 @@ function example()
     $binarySearchST->delete($deleteKey);
     $binarySearchST->delete(3);
     $binarySearchST->delete(4);
+    $binarySearchST->delete(8);
 //    $binarySearchST->deleteMin();
 //    $binarySearchST->deleteMin();
 
@@ -38,10 +41,24 @@ function example()
 //    var_dump($ceilKey . '  ceilKey:  ' . $binarySearchST->ceil($ceilKey));
 //    var_dump('min:  ' . $binarySearchST->min());
 //    var_dump('max:  ' . $binarySearchST->max());
+    printNode($binarySearchST->root);exit;
     echo '<pre>';
 //    var_dump($binarySearchST->get(6));
     print_r($binarySearchST);
     echo '<pre>';
+}
+
+function printNode(Node $node){
+    if ($node->left != null){
+        printNode($node->left);
+    }
+
+    echo $node->value;
+    echo '<br>';
+
+    if ($node->right != null){
+        printNode($node->right);
+    }
 }
 
 
@@ -50,10 +67,11 @@ function example()
  */
 class BST
 {
-    private $root;
+    public $root;
 
 
-    public function delete($key){
+    public function delete($key)
+    {
         if (!$this->get($key)) {
             return false;
         }
@@ -61,19 +79,45 @@ class BST
         $this->root = $this->executeDelete($this->root, $key);
     }
 
-    private function executeDelete($node, $key){
+    private function executeDelete($node, $key)
+    {
         $cmp = $key - $node->key;
 
-        if ($cmp > 0){
+        if ($cmp > 0) {
+            $node->right = $this->executeDelete($node->right, $key);
+        } elseif ($cmp < 0) {
+            $node->left = $this->executeDelete($node->left, $key);
+        } else {
+            if ($node->left == null) {
+                return $node->right;
+            } elseif ($node->right == null) {
+                return $node->left;
+            } else {
+                $tempNode = $node;
+                $node = $this->executeMin($node->right);
+                $node->right = $this->executeDeleteMin($tempNode->right);
+                $node->left = $tempNode->left;
+            }
+        }
+
+        $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
+        return $node;
+    }
+
+    private function myExecuteDelete($node, $key)
+    {
+        $cmp = $key - $node->key;
+
+        if ($cmp > 0) {
             $node->right = $this->executeDelete($node->right, $key);
             $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
             return $node;
-        } elseif ($cmp < 0){
+        } elseif ($cmp < 0) {
             $node->left = $this->executeDelete($node->left, $key);
             $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
             return $node;
         } else {
-            if ($node->right != null){
+            if ($node->right != null) {
                 $minKey = $this->executeMin($node->right);
                 $followNodeValue = $this->get($minKey);
                 $node->right = $this->executeDeleteMin($node->right);
@@ -103,7 +147,7 @@ class BST
         return true;
     }
 
-    private function executeDeleteMin($node)
+    private function executeDeleteMin($node) :Node
     {
         if ($node->left == null) {
             return $node->right;
@@ -125,7 +169,7 @@ class BST
         return true;
     }
 
-    private function executeDeleteMax($node)
+    private function executeDeleteMax($node) :Node
     {
         if ($node->right == null) {
             return $node->left;
@@ -331,17 +375,13 @@ class BST
 
     public function min()
     {
-        return $this->executeMin($this->root);
+        return $this->executeMin($this->root)->key;
     }
 
-    private function executeMin($node)
+    private function executeMin(Node $node) :Node
     {
-        if ($node == null) {
-            return false;
-        }
-
         if ($node->left === null) {
-            return $node->key;
+            return $node;
         } else {
             return $this->executeMin($node->left);
         }
@@ -349,17 +389,14 @@ class BST
 
     public function max()
     {
-        return $this->executeMax($this->root);
+        return $this->executeMax($this->root)->key;
     }
 
-    private function executeMax($node)
-    {
-        if ($node == null) {
-            return false;
-        }
 
+    private function executeMax(Node $node) :Node
+    {
         if ($node->right === null) {
-            return $node->key;
+            return $node;
         } else {
             return $this->executeMax($node->right);
         }
