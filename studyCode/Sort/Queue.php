@@ -1,19 +1,22 @@
 <?php
 
-$whiteList = array(11, 12, 13, 123,0,0, 12, 123, 0, 346, 0,0);
-$queue =  new Queue();
-foreach ($whiteList as $value){
-    if ($value != 0){
-        $queue->enQueue($value);
-    }else{
-        if (!$queue->isEmpty()){
-            echo $queue->deQueue();
-            echo "<br>";
+//exampleQueue();
+function exampleQueue(){
+    $whiteList = array(11, 12, 13, 123,0,0, 12, 123, 0, 346, 0,0);
+    $queue =  new Queue();
+    foreach ($whiteList as $value){
+        if ($value != 0){
+            $queue->enQueue($value);
+        }else{
+            if (!$queue->isEmpty()){
+                echo $queue->deQueue();
+                echo "<br>";
+            }
         }
     }
-}
 
-echo 'the Queue length :' . $queue->size();
+    echo 'the Queue length :' . $queue->size();
+}
 
 
 /**
