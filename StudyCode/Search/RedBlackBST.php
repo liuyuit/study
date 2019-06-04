@@ -13,7 +13,7 @@ function example()
     unset($array[2]);
     unset($array[3]);
     unset($array[1]);
-    $binarySearchST = new BST();
+    $binarySearchST = new RedBlackBST();
 
     foreach ($array as $key => $value) {
         $binarySearchST->put($key, $value);
@@ -27,10 +27,10 @@ function example()
     $floorKey = 5;
     $ceilKey = 1.5;
 
-    $binarySearchST->delete($deleteKey);
-    $binarySearchST->delete(11);
-    $binarySearchST->delete(4);
-    $binarySearchST->delete(8);
+//    $binarySearchST->delete($deleteKey);
+//    $binarySearchST->delete(11);
+//    $binarySearchST->delete(4);
+//    $binarySearchST->delete(8);
 //    $binarySearchST->deleteMin();
 //    $binarySearchST->deleteMin();
 
@@ -44,8 +44,8 @@ function example()
 //    printNode($binarySearchST->root);
     echo '<pre>';
 //    var_dump($binarySearchST->get(6));
-    $queue = $binarySearchST->keys(6, 12);
-    print_r($queue);
+//    $queue = $binarySearchST->keys(6, 12);
+//    print_r($queue);
     print_r($binarySearchST->root);
     echo '<pre>';
 }
@@ -82,12 +82,59 @@ function printNode($node)
 /**
  * 基于二叉查找树的符号表
  */
-class BST
+class RedBlackBST
 {
-    const RED = true;
-    const BLACK = false;
+    const RED = 1; // true;
+    const BLACK = 0;// false;
     public $root;
 
+
+
+    public function put($key, $value)
+    {
+        $this->root = $this->executePut($this->root, $key, $value);
+        $this->root->color = self::BLACK;
+    }
+
+    private function executePut($node, $key, $value)
+    {
+        if ($node == null) {
+            return new Node($key, $value, self::RED, 1);
+        }
+
+        $mcd = $key - $node->key;
+        if ($mcd > 0) {
+            $node->right = $this->executePut($node->right, $key, $value);
+        } elseif ($mcd < 0) {
+            $node->left = $this->executePut($node->left, $key, $value);
+        } elseif ($mcd == 0) {
+            $node->value = $value;
+        }
+
+        if ($this->isRed($node->right) && !$this->isRed($node->left)){
+            $node = $this->rotateLeft($node);
+        }
+
+        if ($this->isRed($node->left) && $this->isRed($node->left->left)){
+            $node = $this->rotateRight($node);
+        }
+
+        if ($this->isRed($node->left) && $this->isRed($node->right)){
+            $node = $this->flipColors($node);
+        }
+
+        $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
+        return $node;
+    }
+
+    private function isRed($node) : bool
+    {
+        if ($node == null){
+            return false;
+        }
+
+        return $node->color == self::RED;
+    }
 
     /** 变换颜色
      * @param Node $h
@@ -378,36 +425,6 @@ class BST
         } else {
             return $node->value;
         }
-    }
-
-    public function put($key, $value)
-    {
-        $this->root = $this->executePut($this->root, $key, $value);
-    }
-
-    /**
-     * @param $node
-     * @param $key
-     * @param $value
-     * @return Node
-     */
-    private function executePut($node, $key, $value)
-    {
-        if ($node == null) {
-            return new Node($key, $value, 1);
-        }
-
-        $mcd = $key - $node->key;
-        if ($mcd > 0) {
-            $node->right = $this->executePut($node->right, $key, $value);
-        } elseif ($mcd < 0) {
-            $node->left = $this->executePut($node->left, $key, $value);
-        } elseif ($mcd == 0) {
-            $node->value = $value;
-        }
-
-        $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
-        return $node;
     }
 
     public function floor($key)
