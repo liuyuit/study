@@ -90,6 +90,25 @@ class RedBlackBST
 
 
 
+    public function deleteMin()
+    {
+        if ($this->isEmpty()) {
+            return false;
+        }
+
+        $this->root = $this->executeDeleteMin($this->root);
+        $this->root->num = $this->executeSize($this->root->left) + $this->executeSize($this->root->right);
+        return true;
+    }
+
+    private function executeDeleteMin($node): Node
+    {
+        if ($this->isRed($node->left->left)){
+            $node = $node->left->left;
+        }
+
+    }
+
     public function put($key, $value)
     {
         $this->root = $this->executePut($this->root, $key, $value);
@@ -279,28 +298,6 @@ class RedBlackBST
             $followNode = new Node($key, $followNodeValue, $followNodeNum, $node->left, $node->right);
 
             return $followNode;
-        }
-    }
-
-    public function deleteMin()
-    {
-        if ($this->isEmpty()) {
-            return false;
-        }
-
-        $this->root = $this->executeDeleteMin($this->root);
-        $this->root->num = $this->executeSize($this->root->left) + $this->executeSize($this->root->right);
-        return true;
-    }
-
-    private function executeDeleteMin($node): Node
-    {
-        if ($node->left == null) {
-            return $node->right;
-        } else {
-            $node->left = $this->executeDeleteMin($node->left);
-            $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
-            return $node;
         }
     }
 
