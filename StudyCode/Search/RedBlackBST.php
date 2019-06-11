@@ -12,14 +12,14 @@ function example()
     $array = array(-11, 12, 13, 123, -128, -128);
     unset($array[2]);
     unset($array[3]);
-    unset($array[1]);
-    $binarySearchST = new RedBlackBST();
+    unset($array[0]);
+    $redBlackBST = new RedBlackBST();
 
     foreach ($array as $key => $value) {
-        $binarySearchST->put($key, $value);
+        $redBlackBST->put($key, $value);
     }
-    $binarySearchST->put(3, 23);
-    $binarySearchST->put(2, 23);
+    $redBlackBST->put(3, 23);
+    $redBlackBST->put(2, 23);
 
     $deleteKey = 2;
     $selectKey = 1;
@@ -27,26 +27,27 @@ function example()
     $floorKey = 5;
     $ceilKey = 1.5;
 
-//    $binarySearchST->delete($deleteKey);
-//    $binarySearchST->delete(11);
-//    $binarySearchST->delete(4);
-//    $binarySearchST->delete(8);
-    $binarySearchST->deleteMin();
-//    $binarySearchST->deleteMin();
+//    $redBlackBST->delete($deleteKey);
+//    $redBlackBST->delete(11);
+//    $redBlackBST->delete(4);
+//    $redBlackBST->delete(8);
+//    $redBlackBST->deleteMin();
+//    $redBlackBST->deleteMin();
+    $redBlackBST->deleteMax();
 
-//    var_dump($selectKey . '  select is:  ' . $binarySearchST->select($selectKey));
-//    var_dump($selectKey . '  select is:  ' . $binarySearchST->select($selectKey));
-//    var_dump($rankKey . '  rank is:  ' . $binarySearchST->rank($rankKey));
-//    var_dump($floorKey . '  floorKey:  ' . $binarySearchST->floor($floorKey));
-//    var_dump($ceilKey . '  ceilKey:  ' . $binarySearchST->ceil($ceilKey));
-//    var_dump('min:  ' . $binarySearchST->min());
-//    var_dump('max:  ' . $binarySearchST->max());
-//    printNode($binarySearchST->root);
+//    var_dump($selectKey . '  select is:  ' . $redBlackBST->select($selectKey));
+//    var_dump($selectKey . '  select is:  ' . $redBlackBST->select($selectKey));
+//    var_dump($rankKey . '  rank is:  ' . $redBlackBST->rank($rankKey));
+//    var_dump($floorKey . '  floorKey:  ' . $redBlackBST->floor($floorKey));
+//    var_dump($ceilKey . '  ceilKey:  ' . $redBlackBST->ceil($ceilKey));
+//    var_dump('min:  ' . $redBlackBST->min());
+//    var_dump('max:  ' . $redBlackBST->max());
+//    printNode($redBlackBST->root);
     echo '<pre>';
-//    var_dump($binarySearchST->get(6));
-//    $queue = $binarySearchST->keys(6, 12);
+//    var_dump($redBlackBST->get(6));
+//    $queue = $redBlackBST->keys(6, 12);
 //    print_r($queue);
-    print_r($binarySearchST->root);
+    print_r($redBlackBST->root);
     echo '<pre>';
 }
 
@@ -89,6 +90,45 @@ class RedBlackBST
     public $root;
 
 
+    public function deleteMax()
+    {
+        if (!$this->isRed($this->root->left) && !$this->isRed($this->root->right)){
+            $this->root->color = self::RED;
+        }
+
+        $this->root = $this->executeDeleteMax($this->root);
+    }
+
+    /**
+     * @param $node
+     * @return mixed|Node|null
+     */
+    private function executeDeleteMax($node)
+    {
+        if ($this->isRed($node->left)){
+            $this->rotateRight($node);
+        }
+
+        if ($node->right == null){
+            return null;
+        }
+
+        if (!$this->isRed($node->right) && !$this->isRed($node->right->left)){
+            $node = $this->moveRedRight($node);
+        }
+
+        $node->right = $this->executeDeleteMax($node->right);
+        return $this->balance($node);
+    }
+
+
+    private function moveRedRight($node){
+        $node = $this->deleteFlipColors($node);
+        if ($this->isRed($node->left->left)){
+            $node = $this->rotateRight($node);
+        }
+        return $node;
+    }
 
     public function deleteMin()
     {
@@ -97,23 +137,27 @@ class RedBlackBST
         }
 
         $this->root = $this->executeDeleteMin($this->root);
-        if ($this->isEmpty()){
-            $this->root->color = self::BLACK;
-        }
     }
 
+    /**
+     * @param $node
+     * @return mixed|Node|null
+     */
     private function executeDeleteMin($node)
     {
         if ($node->left == null){
             return null;
         }
 
-        if ($this->isRed($node->left) && $this->isRed($node->left->left)){
+        if (!$this->isRed($node->left) && !$this->isRed($node->left->left)){
             $node = $this->moveRedLeft($node);
         }
 
         $node->left = $this->executeDeleteMin($node->left);
+        return $this->balance($node);
+    }
 
+    private function balance($node){
         if ($this->isRed($node->left) && $this->isRed($node->right)){
             $node = $this->rotateLeft($node);
         }
@@ -342,27 +386,6 @@ class RedBlackBST
         }
     }
 
-    public function deleteMax()
-    {
-        if ($this->isEmpty()) {
-            return false;
-        }
-
-        $this->root = $this->executeDeleteMax($this->root);
-        $this->root->num = $this->executeSize($this->root->left) + $this->executeSize($this->root->right);
-        return true;
-    }
-
-    private function executeDeleteMax($node): Node
-    {
-        if ($node->right == null) {
-            return $node->left;
-        } else {
-            $node->right = $this->executeDeleteMax($node->right);
-            $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
-            return $node;
-        }
-    }
 
     /**
      * 找到排名为k的键，即树中正好有k个小于它的键
