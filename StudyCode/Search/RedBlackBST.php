@@ -121,7 +121,6 @@ class RedBlackBST
         return $this->balance($node);
     }
 
-
     private function moveRedRight($node){
         $node = $this->deleteFlipColors($node);
         if ($this->isRed($node->left->left)){
@@ -158,7 +157,7 @@ class RedBlackBST
     }
 
     private function balance($node){
-        if ($this->isRed($node->left) && $this->isRed($node->right)){
+        if ($this->isRed($node->right) ){
             $node = $this->rotateLeft($node);
         }
 
