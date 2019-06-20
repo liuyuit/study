@@ -27,14 +27,14 @@ function example()
     $floorKey = 5;
     $ceilKey = 1.5;
 
-//    $redBlackBST->delete($deleteKey);
+    $redBlackBST->delete($deleteKey);
 //    $redBlackBST->delete(11);
-//    $redBlackBST->delete(4);
-//    $redBlackBST->delete(8);
+    $redBlackBST->delete(4);
+    $redBlackBST->delete(3);
 //    $redBlackBST->deleteMin();
 //    $redBlackBST->deleteMin();
 //    $redBlackBST->deleteMin();
-    $redBlackBST->deleteMax();
+//    $redBlackBST->deleteMax();
 
 //    var_dump($selectKey . '  select is:  ' . $redBlackBST->select($selectKey));
 //    var_dump($selectKey . '  select is:  ' . $redBlackBST->select($selectKey));
@@ -91,9 +91,54 @@ class RedBlackBST
     public $root;
 
 
+    public function delete($key)
+    {
+        if (!$this->isRed($this->root->left) && !$this->isRed($this->root->right)) {
+            $this->root->color = self::RED;
+        }
+
+        $this->root = $this->executeDelete($this->root, $key);
+    }
+
+    private function executeDelete($node, $key)
+    {
+        $mcd = $key - $node->key;
+
+        if ($mcd < 0) {
+            if (!$this->isRed($node->left) && !$this->isRed($node->left->left)) {
+                $this->moveRedLeft($node);
+            }
+            $node->left = $this->executeDelete($node->left, $key);
+        } else {
+            if ($this->isRed($node->left)){
+                $node = $this->rotateRight($node);
+            }
+
+            if (($key == $node->key) && ($node->right == null)){
+                return null;
+            }
+
+            if (!$this->isRed($node->right) && !$this->isRed($node->right->left)){
+                $node = $this->moveRedRight($node);
+            }
+
+            if ($key == $node->key){
+                $followNode = $this->executeMin($node->right);
+                $node->key = $followNode->key;
+                $node->value = $followNode->value;
+                $node->right = $this->executeDeleteMin($node->right);
+            } else {
+                $node->right = $this->executeDelete($node->right, $key);
+            }
+        }
+
+        $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
+        return $this->balance($node);
+    }
+
     public function deleteMax()
     {
-        if (!$this->isRed($this->root->left) && !$this->isRed($this->root->right)){
+        if (!$this->isRed($this->root->left) && !$this->isRed($this->root->right)) {
             $this->root->color = self::RED;
         }
 
@@ -106,15 +151,15 @@ class RedBlackBST
      */
     private function executeDeleteMax($node)
     {
-        if ($this->isRed($node->left)){
+        if ($this->isRed($node->left)) {
             $node = $this->rotateRight($node);
         }
 
-        if ($node->right == null){
+        if ($node->right == null) {
             return null;
         }
 
-        if (!$this->isRed($node->right) && !$this->isRed($node->right->left)){
+        if (!$this->isRed($node->right) && !$this->isRed($node->right->left)) {
             $node = $this->moveRedRight($node);
         }
 
@@ -122,30 +167,32 @@ class RedBlackBST
         return $this->balance($node);
     }
 
-    private function balance($node){
-        if ($this->isRed($node->right) ){
+    private function balance($node)
+    {
+        if ($this->isRed($node->right)) {
             $node = $this->rotateLeft($node);
         }
 
-        if ($this->isRed($node->right) && !$this->isRed($node->left)){
+        if ($this->isRed($node->right) && !$this->isRed($node->left)) {
             $node = $this->rotateLeft($node);
         }
 
-        if ($this->isRed($node->left) && $this->isRed($node->left->left)){
+        if ($this->isRed($node->left) && $this->isRed($node->left->left)) {
             $node = $this->rotateRight($node);
         }
 
-        if ($this->isRed($node->left) && $this->isRed($node->right)){
-            $node = $this->flipColors($node);
+        if ($this->isRed($node->left) && $this->isRed($node->right)) {
+            $this->flipColors($node);
         }
 
         $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
         return $node;
     }
 
-    private function moveRedRight($node){
-        $node = $this->deleteFlipColors($node);
-        if (!$this->isRed($node->left->left)){
+    private function moveRedRight($node)
+    {
+        $this->deleteFlipColors($node);
+        if (!$this->isRed($node->left->left)) {
             $node = $this->rotateRight($node);
         }
         return $node;
@@ -153,7 +200,7 @@ class RedBlackBST
 
     public function deleteMin()
     {
-        if (!$this->isRed($this->root->left) && !$this->isRed($this->root->right)){
+        if (!$this->isRed($this->root->left) && !$this->isRed($this->root->right)) {
             $this->root->color = self::RED;
         }
 
@@ -166,11 +213,11 @@ class RedBlackBST
      */
     private function executeDeleteMin($node)
     {
-        if ($node->left == null){
+        if ($node->left == null) {
             return null;
         }
 
-        if (!$this->isRed($node->left) && !$this->isRed($node->left->left)){
+        if (!$this->isRed($node->left) && !$this->isRed($node->left->left)) {
             $node = $this->moveRedLeft($node);
         }
 
@@ -179,20 +226,21 @@ class RedBlackBST
     }
 
 
-    private function moveRedLeft($node){
-        $node = $this->deleteFlipColors($node);
-        if ($this->isRed($node->right->left)){
+    private function moveRedLeft($node)
+    {
+        $this->deleteFlipColors($node);
+        if ($this->isRed($node->right->left)) {
             $node->right = $this->rotateRight($node->right);
             $node = $this->rotateLeft($node);
         }
         return $node;
     }
 
-    private function deleteFlipColors($node){
+    private function deleteFlipColors($node)
+    {
         $node->color = self::BLACK;
         $node->left->color = self::RED;
         $node->right->color = self::RED;
-        return $node;
     }
 
     public function put($key, $value)
@@ -216,25 +264,25 @@ class RedBlackBST
             $node->value = $value;
         }
 
-        if ($this->isRed($node->right) && !$this->isRed($node->left)){
+        if ($this->isRed($node->right) && !$this->isRed($node->left)) {
             $node = $this->rotateLeft($node);
         }
 
-        if ($this->isRed($node->left) && $this->isRed($node->left->left)){
+        if ($this->isRed($node->left) && $this->isRed($node->left->left)) {
             $node = $this->rotateRight($node);
         }
 
-        if ($this->isRed($node->left) && $this->isRed($node->right)){
-            $node = $this->flipColors($node);
+        if ($this->isRed($node->left) && $this->isRed($node->right)) {
+            $this->flipColors($node);
         }
 
         $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
         return $node;
     }
 
-    private function isRed($node) : bool
+    private function isRed($node): bool
     {
-        if ($node == null){
+        if ($node == null) {
             return false;
         }
 
@@ -243,14 +291,12 @@ class RedBlackBST
 
     /** 变换颜色
      * @param Node $h
-     * @return Node
      */
-    public function flipColors(Node $h): Node
+    public function flipColors(Node $h)
     {
         $h->color = self::RED;
         $h->left->color = self::BLACK;
         $h->right->color = self::BLACK;
-        return $h;
     }
 
     /**
@@ -319,40 +365,6 @@ class RedBlackBST
         if ($cmpHi < 0) {
             $this->executeKeys($node->right, $queue, $lo, $hi);
         }
-    }
-
-    public function delete($key)
-    {
-        if (!$this->get($key)) {
-            return false;
-        }
-
-        $this->root = $this->executeDelete($this->root, $key);
-    }
-
-    private function executeDelete($node, $key)
-    {
-        $cmp = $key - $node->key;
-
-        if ($cmp > 0) {
-            $node->right = $this->executeDelete($node->right, $key);
-        } elseif ($cmp < 0) {
-            $node->left = $this->executeDelete($node->left, $key);
-        } else {
-            if ($node->left == null) {
-                return $node->right;
-            } elseif ($node->right == null) {
-                return $node->left;
-            } else {
-                $tempNode = $node;
-                $node = $this->executeMin($node->right);
-                $node->right = $this->executeDeleteMin($tempNode->right);
-                $node->left = $tempNode->left;
-            }
-        }
-
-        $node->num = $this->executeSize($node->left) + $this->executeSize($node->right) + 1;
-        return $node;
     }
 
     private function myExecuteDelete($node, $key)

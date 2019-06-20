@@ -9,7 +9,7 @@ $InsertSort = new InsertSort();
 /**
  * 插入排序
  */
-class InsertSort
+    class InsertSort
 {
     public function __construct()
     {
@@ -18,7 +18,7 @@ class InsertSort
 
     private function example()
     {
-        $array = [123,346,12,13,128,3425,11];
+        $array = [123,346,12,13,128,3425,11,-12];
         $newArray = $this->InsertSort($array);
         print_r($newArray);
     }
