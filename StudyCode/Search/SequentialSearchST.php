@@ -2,12 +2,12 @@
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 
-example();
+//example();
 
 function example()
 {
     $array = array(-11, 12, 13, 123, -128, -128, -346, -128, -346,13, -1, -3425, 120, 8, 346, 3425,);
-    $sequentialSearchST =  new BST();
+    $sequentialSearchST =  new SequentialSearchST();
 
     foreach ($array as $key => $value){
         if ($sequentialSearchST->get($value)){
@@ -76,10 +76,6 @@ class Node{
 
     public function __construct($key = '', $value = '', $next = '')
     {
-        if (empty($key) || empty($value)){
-            return false;
-        }
-
         $this->key = $key;
         $this->value = $value;
         $this->next = $next;
