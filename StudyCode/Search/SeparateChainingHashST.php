@@ -13,7 +13,7 @@ function separateChainingHashSTExample()
     unset($array[2]);
     unset($array[3]);
     unset($array[1]);
-    $separateChainingHashST = new SeparateChainingHashST();
+    $separateChainingHashST = new SeparateChainingHashST(97);
 
     foreach ($array as $key => $value) {
         $separateChainingHashST->put($key, $value);
@@ -57,9 +57,9 @@ class SeparateChainingHashST{
     public $st = [];
 
 
-    public function __construct()
+    public function __construct($M)
     {
-        $this->init(97);
+        $this->init($M);
     }
 
     private function init($M){
@@ -86,6 +86,15 @@ class SeparateChainingHashST{
         $intHash = base_convert($md5Str, 16, 10);
         return (int)$intHash;
     }
+
+    /*private function resize($cap){
+        $separateChainingHashST = new SeparateChainingHashST(97);
+
+        foreach ($this->st as $sequentialSearchST){
+
+        }
+
+    }*/
 
 
 }

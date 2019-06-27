@@ -86,7 +86,7 @@ class LinerProbingHashST{
     }
 
     public function executeGet($key){
-        return $this->st[$this->hash($key)]->get($key);
+        return $this->keys[$this->hash($key)]->get($key);
     }
 
     private function hash($key){
