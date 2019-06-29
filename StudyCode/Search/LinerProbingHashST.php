@@ -52,21 +52,23 @@ function LinerProbingHashSTExample()
 /**
  * 基于线性探测法的散列表
  */
-class LinerProbingHashST{
-    private  $M = 16;    // 数组大小
+class LinerProbingHashST
+{
+    private $M = 16;    // 数组大小
     private $N = 0;     // 表中键值对总数
     public $keys = [];
     public $values = [];
 
 
-    public function put($key, $value){
+    public function put($key, $value)
+    {
         $hash = $this->hash($key);
         return $this->executePut($hash, $key, $value);
     }
 
-    private function executePut($hash, $key, $value){
-
-        if (!isset($this->keys[$hash])){
+    private function executePut($hash, $key, $value)
+    {
+        if (!isset($this->keys[$hash])) {
             $this->keys[$hash] = $key;
             $this->values[$hash] = $value;
             return true;
@@ -74,26 +76,40 @@ class LinerProbingHashST{
 
         $oldKey = $this->keys[$hash];
 
-        if ($oldKey == $key){
+        if ($oldKey == $key) {  // 已存在重复键
             return false;
         }
 
-        if ($hash >= $this->M){
-            return $this->executePut(0, $key, $value);
+        return $this->executePut(($hash + 1) % $this->M, $key, $value);
+    }
+
+    public function get($key)
+    {
+
+    }
+
+    public function executeGet($hash, $key)
+    {
+        if (!isset($this->keys[$hash])) { // 查询未命中
+            return false;
         }
 
-        return $this->executePut($hash + 1, $key, $value);
+        if ($this->keys[$hash] == $key) {
+            // 查询命中
+            return $this->values[$hash];
+        } else {
+            // 需要在下一个位置继续查找
+            return $this->executeGet(($hash + 1) % $this->M, $key);
+        }
     }
 
-    public function executeGet($key){
-        return $this->keys[$this->hash($key)]->get($key);
-    }
-
-    private function hash($key){
+    private function hash($key)
+    {
         return $this->getIntHash($key) % $this->M;
     }
 
-    private function getIntHash($str){
+    private function getIntHash($str)
+    {
         $md5Str = substr(md5($str), 10, 6);
         $intHash = base_convert($md5Str, 16, 10);
         return (int)$intHash;
