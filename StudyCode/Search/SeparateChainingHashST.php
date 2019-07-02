@@ -86,17 +86,6 @@ class SeparateChainingHashST{
         $intHash = base_convert($md5Str, 16, 10);
         return (int)$intHash;
     }
-
-    /*private function resize($cap){
-        $separateChainingHashST = new SeparateChainingHashST(97);
-
-        foreach ($this->st as $sequentialSearchST){
-
-        }
-
-    }*/
-
-
 }
 
 
