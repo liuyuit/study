@@ -52,6 +52,7 @@ function example()
     echo '<pre>';
 }
 
+//require_once './';
 /**
  * 图
  */
@@ -62,25 +63,11 @@ class Graph
     private $Bag;// 邻接表
 
 
-}
+    public function initGraph($V){
+        $this->V = $V;
+        $this->E = 0;
 
-
-class Node
-{
-    public $key;
-    public $value;
-    public $color;  // 指向该结点的链接的颜色，空链接为黑色
-    public $num;
-    public $left = null;
-    public $right = null;
-
-    public function __construct($key, $value, $color, $num, $left = null, $right = null)
-    {
-        $this->key = $key;
-        $this->value = $value;
-        $this->color = $color;
-        $this->num = $num;
-        $this->left = $left;
-        $this->right = $right;
     }
+
+
 }
