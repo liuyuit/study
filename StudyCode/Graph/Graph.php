@@ -60,14 +60,33 @@ class Graph
 {
     private $V; // 顶点数目
     private $E; // 边的数目
-    private $Bag;// 邻接表
+    private $adg;// 邻接表
 
 
     public function initGraph($V){
         $this->V = $V;
         $this->E = 0;
+        $this->adg = [];
 
+        for ($i = 0; $i < $V; $i++){
+            $this->adg[$i] = New Queue();
+        }
     }
+
+    /**
+     * @param $V
+     * @param $edgeList // 每个元素是一个包含两个顶点的数组
+     */
+    public function createGraph($V,, $edgeList){
+        $this->initGraph($V);
+
+        foreach ($edgeList as $edge){
+            /** @noinspection PhpUndefinedMethodInspection */
+            $this->adg[$edge[0]]->enQueue($edge[1]);
+        }
+    }
+
+
 
 
 }
