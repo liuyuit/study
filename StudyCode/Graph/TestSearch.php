@@ -29,7 +29,7 @@ function example()
 /**
  * 图
  */
-class Graph
+class TestSearch
 {
     private $V = 0; // 顶点数目
     private $E = 0; // 边的数目

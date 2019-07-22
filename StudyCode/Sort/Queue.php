@@ -1,6 +1,9 @@
 <?php
+namespace Sort;
 
 //exampleQueue();
+use stdClass;
+
 function exampleQueue(){
     $whiteList = array(11, 12, 13, 123,0,0, 12, 123, 0, 346, 0,0);
     $queue =  new Queue();
