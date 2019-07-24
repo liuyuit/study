@@ -1,2 +1,2 @@
 Set ws = CreateObject("Wscript.Shell") 
-ws.run "cmd /c gitPush.bat",vbhide 
+ws.run "cmd /c .\gitPush.bat",vbhide 
