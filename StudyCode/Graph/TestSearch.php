@@ -4,6 +4,7 @@ ini_set("html_errors", "On");
 use Sort\Queue;
 
 require_once '../Sort/Queue.php';
+require_once '../Graph/Graph.php';
 
 example();
 
