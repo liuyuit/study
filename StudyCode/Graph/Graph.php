@@ -17,8 +17,7 @@ function example()
         [3, 4],
     ];
 
-    $graph = new Graph();
-    $graph->createGraph($v, $array);
+    $graph = new Graph($v, $array);
 
     echo '<pre>';
     print_r($graph->adg);
@@ -50,7 +49,7 @@ class Graph
      * @param $V
      * @param $edgeList // 每个元素是一个包含两个顶点的数组
      */
-    public function createGraph($V, $edgeList){
+    public function __construct($V, $edgeList){
         $this->initGraph($V);
 
         foreach ($edgeList as $edge){
