@@ -73,10 +73,26 @@ class Graph
      */
     public function addEdge($v, $w){
         $this->adg[$v][] = $w;
-        $this->adg[$w] = $v;
+        $this->adg[$w][] = $v;
         $this->E++;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * 图
