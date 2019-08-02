@@ -35,16 +35,6 @@ class Graph
     public $adg = [];// 邻接表
 
 
-    public function initGraph($V){
-        $this->V = $V;
-        $this->E = 0;
-        $this->adg = [];
-
-        for ($i = 0; $i < $V; $i++){
-            $this->adg[$i] = [];
-        }
-    }
-
     /**
      * @param $V
      * @param $edgeList // 每个元素是一个包含两个顶点的数组
@@ -56,6 +46,17 @@ class Graph
             $this->addEdge($edge[0], $edge[1]);
         }
     }
+
+    public function initGraph($V){
+        $this->V = $V;
+        $this->E = 0;
+        $this->adg = [];
+
+        for ($i = 0; $i < $V; $i++){
+            $this->adg[$i] = [];
+        }
+    }
+
 
     public function V(){
         return $this->V;

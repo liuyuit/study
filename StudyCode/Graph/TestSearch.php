@@ -33,10 +33,16 @@ function example()
 class TestSearch
 {
 
-    public function __construct(array $vertexArr,int $vertexNum)
+    public function __construct(array $vertexArr,int $vertexNum, $searchVertex)
     {
         $graph = new Graph($vertexArr, $vertexNum);
+        $search = new Search($graph, $searchVertex);
 
+        for ($v = 0; $v < $graph->V(); $v++){
+            if ($search->marked($v)){
+
+            }
+        }
     }
 
 }
