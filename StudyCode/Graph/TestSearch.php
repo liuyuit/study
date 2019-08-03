@@ -40,8 +40,15 @@ class TestSearch
 
         for ($v = 0; $v < $graph->V(); $v++){
             if ($search->marked($v)){
-
+                echo $v;
+                echo '  ';
             }
+        }
+
+        if ($search->count() != $graph->V()){
+            echo 'Not Contented';
+        } else {
+            echo 'Contented';
         }
     }
 
