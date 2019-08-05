@@ -46,9 +46,10 @@ class Search
     /**
      * 顶点s是否与$v相连
      * @param $V
+     * @return bool
      */
     public function marked($V){
-
+        return true;
     }
 
     /**

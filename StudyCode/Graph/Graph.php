@@ -78,6 +78,10 @@ class Graph
         $this->adg[$w][] = $v;
         $this->E++;
     }
+
+    public function adg(int $vertex){
+        return $this->adg[$vertex];
+    }
 }
 
 

@@ -1,10 +1,13 @@
 <?php
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
-use Sort\Queue;
+//use Sort\Queue;
+use Graph\Search;
+use Graph\Graph;
 
 //require_once '../Sort/Queue.php';
 require_once '../Graph/Graph.php';
+require_once '../Graph/Search.php';
 
 example();
 
@@ -18,11 +21,10 @@ function example()
         [3, 4],
     ];
 
-    $graph = new Graph();
-    $graph->createGraph($v, $array);
+    new TestSearch($array, $v, 1);
 
     echo '<pre>';
-    print_r($graph->adg);
+//    print_r($testSearch->adg);
     echo '<pre>';
 }
 
