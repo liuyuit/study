@@ -7,7 +7,7 @@ use Sort\Queue;
 
 require_once '../Sort/Queue.php';
 
-example();
+//example();
 
 function example()
 {
@@ -41,7 +41,7 @@ class Graph
      * @param $V
      * @param $edgeList // 每个元素是一个包含两个顶点的数组
      */
-    public function __construct($V, $edgeList){
+    public function __construct($edgeList, $V){
         $this->initGraph($V);
 
         foreach ($edgeList as $edge){

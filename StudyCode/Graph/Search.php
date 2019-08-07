@@ -7,9 +7,9 @@ use Sort\Queue;
 
 require_once '../Sort/Queue.php';
 
-example();
+//example();
 
-function example()
+function SearchExample()
 {
     $v = 5;
     $array = [
@@ -22,7 +22,7 @@ function example()
     $search = new Search($v, $array);
 
     echo '<pre>';
-    print_r($search->adg);
+//    print_r($search->adg);
     echo '<pre>';
 }
 

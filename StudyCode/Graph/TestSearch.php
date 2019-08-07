@@ -3,11 +3,13 @@ ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 //use Sort\Queue;
 use Graph\Search;
+use Graph\DepthFirstSearch;
 use Graph\Graph;
 
 //require_once '../Sort/Queue.php';
 require_once '../Graph/Graph.php';
 require_once '../Graph/Search.php';
+require_once '../Graph/DepthFirstSearch.php';
 
 example();
 
@@ -38,7 +40,7 @@ class TestSearch
     public function __construct(array $vertexArr,int $vertexNum, $searchVertex)
     {
         $graph = new Graph($vertexArr, $vertexNum);
-        $search = new Search($graph, $searchVertex);
+        $search = new DepthFirstSearch($graph, $searchVertex);
 
         for ($v = 0; $v < $graph->V(); $v++){
             if ($search->marked($v)){
