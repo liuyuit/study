@@ -8,8 +8,8 @@ use Graph\Graph;
 
 //require_once '../Sort/Queue.php';
 require_once '../Graph/Graph.php';
-require_once '../Graph/Search.php';
-require_once '../Graph/DepthFirstSearch.php';
+//require_once '../Graph/Search.php';
+//require_once '../Graph/DepthFirstSearch.php';
 
 example();
 
@@ -23,7 +23,7 @@ function example()
         [3, 4],
     ];
 
-    new TestSearch($array, $v, 1);
+    new TestPaths($array, $v, 1);
 
     echo '<pre>';
 //    print_r($testSearch->adg);
@@ -34,13 +34,13 @@ function example()
 /**
  * 图
  */
-class TestSearch
+class TestPaths
 {
 
     public function __construct(array $vertexArr,int $vertexNum, $searchVertex)
     {
         $graph = new Graph($vertexArr, $vertexNum);
-        $search = new DepthFirstSearch($graph, $searchVertex);
+        $search = new Paths($graph, $searchVertex);
 
         for ($v = 0; $v < $graph->V(); $v++){
             if ($search->marked($v)){
