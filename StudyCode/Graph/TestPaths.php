@@ -47,7 +47,11 @@ class TestPaths
                 echo $searchVertex . 'TO' . $v .':';
                 $paths = $search->pathTo($v);
                 foreach ($paths as $value){
-                    
+                    if($value == $searchVertex){
+                        echo $value;
+                    }else{
+                        echo '-' . $value;
+                    }
                 }
             }
         }
