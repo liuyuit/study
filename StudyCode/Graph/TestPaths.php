@@ -36,7 +36,6 @@ function example()
  */
 class TestPaths
 {
-
     public function __construct(array $vertexArr,int $vertexNum, $searchVertex)
     {
         $graph = new Graph($vertexArr, $vertexNum);
