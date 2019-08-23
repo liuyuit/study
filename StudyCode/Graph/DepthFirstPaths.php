@@ -57,11 +57,9 @@ class DepthFirstPaths
         }
     }
 
-    public function marked($w){
-        return $this->marked[$w];
+    public function hasPathTO($v){
+        return $this->edgeTo[$v];
     }
 
-    public function count(){
-        return $this->count;
-    }
+    public function 
 }
