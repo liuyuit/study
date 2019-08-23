@@ -61,5 +61,7 @@ class DepthFirstPaths
         return $this->edgeTo[$v];
     }
 
-    public function 
+    public function pathTo($v){
+
+    }
 }
