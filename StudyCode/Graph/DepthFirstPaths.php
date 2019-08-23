@@ -36,11 +36,12 @@ function DepthFirstSearchExample()
 class DepthFirstPaths
 {
     private $marked = [];
-    private $edgeTo = []; // 
+    private $edgeTo = []; // 从起点到任意顶点的路径上的最后一个顶点
     private $s;
 
     public function __construct(Graph $graph,int $search)
     {
+        $this->s = $search;
         $this->dfs($graph, $search);
     }
 
