@@ -33,10 +33,11 @@ function DepthFirstSearchExample()
 /**
  * 图
  */
-class DepthFirstSearch
+class DepthFirstPaths
 {
     private $marked = [];
-    private $count;
+    private $
+    private $s;
 
     public function __construct(Graph $graph,int $search)
     {
