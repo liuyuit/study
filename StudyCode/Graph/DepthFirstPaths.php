@@ -36,7 +36,7 @@ function DepthFirstSearchExample()
 class DepthFirstPaths
 {
     private $marked = [];
-    private $
+    private $edgeTo = []; // 
     private $s;
 
     public function __construct(Graph $graph,int $search)
