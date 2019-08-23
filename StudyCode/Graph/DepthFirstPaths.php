@@ -47,11 +47,11 @@ class DepthFirstPaths
 
     private function dfs(Graph $graph, $vertex){
         $this->marked[$vertex] = true;
-        $this->count++;
 
-        $adgArr = $graph->adg($vertex);
-        foreach ($adgArr as $w){
+        $adgVertexList = $graph->adg($vertex);
+        foreach ($adgVertexList as $w){
             if (empty($this->marked[$w])){
+                $this->edgeTo[$w] = $vertex;
                 $this->dfs($graph, $w);
             }
         }
