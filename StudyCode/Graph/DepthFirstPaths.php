@@ -67,9 +67,9 @@ class DepthFirstPaths
         }
 
         $vertexPaths = [];
-        for($vertex = $v; isset($this->edgeTo[$vertex]); $vertex = $this->edgeTo[$vertex]){
-            array_unshift($vertexPaths, $vertex);
-        }
+        do{
+            array_unshift($vertexPaths, $v);
+        } while(isset($this->edgeTo[$v]));
 
         return $vertexPaths;
     }
