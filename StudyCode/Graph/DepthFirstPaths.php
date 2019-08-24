@@ -4,9 +4,9 @@ ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 //use Sort\Queue;
 //use Graph\Search;
-use Graph\Graph;
+use Sort\Stack;
 
-//require_once '../Sort/Queue.php';
+require_once '../Sort/Stack.php';
 //require_once '../Graph/Graph.php';
 //require_once '../Graph/Search.php';
 
@@ -62,6 +62,11 @@ class DepthFirstPaths
     }
 
     public function pathTo($v){
+        if (!$this->hasPathTO($v)){
+            return false;
+        }
+
+        $stack = new Stack();
         
     }
 }

@@ -1,4 +1,5 @@
 <?php
+namespace Sort;
 
 $whiteList = array(11, 12, 13, 123, 0, 123, 0, 346, 0);
 $stack =  new Stack();
