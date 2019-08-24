@@ -58,7 +58,7 @@ class DepthFirstPaths
     }
 
     public function hasPathTo($v){
-        return $this->edgeTo[$v];
+        return isset($this->edgeTo[$v]);
     }
 
     public function pathTo($v){
