@@ -35,7 +35,7 @@ function DepthFirstSearchExample()
  */
 class DepthFirstPaths
 {
-    private $marked = [];   // 
+    private $marked = [];   //
     private $edgeTo = [];   // 从起点到任意顶点的路径上的最后一个顶点
     private $s;
 
