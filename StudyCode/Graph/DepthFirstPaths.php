@@ -4,9 +4,9 @@ ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 //use Sort\Queue;
 //use Graph\Search;
-use Sort\Stack;
+//use Sort\Stack;
 
-require_once '../Sort/Stack.php';
+//require_once '../Sort/Stack.php';
 //require_once '../Graph/Graph.php';
 //require_once '../Graph/Search.php';
 
@@ -66,11 +66,11 @@ class DepthFirstPaths
             return false;
         }
 
-        $stack = new Stack();
+        $vertexPaths = [];
         for($vertex = $v; isset($this->edgeTo[$vertex]); $vertex = $this->edgeTo[$vertex]){
-            $stack->push($vertex);
+            $vertexPaths->push($vertex);
         }
 
-        return $stack;
+        return $vertexPaths;
     }
 }
