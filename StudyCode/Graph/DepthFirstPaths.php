@@ -67,6 +67,6 @@ class DepthFirstPaths
         }
 
         $stack = new Stack();
-        
+        for($vertex = )
     }
 }
