@@ -43,7 +43,7 @@ class TestPaths
 
         for ($v = 0; $v < $graph->V(); $v++){
             if ($search->hasPathTo($v)){
-                echo $searchVertex . 'TO' . $v .':';
+                echo $searchVertex . 'TO' . $v .':' . $searchVertex;
                 $paths = $search->pathTo($v);
                 foreach ($paths as $value){
                     if($value == $searchVertex){
