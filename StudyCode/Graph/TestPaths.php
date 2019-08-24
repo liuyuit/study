@@ -51,8 +51,8 @@ class TestPaths
                     }else{
                         echo '-' . $value;
                     }
-                    echo "\r\n";
                 }
+                echo "<br/>";
             }
         }
     }
