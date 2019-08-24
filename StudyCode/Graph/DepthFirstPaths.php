@@ -67,6 +67,10 @@ class DepthFirstPaths
         }
 
         $stack = new Stack();
-        for($vertex = )
+        for($vertex = $v; isset($this->edgeTo[$vertex]); $vertex = $this->edgeTo[$vertex]){
+            $stack->push($vertex);
+        }
+
+        return $stack;
     }
 }
