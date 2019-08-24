@@ -21,6 +21,7 @@ function example()
         [1, 2],
         [2, 3],
         [3, 4],
+        [1, 4],
     ];
 
     new TestPaths($array, $v, 1);
