@@ -57,12 +57,12 @@ class DepthFirstPaths
         }
     }
 
-    public function hasPathTO($v){
+    public function hasPathTo($v){
         return $this->edgeTo[$v];
     }
 
     public function pathTo($v){
-        if (!$this->hasPathTO($v)){
+        if (!$this->hasPathTo($v)){
             return false;
         }
 

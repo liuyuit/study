@@ -42,7 +42,7 @@ class TestPaths
         $search = new DepthFirstPaths($graph, $searchVertex);
 
         for ($v = 0; $v < $graph->V(); $v++){
-            if ($search->hasPathsTo($v)){
+            if ($search->hasPathTo($v)){
                 echo $searchVertex . 'TO' . $v .':';
                 $paths = $search->pathTo($v);
                 foreach ($paths as $value){
