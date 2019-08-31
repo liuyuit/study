@@ -2,10 +2,11 @@
 namespace Graph;
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
-//use Sort\Queue;
+use Sort\Queue;
 //use Graph\Search;
 //use Sort\Stack;
 
+require_once '../Sort/Queue.php';
 //require_once '../Sort/Stack.php';
 //require_once '../Graph/Graph.php';
 //require_once '../Graph/Search.php';
@@ -35,9 +36,9 @@ function BreadthFirstSearchExample()
  */
 class BreadthFirstPaths
 {
-    private $marked = [];   //
+    private $marked = [];   // 用于标记某个顶点是否已经访问过
     private $edgeTo = [];   // 从起点到任意顶点的路径上的最后一个顶点
-    private $s;
+    private $s; // 起点
 
     public function __construct(Graph $graph,int $search)
     {
