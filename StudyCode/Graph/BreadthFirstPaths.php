@@ -49,10 +49,10 @@ class BreadthFirstPaths
     private function bfs(Graph $graph, $vertex){
         $this->marked[$vertex] = true;
         $vertexQueue = new queue(); // 用于存储已经访问过但还未遍历其邻接表的顶点。
-        $vertexQueue->enQueue($vertex);
+        $vertexQueue->enQueue($vertex); // 将起点加入队列中
 
         while(!$vertexQueue->isEmpty()){
-            $vertex = $vertexQueue->deQueue();
+            $vertex = $vertexQueue->deQueue();  // 将要遍历这个顶点的邻接顶点，所以将其从队列中删除
             $adgVertexList = $graph->adg($vertex);
 
             foreach ($adgVertexList as $w){
