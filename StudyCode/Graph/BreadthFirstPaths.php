@@ -48,13 +48,18 @@ class BreadthFirstPaths
 
     private function bfs(Graph $graph, $vertex){
         $this->marked[$vertex] = true;
-        $vertexQueue = new queue();
+        $vertexQueue = new queue(); // 用于存储已经访问过但还未遍历其邻接表的顶点。
+        $vertexQueue->enQueue($vertex);
 
         while(!$vertexQueue->isEmpty()){
+            $vertex = $vertexQueue->deQueue();
             $adgVertexList = $graph->adg($vertex);
+
             foreach ($adgVertexList as $w){
                 if (empty($this->marked[$w])){
                     $this->edgeTo[$w] = $vertex;
+                    $this->marked[$w] = true;
+                    
                     $this->bfs($graph, $w);
                 }
             }
