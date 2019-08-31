@@ -4,10 +4,12 @@ ini_set("html_errors", "On");
 //use Sort\Queue;
 //use Graph\Search;
 use Graph\DepthFirstPaths;
+use Graph\BreadthFirstPaths;
 use Graph\Graph;
 
 require_once '../Graph/Graph.php';
 require_once '../Graph/DepthFirstPaths.php';
+require_once '../Graph/BreadthFirstPaths.php';
 //require_once '../Sort/Queue.php';
 //require_once '../Graph/Search.php';
 
@@ -40,7 +42,8 @@ class TestPaths
     public function __construct(array $vertexArr,int $vertexNum, $searchVertex)
     {
         $graph = new Graph($vertexArr, $vertexNum);
-        $search = new DepthFirstPaths($graph, $searchVertex);
+//        $search = new DepthFirstPaths($graph, $searchVertex);
+        $search = new BreadthFirstPaths($graph, $searchVertex);
 
         for ($v = 0; $v < $graph->V(); $v++){
             if ($search->hasPathTo($v)){

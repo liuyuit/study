@@ -59,8 +59,7 @@ class BreadthFirstPaths
                 if (empty($this->marked[$w])){
                     $this->edgeTo[$w] = $vertex;
                     $this->marked[$w] = true;
-                    
-                    $this->bfs($graph, $w);
+                    $vertexQueue->enQueue($w);
                 }
             }
         }
