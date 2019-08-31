@@ -42,17 +42,17 @@ class BreadthFirstPaths
     public function __construct(Graph $graph,int $search)
     {
         $this->s = $search;
-        $this->dfs($graph, $search);
+        $this->bfs($graph, $search);
     }
 
-    private function dfs(Graph $graph, $vertex){
+    private function bfs(Graph $graph, $vertex){
         $this->marked[$vertex] = true;
 
         $adgVertexList = $graph->adg($vertex);
         foreach ($adgVertexList as $w){
             if (empty($this->marked[$w])){
                 $this->edgeTo[$w] = $vertex;
-                $this->dfs($graph, $w);
+                $this->bfs($graph, $w);
             }
         }
     }
