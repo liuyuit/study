@@ -48,12 +48,15 @@ class BreadthFirstPaths
 
     private function bfs(Graph $graph, $vertex){
         $this->marked[$vertex] = true;
+        $vertexQueue = new queue();
 
-        $adgVertexList = $graph->adg($vertex);
-        foreach ($adgVertexList as $w){
-            if (empty($this->marked[$w])){
-                $this->edgeTo[$w] = $vertex;
-                $this->bfs($graph, $w);
+        while(!$vertexQueue->isEmpty()){
+            $adgVertexList = $graph->adg($vertex);
+            foreach ($adgVertexList as $w){
+                if (empty($this->marked[$w])){
+                    $this->edgeTo[$w] = $vertex;
+                    $this->bfs($graph, $w);
+                }
             }
         }
     }
