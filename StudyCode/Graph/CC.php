@@ -30,6 +30,8 @@ function exampleCC()
 
     $cc = new CC($graph);
     $M = $cc->count();
+    echo $M . 'components';
+
     echo '<pre>';
 //    print_r($testSearch->adg);
     echo '<pre>';
