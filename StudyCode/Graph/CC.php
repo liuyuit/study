@@ -28,6 +28,8 @@ function exampleCC()
 
     new Graph($array, $v);
 
+    $cc = new CC();
+    $M =
     echo '<pre>';
 //    print_r($testSearch->adg);
     echo '<pre>';
