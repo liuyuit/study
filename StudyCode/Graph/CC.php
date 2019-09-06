@@ -32,7 +32,12 @@ function exampleCC()
     $M = $cc->count();
     echo $M . 'components';
 
-    
+    $components = [];
+    for ($v = 0; $v < $graph->V(); $v++){
+        $components[$cc->id($v)] = $v;
+    }
+
+
 
     echo '<pre>';
 //    print_r($testSearch->adg);
