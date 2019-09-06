@@ -26,10 +26,10 @@ function exampleCC()
         [1, 4],
     ];
 
-    new Graph($array, $v);
+    $graph = new Graph($array, $v);
 
-    $cc = new CC();
-    $M =
+    $cc = new CC($graph);
+    $M = $cc->count();
     echo '<pre>';
 //    print_r($testSearch->adg);
     echo '<pre>';
@@ -41,26 +41,9 @@ function exampleCC()
  */
 class CC
 {
-    public function __construct(array $vertexArr,int $vertexNum, $searchVertex)
+    public function __construct($graph)
     {
-        $graph = new Graph($vertexArr, $vertexNum);
-//        $search = new DepthFirstPaths($graph, $searchVertex);
-        $search = new BreadthFirstPaths($graph, $searchVertex);
 
-        for ($v = 0; $v < $graph->V(); $v++){
-            if ($search->hasPathTo($v)){
-                echo $searchVertex . 'TO' . $v .': &nbsp&nbsp&nbsp';
-                $paths = $search->pathTo($v);
-                foreach ($paths as $value){
-                    if($value == $searchVertex){
-                        echo $value;
-                    }else{
-                        echo '-' . $value;
-                    }
-                }
-                echo "<br/>";
-            }
-        }
     }
 }
 
