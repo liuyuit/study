@@ -37,7 +37,7 @@ function exampleCC()
         $components[$cc->id($v)] = $v;
     }
 
-
+    for ($i)
 
     echo '<pre>';
 //    print_r($testSearch->adg);
