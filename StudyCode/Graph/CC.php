@@ -32,6 +32,8 @@ function exampleCC()
     $M = $cc->count();
     echo $M . 'components';
 
+    
+
     echo '<pre>';
 //    print_r($testSearch->adg);
     echo '<pre>';
