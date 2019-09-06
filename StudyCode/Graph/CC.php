@@ -13,9 +13,9 @@ require_once '../Graph/Graph.php';
 //require_once '../Sort/Queue.php';
 //require_once '../Graph/Search.php';
 
-example();
+exampleCC();
 
-function example()
+function exampleCC()
 {
     $v = 5;
     $array = [
@@ -26,7 +26,7 @@ function example()
         [1, 4],
     ];
 
-    new TestPaths($array, $v, 1);
+    new CC($array, $v, 1);
 
     echo '<pre>';
 //    print_r($testSearch->adg);
@@ -37,7 +37,7 @@ function example()
 /**
  * 图
  */
-class TestPaths
+class CC
 {
     public function __construct(array $vertexArr,int $vertexNum, $searchVertex)
     {
