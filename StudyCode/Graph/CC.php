@@ -26,7 +26,7 @@ function exampleCC()
         [1, 4],
     ];
 
-    new CC($array, $v, 1);
+    new Graph($array, $v);
 
     echo '<pre>';
 //    print_r($testSearch->adg);
