@@ -37,7 +37,14 @@ function exampleCC()
         $components[$cc->id($v)] = $v;
     }
 
-    for ($i)
+    for ($i = 0; $i < $M; $i++){
+        $vertexComponents = $components[$i];
+
+        foreach ($vertexComponents as $vertex){
+            echo $vertex . ' ';
+        }
+        echo '<br/>';
+    }
 
     echo '<pre>';
 //    print_r($testSearch->adg);
