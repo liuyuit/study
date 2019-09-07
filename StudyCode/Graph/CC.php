@@ -59,6 +59,14 @@ class CC
     {
 
     }
+
+    public function id(int $v){
+        return $v;
+    }
+
+    public function count(){
+        return 1;
+    }
 }
 
 
