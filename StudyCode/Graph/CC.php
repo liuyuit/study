@@ -62,9 +62,11 @@ class CC
     private $id = [];
     private $count = 0;
 
-    public function __construct($graph)
+    public function __construct(Graph $graph)
     {
-        
+        for ($s = 0; $s < $graph->V(); $s++){
+            if ()
+        }
     }
 
     public function dfs(Graph $graph, int $v){
