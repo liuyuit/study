@@ -64,7 +64,7 @@ class CC
 
     public function __construct($graph)
     {
-
+        
     }
 
     public function dfs(Graph $graph, int $v){
