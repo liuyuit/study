@@ -55,9 +55,13 @@ function exampleCC()
  */
 class CC
 {
+    private $marked = [];
+    private $id = [];
+    private $count = 0;
+
     public function __construct($graph)
     {
-
+        
     }
 
     public function id(int $v){
