@@ -73,7 +73,15 @@ class CC
     }
 
     public function dfs(Graph $graph, int $v){
+        $this->marked[$v] = true; // 将该顶点标记为已访问
+        $this->id[$v] = $this->count;
 
+        $adgVertexes = $graph->adg($v);
+        foreach ($adgVertexes as $adgVertex){
+            if (empty($this->marked[$adgVertex])){
+                $this->dfs($graph, $adgVertex);
+            }
+        }
     }
 
     public function connected($v, $w){
@@ -81,11 +89,11 @@ class CC
     }
 
     public function id(int $v){
-        return $v;
+        return $this->id[$v];
     }
 
     public function count(){
-        return 1;
+        return $this->count;
     }
 }
 
