@@ -65,12 +65,15 @@ class CC
     public function __construct(Graph $graph)
     {
         for ($s = 0; $s < $graph->V(); $s++){
-            if ()
+            if (empty($this->marked[$s])){
+                $this->dfs($graph, $s);
+                $this->count++;
+            }
         }
     }
 
     public function dfs(Graph $graph, int $v){
-
+        
     }
 
     public function connected($v, $w){
