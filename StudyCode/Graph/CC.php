@@ -37,7 +37,7 @@ function exampleCC()
 
     $components = [];
     for ($v = 0; $v < $graph->V(); $v++){
-        $components[$cc->id($v)] = $v;
+        $components[$cc->id($v)][] = $v;
     }
 
     foreach ($components as $vertexes){
