@@ -17,13 +17,16 @@ exampleCC();
 
 function exampleCC()
 {
-    $v = 5;
+    $v = 9;
     $array = [
         [0, 1],
         [1, 2],
         [2, 3],
         [3, 4],
         [1, 4],
+        [5, 6],
+        [6, 7],
+        [7, 8],
     ];
 
     $graph = new Graph($array, $v);
