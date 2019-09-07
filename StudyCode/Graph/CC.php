@@ -64,7 +64,15 @@ class CC
 
     public function __construct($graph)
     {
-        
+
+    }
+
+    public function dfs(Graph $graph, int $v){
+
+    }
+
+    public function connected($v, $w){
+        return $this->id[$v] === $this->id[$w];
     }
 
     public function id(int $v){
