@@ -24,6 +24,7 @@ function exampleCC()
         [2, 3],
         [3, 4],
         [1, 4],
+        [4, 0],
         [5, 6],
         [6, 7],
         [7, 8],
@@ -34,6 +35,7 @@ function exampleCC()
     $cc = new CC($graph);
     $M = $cc->count();
     echo $M . 'components';
+    echo '<br/>';
 
     $components = [];
     for ($v = 0; $v < $graph->V(); $v++){
