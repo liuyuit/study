@@ -57,7 +57,7 @@ class CC
 {
     public function __construct($graph)
     {
-
+        
     }
 
     public function id(int $v){
