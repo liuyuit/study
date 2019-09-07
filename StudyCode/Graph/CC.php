@@ -38,9 +38,9 @@ function exampleCC()
     }
 
     for ($i = 0; $i < $M; $i++){
-        $vertexComponents = $components[$i];
+        $vertexs = $components[$i];
 
-        foreach ($vertexComponents as $vertex){
+        foreach ($vertexs as $vertex){
             echo $vertex . ' ';
         }
         echo '<br/>';
