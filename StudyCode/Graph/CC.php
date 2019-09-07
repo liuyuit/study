@@ -37,10 +37,8 @@ function exampleCC()
         $components[$cc->id($v)] = $v;
     }
 
-    for ($i = 0; $i < $M; $i++){
-        $vertexs = $components[$i];
-
-        foreach ($vertexs as $vertex){
+    foreach ($components as $vertexes){
+        foreach ($vertexes as $vertex){
             echo $vertex . ' ';
         }
         echo '<br/>';
