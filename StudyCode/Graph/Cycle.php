@@ -86,16 +86,8 @@ class Cycle
         }
     }
 
-    public function connected($v, $w){
+    public function hasCycle(){
         return $this->id[$v] === $this->id[$w];
-    }
-
-    public function id(int $v){
-        return $this->id[$v];
-    }
-
-    public function count(){
-        return $this->count;
     }
 }
 
