@@ -33,25 +33,16 @@ function exampleCycle()
     $graph = new Graph($array, $v);
 
     $cc = new Cycle($graph);
-    $M = $cc->count();
-    echo $M . 'components';
-    echo '<br/>';
-
-    $components = [];
-    for ($v = 0; $v < $graph->V(); $v++){
-        $components[$cc->id($v)][] = $v;
+    if ($cc->hasCycle()){
+        echo 'has cycle';
+    } else {
+        echo 'not cycle';
     }
 
-    foreach ($components as $vertexes){
-        foreach ($vertexes as $vertex){
-            echo $vertex . ' ';
-        }
-        echo '<br/>';
-    }
 
-    echo '<pre>';
+//    echo '<pre>';
 //    print_r($testSearch->adg);
-    echo '<pre>';
+//    echo '<pre>';
 }
 
 
@@ -61,22 +52,19 @@ function exampleCycle()
 class Cycle
 {
     private $marked = [];
-    private $id = [];
-    private $count = 0;
+    private $hasCycle;
 
     public function __construct(Graph $graph)
     {
         for ($s = 0; $s < $graph->V(); $s++){
             if (empty($this->marked[$s])){
                 $this->dfs($graph, $s);
-                $this->count++;
             }
         }
     }
 
     public function dfs(Graph $graph, int $v){
         $this->marked[$v] = true; // 将该顶点标记为已访问
-        $this->id[$v] = $this->count;
 
         $adgVertexes = $graph->adg($v);
         foreach ($adgVertexes as $adgVertex){
@@ -87,7 +75,7 @@ class Cycle
     }
 
     public function hasCycle(){
-        return $this->id[$v] === $this->id[$w];
+        return $this->hasCycle;
     }
 }
 
