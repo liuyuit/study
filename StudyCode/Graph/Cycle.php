@@ -13,9 +13,9 @@ require_once '../Graph/Graph.php';
 //require_once '../Sort/Queue.php';
 //require_once '../Graph/Search.php';
 
-exampleCC();
+exampleCycle();
 
-function exampleCC()
+function exampleCycle()
 {
     $v = 9;
     $array = [
@@ -32,7 +32,7 @@ function exampleCC()
 
     $graph = new Graph($array, $v);
 
-    $cc = new CC($graph);
+    $cc = new Cycle($graph);
     $M = $cc->count();
     echo $M . 'components';
     echo '<br/>';
@@ -58,7 +58,7 @@ function exampleCC()
 /**
  * 图
  */
-class CC
+class Cycle
 {
     private $marked = [];
     private $id = [];
