@@ -23,7 +23,7 @@ function exampleCycle()
         [1, 2],
         [2, 3],
         [3, 4],
-//        [1, 4],
+        [1, 4],
 //        [4, 0],
         [5, 6],
         [6, 7],
@@ -70,7 +70,7 @@ class Cycle
         foreach ($adgVertexes as $adgVertex){
             if (empty($this->marked[$adgVertex])){
                 $this->dfs($graph, $adgVertex, $v);
-            }elseif ($adgVertex != $v){
+            }elseif ($adgVertex != $u){
                 $this->hasCycle = true;
             }
         }
