@@ -58,18 +58,20 @@ class Cycle
     {
         for ($s = 0; $s < $graph->V(); $s++){
             if (empty($this->marked[$s])){
-                $this->dfs($graph, $s);
+                $this->dfs($graph, $s, $s);
             }
         }
     }
 
-    public function dfs(Graph $graph, int $v){
+    public function dfs(Graph $graph, int $v, int $u){
         $this->marked[$v] = true; // 将该顶点标记为已访问
 
         $adgVertexes = $graph->adg($v);
         foreach ($adgVertexes as $adgVertex){
             if (empty($this->marked[$adgVertex])){
-                $this->dfs($graph, $adgVertex);
+                $this->dfs($graph, $adgVertex, $v);
+            }elseif ($adgVertex != $v){
+                $this->hasCycle = true;
             }
         }
     }
