@@ -52,7 +52,7 @@ function exampleCycle()
 class Cycle
 {
     private $marked = [];
-    private $hasCycle;
+    private $hasCycle = false;
 
     public function __construct(Graph $graph)
     {
