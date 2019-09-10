@@ -71,6 +71,7 @@ class Cycle
             if (empty($this->marked[$adgVertex])){
                 $this->dfs($graph, $adgVertex, $v);
             }elseif ($adgVertex != $u){
+                // 访问到了一个已被标记的顶点，并且这个顶点不是上一个
                 $this->hasCycle = true;
             }
         }
