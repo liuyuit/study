@@ -71,8 +71,8 @@ class Cycle
             if (empty($this->marked[$adgVertex])){
                 $this->dfs($graph, $adgVertex, $v);
             }elseif ($adgVertex != $u){
-                // 访问到了一个已被标记的顶点，并且这个顶点不是上一个递归访问的顶点，
-                // 
+                // 遍历到了一个已被标记的顶点，并且这个顶点不是上一个递归访问的顶点，
+                // 这个顶点在两条路线上被遍历到，所以这是个有环图
                 $this->hasCycle = true;
             }
         }
