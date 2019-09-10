@@ -72,7 +72,7 @@ class TwoColor
         $adgVertexes = $graph->adg($v);
         foreach ($adgVertexes as $adgVertex){
             if (empty($this->marked[$adgVertex])){
-
+                $this->color[$adgVertex] = !$this->color[$v];
                 $this->dfs($graph, $adgVertex);
             }elseif ($adgVertex ){
                 // 遍历到了一个已被标记的顶点，并且这个顶点不是上一个递归访问的顶点，
