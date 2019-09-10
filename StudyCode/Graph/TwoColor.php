@@ -52,6 +52,7 @@ function exampleTwoColor()
 class TwoColor
 {
     private $marked = [];
+    private $
     private $hasCycle = false;
 
     public function __construct(Graph $graph)
