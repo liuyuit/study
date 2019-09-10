@@ -13,9 +13,9 @@ require_once '../Graph/Graph.php';
 //require_once '../Sort/Queue.php';
 //require_once '../Graph/Search.php';
 
-exampleCycle();
+exampleTwoColor();
 
-function exampleCycle()
+function exampleTwoColor()
 {
     $v = 9;
     $array = [
@@ -32,7 +32,7 @@ function exampleCycle()
 
     $graph = new Graph($array, $v);
 
-    $cc = new Cycle($graph);
+    $cc = new TwoColor($graph);
     if ($cc->hasCycle()){
         echo 'has cycle';
     } else {
@@ -49,7 +49,7 @@ function exampleCycle()
 /**
  * 图
  */
-class Cycle
+class TwoColor
 {
     private $marked = [];
     private $hasCycle = false;
