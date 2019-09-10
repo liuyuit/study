@@ -59,7 +59,7 @@ class TwoColor
     {
         for ($s = 0; $s < $graph->V(); $s++){
             if (empty($this->marked[$s])){
-                //
+                // 每个连通分量只有一个顶点会进入这个分支
                 $this->dfs($graph, $s);
             }
         }
@@ -67,6 +67,7 @@ class TwoColor
 
     public function dfs(Graph $graph, int $v){
         $this->marked[$v] = true; // 将该顶点标记为已访问
+        
 
         $adgVertexes = $graph->adg($v);
         foreach ($adgVertexes as $adgVertex){
