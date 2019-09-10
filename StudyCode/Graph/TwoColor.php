@@ -59,18 +59,19 @@ class TwoColor
     {
         for ($s = 0; $s < $graph->V(); $s++){
             if (empty($this->marked[$s])){
-                $this->dfs($graph, $s, $s);
+                $this->dfs($graph, $s);
             }
         }
     }
 
-    public function dfs(Graph $graph, int $v, int $u){
+    public function dfs(Graph $graph, int $v){
         $this->marked[$v] = true; // 将该顶点标记为已访问
 
         $adgVertexes = $graph->adg($v);
         foreach ($adgVertexes as $adgVertex){
             if (empty($this->marked[$adgVertex])){
-                $this->dfs($graph, $adgVertex, $v);
+
+                $this->dfs($graph, $adgVertex);
             }elseif ($adgVertex != $u){
                 // 遍历到了一个已被标记的顶点，并且这个顶点不是上一个递归访问的顶点，
                 // 这个顶点在两条路线上被遍历到，所以这是个有环图
