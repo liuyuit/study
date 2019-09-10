@@ -33,10 +33,10 @@ function exampleTwoColor()
     $graph = new Graph($array, $v);
 
     $cc = new TwoColor($graph);
-    if ($cc->hasCycle()){
-        echo 'has cycle';
+    if ($cc->isBipartite()){
+        echo 'is bipartite';
     } else {
-        echo 'not cycle';
+        echo 'not bipartite';
     }
 
 
