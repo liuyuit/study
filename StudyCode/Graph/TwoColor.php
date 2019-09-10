@@ -59,6 +59,7 @@ class TwoColor
     {
         for ($s = 0; $s < $graph->V(); $s++){
             if (empty($this->marked[$s])){
+                //
                 $this->dfs($graph, $s);
             }
         }
@@ -81,7 +82,7 @@ class TwoColor
     }
 
     public function hasCycle(){
-        return $this->hasCycle;
+        return $this->isTwoColorable;
     }
 }
 
