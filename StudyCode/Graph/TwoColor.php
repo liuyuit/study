@@ -68,7 +68,6 @@ class TwoColor
     public function dfs(Graph $graph, int $v){
         $this->marked[$v] = true; // 将该顶点标记为已访问
 
-
         $adgVertexes = $graph->adg($v);
         foreach ($adgVertexes as $adgVertex){
             if (empty($this->marked[$adgVertex])){
