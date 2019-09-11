@@ -60,6 +60,7 @@ class TwoColor
         for ($s = 0; $s < $graph->V(); $s++){
             if (empty($this->marked[$s])){
                 // 每个连通分量只有一个顶点会进入这个分支
+                $this->color[$s] = true;
                 $this->dfs($graph, $s);
             }
         }
@@ -73,7 +74,7 @@ class TwoColor
             if (empty($this->marked[$adgVertex])){
                 $this->color[$adgVertex] = !$this->color[$v];
                 $this->dfs($graph, $adgVertex);
-            }elseif ($adgVertex ){
+            }elseif ($this->color[$adgVertex] === $this->color[$v] ){
                 // 遍历到了一个已被标记的顶点，并且这个顶点不是上一个递归访问的顶点，
                 // 这个顶点在两条路线上被遍历到，所以这是个有环图
                 $this->isTwoColorable = true;
