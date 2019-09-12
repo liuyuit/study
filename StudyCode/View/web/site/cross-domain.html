@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <title>跨域测试</title>
-    <script src="./h5Game/js/jquery-1.8.2.min.js"></script>
+    <script src="./jquery.js"></script>
     <script>
         //回调函数
         // function showData (result) {
@@ -14,18 +14,19 @@
 
         //     $("#btn").click(function () {
         //         //向头部输入一个脚本，该脚本发起一个跨域请求
-        //         $("head").append("<script src='http://apisdk.ggxx.local/cite.php?callback=showData'><\/script>");
+        //         $("head").append("<script src='http://applyapi.ggxx.local/cite.php?callback=showData'><\/script>");
         //     });
 
         // });
         $(function(){
             
             $.ajax({
-                url:'http://apisdk.ggxx.local/cite.php?callback=showData',
+                url:'http://applyapi.ggxx.local/cite.php?callback=showData',
                 type:'GET',
                 dataType:'jsonp',
                 success:function(data){
                     var data = JSON.stringify(data); //json对象转成字符串
+                    console.log(data);
                     $("#text").val(data);
                 }
             });
