@@ -13,7 +13,7 @@ require_once '../Graph/Graph.php';
 //require_once '../Sort/Queue.php';
 //require_once '../Graph/Search.php';
 
-exampleTwoColor();
+exampleCC();
 
 function exampleCC()
 {
