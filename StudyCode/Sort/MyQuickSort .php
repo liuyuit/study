@@ -2,7 +2,7 @@
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 
-$QuickSort = new QuickSort();
+$QuickSort = new MyQuickSort();
 
 
 
@@ -10,11 +10,10 @@ $QuickSort = new QuickSort();
 /**
  * 快速排序
  */
-class QuickSort
+class MyQuickSort
 {
     public function __construct()
     {
-        
         $this->example();
     }
 

@@ -35,7 +35,7 @@ class Stack
 
     public function push($item){
         $oldFirst = $this->first;
-        $first = new stdClass();
+        $first = new \stdClass();
         $first->item = $item;
         $first->next = $oldFirst;
         $this->first = $first;

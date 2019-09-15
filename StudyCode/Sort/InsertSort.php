@@ -2,14 +2,13 @@
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 
-$InsertSort = new InsertSort();
-
+$insertSort = new InsertSort();
 
 
 /**
  * 插入排序
  */
-    class InsertSort
+class InsertSort
 {
     public function __construct()
     {
@@ -18,7 +17,7 @@ $InsertSort = new InsertSort();
 
     private function example()
     {
-        $array = [123,346,12,13,128,3425,11,-12];
+        $array = [123, 346, 12, 13, 128, 3425, 11, -12];
         $newArray = $this->InsertSort($array);
         print_r($newArray);
     }
@@ -26,12 +25,12 @@ $InsertSort = new InsertSort();
     private function InsertSort(array $array)
     {
         $j = count($array);
-        for ($i = 1; $i < $j; $i++){
+        for ($i = 1; $i < $j; $i++) {
             $current = $array[$i];
-            $preIndex = $i-1;
+            $preIndex = $i - 1;
 
-            while ($preIndex >= 0 && $array[$preIndex] > $current){
-                $array[$preIndex +1] = $array[$preIndex];
+            while ($preIndex >= 0 && $array[$preIndex] > $current) {
+                $array[$preIndex + 1] = $array[$preIndex];
                 $preIndex--;
             }
 
@@ -40,13 +39,14 @@ $InsertSort = new InsertSort();
         return $array;
     }
 
-    private function InsertSort1(array $array){
+    private function InsertSort1(array $array)
+    {
         $j = count($array);
 
-        for ($i = 1; $i < $j; $i++){
-            for ($k = $i; $k >= 0; $k--){
-                if ($array[$k] < $array[$k -1]){
-                    $this->swap($array, $k, $k -1);
+        for ($i = 1; $i < $j; $i++) {
+            for ($k = $i; $k >= 0; $k--) {
+                if ($array[$k] < $array[$k - 1]) {
+                    $this->swap($array, $k, $k - 1);
                 } else {
                     break;
                 }
@@ -56,8 +56,8 @@ $InsertSort = new InsertSort();
     }
 
 
-
-    private function swap(&$array, $i, $j){
+    private function swap(&$array, $i, $j)
+    {
         $temp = $array[$i];
         $array[$i] = $array[$j];
         $array[$j] = $temp;
