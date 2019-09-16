@@ -19,15 +19,15 @@ function exampleSymbolGraphTest()
 {
     $v = 9;
     $array = [
-        [0, 1],
-        [1, 2],
-        [2, 3],
-        [3, 4],
-//        [1, 4],
-//        [4, 0],
-        [5, 6],
-        [6, 7],
-        [7, 8],
+        ['movie0', 1],
+        ['movie1', 2],
+        ['movie2', 3],
+        ['movie3', 4],
+//        ['movie1', 4],
+//        ['movie4', 0],
+        ['movie5', 6],
+        ['movie6', 7],
+        ['movie7', 8],
     ];
 
     $graph = new SymbolGraphTest($array, $v);
