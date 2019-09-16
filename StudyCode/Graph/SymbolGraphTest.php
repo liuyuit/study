@@ -13,9 +13,9 @@ require_once '../Graph/Graph.php';
 //require_once '../Sort/Queue.php';
 //require_once '../Graph/Search.php';
 
-exampleTwoColor();
+exampleSymbolGraphTest();
 
-function exampleTwoColor()
+function exampleSymbolGraphTest()
 {
     $v = 9;
     $array = [
@@ -30,7 +30,7 @@ function exampleTwoColor()
         [7, 8],
     ];
 
-    $graph = new Graph($array, $v);
+    $graph = new SymbolGraphTest($array, $v);
 
     $cc = new TwoColor($graph);
     if ($cc->isBipartite()){
@@ -49,7 +49,7 @@ function exampleTwoColor()
 /**
  * 图
  */
-class TwoColor
+class SymbolGraphTest
 {
     private $marked = [];
     private $color = [];
