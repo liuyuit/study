@@ -3,44 +3,44 @@
     <meta charset="utf-8">
     <title>跨域测试</title>
     <script src="./jquery.js"></script>
-    <script>
-        //回调函数
-        // function showData (result) {
-        //     var data = JSON.stringify(result); //json对象转成字符串
-        //     $("#text").val(data);
-        // }
 
-        // $(document).ready(function () {
-
-        //     $("#btn").click(function () {
-        //         //向头部输入一个脚本，该脚本发起一个跨域请求
-        //         $("head").append("<script src='http://applyapi.ggxx.local/cite.php?callback=showData'><\/script>");
-        //     });
-
-        // });
-        $(function(){
-            
-            $.ajax({
-                url:'http://applyapi.ggxx.local/cite.php?callback=showData',
-                type:'GET',
-                dataType:'jsonp',
-                success:function(data){
-                    var data = JSON.stringify(data); //json对象转成字符串
-                    console.log(data);
-                    $("#text").val(data);
-                }
-            });
-
-
-        });
-
-        
-
-    </script>
 </head>
 <body>
     <input id="btn" type="button" value="跨域获取数据" />
     <textarea id="text" style="width: 400px; height: 100px;"></textarea>
 
 </body>
+<script>
+    //回调函数
+    function showData (result) {
+        var data = JSON.stringify(result); //json对象转成字符串
+        $("#text").val(data);
+    }
+
+    // $(document).ready(function () {
+
+    $("#btn").click(function () {
+        alert(11);
+        //向头部输入一个脚本，该脚本发起一个跨域请求
+        $("head").append("<script src='http://applyapi.ggxx.local/cite.php?callback=showData'><\/script>");
+    });
+
+    // });
+    /*$(function(){
+        $.ajax({
+            url:'http://applyapi.ggxx.local/cite.php?callback=showData',
+            type:'GET',
+            dataType:'json',
+            success:function(data){
+                alert(1);
+                var data = JSON.stringify(data); //json对象转成字符串
+                console.log(data);
+                $("#text").val(data);
+            }
+        });
+    });*/
+
+
+
+</script>
 </html>
