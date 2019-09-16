@@ -46,7 +46,7 @@ class SymbolGraphTest
     private $color = [];
     private $isTwoColorable = true;
 
-    public function __construct($vertexs)
+    public function __construct($vertexes)
     {
         
     }
