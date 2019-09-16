@@ -30,16 +30,7 @@ function exampleSymbolGraphTest()
         ['movie7', 'actor8'],
     ];
 
-    $graph = new SymbolGraphTest($array, $v);
-
-    $cc = new TwoColor($graph);
-    if ($cc->isBipartite()){
-        echo 'is bipartite';
-    } else {
-        echo 'not bipartite';
-    }
-
-
+    $symbolGraphTest = new SymbolGraphTest($array);
 //    echo '<pre>';
 //    print_r($testSearch->adg);
 //    echo '<pre>';
@@ -55,15 +46,9 @@ class SymbolGraphTest
     private $color = [];
     private $isTwoColorable = true;
 
-    public function __construct(Graph $graph)
+    public function __construct($vertexs)
     {
-        for ($s = 0; $s < $graph->V(); $s++){
-            if (empty($this->marked[$s])){
-                // 每个连通分量只有一个顶点会进入这个分支
-                $this->color[$s] = true;
-                $this->dfs($graph, $s);
-            }
-        }
+        
     }
 }
 
