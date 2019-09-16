@@ -65,27 +65,6 @@ class SymbolGraphTest
             }
         }
     }
-
-    public function dfs(Graph $graph, int $v){
-        $this->marked[$v] = true; // 将该顶点标记为已访问
-
-        $adgVertexes = $graph->adg($v);
-        foreach ($adgVertexes as $adgVertex){
-            if (empty($this->marked[$adgVertex])){
-                $this->color[$adgVertex] = !$this->color[$v];
-                $this->dfs($graph, $adgVertex);
-            }elseif ($this->color[$adgVertex] === $this->color[$v] ){
-                // 遍历到了一个已被标记的顶点，并且这个顶点不是上一个递归访问的顶点，
-                // 这个顶点在两条路线上被遍历到，所以这是个有环图
-                // 并且这两个相邻的顶点颜色相同，所以不是一个二分图
-                $this->isTwoColorable = false;
-            }
-        }
-    }
-
-    public function isBipartite(){
-        return $this->isTwoColorable;
-    }
 }
 
 
