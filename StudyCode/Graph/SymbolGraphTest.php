@@ -48,6 +48,9 @@ class SymbolGraphTest
 
     public function __construct($vertexes)
     {
+        $symbolGraph = new SymbolGraph($vertexes);
+        $graph = $symbolGraph->G();
+
         
     }
 }
