@@ -4,9 +4,6 @@ ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 
 
-/**
- * 图
- */
 class SymbolGraph
 {
     private $marked = [];   // 用于标记某个顶点是否已经访问过
