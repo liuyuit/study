@@ -6,8 +6,10 @@ ini_set("html_errors", "On");
 //use Graph\DepthFirstPaths;
 //use Graph\BreadthFirstPaths;
 use Graph\Graph;
+use Graph\SymbolGraph;
 
 require_once '../Graph/Graph.php';
+require_once '../Graph/SymbolGraph.php';
 //require_once '../Graph/DepthFirstPaths.php';
 //require_once '../Graph/BreadthFirstPaths.php';
 //require_once '../Sort/Queue.php';
