@@ -6,5 +6,13 @@ ini_set("html_errors", "On");
 
 class SymbolGraph
 {
-    private $st = [];   // 
+    private $st = [];   // 符号名-》索引
+    private $keys = []; // 索引-》符号名
+    private  $G;    // 图的引用
+
+    public function __construct()
+    {
+    }
+
+    
 }
