@@ -20,7 +20,15 @@ class SymbolGraph
 
     }
 
-    public function index(){
+    public function index(string $s){
 
+    }
+
+    public function name(int $v){
+
+    }
+
+    public function G(){
+        return $this->G;
     }
 }
