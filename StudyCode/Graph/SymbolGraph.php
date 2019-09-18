@@ -11,9 +11,9 @@ class SymbolGraph
     private $keys = []; // 索引-》符号名
     private $G;    // 图的引用
 
-    public function __construct()
+    public function __construct($data)
     {
-        
+        foreach ($data as $)
     }
 
     public function contains(string $s): bool
