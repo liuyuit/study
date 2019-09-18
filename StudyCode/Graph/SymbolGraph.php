@@ -13,7 +13,7 @@ class SymbolGraph
 
     public function __construct()
     {
-        
+
     }
 
     public function contains(string $s): bool
