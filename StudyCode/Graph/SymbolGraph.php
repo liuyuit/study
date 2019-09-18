@@ -14,8 +14,12 @@ class SymbolGraph
     public function __construct($data)
     {
         foreach ($data as $lineData){
-            foreach ($lineData as )
+            foreach ($lineData as $vertex){
+                $this->st[$vertex] = count($this->st);
+            }
         }
+
+
     }
 
     public function contains(string $s): bool
