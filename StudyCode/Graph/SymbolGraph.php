@@ -13,6 +13,7 @@ class SymbolGraph
 
     public function __construct()
     {
+        
     }
 
     public function contains(string $s): bool
@@ -21,11 +22,11 @@ class SymbolGraph
     }
 
     public function index(string $s){
-    
+        return $this->st[$s];
     }
 
     public function name(int $v){
-
+        return $this->keys[$v];
     }
 
     public function G(){
