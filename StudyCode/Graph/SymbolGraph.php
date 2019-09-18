@@ -13,7 +13,9 @@ class SymbolGraph
 
     public function __construct($data)
     {
-        foreach ($data as $)
+        foreach ($data as $lineData){
+            foreach ($lineData as )
+        }
     }
 
     public function contains(string $s): bool
