@@ -17,11 +17,11 @@ class SymbolGraph
 
     public function contains(string $s): bool
     {
-
+        return isset($this->st[$s]);
     }
 
     public function index(string $s){
-
+    
     }
 
     public function name(int $v){
