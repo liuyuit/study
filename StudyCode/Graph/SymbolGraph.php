@@ -25,7 +25,9 @@ class SymbolGraph
             $this->keys[$key] = $name;
         }
 
-        
+        foreach ($data as $lineData){
+            $v = $lineData[0];  // 将每一个行的顶点
+        }
     }
 
     public function contains(string $s): bool
