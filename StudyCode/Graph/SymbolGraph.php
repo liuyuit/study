@@ -25,7 +25,7 @@ class SymbolGraph
             $this->keys[$key] = $name;
         }
 
-        
+
     }
 
     public function contains(string $s): bool
