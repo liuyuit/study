@@ -27,7 +27,9 @@ class SymbolGraph
 
         foreach ($data as $lineData){
             $v = $lineData[0];  // 将每一个行的顶点和该行的其他顶点相连
-            for ($i = 1; $i < )
+            for ($i = 1; $i < count($lineData); $i++){
+                
+            }
         }
     }
 
