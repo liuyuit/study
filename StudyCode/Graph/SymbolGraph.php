@@ -20,6 +20,8 @@ class SymbolGraph
                 }
             }
         }
+
+        foreach ($this->st as $key)
     }
 
     public function contains(string $s): bool
