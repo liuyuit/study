@@ -14,8 +14,10 @@ class SymbolGraph
     public function __construct($data)
     {
         foreach ($data as $lineData){
-            foreach ($lineData as $vertex){     // 为每个不同的
-                $this->st[$vertex] = count($this->st);
+            foreach ($lineData as $vertex){     // 为每个不同的字符串关联一个索引
+                if (!$this->contains($vertex)){
+                    $this->st[$vertex] = count($this->st);
+                }
             }
         }
     }
