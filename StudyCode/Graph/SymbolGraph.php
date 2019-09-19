@@ -14,7 +14,7 @@ class SymbolGraph
     public function __construct($data)
     {
         foreach ($data as $lineData){
-            foreach ($lineData as $vertex){
+            foreach ($lineData as $vertex){     // 为每个不同的
                 $this->st[$vertex] = count($this->st);
             }
         }
