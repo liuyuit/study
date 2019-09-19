@@ -18,8 +18,6 @@ class SymbolGraph
                 $this->st[$vertex] = count($this->st);
             }
         }
-
-
     }
 
     public function contains(string $s): bool
