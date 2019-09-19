@@ -22,7 +22,7 @@ class SymbolGraph
         }
 
         foreach ($this->st as $name => $item){
-            
+            $this->keys[]
         }
     }
 
