@@ -21,7 +21,9 @@ class SymbolGraph
             }
         }
 
-        foreach ($this->st as $key)
+        foreach ($this->st as $name => $item){
+            
+        }
     }
 
     public function contains(string $s): bool
