@@ -21,9 +21,11 @@ class SymbolGraph
             }
         }
 
-        foreach ($this->st as $name => $item){
-            $this->keys[]
+        foreach ($this->st as $name => $key){ // 用来获得顶点名的反向索引是一个数组
+            $this->keys[$key] = $name;
         }
+
+        
     }
 
     public function contains(string $s): bool
