@@ -53,7 +53,9 @@ class SymbolGraphTest
         $symbolGraph = new SymbolGraph($vertexes);
         $graph = $symbolGraph->G();
 
-        
+        foreach ($vertexes as $vertexLine){
+            foreach ()
+        }
         var_dump($graph);
     }
 }
