@@ -54,11 +54,12 @@ class SymbolGraphTest
         $graph = $symbolGraph->G();
 
         foreach ($vertexes as $vertexLine){
+            
             foreach ($graph->adg($vertexLine[0]) as $adgVertex){
-                echo ''
+                echo $adgVertex . "\n";
             }
         }
-        var_dump($graph);
+//        var_dump($graph);
     }
 }
 
