@@ -53,6 +53,7 @@ class SymbolGraphTest
         $symbolGraph = new SymbolGraph($vertexes);
         $graph = $symbolGraph->G();
 
+        
         var_dump($graph);
     }
 }
