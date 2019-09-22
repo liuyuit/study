@@ -44,9 +44,6 @@ function exampleSymbolGraphTest()
  */
 class SymbolGraphTest
 {
-    private $marked = [];
-    private $color = [];
-    private $isTwoColorable = true;
 
     public function __construct($vertexes)
     {
