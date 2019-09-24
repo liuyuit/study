@@ -6,8 +6,10 @@ ini_set("html_errors", "On");
 //use Graph\DepthFirstPaths;
 //use Graph\BreadthFirstPaths;
 use Graph\Graph;
+use Graph\SymbolGraph;
 
 require_once '../Graph/Graph.php';
+require_once '../Graph/SymbolGraph.php';
 //require_once '../Graph/DepthFirstPaths.php';
 //require_once '../Graph/BreadthFirstPaths.php';
 //require_once '../Sort/Queue.php';
@@ -19,15 +21,15 @@ function exampleSymbolGraphTest()
 {
     $v = 9;
     $array = [
-        ['movie0', 'actor1'],
-        ['movie1', 'actor2'],
-        ['movie2', 'actor3'],
-        ['movie3', 'actor4'],
+        ['movie0', 'actor0', 'actor01', 'actor02'],
+        ['movie1', 'actor1', 'actor11', 'actor12'],
+        ['movie2', 'actor2'],
+        ['movie3', 'actor3'],
 //        ['movie1', 'actor4'],
 //        ['movie4', 'actor0'],
-        ['movie5', 'actor6'],
-        ['movie6', 'actor7'],
-        ['movie7', 'actor8'],
+//        ['movie5', 'actor6'],
+//        ['movie6', 'actor7'],
+//        ['movie7', 'actor8'],
     ];
 
     $symbolGraphTest = new SymbolGraphTest($array);
@@ -42,16 +44,21 @@ function exampleSymbolGraphTest()
  */
 class SymbolGraphTest
 {
-    private $marked = [];
-    private $color = [];
-    private $isTwoColorable = true;
 
     public function __construct($vertexes)
     {
         $symbolGraph = new SymbolGraph($vertexes);
         $graph = $symbolGraph->G();
 
-        
+        foreach ($vertexes as $vertexLine){
+            $source = $vertexLine[0];
+            foreach ($graph->adg($symbolGraph->index($source)) as $adgVertex){
+//                echo $adgVertex . " ";
+                echo $symbolGraph->name($adgVertex) . " ";
+            }
+            echo "\n";
+        }
+//        var_dump($graph);
     }
 }
 
