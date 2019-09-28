@@ -5,7 +5,7 @@ ini_set("html_errors", "On");
 //use Graph\Search;
 //use Graph\DepthFirstPaths;
 //use Graph\BreadthFirstPaths;
-use Graph\Graph;
+//use Graph\Graph;
 use Graph\SymbolGraph;
 
 require_once '../Graph/Graph.php';

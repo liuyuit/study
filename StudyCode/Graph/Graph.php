@@ -149,7 +149,7 @@ class MyGraph
         /** @var Queue $vQueue */
         $vQueue = $this->adg[$v];
         $vQueue->enQueue($w);
-        /** @noinspection PhpUndefinedMethodInspection */
+        /** @var Queue $wQueue */
         $wQueue = $this->adg[$w];
         $wQueue->enQueue($v);
         $this->E++;
