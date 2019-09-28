@@ -82,4 +82,8 @@ class DiGraph
     public function adg(int $vertex){
         return $this->adg[$vertex];
     }
+
+    public function reverse(){
+        
+    }
 }
