@@ -3,11 +3,11 @@ namespace Graph;
 
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
-use Sort\Queue;
+//use Sort\Queue;
 
-require_once '../Sort/Queue.php';
+//require_once '../Sort/Queue.php';
 
- digraphExample();
+digraphExample();
 
 function digraphExample()
 {
