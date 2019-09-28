@@ -39,15 +39,15 @@ class DiGraph
 
     /**
      * @param $V
-     * @param $edgeList // 每个元素是一个包含两个顶点的数组
+     * @param $edgeList array 每个元素是一个包含两个顶点的数组
      */
-    public function __construct($edgeList, $V){
-        $this->initGraph($V);
-
-        foreach ($edgeList as $edge){
-            $this->addEdge($edge[0], $edge[1]);
-        }
-    }
+//    public function __construct($edgeList, $V){
+//        $this->initGraph($V);
+//
+//        foreach ($edgeList as $edge){
+//            $this->addEdge($edge[0], $edge[1]);
+//        }
+//    }
 
     public function initGraph($V){
         $this->V = $V;
@@ -75,7 +75,7 @@ class DiGraph
      */
     public function addEdge($v, $w){
         $this->adg[$v][] = $w;
-        $this->adg[$w][] = $v;
+//        $this->adg[$w][] = $v;
         $this->E++;
     }
 
