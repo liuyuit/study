@@ -146,11 +146,12 @@ class MyGraph
      * @param $w // 顶点
      */
     public function addEdge($v, $w){
-        /** @noinspection PhpUndefinedMethodInspection */
+        /** @var Queue $vQueue */
         $vQueue = $this->adg[$v];
-        $this->adg[$v]->enQueue($w);
+        $vQueue->enQueue($w);
         /** @noinspection PhpUndefinedMethodInspection */
-        $this->adg[$w]->enQueue($v);
+        $wQueue = $this->adg[$w];
+        $wQueue->enQueue($v);
         $this->E++;
     }
 }
