@@ -49,7 +49,7 @@ class DiGraph
 //        }
 //    }
 
-    public function initGraph($V){
+    public function __construct($V){
         $this->V = $V;
         $this->E = 0;
         $this->adg = [];
@@ -84,6 +84,14 @@ class DiGraph
     }
 
     public function reverse(){
-        
+        $reverseDigraph = new DiGraph($this->V());
+        for ($i = 0; $i <= $reverseDigraph->V(); $i++){
+            $adgVertexes = $this->adg($i);
+            foreach ($adgVertexes as $adgVertex){
+                $reverseDigraph->addEdge($adgVertex, $i);
+            }
+        }
+
+        return $reverseDigraph;
     }
 }
