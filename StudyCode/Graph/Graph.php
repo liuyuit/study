@@ -7,9 +7,9 @@ use Sort\Queue;
 
 require_once '../Sort/Queue.php';
 
-//example();
+// graphExample();
 
-function example()
+function graphExample()
 {
     $v = 5;
     $array = [
