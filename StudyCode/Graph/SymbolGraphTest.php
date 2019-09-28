@@ -19,7 +19,7 @@ exampleSymbolGraphTest();
 
 function exampleSymbolGraphTest()
 {
-    $v = 9;
+//    $v = 9;
     $array = [
         ['movie0', 'actor0', 'actor01', 'actor02'],
         ['movie1', 'actor1', 'actor11', 'actor12'],
@@ -32,7 +32,8 @@ function exampleSymbolGraphTest()
 //        ['movie7', 'actor8'],
     ];
 
-    $symbolGraphTest = new SymbolGraphTest($array);
+    new SymbolGraphTest($array);
+//    $symbolGraphTest = new SymbolGraphTest($array);
 //    echo '<pre>';
 //    print_r($testSearch->adg);
 //    echo '<pre>';
