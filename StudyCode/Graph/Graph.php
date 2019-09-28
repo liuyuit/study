@@ -147,6 +147,7 @@ class MyGraph
      */
     public function addEdge($v, $w){
         /** @noinspection PhpUndefinedMethodInspection */
+        $vQueue = $this->adg[$v];
         $this->adg[$v]->enQueue($w);
         /** @noinspection PhpUndefinedMethodInspection */
         $this->adg[$w]->enQueue($v);
