@@ -20,8 +20,8 @@ function digraphExample()
     ];
 
     $digraph = new Digraph($v);
-    foreach ($array as $adgVertexs){
-        $digraph->addEdge($adgVertexs[0], $adgVertexs[1]);
+        foreach ($array as $adgVertexes){
+        $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
     }
 
     echo '<pre>';
