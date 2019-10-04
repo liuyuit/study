@@ -17,10 +17,10 @@ function digraphExample()
         [1, 2],
         [2, 3],
         [3, 4],
-    ];s[e;ek;4'4/.44,lklp[,jn  iiiiiiiiii0000007777777777777777ygggka.lmlwd212']
+    ];
 
     $digraph = new Digraph($v);
-        foreach ($array as $adgVertexes){
+    foreach ($array as $adgVertexes){
         $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
     }
 
