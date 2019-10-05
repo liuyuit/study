@@ -39,11 +39,7 @@ class Digraph
     private $E = 0; // 边的数目
     public $adg = [];// 邻接表
 
-
-    /**
-     * @param $V
-     * @param $edgeList array 每个元素是一个包含两个顶点的数组
-     */
+    
 //    public function __construct($edgeList, $V){
 //        $this->initGraph($V);
 //
