@@ -39,7 +39,7 @@ class Digraph
     private $E = 0; // 边的数目
     public $adg = [];// 邻接表
 
-    
+
 //    public function __construct($edgeList, $V){
 //        $this->initGraph($V);
 //
