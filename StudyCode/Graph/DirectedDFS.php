@@ -5,7 +5,6 @@ ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 //use Sort\Queue;
 use Graph\Digraph;
-use Graph\Digraph;
 
 require_once '../Graph/Digraph.php';
 //require_once '../Sort/Queue.php';
@@ -22,10 +21,13 @@ function directedDFSExample()
         [3, 4],
     ];
 
-    $graph = new Graph($v, $array);
+    $digraph = new Digraph($v);
+    foreach ($array as $adgVertexes){
+        $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
+    }
 
     echo '<pre>';
-    print_r($graph->adg);
+    print_r($digraph->adg);
     echo '<pre>';
 }
 
