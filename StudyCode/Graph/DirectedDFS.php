@@ -26,8 +26,12 @@ function directedDFSExample()
         $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
     }
 
+    $directedDFS = new DirectedDFS();
+    $directedDFS->searchVertex($digraph, 1);
+
     echo '<pre>';
     print_r($digraph->adg);
+    print_r($directedDFS->marked);
     echo '<pre>';
 }
 
@@ -37,7 +41,7 @@ function directedDFSExample()
  */
 class DirectedDFS
 {
-    private $marked = []; // 标记所有从起点能够访问到的顶点
+    public $marked = []; // 标记所有从起点能够访问到的顶点
 
 
     public function searchVertex(Digraph $digraph, $vertex){

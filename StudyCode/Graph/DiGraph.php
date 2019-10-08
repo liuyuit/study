@@ -7,7 +7,7 @@ ini_set("html_errors", "On");
 
 //require_once '../Sort/Queue.php';
 
-digraphExample();
+//digraphExample();
 
 function digraphExample()
 {
