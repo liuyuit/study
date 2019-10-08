@@ -5,6 +5,7 @@ ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 //use Sort\Queue;
 use Graph\Digraph;
+use Graph\Digraph;
 
 require_once '../Graph/Digraph.php';
 //require_once '../Sort/Queue.php';
@@ -37,16 +38,25 @@ class DirectedDFS
     private $marked = []; // 标记所有从起点能够访问到的顶点
 
 
-    public function searchVertex($digraph, $vertex){
-//        $this
+    public function searchVertex(Digraph $digraph, $vertex){
+        $this->dfs($digraph, $vertex);
     }
 
-    public function searchVertexes($digraph, $vertexes){
+    public function searchVertexes(Digraph $digraph, $vertexes){
 
     }
 
-    public function dfs($digraph, $vertex){
+    private function dfs(Digraph $digraph, $vertex){
         $this->marked[$vertex] = true;
-        $adgVertexes = $digraph->
+        $adgVertexes = $digraph->adg($vertex);
+        foreach ($adgVertexes as $adgVertex){
+            if (!$this->marked($adgVertex)){
+                $this->dfs($digraph, $adgVertex);
+            }
+        }
+    }
+
+    private function marked($vertex){
+        return $this->marked[$vertex];
     }
 }
