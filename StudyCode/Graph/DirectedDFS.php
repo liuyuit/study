@@ -65,7 +65,6 @@ class DirectedDFS
      */
     public function addEdge($v, $w){
         $this->adg[$v][] = $w;
-//        $this->adg[$w][] = $v;
         $this->E++;
     }
 

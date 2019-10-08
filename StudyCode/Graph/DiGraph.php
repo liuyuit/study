@@ -40,14 +40,6 @@ class Digraph
     public $adg = [];// 邻接表
 
 
-//    public function __construct($edgeList, $V){
-//        $this->initGraph($V);
-//
-//        foreach ($edgeList as $edge){
-//            $this->addEdge($edge[0], $edge[1]);
-//        }
-//    }
-
     public function __construct($V){
         $this->V = $V;
         $this->E = 0;
@@ -74,7 +66,6 @@ class Digraph
      */
     public function addEdge($v, $w){
         $this->adg[$v][] = $w;
-//        $this->adg[$w][] = $v;
         $this->E++;
     }
 
