@@ -63,6 +63,6 @@ class DirectedDFS
     }
 
     private function marked($vertex){
-        return $this->marked[$vertex];
+        return !empty($this->marked[$vertex]);
     }
 }
