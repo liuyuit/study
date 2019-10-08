@@ -4,7 +4,9 @@ namespace Graph;
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 //use Sort\Queue;
+use Graph\Digraph;
 
+require_once '../Graph/Digraph.php';
 //require_once '../Sort/Queue.php';
 
 directedDFSExample();
@@ -32,16 +34,19 @@ function directedDFSExample()
  */
 class DirectedDFS
 {
-    private $V = 0; // 顶点数目
-    private $E = 0; // 边的数目
-    public $adg = [];// 邻接表
+    private $marked = []; // 标记所有从起点能够访问到的顶点
 
 
     public function searchVertex($digraph, $vertex){
-        
+//        $this
     }
 
     public function searchVertexes($digraph, $vertexes){
 
+    }
+
+    public function dfs($digraph, $vertex){
+        $this->marked[$vertex] = true;
+        $adgVertexes = $digraph->
     }
 }
