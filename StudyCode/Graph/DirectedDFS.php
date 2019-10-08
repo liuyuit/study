@@ -38,10 +38,10 @@ class DirectedDFS
 
 
     public function searchVertex($digraph, $vertex){
-
+        
     }
 
-    public function searchVertex($digraph, $vertex){
+    public function searchVertexes($digraph, $vertexes){
 
     }
 }
