@@ -4,7 +4,7 @@ namespace Graph;
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 //use Sort\Queue;
-use Graph\Digraph;
+//use Graph\Digraph;
 
 require_once '../Graph/Digraph.php';
 //require_once '../Sort/Queue.php';
