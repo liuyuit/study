@@ -37,50 +37,11 @@ class DirectedDFS
     public $adg = [];// 邻接表
 
 
+    public function searchVertex($digraph, $vertex){
 
-
-    public function __construct($V){
-        $this->V = $V;
-        $this->E = 0;
-        $this->adg = [];
-
-        for ($i = 0; $i < $V; $i++){
-            $this->adg[$i] = [];
-        }
     }
 
+    public function searchVertex($digraph, $vertex){
 
-    public function V(){
-        return $this->V;
-    }
-
-    public function E(){
-        return $this->E;
-    }
-
-    /**
-     * 添加一条边
-     * @param $v // 顶点
-     * @param $w // 顶点
-     */
-    public function addEdge($v, $w){
-        $this->adg[$v][] = $w;
-        $this->E++;
-    }
-
-    public function adg(int $vertex){
-        return $this->adg[$vertex];
-    }
-
-    public function reverse(){
-        $reverseDigraph = new DiGraph($this->V());
-        for ($i = 0; $i <= $reverseDigraph->V(); $i++){
-            $adgVertexes = $this->adg($i);
-            foreach ($adgVertexes as $adgVertex){
-                $reverseDigraph->addEdge($adgVertex, $i);
-            }
-        }
-
-        return $reverseDigraph;
     }
 }
