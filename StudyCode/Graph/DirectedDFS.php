@@ -27,11 +27,11 @@ function directedDFSExample()
     }
 
     $directedDFS = new DirectedDFS();
-    $directedDFS->searchVertex($digraph, 1);
+    $directedDFS->searchVertex($digraph, 3);
 
     echo '<pre>';
-    print_r($digraph->adg);
-    print_r($directedDFS->marked);
+//    print_r($digraph->adg);
+    var_dump($directedDFS->marked);
     echo '<pre>';
 }
 
