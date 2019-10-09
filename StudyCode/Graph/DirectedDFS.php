@@ -31,7 +31,7 @@ function directedDFSExample()
 
     echo '<pre>';
 //    print_r($digraph->adg);
-    var_dump($directedDFS->marked);
+    print_r($directedDFS->marked);
     echo '<pre>';
 }
 
