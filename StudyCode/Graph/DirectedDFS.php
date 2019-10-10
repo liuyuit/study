@@ -29,7 +29,11 @@ function directedDFSExample()
     $directedDFS = new DirectedDFS();
     $directedDFS->searchVertex($digraph, 3);
 
-    foreach ()
+    for($v = 0; $v < $digraph->V(); $v++){
+        if ($directedDFS->marked($v)){
+            echo $v . ' ';
+        }
+    }
 
     echo '<pre>';
 //    print_r($digraph->adg);
@@ -65,7 +69,7 @@ class DirectedDFS
         }
     }
 
-    private function marked($vertex){
+    public function marked($vertex){
         return !empty($this->marked[$vertex]);
     }
 }
