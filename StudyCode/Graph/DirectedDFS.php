@@ -31,15 +31,15 @@ function directedDFSExample()
 
     for($v = 0; $v < $digraph->V(); $v++){
         if ($directedDFS->marked($v)){
-            echo $v . ' ';
+            echo $v . "\n";
         }
     }
 
-    echo '<pre>';
+//    echo '<pre>';
 //    print_r($digraph->adg);
 //    print_r($directedDFS->marked);
 
-    echo '<pre>';
+//    echo '<pre>';
 }
 
 
