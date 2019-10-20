@@ -26,11 +26,11 @@ function directedDFSExample()
         $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
     }
 
-    $directedDFS = new DirectedDFS();
-    $directedDFS->searchVertex($digraph, 3);
+    $directedCycle = new DirectedCycle();
+    $directedCycle->searchVertex($digraph, 3);
 
     for($v = 0; $v < $digraph->V(); $v++){
-        if ($directedDFS->marked($v)){
+        if ($directedCycle->marked($v)){
             echo $v . "\n";
         }
     }
@@ -46,7 +46,7 @@ function directedDFSExample()
 /**
  * 图
  */
-class DirectedDFS
+class DirectedCycle
 {
     public $marked = []; // 标记所有从起点能够访问到的顶点
 
