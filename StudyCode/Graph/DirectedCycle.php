@@ -49,8 +49,9 @@ function directedDFSExample()
 class DirectedCycle
 {
     public $marked = []; // 标记所有从起点能够访问到的顶点
-    private $edgeTo = []; // 
-
+    private $edgeTo = []; //
+    private $cycle = [];
+    private $onStack = [];
 
     public function searchVertex(Digraph $digraph, $vertex){
         $this->dfs($digraph, $vertex);
