@@ -50,10 +50,10 @@ class DirectedCycle
 {
     public $marked = []; // 标记所有从起点能够访问到的顶点
     private $edgeTo = []; //
-    private $cycle = [];
-    private $onStack = [];
+    private $cycle = [];    // 有向环的所有顶点
+    private $onStack = [];  // 递归调用的栈上的所有顶点
 
-    public function __construct(Digraph $digraph){
+    public function __construct(Digraph $digraph, $vertex){
         $this->dfs($digraph, $vertex);
     }
 
