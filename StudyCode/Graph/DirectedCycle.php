@@ -53,12 +53,8 @@ class DirectedCycle
     private $cycle = [];
     private $onStack = [];
 
-    public function searchVertex(Digraph $digraph, $vertex){
+    public function __construct(Digraph $digraph){
         $this->dfs($digraph, $vertex);
-    }
-
-    public function searchVertexes(Digraph $digraph, $vertexes){
-
     }
 
     private function dfs(Digraph $digraph, $vertex){
