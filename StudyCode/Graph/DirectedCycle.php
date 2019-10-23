@@ -54,6 +54,10 @@ class DirectedCycle
     private $onStack = [];  // 递归调用的栈上的所有顶点
 
     public function __construct(Digraph $digraph, $vertex){
+        for (){
+
+        }
+
         $this->dfs($digraph, $vertex);
     }
 
