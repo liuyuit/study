@@ -55,10 +55,10 @@ class DirectedCycle
 
     public function __construct(Digraph $digraph, $vertex){
         for ($i = 0; $i < $digraph->V(); $i++){
-            if()
+            if(!$this->marked($i)){
+                $this->dfs($digraph, $vertex);
+            }
         }
-
-        $this->dfs($digraph, $vertex);
     }
 
     private function dfs(Digraph $digraph, $vertex){
