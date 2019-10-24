@@ -71,6 +71,7 @@ class DirectedCycle
             }elseif (!$this->marked($adgVertex)){
                 $this->dfs($digraph, $adgVertex);
             }
+
         }
     }
 
