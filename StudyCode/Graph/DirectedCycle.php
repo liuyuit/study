@@ -68,11 +68,14 @@ class DirectedCycle
         foreach ($adgVertexes as $adgVertex){
             if ($this->hasCycle()){
                 return;
-            }
-            if (!$this->marked($adgVertex)){
+            }elseif (!$this->marked($adgVertex)){
                 $this->dfs($digraph, $adgVertex);
             }
         }
+    }
+
+    private function hasCycle(){
+        return !empty($this->cycle);
     }
 
     public function marked($vertex){
