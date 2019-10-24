@@ -66,6 +66,7 @@ class DirectedCycle
         $this->marked[$vertex] = true;
         $adgVertexes = $digraph->adg($vertex);
         foreach ($adgVertexes as $adgVertex){
+            if ()
             if (!$this->marked($adgVertex)){
                 $this->dfs($digraph, $adgVertex);
             }
