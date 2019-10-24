@@ -62,6 +62,7 @@ class DirectedCycle
     }
 
     private function dfs(Digraph $digraph, $vertex){
+        $this->onStack[$vertex] = true;
         $this->marked[$vertex] = true;
         $adgVertexes = $digraph->adg($vertex);
         foreach ($adgVertexes as $adgVertex){
