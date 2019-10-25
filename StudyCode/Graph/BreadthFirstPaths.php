@@ -32,7 +32,12 @@ function BreadthFirstSearchExample()
 
 
 /**
- * 图
+ * 广度优先搜索
+ * 就像一队人从起点开始不断的地探索，每当遇到分岔路口就开始分成多队去分别探索所有的路口
+ *
+ * 一级一级地去探索，从起点开始分别去访问所有的邻接顶点
+ * 这一级所有顶点都访问完了之后再去访问下一级的所有未被访问的邻接顶点
+ *
  */
 class BreadthFirstPaths
 {
@@ -40,6 +45,11 @@ class BreadthFirstPaths
     private $edgeTo = [];   // 从起点到任意顶点的路径上的最后一个顶点
     private $s; // 起点
 
+    /**
+     * BreadthFirstPaths constructor.
+     * @param Graph $graph 一幅图
+     * @param int $search 搜索的起始顶点
+     */
     public function __construct(Graph $graph,int $search)
     {
         $this->s = $search;

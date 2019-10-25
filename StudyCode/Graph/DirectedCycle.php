@@ -26,7 +26,7 @@ function directedDFSExample()
         $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
     }
 
-    $directedCycle = new DirectedCycle();
+    $directedCycle = new DirectedCycle($digraph);
     $directedCycle->searchVertex($digraph, 3);
 
     for($v = 0; $v < $digraph->V(); $v++){
@@ -53,10 +53,10 @@ class DirectedCycle
     private $cycle = [];    // 有向环的所有顶点
     private $onStack = [];  // 递归调用的栈上的所有顶点
 
-    public function __construct(Digraph $digraph, $vertex){
+    public function __construct(Digraph $digraph){
         for ($i = 0; $i < $digraph->V(); $i++){
             if(!$this->marked($i)){
-                $this->dfs($digraph, $vertex);
+                $this->dfs($digraph, $i);
             }
         }
     }
@@ -69,10 +69,18 @@ class DirectedCycle
             if ($this->hasCycle()){
                 return;
             }elseif (!$this->marked($adgVertex)){
+                $this->edgeTo[$adgVertex] = $vertex;
                 $this->dfs($digraph, $adgVertex);
+            } elseif (!empty($this->onStack[$adgVertex])){
+                $cycle = [];
+                for ($x = $vertex; $x != $adgVertex; $x = $this->edgeTo[$x]){
+                    $cycle[] = $x;
+                }
+                $cycle[] = $adgVertex;
+                $cycle[] = $vertex;
             }
-
         }
+        $this->onStack[$vertex] = false;
     }
 
     private function hasCycle(){
@@ -81,5 +89,9 @@ class DirectedCycle
 
     public function marked($vertex){
         return !empty($this->marked[$vertex]);
+    }
+
+    public function cycle(){
+        return $this->cycle;
     }
 }
