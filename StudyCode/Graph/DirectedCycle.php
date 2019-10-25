@@ -27,7 +27,7 @@ function directedDFSExample()
     }
 
     $directedCycle = new DirectedCycle($digraph);
-    $directedCycle->searchVertex($digraph, 3);
+//    $directedCycle->searchVertex($digraph, 3);
 
     for($v = 0; $v < $digraph->V(); $v++){
         if ($directedCycle->marked($v)){
