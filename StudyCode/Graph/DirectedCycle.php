@@ -71,7 +71,7 @@ class DirectedCycle
         foreach ($adgVertexes as $adgVertex) {
             if ($this->hasCycle()) { // 已经确定是有环图了
                 return;
-            } elseif (!$this->marked($adgVertex)) { // 访问到一个没有被标记的
+            } elseif (!$this->marked($adgVertex)) { // 访问到一个没有被标记的顶点，
                 $this->edgeTo[$adgVertex] = $vertex;
                 $this->dfs($digraph, $adgVertex);
             } elseif (!empty($this->onStack[$adgVertex])) {
