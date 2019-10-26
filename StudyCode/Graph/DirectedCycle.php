@@ -1,4 +1,5 @@
 <?php
+
 namespace Graph;
 
 ini_set("display_errors", "On");
@@ -22,15 +23,15 @@ function directedDFSExample()
     ];
 
     $digraph = new Digraph($v);
-    foreach ($array as $adgVertexes){
+    foreach ($array as $adgVertexes) {
         $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
     }
 
     $directedCycle = new DirectedCycle($digraph);
 //    $directedCycle->searchVertex($digraph, 3);
 
-    for($v = 0; $v < $digraph->V(); $v++){
-        if ($directedCycle->marked($v)){
+    for ($v = 0; $v < $digraph->V(); $v++) {
+        if ($directedCycle->marked($v)) {
             echo $v . "\n";
         }
     }
@@ -53,27 +54,29 @@ class DirectedCycle
     private $cycle = [];    // 有向环的所有顶点
     private $onStack = [];  // 递归调用的栈上的所有顶点
 
-    public function __construct(Digraph $digraph){
-        for ($i = 0; $i < $digraph->V(); $i++){
-            if(!$this->marked($i)){
+    public function __construct(Digraph $digraph)
+    {
+        for ($i = 0; $i < $digraph->V(); $i++) {
+            if (!$this->marked($i)) {
                 $this->dfs($digraph, $i);
             }
         }
     }
 
-    private function dfs(Digraph $digraph, $vertex){
+    private function dfs(Digraph $digraph, $vertex)
+    {
         $this->onStack[$vertex] = true;
         $this->marked[$vertex] = true;
         $adgVertexes = $digraph->adg($vertex);
-        foreach ($adgVertexes as $adgVertex){
-            if ($this->hasCycle()){
+        foreach ($adgVertexes as $adgVertex) {
+            if ($this->hasCycle()) { // 已经确定是有环图了
                 return;
-            }elseif (!$this->marked($adgVertex)){
+            } elseif (!$this->marked($adgVertex)) { // 访问到一个没有被标记的
                 $this->edgeTo[$adgVertex] = $vertex;
                 $this->dfs($digraph, $adgVertex);
-            } elseif (!empty($this->onStack[$adgVertex])){
+            } elseif (!empty($this->onStack[$adgVertex])) {
                 $cycle = [];
-                for ($x = $vertex; $x != $adgVertex; $x = $this->edgeTo[$x]){
+                for ($x = $vertex; $x != $adgVertex; $x = $this->edgeTo[$x]) {
                     $cycle[] = $x;
                 }
                 $cycle[] = $adgVertex;
@@ -83,15 +86,18 @@ class DirectedCycle
         $this->onStack[$vertex] = false;
     }
 
-    private function hasCycle(){
+    private function hasCycle()
+    {
         return !empty($this->cycle);
     }
 
-    public function marked($vertex){
+    public function marked($vertex)
+    {
         return !empty($this->marked[$vertex]);
     }
 
-    public function cycle(){
+    public function cycle()
+    {
         return $this->cycle;
     }
 }
