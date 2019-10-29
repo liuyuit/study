@@ -76,10 +76,10 @@ class DirectedCycle
                 $this->dfs($digraph, $adgVertex);
             } elseif (!empty($this->onStack[$adgVertex])) { // 访问到一个已经被标记的顶点，并且这个顶点在当前访问的堆栈内，在以$vertex为初始顶点的一次深度搜索中。
                 $cycle = [];
-                for ($x = $vertex; $x != $adgVertex; $x = $this->edgeTo[$x]) {
+                for ($x = $adgVertex; $x != $vertex; $x = $this->edgeTo[$x]) {
                     $cycle[] = $x;
                 }
-                $cycle[] = $adgVertex;
+//                $cycle[] = $adgVertex;
                 $cycle[] = $vertex;
             }
         }
