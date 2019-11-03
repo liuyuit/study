@@ -83,7 +83,6 @@ class DirectedCycle
                     $this->cycle[] = $x;
                 }
                 $this->cycle[] = $adgVertex;
->>>>>>> 2d018f2c1ef223fc0b52b56f02422045070ad153
             }
         }
         $this->onStack[$vertex] = false;
