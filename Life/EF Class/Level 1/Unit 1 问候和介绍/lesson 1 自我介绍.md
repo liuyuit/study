@@ -8,20 +8,14 @@ Hello, My name is jack.
 
 ## Introducion youself
 
-```
 Hello
 Hi
 What's your name?
 My name is Nancy
-```
 
-```
 Nice to meet you
 Nice to meet you too
-```
 
-```
 Goodbye
 Bye
-```
 
