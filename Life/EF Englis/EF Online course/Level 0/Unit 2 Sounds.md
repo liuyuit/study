@@ -2,12 +2,17 @@
 
 ## 重点句式
 
-- 单数名词要加定冠词，复数形式要加s。裤子基本都是复数形式，因为有两个裤腿
+- 单数名词要加定冠词，复数形式要加s
   - I wear a hat in winter
   - I wear shoes in summer
 - 第三人称单数形式的动词要加s，
   - I wear a shirt in summer
   - She wears a dress in summer
+
+## 学习方法
+
+- The brain remember a lot of pictures
+- Learning sounds wiht picture is good
 
 ## 句子
 
@@ -26,15 +31,16 @@
 
 ## 单词
 
+- wear
 - hat 
 - shirt
 - socks
 - boots
-- trousers
+- trousers   裤子
 - jeans
 - shorts
 - dress
-- jumper
+- jumper  针织套头衫
 - shoes
-- ring
+- ring  戒指
 - t-shirt
