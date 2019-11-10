@@ -5,7 +5,7 @@
 - 单数名词要加定冠词，复数形式要加s
   - I wear a hat in winter
   - I wear shoes in summer
-- 第三人称单数形式的动词要加s，
+- 第三人称单数形式的动词要加s，    
   - I wear a shirt in summer
   - She wears a dress in summer
 
