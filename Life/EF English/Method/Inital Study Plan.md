@@ -57,3 +57,12 @@ what book do you like
 what fruit do you dislike
 
 what fruit do you hate
+
+## Study  Progress Analysis
+
+| **标准学习进度**      | **建议您**          |
+| --------------------- | ------------------- |
+| 每1-2周完成一个单元   | 每周完成1个单元练习 |
+| 每1-2周完成3-7节GL    | 每周完成2-3节GL     |
+| 每1-2周完成一节PL(20) |                     |
+
