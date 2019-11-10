@@ -37,4 +37,7 @@ who has an apple
 
 Do you have an apple
 
-How many  apple do you have 
+How many  apples do you have 
+
+what do you have
+
