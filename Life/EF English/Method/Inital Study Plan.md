@@ -32,3 +32,9 @@ I don't have any apple
 #### 疑问句
 
 > 对句子的各个成分进行提问 ，主语、谓语、宾语、状语、补语
+
+who has an apple
+
+Do you have an apple
+
+How many do you have apple
