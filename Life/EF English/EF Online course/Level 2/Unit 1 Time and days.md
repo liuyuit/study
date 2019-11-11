@@ -51,5 +51,5 @@ always,usually,often,sometimes,rarely,never
 
 #### Language to describe frequency
 
-
+I usually/ I sometimes
 
