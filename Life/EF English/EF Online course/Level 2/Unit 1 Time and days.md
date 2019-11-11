@@ -2,7 +2,15 @@
 
 ## sentence
 
+I go shopping on the weekend
 
+No, I go to the movies on weekend
+
+go on a short trip
+
+I go traveling once a year
+
+I am going to go to a park year
 
 ## pronunciation
 
