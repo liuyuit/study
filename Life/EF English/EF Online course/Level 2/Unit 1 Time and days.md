@@ -2,7 +2,9 @@
 
 ## key point
 
+I am going to go to a park next year.
 
+I often go to park on weekend.
 
 ## sentence
 
