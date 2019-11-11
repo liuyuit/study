@@ -41,7 +41,13 @@ How often
 
 often/never/seldom/usually,etc
 
+
+
 once/twice/three times a year
+
+always,usually,often,sometimes,rarely,never
+
+
 
 
 
