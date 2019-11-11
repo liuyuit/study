@@ -6,8 +6,8 @@
 
 ## pronunciation
 
+- invite
+- April
+
 ## vocabulary
 
-invite
-
-April
