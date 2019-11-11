@@ -41,15 +41,17 @@ How often
 
 often/never/seldom/usually,etc
 
-
-
 once/twice/three times a year
 
 always,usually,often,sometimes,rarely,never
 
-
-
 #### Language to describe frequency
 
 I usually/ I sometimes
+
+I often __ on the weekend.
+
+I don't often __ on the weekend.
+
+I never __ on the weekend.
 
