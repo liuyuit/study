@@ -19,3 +19,19 @@ I am going to go to a park year
 
 ## vocabulary
 
+discuss
+
+discussion
+
+make/have a discussion
+
+soccer
+
+football
+
+restaurant
+
+movie
+
+How often
+
