@@ -46,7 +46,7 @@ function directedDFSExample()
 /**
  * 图
  */
-class DirectedDFS
+class DirectedFirstOrder
 {
     public $marked = []; // 标记所有从起点能够访问到的顶点
 
