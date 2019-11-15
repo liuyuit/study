@@ -6,6 +6,8 @@
 
 It's raining
 
+## centence
+
 #### 询问天气
 
 How's  the wather?
@@ -13,6 +15,8 @@ How's  the wather?
 It's sunny,but it's windy.
 
 ## 词汇
+
+#### 天气
 
 > 某些天气在名词后加y变形容词
 
@@ -22,4 +26,10 @@ It's sunny,but it's windy.
 - fog      foggy
 - snow  snowy
 - cloud  cloudy
-- 
+
+#### 温度
+
+- hot
+- cool
+- cold
+- warm
