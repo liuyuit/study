@@ -8,6 +8,10 @@ It's raining
 
 ## sentence
 
+What's the temperature?
+
+It's seven degrees.
+
 #### 询问天气
 
 How's  the wather?
