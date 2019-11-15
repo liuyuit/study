@@ -1,3 +1,10 @@
 # Lesson 2 最爱的季节
 
-## Vocabulary
+## Vacabulary
+
+- spring
+- summer
+- fall
+- winter
+
+## G
