@@ -8,7 +8,9 @@ It's raining
 
 #### 询问天气
 
-How about  the wather
+How's  the wather?
+
+It's sunny,but it's windy.
 
 ## 词汇
 
