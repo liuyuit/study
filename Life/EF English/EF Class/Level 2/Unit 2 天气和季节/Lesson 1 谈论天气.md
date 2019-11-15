@@ -6,7 +6,7 @@
 
 It's raining
 
-## centence
+## sentence
 
 #### 询问天气
 
