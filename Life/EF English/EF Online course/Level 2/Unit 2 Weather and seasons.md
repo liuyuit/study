@@ -2,8 +2,15 @@
 
 ## key point
 
-- What do you like to do when it's warm
+- What do you like to do when it's warm and sunny
+
 - what do you want to do in such weather 
+
+  
+
+- Is this usually the weather in GZ?
+
+- 
 
 ## sentence
 
