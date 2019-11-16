@@ -2,9 +2,8 @@
 
 ## key point
 
-- I am going to go to a park next year.
-- I often go to park on weekend.
-- I travel once a year
+- What do you like to do when it's warm
+- what do you want to do in such weather 
 
 ## sentence
 
