@@ -6,10 +6,12 @@
 
 ###### should + 动词
 
-You should go skiing.
+- You should go skiing.
 
 ###### Let's + 动词
 
-Let's eat out
+- Let's eat out
 
-###### How  about 
+###### How  about
+
+How about  a game of cards?
