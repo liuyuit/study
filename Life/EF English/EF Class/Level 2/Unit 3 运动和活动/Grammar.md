@@ -7,4 +7,3 @@
 - I like playing soccer
 - I don't like palying basketball
 - They enjoy playing tennis
-
