@@ -6,6 +6,10 @@
 
 ###### should + 动词
 
+You should go skiing.
+
 ###### Let's + 动词
+
+Let's eat out
 
 ###### How  about 
