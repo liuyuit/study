@@ -10,5 +10,7 @@ You shouldn't go.
 
 Should we go?
 
-What should we doing this weekend?
+What should we do this weekend?
+
+Where should wo go
 
