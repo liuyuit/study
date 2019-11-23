@@ -43,7 +43,7 @@ function directedDFSExample()
 /**
  * 图
  */
-class DirectedFirstOrder
+class Topological
 {
     public $marked = []; // 标记所有已经访问过的顶点
     private $pre = [];  // 顶点的前序排序
