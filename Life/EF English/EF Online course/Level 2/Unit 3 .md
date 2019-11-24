@@ -16,4 +16,6 @@ want + 名词
 
 want + to + 动词
 
-I like to play 
+I like to play basketball.
+
+I like playing basketball.
