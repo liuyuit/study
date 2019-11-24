@@ -6,11 +6,10 @@ How often do you ....?
 
 #### verb + to + verb
 
-> 2
+> 一个句子
 
-Do you want to play basketball with me?
+Do you want **to** play basketball with me?
 
 want + 名词
 
 want + to + 动词
-
