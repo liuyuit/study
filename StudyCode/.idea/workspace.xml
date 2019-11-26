@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php">
-      <change beforePath="$PROJECT_DIR$/../Learning/LearningDocument/LearningNotes/算法学习笔记/4、图/2、有向图.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning/LearningDocument/LearningNotes/算法学习笔记/4、图/2、有向图.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph/Topological.php" beforeDir="false" />
-    </list>
+    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,19 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Graph/SymbolGraph.php">
+        <entry file="file://$PROJECT_DIR$/Graph/CC.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graph/SymbolGraphTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            <state relative-caret-position="152">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -130,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,7 +135,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,6 +332,7 @@
       <workItem from="1574506811367" duration="5585000" />
       <workItem from="1574596895730" duration="1843000" />
       <workItem from="1574781608137" duration="4000" />
+      <workItem from="1574781839933" duration="240000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -370,7 +359,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288923000" />
+    <option name="totallyTimeSpent" value="289163000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -383,9 +372,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="276" y="48" width="1068" height="744" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.38514853" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.31683168" />
       <window_info id="Structure" order="1" sideWeight="0.53417265" side_tool="true" weight="0.24121997" />
       <window_info id="Favorites" order="2" sideWeight="0.5155131" side_tool="true" weight="0.22654155" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -682,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph/CC.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Graph/Cycle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -889,6 +870,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/CC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
