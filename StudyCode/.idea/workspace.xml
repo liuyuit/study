@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php" />
+    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php">
+      <change beforePath="$PROJECT_DIR$/../Learning/LearningDocument/LearningNotes/算法学习笔记/4、图/2、有向图.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning/LearningDocument/LearningNotes/算法学习笔记/4、图/2、有向图.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +27,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graph/DiGraph.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-521">
+            <state relative-caret-position="665">
               <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graph/DirectedFirstOrder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="790">
+              <caret line="66" column="46" lean-forward="true" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Graph/CC.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="68" column="45" lean-forward="true" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -107,8 +128,8 @@
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP-7.1.13-nts" />
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="studycode.com" port="80" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="345" />
-    <option name="y" value="60" />
+    <option name="x" value="365" />
+    <option name="y" value="81" />
     <option name="width" value="1335" />
     <option name="height" value="930" />
   </component>
@@ -118,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,6 +155,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,7 +353,8 @@
       <workItem from="1574506811367" duration="5585000" />
       <workItem from="1574596895730" duration="1843000" />
       <workItem from="1574781608137" duration="4000" />
-      <workItem from="1574781839933" duration="602000" />
+      <workItem from="1574781839933" duration="842000" />
+      <workItem from="1574963710518" duration="490000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -359,7 +381,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289525000" />
+    <option name="totallyTimeSpent" value="290255000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,10 +393,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="276" y="48" width="1068" height="744" extended-state="0" />
+    <frame x="292" y="65" width="1068" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.31683168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.32277226" />
       <window_info id="Structure" order="1" sideWeight="0.53417265" side_tool="true" weight="0.24121997" />
       <window_info id="Favorites" order="2" sideWeight="0.5155131" side_tool="true" weight="0.22654155" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -844,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph/DirectedFirstOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Graph/SymbolDigraph.php" />
     <entry file="file://$PROJECT_DIR$/Graph/Topological.php" />
     <entry file="file://$PROJECT_DIR$/Graph/SymbolGraph.php">
@@ -867,17 +882,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph/CC.php">
+    <entry file="file://$PROJECT_DIR$/Graph/DiGraph.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="63" column="21" lean-forward="true" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+        <state relative-caret-position="665">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph/DiGraph.php">
+    <entry file="file://$PROJECT_DIR$/Graph/DirectedFirstOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        <state relative-caret-position="790">
+          <caret line="66" column="46" lean-forward="true" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/CC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="68" column="45" lean-forward="true" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
         </state>
       </provider>
     </entry>
