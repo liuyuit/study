@@ -1,0 +1,1 @@
+# 使用tp5自带的cache类连接redis
