@@ -34,8 +34,12 @@ fixbug(修补bug分支)
 
 ## 功能分支feature
 
-
+用于功能开发，命名可以是 feature-xx
+从Develop分支分出，开发完之后需要再合并到Develop，然后再删除
 
 ## 预发布分支release
+
+在正式发布版本之前（合并到主分支）。需要一个预发布分支进行测试，release的命名可以是release-xxx
+从Develop分支分出，测试通过后在合并到Develop分支，然后合并到Develop分支，然后删除，然后可以Develop并入到Master中完成正式发布
 
 ## 修改bug分支fixbug
