@@ -43,3 +43,6 @@ fixbug(修补bug分支)
 从Develop分支分出，测试通过后在合并到Develop分支，然后合并到Develop分支，然后删除，然后可以Develop并入到Master中完成正式发布
 
 ## 修改bug分支fixbug
+
+如果线上临时出现bug，就需要修改bug分支，分支的命名可以是fixbug-xxx
+从主分支分出fixbug，修改完成后并入master，并入develop，删除分支
