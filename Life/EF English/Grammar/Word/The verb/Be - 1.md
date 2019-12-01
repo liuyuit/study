@@ -12,33 +12,17 @@ I am Kevin
 
 He is a student.
 
-She is  a teacher.
-
-It is new.
-
 #### are 搭配 you they we,人称代词you 可做单数，也可做复数
 
 We are students.
 
 You are student.
 
-You are students.
-
-They are students.
-
 ## be 动词：缩写
 
 I'm kevin
 
 He's a student.
-
-She's a teacher.
-
-It's new.
-
-You're a student.
-
-We're new.
 
 They're students.
 
@@ -57,10 +41,6 @@ They are not neat.
 #### 缩写主格和动词be
 
 I'm not a student.
-
-She's not neat.
-
-we's not teather.
 
 #### 缩写be动词和not，主格代词I不能用这种形式
 
