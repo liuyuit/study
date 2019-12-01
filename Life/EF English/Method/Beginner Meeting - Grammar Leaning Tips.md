@@ -6,6 +6,12 @@
 
 I like your new shoes.
 
+You like my new shoes.
+
+
+
+
+
 ## 记句型
 
 > 句型是语法的浓缩。
