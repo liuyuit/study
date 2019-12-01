@@ -12,7 +12,9 @@
 
   You are student.
 
-- What is your cat 
+- What is your cat like?
+
+  My cat is black and small
 
 
 
