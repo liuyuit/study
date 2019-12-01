@@ -14,15 +14,19 @@
 
 - What is your cat like?
 
-  My cat is black and small
+  My cat is black and small.
 
-
+  Your cat is black and small.
 
 ## 记句型
 
 > 句型是语法的浓缩。
 
-What is/are ... like?
+#### What is/are ... like?
+
+What is the weahter like today?
+
+
 
 ## 写日记
 
