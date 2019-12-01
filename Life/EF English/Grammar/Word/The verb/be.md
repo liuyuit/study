@@ -56,4 +56,14 @@ They are not neat.
 
 #### 缩写主格和动词be
 
-#### 缩写
+I'm not a student.
+
+She's not neat.
+
+we's not teather.
+
+#### 缩写be动词和not，主格代词I不能用这种形式
+
+He isn't  a student.
+
+They aren't new students.
