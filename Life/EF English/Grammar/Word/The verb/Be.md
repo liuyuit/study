@@ -26,7 +26,7 @@ You are students.
 
 They are students.
 
-## be 动词：缩写形式
+## be 动词：缩写
 
 I'm kevin
 
@@ -41,3 +41,11 @@ You're a student.
 We're new.
 
 They're students.
+
+## be 动词的否定形式
+
+> be动词和 not搭配，形成否定形式，not在be动词之后
+
+I am not a student.
+
+He is not bu
