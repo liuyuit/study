@@ -26,6 +26,10 @@
 
 What is the weahter like today?
 
+What is the food like?
+
+What is your best frident like?
+
 What are your hobby?
 
 ## 写日记
