@@ -48,4 +48,6 @@ They're students.
 
 I am not a student.
 
-He is not bu
+He is not busy.
+
+They are not neat.
