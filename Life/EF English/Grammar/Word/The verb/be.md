@@ -51,3 +51,9 @@ I am not a student.
 He is not busy.
 
 They are not neat.
+
+## be动词的否定式缩写
+
+#### 缩写主格和动词be
+
+#### 缩写
