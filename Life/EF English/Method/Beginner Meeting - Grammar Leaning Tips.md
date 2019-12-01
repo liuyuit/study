@@ -26,7 +26,7 @@
 
 What is the weahter like today?
 
-
+What are your hobby?
 
 ## 写日记
 
