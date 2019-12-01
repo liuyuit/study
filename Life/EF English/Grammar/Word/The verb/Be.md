@@ -26,3 +26,14 @@ You are students.
 
 They are students.
 
+## be 动词：缩写形式
+
+I'm kevin
+
+He's a student.
+
+She's a teacher.
+
+It's new.
+
+You're student.
