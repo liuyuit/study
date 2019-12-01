@@ -4,11 +4,15 @@
 
 > 把你听到的内容转述给对方听，需要进行人称的转换
 
-I like your new shoes.
+- I like your new shoes.
 
-You like my new shoes.
+  You like my new shoes.
 
+- I am student.
 
+  You are student.
+
+- What is your cat 
 
 
 
@@ -21,3 +25,7 @@ What is/are ... like?
 ## 写日记
 
 > 每天的日记只需写几句，写你今天做的事和明天将要做的事。
+
+## 犯错
+
+> 大胆地和你的老师或同学进行对话，在这个过程中犯错，然后纠正它。
