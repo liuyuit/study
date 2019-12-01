@@ -36,5 +36,8 @@ She's a teacher.
 
 It's new.
 
-You're student.
+You're a student.
 
+We're new.
+
+They're students.
