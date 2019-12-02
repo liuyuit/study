@@ -30,7 +30,7 @@ What is the food like?
 
 What is your best frident like?
 
-What are your hobby?
+What are your hobbies?
 
 ## 写日记
 
