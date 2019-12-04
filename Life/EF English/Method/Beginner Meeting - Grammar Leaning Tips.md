@@ -8,9 +8,9 @@
 
   You like my new shoes.
 
-- I am student.
+- I am a student.
 
-  You are student.
+  You are a student.
 
 - What is your cat like?
 
