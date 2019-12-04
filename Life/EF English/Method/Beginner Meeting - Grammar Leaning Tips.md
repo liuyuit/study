@@ -22,7 +22,7 @@
 
 > 句型是语法的浓缩。
 
- What is/are ... like?
+#### What is/are ... like?
 
 What is the weahter like today?
 
