@@ -357,7 +357,7 @@
       <workItem from="1575305409237" duration="1572000" />
       <workItem from="1575475429615" duration="906000" />
       <workItem from="1575647104171" duration="599000" />
-      <workItem from="1575737470431" duration="652000" />
+      <workItem from="1575737470431" duration="1302000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -384,7 +384,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295191000" />
+    <option name="totallyTimeSpent" value="295841000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,10 +396,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="23" y="74" width="1068" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.24396783" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.36039603" />
       <window_info id="Structure" order="1" sideWeight="0.53417265" side_tool="true" weight="0.24121997" />
       <window_info id="Favorites" order="2" sideWeight="0.5155131" side_tool="true" weight="0.22654155" />
       <window_info anchor="bottom" id="Message" order="0" />
