@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph/DirectedFirstOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state relative-caret-position="542">
+              <caret line="93" column="1" lean-forward="true" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -136,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,6 +152,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,6 +357,7 @@
       <workItem from="1575305409237" duration="1572000" />
       <workItem from="1575475429615" duration="906000" />
       <workItem from="1575647104171" duration="599000" />
+      <workItem from="1575737470431" duration="652000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -383,7 +384,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294539000" />
+    <option name="totallyTimeSpent" value="295191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,7 +399,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.24061662" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.24396783" />
       <window_info id="Structure" order="1" sideWeight="0.53417265" side_tool="true" weight="0.24121997" />
       <window_info id="Favorites" order="2" sideWeight="0.5155131" side_tool="true" weight="0.22654155" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -900,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph/DirectedFirstOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="542">
+          <caret line="93" column="1" lean-forward="true" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
         </state>
       </provider>
     </entry>
