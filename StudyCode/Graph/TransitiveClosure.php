@@ -59,33 +59,14 @@ class TransitiveClosure
     public function __construct(Digraph $digraph)
     {
         for ($vertex = 0; $vertex < $digraph->V(); $vertex++){
-            $this->allDirectedDfs[$vertex][] = new DirectedDFS();
+            $this->allDirectedDfs[$vertex][] = new DirectedDFS($digraph, $vertex);
         }
     }
 
-    public function dfs(Digraph $digraph, int $v){
-        $this->marked[$v] = true; // 将该顶点标记为已访问
-        $this->id[$v] = $this->count;
-
-        $adgVertexes = $digraph->adg($v);
-        foreach ($adgVertexes as $adgVertex){
-            if (empty($this->marked[$adgVertex])){
-                $this->dfs($digraph, $adgVertex);
-            }
-        }
-    }
-
-    public function connected($v, $w){
+    public function reachable($v, $w){
         return $this->id[$v] === $this->id[$w];
     }
 
-    public function id(int $v){
-        return $this->id[$v];
-    }
-
-    public function count(){
-        return $this->count;
-    }
 }
 
 
