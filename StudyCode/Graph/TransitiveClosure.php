@@ -64,7 +64,8 @@ class TransitiveClosure
     }
 
     public function reachable($v, $w){
-        return $this->id[$v] === $this->id[$w];
+        $directedDFS = $this->allDirectedDfs[$v];
+        return $this->allDirectedDfs[$v] === $this->id[$w];
     }
 
 }
