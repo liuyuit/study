@@ -9,7 +9,7 @@ ini_set("html_errors", "On");
 require_once '../Graph/Digraph.php';
 //require_once '../Sort/Queue.php';
 
-directedDFSExample();
+//directedDFSExample();
 
 function directedDFSExample()
 {

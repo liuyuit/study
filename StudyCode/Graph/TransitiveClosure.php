@@ -29,7 +29,7 @@ function exampleTransitiveClosure()
     $transitiveClosure = new TransitiveClosure($digraph);
 
     $v = 2;
-    $w = 3;
+    $w = 1;
     $result = $transitiveClosure->reachable($v, $w);
     $result = !empty($result) ? 'connection' : 'not connection';
     echo "{$v} and {$w} {$result}";
@@ -47,7 +47,7 @@ class TransitiveClosure
     public function __construct(Digraph $digraph)
     {
         for ($vertex = 0; $vertex < $digraph->V(); $vertex++){
-            $this->allDirectedDfs[$vertex][] = new DirectedDFS($digraph, $vertex);
+            $this->allDirectedDfs[$vertex] = new DirectedDFS($digraph, $vertex);
         }
     }
 
