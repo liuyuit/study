@@ -1,4 +1,5 @@
 <?php
+var_dump(11);exit;
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
 
