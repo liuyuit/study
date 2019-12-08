@@ -26,26 +26,7 @@ function exampleKosaraju()
         $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
     }
 
-    $cc = new TransitiveClosure($digraph);
-    $M = $cc->count();
-    echo $M . ' components';
-    echo '<br/>';
-
-    $components = [];
-    for ($v = 0; $v < $digraph->V(); $v++){
-        $components[$cc->id($v)][] = $v;
-    }
-
-    foreach ($components as $vertexes){
-        foreach ($vertexes as $vertex){
-            echo $vertex . ' ';
-        }
-        echo '<br/>';
-    }
-
-    echo '<pre>';
-//    print_r($testSearch->adg);
-    echo '<pre>';
+    $transitiveClosure = new TransitiveClosure($digraph);
 }
 
 
