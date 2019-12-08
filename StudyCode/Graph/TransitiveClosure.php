@@ -38,7 +38,7 @@ function exampleTransitiveClosure()
 
 
 /**
- * 图
+ * 有向图顶点对的可达性
  */
 class TransitiveClosure
 {
