@@ -61,18 +61,11 @@ function exampleKosaraju()
  */
 class TransitiveClosure
 {
-    private $allDi
+    private $allDirectedDfs = [];
 
     public function __construct(Digraph $digraph)
     {
-        $order = new DirectedFirstOrder($digraph->reverse());
-
-        foreach ($order->reversePost() as $vertex){
-            if (empty($this->marked[$vertex])){
-                $this->dfs($digraph, $vertex);
-                $this->count++;
-            }
-        }
+        
     }
 
     public function dfs(Digraph $digraph, int $v){
