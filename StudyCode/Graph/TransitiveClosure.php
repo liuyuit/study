@@ -6,11 +6,10 @@ ini_set("html_errors", "On");
 //use Graph\DepthFirstPaths;
 //use Graph\BreadthFirstPaths;
 use Graph\Digraph;
-use Graph\DirectedFirstOrder;
+use Graph\DirectedDFS;
 
 require_once '../Graph/DiGraph.php';
-require_once '../Graph/DirectedFirstOrder.php';
-//require_once '../Graph/DepthFirstPaths.php';
+require_once '../Graph/DirectedDFS.php';
 //require_once '../Graph/BreadthFirstPaths.php';
 //require_once '../Sort/Queue.php';
 //require_once '../Graph/Search.php';
@@ -65,7 +64,9 @@ class TransitiveClosure
 
     public function __construct(Digraph $digraph)
     {
-        
+        for ($vertex = 0; $vertex < $digraph->V(); $vertex++){
+            $this->allDirectedDfs[$vertex][] = new
+        }
     }
 
     public function dfs(Digraph $digraph, int $v){
