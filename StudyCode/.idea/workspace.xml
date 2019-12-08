@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php" />
+    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php">
+      <change beforePath="$PROJECT_DIR$/../Learning/LearningDocument/LearningNotes/算法学习笔记/4、图/新建文本文档.TXT" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph/TransitiveClosure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="427">
+              <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding>
                 <element signature="e#167#185#0#PHP" expanded="true" />
               </folding>
@@ -354,7 +356,7 @@
       <workItem from="1575475429615" duration="906000" />
       <workItem from="1575647104171" duration="599000" />
       <workItem from="1575737470431" duration="1302000" />
-      <workItem from="1575802828220" duration="5368000" />
+      <workItem from="1575802828220" duration="5620000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -381,7 +383,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301209000" />
+    <option name="totallyTimeSpent" value="301461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,10 +395,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="338" y="1" width="1307" height="802" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.24865952" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.29703763" />
       <window_info id="Structure" order="1" sideWeight="0.53417265" side_tool="true" weight="0.24121997" />
       <window_info id="Favorites" order="2" sideWeight="0.5155131" side_tool="true" weight="0.22654155" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -925,8 +927,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph/TransitiveClosure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="427">
+          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding>
             <element signature="e#167#185#0#PHP" expanded="true" />
           </folding>
