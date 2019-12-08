@@ -8,9 +8,9 @@ use Graph\DirectedDFS;
 require_once '../Graph/DiGraph.php';
 require_once '../Graph/DirectedDFS.php';
 
-exampleKosaraju();
+exampleTransitiveClosure();
 
-function exampleKosaraju()
+function exampleTransitiveClosure()
 {
     $v = 5;
     $array = [
@@ -27,6 +27,13 @@ function exampleKosaraju()
     }
 
     $transitiveClosure = new TransitiveClosure($digraph);
+
+    $v = 2;
+    $w = 3;
+    $result = $transitiveClosure->reachable($v, $w);
+    $result = !empty($result) ? 'connection' : 'not connection';
+    echo "{$v} and {$w} {$result}";
+
 }
 
 

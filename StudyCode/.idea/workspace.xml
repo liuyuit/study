@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph/TransitiveClosure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="361">
+              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding>
                 <element signature="e#167#185#0#PHP" expanded="true" />
               </folding>
@@ -356,7 +356,7 @@
       <workItem from="1575475429615" duration="906000" />
       <workItem from="1575647104171" duration="599000" />
       <workItem from="1575737470431" duration="1302000" />
-      <workItem from="1575802828220" duration="4616000" />
+      <workItem from="1575802828220" duration="4776000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -383,7 +383,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300457000" />
+    <option name="totallyTimeSpent" value="300617000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -922,8 +922,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph/TransitiveClosure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="361">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
           <folding>
             <element signature="e#167#185#0#PHP" expanded="true" />
           </folding>
