@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php" />
+    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php">
+      <change beforePath="$PROJECT_DIR$/Graph/DirectedDFS.php" beforeDir="false" afterPath="$PROJECT_DIR$/Graph/DirectedDFS.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph/DirectedDFS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="259">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -88,7 +90,6 @@
         <option value="$PROJECT_DIR$/Graph/SymbolGraph.php" />
         <option value="$PROJECT_DIR$/Graph/Graph.php" />
         <option value="$PROJECT_DIR$/Graph/SymbolGraphTest.php" />
-        <option value="$PROJECT_DIR$/Graph/DirectedDFS.php" />
         <option value="$PROJECT_DIR$/Graph/yan" />
         <option value="$PROJECT_DIR$/Graph/DirectedCycle.php" />
         <option value="$PROJECT_DIR$/Graph/DirectedFirstOrder.php" />
@@ -96,6 +97,7 @@
         <option value="$PROJECT_DIR$/Graph/SymbolDigraph.php" />
         <option value="$PROJECT_DIR$/Graph/DiGraph.php" />
         <option value="$PROJECT_DIR$/Graph/KosarajuSCC.php" />
+        <option value="$PROJECT_DIR$/Graph/DirectedDFS.php" />
       </list>
     </option>
   </component>
@@ -341,7 +343,7 @@
       <workItem from="1575475429615" duration="906000" />
       <workItem from="1575647104171" duration="599000" />
       <workItem from="1575737470431" duration="1302000" />
-      <workItem from="1575802828220" duration="2773000" />
+      <workItem from="1575802828220" duration="2935000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -368,7 +370,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="298614000" />
+    <option name="totallyTimeSpent" value="298776000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -900,8 +902,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph/DirectedDFS.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="259">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
         </state>
       </provider>
     </entry>
