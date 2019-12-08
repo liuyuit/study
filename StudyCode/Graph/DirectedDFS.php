@@ -26,8 +26,7 @@ function directedDFSExample()
         $digraph->addEdge($adgVertexes[0], $adgVertexes[1]);
     }
 
-    $directedDFS = new DirectedDFS();
-    $directedDFS->searchVertex($digraph, 3);
+    $directedDFS = new DirectedDFS($digraph, 3);
 
     for($v = 0; $v < $digraph->V(); $v++){
         if ($directedDFS->marked($v)){
@@ -51,7 +50,7 @@ class DirectedDFS
     public $marked = []; // 标记所有从起点能够访问到的顶点
 
 
-    public function searchVertex(Digraph $digraph, $vertex){
+    public function __construct(Digraph $digraph, $vertex){
         $this->dfs($digraph, $vertex);
     }
 

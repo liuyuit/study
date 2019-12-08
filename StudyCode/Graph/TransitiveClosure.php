@@ -1,18 +1,12 @@
 <?php
 ini_set("display_errors", "On");
 ini_set("html_errors", "On");
-//use Sort\Queue;
-//use Graph\Search;
-//use Graph\DepthFirstPaths;
-//use Graph\BreadthFirstPaths;
+
 use Graph\Digraph;
 use Graph\DirectedDFS;
 
 require_once '../Graph/DiGraph.php';
 require_once '../Graph/DirectedDFS.php';
-//require_once '../Graph/BreadthFirstPaths.php';
-//require_once '../Sort/Queue.php';
-//require_once '../Graph/Search.php';
 
 exampleKosaraju();
 
@@ -65,7 +59,7 @@ class TransitiveClosure
     public function __construct(Digraph $digraph)
     {
         for ($vertex = 0; $vertex < $digraph->V(); $vertex++){
-            $this->allDirectedDfs[$vertex][] = new
+            $this->allDirectedDfs[$vertex][] = new DirectedDFS();
         }
     }
 
