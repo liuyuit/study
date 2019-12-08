@@ -75,7 +75,7 @@ class Digraph
 
     public function reverse(){
         $reverseDigraph = new DiGraph($this->V());
-        for ($i = 0; $i <= $reverseDigraph->V(); $i++){
+        for ($i = 0; $i < $reverseDigraph->V(); $i++){
             $adgVertexes = $this->adg($i);
             foreach ($adgVertexes as $adgVertex){
                 $reverseDigraph->addEdge($adgVertex, $i);
