@@ -24,6 +24,8 @@
 
   Yes, I am.
 
+  No, I'm not
+
 ## Be 动词的用法
 
 ... be noun/adjective
@@ -39,8 +41,6 @@ I cook
 I am doing
 
 I do
-
-
 
 ## something is better than something
 
