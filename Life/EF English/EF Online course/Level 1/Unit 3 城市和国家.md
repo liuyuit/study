@@ -28,7 +28,7 @@
 
 ## something is better than something
 
-apple is better than origin
+apple is better than origan
 
 ## sentences
 
