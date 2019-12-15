@@ -24,11 +24,15 @@
 
   Yes, I am.
 
+## Be 动词的用法
+
+
+
 
 
 ## something is better than something
 
-apple is better than origan
+apple is better than tangerine
 
 ## sentences
 
