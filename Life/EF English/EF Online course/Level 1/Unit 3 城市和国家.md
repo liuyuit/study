@@ -30,8 +30,6 @@
 
 ## Be 动词的用法
 
-> 
-
 ... be noun/adjective
 
 I am a programmer
