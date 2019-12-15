@@ -26,7 +26,7 @@
 
 ## Be 动词的用法
 
-
+... be noun/ajective
 
 
 
