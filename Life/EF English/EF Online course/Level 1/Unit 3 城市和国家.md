@@ -36,7 +36,9 @@ I am cooking
 
 I cook
 
-I am 
+I am doing
+
+I do
 
 
 
