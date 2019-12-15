@@ -28,7 +28,7 @@
 
 ... be noun/adjective
 
-I am a programer
+I am a programmer
 
 
 
