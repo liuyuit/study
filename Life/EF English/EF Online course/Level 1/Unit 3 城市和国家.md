@@ -26,7 +26,13 @@
 
 ## Be 动词的用法
 
-... be noun/ajective
+... be noun/adjective
+
+I am cooking
+
+I cook
+
+
 
 
 
