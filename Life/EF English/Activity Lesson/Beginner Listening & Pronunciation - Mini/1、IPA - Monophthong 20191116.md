@@ -1,6 +1,6 @@
 ## IPA
 
-![img](https://www.englishclub.com/images/pronunciation/Phonemic-Chart.jpg)
+![img](https://github.com/liuyuit/Study/blob/master/Life/EF%20English/Activity%20Lesson/Beginner%20Listening%20%26%20Pronunciation%20-%20Mini/images/Phonemic-Chart.jpg)
 
 # monophthong
 
