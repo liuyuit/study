@@ -70,5 +70,5 @@ phpstudy启动一个客户端
 
 - cmd切换到php安装目录 `C:\phpStudy\PHPTutorial\php\php-7.2.1-nts`
 - 执行命令 ` php-cgi.exe -b 127.0.0.1:9001 -c php.ini`
-- 或者 `C:\phpStudy\PHPTutorial\php\php-7.2.1-nts\php-cgi.exe -b 127.0.0.1:9001 -c php.ini`
+- 或者 `C:\phpStudy\PHPTutorial\php\php-7.2.1-nts\php-cgi.exe -b 127.0.0.1:9001 -c C:\phpStudy\PHPTutorial\php\php-7.2.1-nts\php.ini`
 
