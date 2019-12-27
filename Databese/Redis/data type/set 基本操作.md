@@ -17,6 +17,18 @@
  2) "6799533A2FC18"
  3) "cc891c4f628f9"
  4) "ECFE4F82-BFF8-AEDEA44"
+```
+
+## srem
+
+```
+127.0.0.1:6379> smembers test
+1) "b"
+2) "a"
+127.0.0.1:6379> srem test a
+(integer) 1
+127.0.0.1:6379> smembers test
+1) "b"
 
 ```
 

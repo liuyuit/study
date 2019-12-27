@@ -1,28 +1,20 @@
-# curl_post_json
+# curl_post
 
 ```
     /**
-     * 使用json格式做post请求
-     * @param $url string
-     * @param $params array
-     * @param $headers array
+     * POST
+     * @param $url
+     * @param $params
+     * @param $headers
      * @return bool|string
      */
-    public static  function  curlPostJson($url,$params,$headers = []){
-        $paramString = json_encode($params);
-        $contentHeaders = [
-            'Content-Type: application/json',
-            'Content-Length: ' . strlen($paramString),
-        ];
-
-        $headers = array_merge($headers, $contentHeaders);
-
+    public static  function  curlPost($url,$params = [],array $headers = []){
         $ch = curl_init ();
 
         curl_setopt ( $ch, CURLOPT_URL, $url );
         curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt ( $ch, CURLOPT_CUSTOMREQUEST, 'POST' );
-        curl_setopt ( $ch, CURLOPT_POSTFIELDS, $paramString);
+        curl_setopt ( $ch, CURLOPT_POSTFIELDS, http_build_query($params) ); // http_build_query()函数用来处理curl_post传输多维数组的
         curl_setopt ( $ch, CURLOPT_HTTPHEADER, $headers );
         curl_setopt ( $ch, CURLOPT_TIMEOUT, 20 );
         // 本地开发环境无法检查安全证书
