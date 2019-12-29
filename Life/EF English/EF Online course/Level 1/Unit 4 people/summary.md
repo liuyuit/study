@@ -10,9 +10,9 @@ There's meatball,dumpling.
 
 ## grammar
 
-> there be 的就近原则，离它最近的是复数就用
+> there be 的就近原则，离它最近的是复数就用are，否则用is。
 
-There's a laptop computer and two smartphones.
+There'**s** a laptop computer and two smartphones.
 
-There are two smartphones and a laptop computer.
+There **are** two smartphones and a laptop computer.
 
