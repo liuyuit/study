@@ -1,5 +1,9 @@
 # People
 
-what' the food like in your city
+What' the food like in your city
 
-there are so many delicious foods.
+There are so many delicious foods.
+
+There's meatball,dumpling.
+
+There's a laptop computer,a smartphone 
