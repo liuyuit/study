@@ -8,4 +8,4 @@ Yes, I am.
 
 He likes swimming.
 
-there's a good rastruant  
+there's a good restaurant   
