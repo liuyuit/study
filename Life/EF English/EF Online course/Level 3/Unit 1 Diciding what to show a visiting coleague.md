@@ -6,3 +6,6 @@ Are you free this weekend?
 
 Yes, I am.
 
+He likes swimming.
+
+there's a good rastruant  
