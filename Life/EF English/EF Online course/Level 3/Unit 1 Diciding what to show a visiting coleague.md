@@ -1,3 +1,4 @@
 # Diciding what to show a visiting coleague
 
-We can go run in the playgaroud.
+We can go run in the playground.
+
