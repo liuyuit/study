@@ -37,6 +37,8 @@ Prim算法的每一步都会为一棵生长中的树添加一条边。
 #### prim的延时实现
 
 ```
-public 
+public lazyPrimMST{
+
+}
 ```
 
