@@ -4,4 +4,5 @@
 
 PrimMST类具有以下特性
 
-- edgeTo[v]表示非树顶点v到树顶点中权重最小的边。distTo[v]we
+- edgeTo[v]表示非树顶点v到树顶点中权重最小的边。distTo[v]为这条边的权重
+- 
