@@ -2,4 +2,6 @@
 
 ## references
 
-> 
+> https://segmentfault.com/q/1010000009314581
+>
+> https://pkg.phpcomposer.com/
