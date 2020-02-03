@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php">
-      <change beforePath="$PROJECT_DIR$/../Learning/LearningDocument/LearningNotes/算法学习笔记/4、图/3、最小生成树.md" beforeDir="false" />
-    </list>
+    <list default="true" id="efa8ca54-a792-4597-a302-e902200d8c60" name="Default Changelist" comment="新增 separateChainingHashSTExample.php" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph/TransitiveClosure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#167#185#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -41,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graph/DirectedDFS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="228">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -134,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,15 +136,11 @@
               <item name="StudyCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="StudyCode" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="StudyCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyCode" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,6 +347,7 @@
       <workItem from="1575647104171" duration="599000" />
       <workItem from="1575737470431" duration="1302000" />
       <workItem from="1575802828220" duration="5755000" />
+      <workItem from="1580695661368" duration="693000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -383,7 +374,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301596000" />
+    <option name="totallyTimeSpent" value="302289000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -395,10 +386,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="97" y="73" width="1307" height="802" extended-state="0" />
-    <editor active="true" />
+    <frame x="96" y="72" width="1308" height="803" extended-state="1" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.29703763" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.3016" />
       <window_info id="Structure" order="1" sideWeight="0.53417265" side_tool="true" weight="0.24121997" />
       <window_info id="Favorites" order="2" sideWeight="0.5155131" side_tool="true" weight="0.22654155" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -918,20 +908,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph/DirectedDFS.php">
+    <entry file="file://$PROJECT_DIR$/Graph/TransitiveClosure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="152">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph/TransitiveClosure.php">
+    <entry file="file://$PROJECT_DIR$/Graph/DirectedDFS.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#167#185#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
