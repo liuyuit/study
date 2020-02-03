@@ -5,7 +5,7 @@
 只需要在`nginx.conf`中加入一句
 
 ```
-#include D:/phpStudy/PHPTutorial/nginx/conf/server/*.conf;
+#include D:/phpStudy/PHPTutorial/nginx/conf/server/*.conf; # 绝对路径和相对路径皆可
 include server/*.conf;
 ```
 
