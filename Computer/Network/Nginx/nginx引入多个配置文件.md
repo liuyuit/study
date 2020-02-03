@@ -5,6 +5,7 @@
 只需要在`nginx.conf`中加入一句
 
 ```
-
+#include D:/phpStudy/PHPTutorial/nginx/conf/server/*.conf;
+include server/*.conf;
 ```
 
