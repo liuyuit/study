@@ -122,11 +122,11 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP-7.1.13-nts" />
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="studycode.com" port="80" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="121" />
-    <option name="y" value="91" />
-    <option name="width" value="1634" />
-    <option name="height" value="1003" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="120" />
+    <option name="y" value="90" />
+    <option name="width" value="1635" />
+    <option name="height" value="1004" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
