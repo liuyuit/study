@@ -117,7 +117,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP-7.1.13-nts" />
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="studycode.com" port="80" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="120" />
     <option name="y" value="90" />
     <option name="width" value="1635" />
@@ -347,7 +347,7 @@
       <workItem from="1575647104171" duration="599000" />
       <workItem from="1575737470431" duration="1302000" />
       <workItem from="1575802828220" duration="5755000" />
-      <workItem from="1580695661368" duration="704000" />
+      <workItem from="1580695661368" duration="1297000" />
     </task>
     <task id="LOCAL-00001" summary="新增二分查找">
       <created>1557501452499</created>
@@ -374,7 +374,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302300000" />
+    <option name="totallyTimeSpent" value="302893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,7 +386,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="96" y="72" width="1308" height="803" extended-state="1" />
+    <frame x="96" y="72" width="1308" height="803" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46582735" visible="true" weight="0.3016" />
