@@ -1,5 +1,9 @@
 # set 基本操作
 
+## references
+
+>  https://www.cnblogs.com/fengkunangel/p/8909523.html 
+
 ## sadd
 
 > 添加一个元素到集合，元素无序（元素的hash值映射到数组索引，并且还会动态调整数组大小）且唯一。
@@ -30,5 +34,18 @@
 127.0.0.1:6379> smembers test
 1) "b"
 
+```
+
+## sismember
+
+判断某个元素是否存在于集合
+
+```
+127.0.0.1:6379> sadd white_list:reg:ip 15
+(integer) 1
+127.0.0.1:6379> sismember  white_list:reg:ip 15
+(integer) 1
+127.0.0.1:6379>  sismember  white_list:reg:ip 16
+(integer) 0
 ```
 
