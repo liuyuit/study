@@ -7,6 +7,8 @@
 > https://zhuanlan.zhihu.com/p/70314212
 >
 > https://blog.csdn.net/weixin_30455365/article/details/95964381
+>
+> https://blog.csdn.net/weixin_43770545/article/details/90717903
 
 ## 创建本地用于映射的文件和目录
 
@@ -77,7 +79,7 @@ You can configure shared paths from Docker -> Preferences... -> File Sharing.
 See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
 ```
 
-
+按照提示，找到Docker -> Preferences… -> File Sharing.添加Sharing可以解决这个问题。
 
 
 
