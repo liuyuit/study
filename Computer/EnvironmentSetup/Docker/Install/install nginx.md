@@ -30,7 +30,18 @@ docker rm -f temp-nginx
 创建容器并映射配置文件、日志文件、网站根目录
 
 ```
-docker run --name nginx -p 80:80 -v /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /usr/local/nginx/conf/conf.d:/etc/nginx/conf.d -v /usr/local/nginx/www:/www -v /usr/local/nginx/log:/var/log/nginx -d nginx
+docker run --name nginx -p 80:80 \
+-v /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
+-v /usr/local/nginx/conf/conf.d:/etc/nginx/conf.d \
+-v /usr/local/nginx/www:/usr/share/nginx/html \
+-v /usr/local/nginx/log:/var/log/nginx\
+-d nginx
+```
+
+or
+
+```
+docker run --name nginx -p 80:80 -v /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /usr/local/nginx/conf/conf.d:/etc/nginx/conf.d -v /usr/local/nginx/www:/usr/share/nginx/html -v /usr/local/nginx/log:/var/log/nginx -d nginx
 ```
 
 启动时报错
