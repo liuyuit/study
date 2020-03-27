@@ -1,0 +1,91 @@
+# php interface abstract trait 
+
+## references
+
+> https://www.php.net/manual/zh/language.oop5.abstract.php
+>
+> https://www.cnblogs.com/maowenqiang/articles/7815249.html
+>
+> https://www.jianshu.com/p/fc053b2d7fd1
+>
+> https://www.php.net/interface
+
+## interface
+
+interface中只能定义抽象方法
+
+```
+interface iTemplate
+{
+    public function setVariable($name, $var);
+    public function getHtml($template);
+}
+```
+
+子类可以用implements 并用逗号相连实现多个interface，并且子类中必须实现interface中所有方法
+
+```
+class c implements a,b
+{
+}
+```
+
+## abstract
+
+abstract中可以定义抽象方法和普通方法
+
+```
+<?php
+abstract class AbstractClass
+{
+ // 强制要求子类定义这些方法
+    abstract protected function getValue();
+    abstract protected function prefixValue($prefix);
+
+    // 普通方法（非抽象方法）
+    public function printOut() {
+        print $this->getValue() . "\n";
+    }
+}
+```
+
+子类必须实现父类的所有抽象方法
+
+```
+class ConcreteClass1 extends AbstractClass
+{
+    protected function getValue() {
+        return "ConcreteClass1";
+    }
+
+    public function prefixValue($prefix) {
+        return "{$prefix}ConcreteClass1";
+    }
+}
+```
+
+## trait
+
+基类和abstract都只能单继承。如果想要多继承可以使用trait。
+
+```
+<?php
+trait ezcReflectionReturnInfo {
+    function getReturnType() { /*1*/ }
+    function getReturnDescription() { /*2*/ }
+}
+
+class ezcReflectionMethod extends ReflectionMethod {
+    use ezcReflectionReturnInfo;
+    /* ... */
+}
+```
+
+## How to choose
+
+如果只想定义一个类的规范、模板，可以使用interface
+
+如果除了定义规范，还想要实现一些通用功能，就使用abstract
+
+如果想实现多继承，只能用trait
+
