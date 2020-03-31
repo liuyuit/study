@@ -35,12 +35,12 @@ $resourceLogs = Redis::pipeline(function ($pipe) {
         });
 ```
 
-但是在管道命令中，只能一次性的执行所有命令，所以队列中取完数据之后还会继续取数据
+但是在管道命令中，只能一次性的执行所有命令，所以队列中没有数据之后还会继续取出空数据
 
 所以还要加上
 
 ```
- if (empty($resourceLogs)) {
+ 		if (empty($resourceLogs)) {
             return false;
         }
 
