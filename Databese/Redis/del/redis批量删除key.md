@@ -29,6 +29,7 @@ OK
 ```
 [liuy@ecs-gz-sdk02 ~]$ redis-cli -h 127.0.0.1 -n 15  keys test* | xargs redis-cli -h 127.0.0.1 -n 15 del
 (integer) 3
+redis-cli -h 127.0.0.1 -n 15  keys test* | xargs redis-cli -h 127.0.0.1 -n 15 del
 ```
 
 #### 命令简介
