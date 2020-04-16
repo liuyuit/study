@@ -17,12 +17,16 @@
 
         $logs = [];
         $query = UnionSdkLog::factory('sdk_game_resource_log')->getBuilder();
-        while(!feof($handle)){
-            $lineStr = fgets($handle);
+        
+		while(
+            !feof($handle)
+            && ($lineStr = fgets($handle))
+        ){
             $log = json_decode($lineStr, true);
+            $log['gid'] = $gid;
             $logs[] = $log;
             $num++;
-
+        
             if ($num >= 50){ // 每50条数据插入一次数据库
                 $query->insert($logs);
                 $num = 0;
