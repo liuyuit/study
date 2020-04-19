@@ -41,8 +41,10 @@ docker run --name nginx -p 80:80 \
 or
 
 ```
-docker run --name nginx -p 80:80 -v /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /usr/local/nginx/conf/conf.d:/etc/nginx/conf.d -v /usr/local/nginx/www:/usr/share/nginx/html -v /usr/local/nginx/log:/var/log/nginx -d nginx
+docker run --name nginx -p 80:80 -v /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /usr/local/nginx/conf/conf.d:/etc/nginx/conf.d -v /usr/local/nginx/www:/usr/share/nginx/html -v /usr/local/nginx/log:/var/log/nginx  --privileged=true -d nginx
 ```
+
+> `-v /usr/local/nginx/www:/usr/share/nginx/html` 是表示文件映射，意思是在容器内部访问 `/usr/share/nginx/html`则会访问到本机的`/usr/local/nginx/www`，相当于做了一个软链接。使用`docker exec`命令进入容器内部，就可以看到这种映射关系。
 
 启动时报错
 
