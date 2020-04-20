@@ -14,6 +14,7 @@ for category_dir in $(ls $start_dir); do    # 循环 git 仓库根目录
   for dir in $(ls $category_dir); do # 循环 git 分类目录
     cd $category_dir; 
     cd $dir;
+    echo "workdir is ${dir}";
     git pull;
     git add .
     git commit -m 'shell script auto push';
