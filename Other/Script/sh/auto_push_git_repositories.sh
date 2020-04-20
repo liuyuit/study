@@ -2,7 +2,7 @@
 pwd="/Users/liuyu/Documents/git/"       #初始化目录
 for category_dir in $(ls $pwd); do    # 循环 git 仓库根目录
   code_dir="code";
-  if ["$category_dir" = "$code"];then  # 代码相关的的 git 仓库不自动推送拉取
+  if ["$category_dir" = "$code_dir"];then  # 代码相关的的 git 仓库不自动推送拉取
     continue
   fi
   unauthorized_dir="unauthorized"
