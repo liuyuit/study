@@ -20,3 +20,27 @@ OK
 2) "jwt"
 ```
 
+## hexists
+
+```
+127.0.0.1:6379> hset test a aa
+(integer) 1
+127.0.0.1:6379> hexists test a
+(integer) 1
+127.0.0.1:6379> hexists test ab
+(integer) 0
+
+```
+
+## hdel
+
+```
+127.0.0.1:6379> hset test a aa
+(integer) 1
+127.0.0.1:6379> hdel test a
+(integer) 1
+127.0.0.1:6379> hget test a
+(nil)
+
+```
+
