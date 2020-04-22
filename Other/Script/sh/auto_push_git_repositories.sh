@@ -1,4 +1,6 @@
 #/bin/sh
+source /etc/profile # 指定该脚本通过 crontab 执行所需的环境变量
+echo "shell script start\r\n";
 start_dir="/Users/liuyu/Documents/git/"       #初始化目录
 for category_dir in $(ls $start_dir); do    # 循环 git 仓库根目录
   code_dir=`ls $start_dir | grep code`;
@@ -15,10 +17,10 @@ for category_dir in $(ls $start_dir); do    # 循环 git 仓库根目录
     cd $category_dir; 
     cd $dir;
     echo "workdir is ${dir}";
-    git pull;
-    git add .
-    git commit -m 'shell script auto push';
-    git push;
+    /usr/bin/git pull;
+    /usr/bin/git add .
+    /usr/bin/git commit -m 'shell script auto push';
+    /usr/bin/git push;
     cd ../; 
     cd ../; 
   done
