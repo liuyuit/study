@@ -1,5 +1,5 @@
 #!/bin/sh
-source /etc/profile # 指定该脚本通过 crontab 执行所需的环境变量
+#source /etc/profile # 指定该脚本通过 crontab 执行所需的环境变量
 echo "shell script start\r\n";
 start_dir="/Users/liuyu/Documents/git/"       #初始化目录
 for category_dir in $(ls $start_dir); do    # 循环 git 仓库根目录
