@@ -85,3 +85,11 @@ vim ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 % launchctl load ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 ```
 
+## Start
+
+立即执行，不管时间有没有到。
+
+```
+% launchctl start ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
+```
+
