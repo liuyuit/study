@@ -152,6 +152,18 @@ liuyu/my_sinatra        v1                  d11eb3e19c5d        20 hours ago    
 liuyu/sinatra           v2                  d11eb3e19c5d        20 hours ago        454MB
 ```
 
+#### Digest
+
+```
+% docker images --digests | head
+REPOSITORY              TAG                 DIGEST                                                                    IMAGE ID            CREATED             SIZE
+php                     7.4-cli             sha256:918fc88105db0d83332482c68d3d7bd08c64b87c0ee89c50116f8b4a0023c90d   76a5dae0c884        4 weeks ago         405MB             sha256:93b055962a3d405c028654f981581a84aa16048657de2b3534a8269f6f848910   7d64b9cd1388        6 weeks ago         405MB
+```
+
+可以使用 `degist` 值来拉取镜像
+
+#### 推送镜像
+
 
 
 #### 删除镜像
@@ -159,4 +171,6 @@ liuyu/sinatra           v2                  d11eb3e19c5d        20 hours ago    
 ```
 % docker rmi training/sinatra:latest
 ```
+
+> 删除镜像之前需要确保没有基于此镜像的容器
 
