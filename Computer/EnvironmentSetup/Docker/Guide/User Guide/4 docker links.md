@@ -31,6 +31,8 @@ $ sudo docker run -d -p 127.0.0.1::5002 training/webapp python app.py
 
 ## 连接容器
 
+docker 可以将多个容器连接以来，会创建一种父子关系，父容器可以查看子容器的信息。
+
 #### 容器命名
 
 ```
