@@ -164,7 +164,10 @@ php                     7.4-cli             sha256:918fc88105db0d83332482c68d3d7
 
 #### 推送镜像
 
-
+```
+% docker push liuyu/sinatra
+denied: requested access to the resource is denied
+```
 
 #### 删除镜像
 
