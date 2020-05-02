@@ -85,7 +85,13 @@ root@8b22a3999822:/# exit
 sha256:d11eb3e19c5de35856698ab5f8f8310efca52998776ede2822edc652ad8284f5
 ```
 
-`-m` 指定
+`-m` 指定标识提交信息， `-a` 标识提交的作者，后接容器ID，然后还指定了新的仓库名， `liuyu` 是仓库的所有者。
+
+运行新镜像
+
+```
+% docker run -i -t liuyu/sinatra:v2 /bin/bash
+```
 
 
 
