@@ -21,11 +21,28 @@ f0ee2f6879cf        training/webapp     "python app.py"     6 seconds ago       
 127.0.0.1:5001
 ```
 
+绑定 UDP 端口
 
+```
+$ sudo docker run -d -p 127.0.0.1::5002 training/webapp python app.py
+```
 
-
+> -p 可以绑定多个端口
 
 
 
 ## 连接容器
 
+#### 容器命名
+
+```
+% docker run -d -P --name web training/webapp python app.py
+```
+
+```
+
+```
+
+
+
+#### 容器连接
