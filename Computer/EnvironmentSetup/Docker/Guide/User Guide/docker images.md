@@ -39,3 +39,27 @@ root@70b9766f831e:/# exit
 % docker pull centos
 ```
 
+然后再运行
+
+```
+ % docker images
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+centos                  latest              470671670cac        3 months ago        237MB
+
+ % docker run -i -t centos:latest /bin/bash
+```
+
+#### 查找一个镜像
+
+```
+
+```
+
+
+
+
+
+
+
+
+
