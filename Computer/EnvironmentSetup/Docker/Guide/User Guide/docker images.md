@@ -68,12 +68,18 @@ Using default tag: latest
 
 创建镜像有两种方式
 
-- 拉取原有的镜像，指定这个镜像运行一个容器，修改这个容器，
+- 拉取原有的镜像，指定这个镜像运行一个容器，修改这个容器，将这个容器提交为镜像。
+- 通过 `Dockerfile` 新建一个镜像。
 
 ```
 % docker run -i -t training/sinatra  /bin/bash
 root@8b22a3999822:/# gem install json
+root@8b22a3999822:/# exit
 ```
 
+提交容器
 
+```
+
+```
 
