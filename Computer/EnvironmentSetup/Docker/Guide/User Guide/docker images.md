@@ -105,6 +105,15 @@ sha256:d11eb3e19c5de35856698ab5f8f8310efca52998776ede2822edc652ad8284f5
 文件中写入
 
 ```
-
+# this is a comment
+FROM unbuntu:14.04
+MAINTAINER liuyu <liuyu@aliyun.com>
+RUN apt-get update && apt-get install -y ruby ruby-dev
+RUN gem install sinatra
 ```
 
+`FROM` 表示源自于哪个基础镜像
+
+`MAINTAINER` 作者信息
+
+`RUN` 
