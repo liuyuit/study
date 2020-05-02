@@ -29,8 +29,6 @@ $ sudo docker run -d -p 127.0.0.1::5002 training/webapp python app.py
 
 > -p 可以绑定多个端口
 
-
-
 ## 连接容器
 
 #### 容器命名
@@ -40,9 +38,17 @@ $ sudo docker run -d -p 127.0.0.1::5002 training/webapp python app.py
 ```
 
 ```
-
+% docker inspect -f "{{ .Name}}" 3839afbfc89f
+/web
 ```
 
-
+>  docker inspect -f "{{ .一级属性}} {{ .一级属性.二级属性}}" contaner_id
 
 #### 容器连接
+
+创建一个数据库的新容器。
+
+```
+% sudo docker -d --name db training/postgres
+```
+
