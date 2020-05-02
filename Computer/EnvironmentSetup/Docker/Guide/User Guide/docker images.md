@@ -154,5 +154,9 @@ liuyu/sinatra           v2                  d11eb3e19c5d        20 hours ago    
 
 
 
+#### 删除镜像
 
+```
+% docker rmi training/sinatra:latest
+```
 
