@@ -130,9 +130,19 @@ RUN gem install sinatra
 
 `-t` 标示属于 `liuyu` 的 `sinatra` 的仓库，标签为 `v2` 。 `.` 表示使用当前路径下的 `Dockerfile` 文件（也可指定其它路径）。
 
+运行新镜像
 
+```
+% docker run -i -t liuyu/sinatra:v2 /bin/bash
+```
 
+## More
 
+#### 修改镜像标识
+
+```
+
+```
 
 
 
