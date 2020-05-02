@@ -4,4 +4,28 @@
 
 > https://github.com/widuu/chinese_docker/blob/master/userguide/dockerlinks.md
 
-## 
+## 绑定端口
+
+绑定指定的主机网络地址
+
+```
+ % docker run -d -p 127.0.0.1:5001:5000 training/webapp python app.py
+ 
+ % docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                      NAMES
+f0ee2f6879cf        training/webapp     "python app.py"     6 seconds ago       Up 5 seconds        127.0.0.1:5001->5000/tcp   frosty_elbakyan
+```
+
+```
+% docker port frosty_elbakyan 5000
+127.0.0.1:5001
+```
+
+
+
+
+
+
+
+## 连接容器
+
