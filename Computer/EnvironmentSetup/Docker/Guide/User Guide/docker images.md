@@ -93,7 +93,18 @@ sha256:d11eb3e19c5de35856698ab5f8f8310efca52998776ede2822edc652ad8284f5
 % docker run -i -t liuyu/sinatra:v2 /bin/bash
 ```
 
+## 使用 Dockerfile 创建镜像
 
+```
+% mkdir sinatra_docker_file
+% cd sinatra_docker_file
+% touch Dockerfile
+% vim Dockerfile
+```
 
+文件中写入
 
+```
+
+```
 
