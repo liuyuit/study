@@ -97,6 +97,8 @@ sha256:d11eb3e19c5de35856698ab5f8f8310efca52998776ede2822edc652ad8284f5
 
 #### 创建 Dockerfile
 
+> Dockerfile 文件编写时，如果每一次测试 RUN 命令都要修改 Dockerfile 文件再运行比较花时间，可以先运行基础镜像，然后进入容器执行修改容器的命令，达到效果后再去修改 Dockerfile 文件。
+
 ```
 % mkdir sinatra_docker_file
 % cd sinatra_docker_file
