@@ -95,6 +95,8 @@ sha256:d11eb3e19c5de35856698ab5f8f8310efca52998776ede2822edc652ad8284f5
 
 ## 使用 Dockerfile 创建镜像
 
+#### 创建 Dockerfile
+
 ```
 % mkdir sinatra_docker_file
 % cd sinatra_docker_file
@@ -117,3 +119,6 @@ RUN gem install sinatra
 `MAINTAINER` 作者信息
 
 `RUN` 在镜像内执行一个命令，就像在容器的终端内执行的命令一样，注意每一个 `RUN` 都会新建一个层，会让镜像体积变大，所以尽量用 `&&` 连接多个命令。
+
+#### 通过 Dockerfile 创建镜像
+
