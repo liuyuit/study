@@ -80,6 +80,14 @@ root@8b22a3999822:/# exit
 提交容器
 
 ```
-
+% docker commit -m 'added json gem' -a 'liuyu' \
+8b22a3999822  liuyu/sinatra:v2
+sha256:d11eb3e19c5de35856698ab5f8f8310efca52998776ede2822edc652ad8284f5
 ```
+
+`-m` 指定
+
+
+
+
 
