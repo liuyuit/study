@@ -52,14 +52,24 @@ centos                  latest              470671670cac        3 months ago    
 #### 查找一个镜像
 
 ```
-
+% docker search sinatra
+NAME                             DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+training/sinatra                                                                 18
 ```
 
+#### 拉取镜像
 
+```
+ % docker pull training/sinatra
+Using default tag: latest
+```
 
+#### 创建自己的镜像
 
-
-
+```
+% docker run -i -t training/sinatra  /bin/bash
+root@8b22a3999822:/# gem install json
+```
 
 
 
