@@ -71,3 +71,47 @@ docker 开放子容器连接信息有两种方式
 - 更新 /etc/hosts
 - 环境变量
 
+###### 环境变量
+
+```
+% sudo docker run --rm --name web2 --link db:db training/webapp env
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=e38aaa9d507b
+DB_PORT=tcp://172.17.0.2:5432
+DB_PORT_5432_TCP=tcp://172.17.0.2:5432
+DB_PORT_5432_TCP_ADDR=172.17.0.2
+DB_PORT_5432_TCP_PORT=5432
+DB_PORT_5432_TCP_PROTO=tcp
+DB_NAME=/web/db
+DB_ENV_PG_VERSION=9.3
+HOME=/root
+```
+
+这里的 DB_PORT 的前缀 `DB_` 是根据前面设置的别名 `db`。 如果设置的别名是 `db1_`，那么前缀会变成 `DB1_`。
+
+可以通过这些环境变量来让应用程序连接 DB。
+
+###### hosts
+
+```
+ % docker exec -i -t 3839afbfc89f /bin/bash
+root@3839afbfc89f:/opt/webapp# cat /etc/hosts
+127.0.0.1	localhost
+::1	localhost ip6-localhost ip6-loopback
+fe00::0	ip6-localnet
+ff00::0	ip6-mcastprefix
+ff02::1	ip6-allnodes
+ff02::2	ip6-allrouters
+172.17.0.2	db bf2b5c015fe8
+172.17.0.3	3839afbfc89f
+```
+
+```
+root@3839afbfc89f:/opt/webapp# apt-get install -yqq inetutils-ping
+
+root@3839afbfc89f:/opt/webapp# ping db
+PING db (172.17.0.2): 56 data bytes
+64 bytes from 172.17.0.2: icmp_seq=0 ttl=64 time=0.202 ms
+64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.267 ms
+```
+
