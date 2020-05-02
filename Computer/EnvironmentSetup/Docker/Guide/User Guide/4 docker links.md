@@ -52,3 +52,13 @@ $ sudo docker run -d -p 127.0.0.1::5002 training/webapp python app.py
 % sudo docker -d --name db training/postgres
 ```
 
+创建一个 web 容器来连接 db 容器
+
+```
+% sudo docker run -d -P --name web --link db:db training/webapp python app.py
+```
+
+```
+--link name:alias
+```
+
