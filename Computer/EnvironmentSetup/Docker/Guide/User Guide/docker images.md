@@ -141,7 +141,15 @@ RUN gem install sinatra
 #### 修改镜像标识
 
 ```
+% docker images
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+liuyu/sinatra           v2                  d11eb3e19c5d        20 hours ago        454MB
 
+% docker tag d11eb3e19c5d liuyu/my_sinatra:v1
+% docker images
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+liuyu/my_sinatra        v1                  d11eb3e19c5d        20 hours ago        454MB
+liuyu/sinatra           v2                  d11eb3e19c5d        20 hours ago        454MB
 ```
 
 
