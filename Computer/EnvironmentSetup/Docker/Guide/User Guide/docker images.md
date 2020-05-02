@@ -122,3 +122,7 @@ RUN gem install sinatra
 
 #### 通过 Dockerfile 创建镜像
 
+```
+% docker build -t liuyu/sinatra:v2 .
+```
+
