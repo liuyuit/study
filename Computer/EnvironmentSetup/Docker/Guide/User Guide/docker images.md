@@ -128,3 +128,4 @@ RUN gem install sinatra
 % docker build -t liuyu/sinatra:v2 .
 ```
 
+`-t` 标识
