@@ -8,7 +8,5 @@ services:
       - /usr/local/nginx/log:/var/log/nginx
     ports:
       - 8080:80
-    expose:
-      - 80
     
     
