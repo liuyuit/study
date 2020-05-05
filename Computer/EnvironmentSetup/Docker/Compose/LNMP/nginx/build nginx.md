@@ -36,6 +36,7 @@ COPY failed: stat /var/lib/docker/tmp/docker-builder744247787/usr/local/nginx/ww
 修改后的 Dockerfile
 
 ```
-
+FROM nginx
+COPY ./www/ /usr/share/nginx/html
 ```
 
