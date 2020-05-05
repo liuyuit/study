@@ -42,6 +42,51 @@ if __name__ == "__main__":
 #### Dockerfile
 
 ```
+% vim Dockerfile
+```
 
+写入以下内容
+
+```
+FROM python:3.6-alpine
+ADD . /code
+WORKDIR /code
+RUN pip install redis flask
+CMD ["python", "app.py"]
+```
+
+#### docker-compose
+
+```
+% vim docker-compose.yml
+```
+
+写入以下内容
+
+```
+version: '3'
+services:
+
+  web:
+    build: .
+    ports:
+     - "5000:5000"
+
+  redis:
+    image: "redis:alpine"
+```
+
+#### 运行
+
+```
+% docker-compose up
+```
+
+访问
+
+```
+http://localhost:5000/
+
+Hello World! 该页面已被访问 2 次。
 ```
 
