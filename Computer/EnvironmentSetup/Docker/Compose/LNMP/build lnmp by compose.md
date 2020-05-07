@@ -1,4 +1,4 @@
-# Build web app by compose
+# Build LNMP by compose
 
 ## references
 
@@ -144,4 +144,16 @@ http://localhost:8080/
 ```
  % docker-compose  restart
 ```
+
+## PHP
+
+#### references
+
+> https://yuedu.baidu.com/ebook/d817967416fc700abb68fca1?pn=1
+>
+> https://hub.docker.com/_/php?tab=description
+>
+> https://github.com/docker-library/docs/blob/master/php/README.md#supported-tags-and-respective-dockerfile-links
+>
+> https://github.com/docker-library/php/blob/b3532e478a5296d570fc85a76d10ae8d3b488a9e/7.4/buster/fpm/Dockerfile
 
