@@ -9,3 +9,10 @@ services:
       - /usr/local/nginx/www:/usr/share/nginx
     ports:
       - "8080:80"
+  php:
+    build: ./php/
+    volumes:
+      - /usr/local/nginx/www:/var/www/
+      - /usr/local/php/conf.d:/usr/local/etc/php/conf.d
+    ports:
+      - "9000:9000"

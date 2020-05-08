@@ -1,6 +1,12 @@
 FROM php:7.4-fpm
 # 修改 apt-get 源 
-CP /usr/local/php/sources.list /etc/apt/sources.list
-RUN apt-get update 
+COPY /usr/local/php/sources.list /etc/apt/sources.list
+RUN apt-get update \
+    && apt-get install -y \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libpng-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd
 EXPOSE 9000
 CMD ["php-fpm"]
