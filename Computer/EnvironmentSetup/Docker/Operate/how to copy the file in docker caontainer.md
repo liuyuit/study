@@ -78,3 +78,27 @@ EXPOSE 9000
 CMD ["php-fpm"]
 ```
 
+
+
+## error
+
+```
+ % docker-compose up -d
+Building php
+Step 1/5 : FROM php:7.4-fpm
+ ---> 990906b33c18
+Step 2/5 : COPY /usr/local/php/sources.list /etc/apt/sources.list
+ERROR: Service 'php' failed to build: COPY failed: stat /var/lib/docker/tmp/docker-builder903934100/usr/local/php/sources.list: no such file or directory
+```
+
+Dockerfile 中 copy 的文件必须在当前目录下，所以需要改为
+
+```
+FROM php:7.4-fpm
+# 修改 apt-get 源
+COPY conf/sources.list /etc/apt/sources.list
+RUN apt-get update
+EXPOSE 9000
+CMD ["php-fpm"]
+```
+
