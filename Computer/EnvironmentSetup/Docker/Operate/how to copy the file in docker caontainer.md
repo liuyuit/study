@@ -24,6 +24,10 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 宿主机新建文件 
 
+> 源地址必须根据你的linux发行版
+>
+> 
+
 ```
 % vim /usr/local/php/sources.list
 
