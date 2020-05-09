@@ -13,6 +13,6 @@ services:
     build: ./php/
     volumes:
       - /usr/local/nginx/www:/var/www/
-      - /usr/local/php/conf.d:/usr/local/etc/php/conf.d
+      - /usr/local/php/conf/:/usr/local/etc/
     ports:
       - "9000:9000"

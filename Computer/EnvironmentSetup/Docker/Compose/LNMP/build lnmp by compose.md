@@ -162,10 +162,25 @@ http://localhost:8080/
 先运行一个没有目录挂载的临时容器，将临时容器的配置文件复制到宿主机
 
 ```
-
+docker build -t php_tmp ./php
 ```
 
-修改 apt 源
+```
+docker run -d --name php_tmp php_tmp
+```
+
+查看配置文件所在路径
+
+```
+docker exec -it php_tmp /bin/bash
+root@e6a5db0f0a1d:/var/www/html# php --ini
+```
+
+```
+docker cp php_tmp:/usr/local/etc/ /usr/local/php/conf
+```
+
+#### 修改 apt 源
 
 ```
 vim php/conf/sources.list
@@ -215,7 +230,7 @@ services:
     build: ./php/
     volumes:
       - /usr/local/nginx/www:/var/www/
-      - /usr/local/php/conf.d:/usr/local/etc/php/conf.d
+      - /usr/local/php/conf/:/usr/local/etc/
     ports:
       - "9000:9000"
 ```
