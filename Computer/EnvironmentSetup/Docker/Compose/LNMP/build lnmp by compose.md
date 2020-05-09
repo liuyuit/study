@@ -157,3 +157,62 @@ http://localhost:8080/
 >
 > https://github.com/docker-library/php/blob/b3532e478a5296d570fc85a76d10ae8d3b488a9e/7.4/buster/fpm/Dockerfile
 
+ 修改 apt 源
+
+```
+vim php/conf/sources.list
+
+deb http://mirrors.163.com/debian/ buster main non-free contrib
+deb http://mirrors.163.com/debian/ buster-updates main non-free contrib
+deb http://mirrors.163.com/debian/ buster-backports main non-free contrib
+deb-src http://mirrors.163.com/debian/ buster main non-free contrib
+deb-src http://mirrors.163.com/debian/ buster-updates main non-free contrib
+deb-src http://mirrors.163.com/debian/ buster-backports main non-free contrib
+deb http://mirrors.163.com/debian-security/ buster/updates main non-free contrib
+deb-src http://mirrors.163.com/debian-security/ buster/updates main non-free contrib
+```
+
+Dockerfile
+
+```
+FROM php:7.4-fpm
+# 修改 apt-get 源
+COPY conf/sources.list /etc/apt/sources.list
+RUN apt-get update \
+    && apt-get install -y \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libpng-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd
+EXPOSE 9000
+CMD ["php-fpm"]
+```
+
+docker-compose
+
+```
+version: "3"
+services:
+  nginx:
+    build: ./nginx/
+    volumes:
+      - /usr/local/nginx/conf/conf.d/:/etc/nginx/conf.d
+      - /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
+      - /usr/local/nginx/log:/var/log/nginx
+      - /usr/local/nginx/www:/usr/share/nginx
+    ports:
+      - "8080:80"
+  php:
+    build: ./php/
+    volumes:
+      - /usr/local/nginx/www:/var/www/
+      - /usr/local/php/conf.d:/usr/local/etc/php/conf.d
+    ports:
+      - "9000:9000"
+```
+
+```
+docker-compose up -d
+```
+
