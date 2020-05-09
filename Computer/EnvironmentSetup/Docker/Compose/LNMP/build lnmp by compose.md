@@ -157,7 +157,15 @@ http://localhost:8080/
 >
 > https://github.com/docker-library/php/blob/b3532e478a5296d570fc85a76d10ae8d3b488a9e/7.4/buster/fpm/Dockerfile
 
- 修改 apt 源
+#### 复制配置文件
+
+先运行一个没有目录挂载的临时容器，将临时容器的配置文件复制到宿主机
+
+```
+
+```
+
+修改 apt 源
 
 ```
 vim php/conf/sources.list
