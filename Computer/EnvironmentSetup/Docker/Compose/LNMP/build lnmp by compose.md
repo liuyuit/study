@@ -21,7 +21,8 @@ cd LUMP
 
 ```
 % docker run --name tmp-nginx-container -d nginx
-% docker cp tmp-nginx-container:/etc/nginx/ ./nginx/conf/
+% docker cp tmp-nginx-container:/etc/nginx/nginx.conf ./nginx/conf/nginx.conf
+% docker cp tmp-nginx-container:/etc/nginx/conf.d ./nginx/conf/conf.d
 % docker rm -f tmp-nginx-container
 ```
 
