@@ -255,9 +255,11 @@ docker build -t tmp_php php/
 docker run -d --name tmp_php tmp_php
 docker exec -it tmp_php /bin/bash
 
-root@ee7cc70778e5:/var/www/html# pecl install -y redis \
-     && pecl install -y xdebug \
-     && docker-php-ext-enable redis xdebug
+root@ee7cc70778e5:/var/www/html# printf "\n" | pecl install -o -f redis \
+    && rm -rf /tmp/pear \
+    && docker-php-ext-enable redis \
+    && pecl install xdebug \
+    && docker-php-ext-enable xdebug
      
 % docker rm -f tmp_php
 % docker rmi tmp_php
