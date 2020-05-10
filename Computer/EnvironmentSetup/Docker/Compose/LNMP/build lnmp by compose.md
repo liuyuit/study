@@ -249,12 +249,15 @@ docker-compose up -d
 在将安装 PHP 扩展多命令写入到 Dockerfile 之前，先运行一个临时镜像测试安装命令
 
 ```
-docker build -t tmp_php php/
+docker build -t tmp_php php/ 
 docker run -d --name tmp_php tmp_php
 docker exec -it tmp_php /bin/bash
 
 root@ee7cc70778e5:/var/www/html# pecl install -n redis \
->     && pecl install -n xdebug \
->     && docker-php-ext-enable redis xdebug
+     && pecl install -n xdebug \
+     && docker-php-ext-enable redis xdebug
+     
+% docker rm -f tmp_php
+% docker rmi tmp_php
 ```
 
