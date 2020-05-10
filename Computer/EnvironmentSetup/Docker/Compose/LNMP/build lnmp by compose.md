@@ -243,3 +243,18 @@ docker-compose up -d
 ```
 
 > nginx 和 php 挂载的容器内项目文件地址需要一致，否则在 nginx 配置文件中需要分别配置 php 文件和静态文件的访问位置。
+
+#### install more extension
+
+在将安装 PHP 扩展多命令写入到 Dockerfile 之前，先运行一个临时镜像测试安装命令
+
+```
+docker build -t tmp_php php/
+docker run -d --name tmp_php tmp_php
+docker exec -it tmp_php /bin/bash
+
+root@ee7cc70778e5:/var/www/html# pecl install -n redis \
+>     && pecl install -n xdebug \
+>     && docker-php-ext-enable redis xdebug
+```
+
