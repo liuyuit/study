@@ -275,6 +275,33 @@ root@ee7cc70778e5:/var/www/html# printf "\n" | pecl install -o -f redis \
 ```
 vim /usr/local/nginx/conf/conf.d/gohost.conf
 
+server {
+    listen       80;
+    server_name  gohost.com;
+    root   /data/www;
 
+    location / {
+        index  index.html index.htm index.php;
+    }
+
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+
+    location ~ \.php$ {
+    #    root           html;
+        fastcgi_pass   php-fpm:9000;
+        fastcgi_index  index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
+```
+
+```
+http://gohost.com:8080/phpinfo.php
 ```
 
