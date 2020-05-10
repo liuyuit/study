@@ -57,7 +57,7 @@ services:
       - /usr/local/nginx/conf/conf.d/:/etc/nginx/conf.d
       - /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
       - /usr/local/nginx/log:/var/log/nginx
-      - /usr/local/nginx/www:/usr/share/nginx
+      - /usr/local/nginx/www:/var/www
     ports:
       - "8080:80"
 ```
@@ -207,7 +207,10 @@ RUN apt-get update \
         libjpeg62-turbo-dev \
         libpng-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd
+    && docker-php-ext-install -j$(nproc) gd \
+    && pecl install redis \    
+    && pecl install xdebug \    
+    && docker-php-ext-enable redis xdebug
 EXPOSE 9000
 CMD ["php-fpm"]
 ```
@@ -239,3 +242,4 @@ services:
 docker-compose up -d
 ```
 
+> nginx 和 php 挂载的容器内项目文件地址需要一致，否则在 nginx 配置文件中需要分别配置 php 文件和静态文件的访问位置。
