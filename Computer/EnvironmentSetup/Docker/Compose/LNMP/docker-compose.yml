@@ -16,5 +16,7 @@ services:
       - /usr/local/nginx/www:/var/www
     ports:
       - "8080:80"
+    depends_on:
+      - php
     links:
       - "php"
