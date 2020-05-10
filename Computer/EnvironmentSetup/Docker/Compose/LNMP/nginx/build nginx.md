@@ -30,4 +30,18 @@ FROM nginx
 COPY ./www/ /usr/share/nginx/html
 ```
 
-#### 无法启动
+#### 无法启动nginx
+
+```
+% docker start -a lnmp_nginx_1
+nginx: [emerg] host not found in upstream "23b1d03147a3" in /etc/nginx/conf.d/gohost.conf:32
+```
+
+> -a 可以看到启动的错误信息
+
+```
+% docker logs -t lnmp_nginx_1
+2020-05-10T08:45:03.789233484Z nginx: [emerg] host not found in upstream "23b1d03147a3" in /etc/nginx/conf.d/gohost.conf:32
+2020-05-10T08:47:08.230518653Z nginx: [emerg] host not found in upstream "23b1d03147a3" in /etc/nginx/conf.d/gohost.conf:32
+```
+
