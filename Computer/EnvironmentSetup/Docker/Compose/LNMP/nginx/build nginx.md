@@ -8,16 +8,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## error
 
 #### COPY failed
@@ -40,3 +30,4 @@ FROM nginx
 COPY ./www/ /usr/share/nginx/html
 ```
 
+#### 无法启动
