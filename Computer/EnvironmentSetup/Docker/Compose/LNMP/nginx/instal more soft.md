@@ -9,15 +9,20 @@
 进入容器内部执行安装命令
 
 ```
-docker build -t tmp_php php/
-docker run -d --name tmp_php tmp_php
-docker exec -it tmp_php /bin/bash
+docker build -t tmp_nginx nginx/
+docker run -d --name tmp_nginx tmp_nginx
+docker exec -it tmp_nginx /bin/bash
 ```
 
 ```
 pecl install redis      \
 && pecl install  xdebug \
 && docker-php-ext-enable redis xdebug
+```
+
+```
+docker rm -f tmp_nginx
+docker rmi tmp_nginx
 ```
 
 安装期间会有交互式应答，直接 enter 就好
