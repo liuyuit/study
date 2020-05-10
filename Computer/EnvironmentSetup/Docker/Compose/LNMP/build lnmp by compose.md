@@ -311,11 +311,25 @@ http://gohost.com:8080/phpinfo.php
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 ## error
 
 #### creating mount
 
 ```
+% docker-compose up -d
+
 WARNING: Image for service nginx was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
 Creating lnmp_php_1 ... error
 
@@ -325,3 +339,4 @@ ERROR: for php  Cannot start service php: error while creating mount source path
 ERROR: Encountered errors while bringing up the project.
 ```
 
+将 docker desk 重启就好了
