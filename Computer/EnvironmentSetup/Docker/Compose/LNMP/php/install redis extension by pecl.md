@@ -8,12 +8,39 @@
 
 进入容器内部执行安装命令
 
-
+```
+docker build -t tmp_php php/
+docker run -d --name tmp_php tmp_php
+docker exec -it tmp_php /bin/bash
+```
 
 ```
-pecl install -y redis      \
-&& pecl install -y xdebug \
+pecl install redis      \
+&& pecl install  xdebug \
 && docker-php-ext-enable redis xdebug
 ```
 
 安装期间会有交互式应答，直接 enter 就好
+
+## Dockerfile
+
+因为安装期间会有交互式应答，而 docker 无法自动应答，pecl instal 也没有自动应答选项。所以需要用。`    printf "\n"` 来自动应答
+
+```
+ARG INSTALL_PHPREDIS=false
+RUN if [ ${INSTALL_PHPREDIS} = true ]; then \
+    # Install Php Redis Extension
+    printf "\n" | pecl install -o -f redis \
+    &&  rm -rf /tmp/pear \
+    &&  docker-php-ext-enable redis \
+;fi
+```
+
+或者
+
+```
+RUN printf "\n" | pecl install -o -f redis \
+    &&  rm -rf /tmp/pear \
+    &&  docker-php-ext-enable redis
+```
+
