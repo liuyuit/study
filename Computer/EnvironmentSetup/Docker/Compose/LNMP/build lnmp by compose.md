@@ -293,8 +293,8 @@ server {
 
     location ~ \.php$ {
     #    root           html;
-        fastcgi_pass   php-fpm:9000;
-        fastcgi_index  index.php;
+        fastcgi_pass   php-fpm:9000; # php-fpm 是在 docker-compose.yml 中 links 字段设置的别名
+        fastcgi_index  index.php; 
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include        fastcgi_params;
     }
