@@ -7,9 +7,9 @@ RUN apt-get update \
         libjpeg62-turbo-dev \
         libpng-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd \
-    && pecl install -y redis \
-    && pecl install -y xdebug \
-    && docker-php-ext-enable redis xdebug
+    && docker-php-ext-install -j$(nproc) gd 
+#    && pecl install -y redis \
+#    && pecl install -y xdebug \
+#    && docker-php-ext-enable redis xdebug
 EXPOSE 9000
 CMD ["php-fpm"]
