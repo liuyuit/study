@@ -10,7 +10,7 @@ RUN apt-get update \
     && docker-php-ext-install -j$(nproc) gd \
     && printf "\n" | pecl install -o -f redis \
     && rm -rf /tmp/pear \
-    && docker-php-ext-enable redis
+    && docker-php-ext-enable redis \
     && pecl install -y xdebug \
     && docker-php-ext-enable xdebug
 EXPOSE 9000
