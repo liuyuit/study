@@ -19,4 +19,4 @@ services:
     depends_on:
       - php
     links:
-      - "php"
+      - php:php-fpm
