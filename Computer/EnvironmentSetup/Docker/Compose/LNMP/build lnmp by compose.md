@@ -57,7 +57,7 @@ services:
       - /usr/local/nginx/conf/conf.d/:/etc/nginx/conf.d
       - /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
       - /usr/local/nginx/log:/var/log/nginx
-      - /usr/local/nginx/www:/var/www
+      - /usr/local/nginx/www:/data/www
     ports:
       - "8080:80"
 ```
@@ -117,7 +117,7 @@ server {
     listen       80;
     server_name  localhost;
     location / {
-        root   /usr/share/nginx/;
+        root   /data/www;
         index  index.html index.htm;
     }
     error_page   500 502 503 504  /50x.html;
@@ -222,22 +222,27 @@ docker-compose
 ```
 version: "3"
 services:
+  php:
+    build: ./php/
+    volumes:
+      - /usr/local/nginx/www:/data/www/
+      - /usr/local/php/conf/:/usr/local/etc/
+    ports:
+      - "9000:9000"
   nginx:
     build: ./nginx/
     volumes:
       - /usr/local/nginx/conf/conf.d/:/etc/nginx/conf.d
       - /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
-      - /usr/local/nginx/log:/var/log/nginx
-      - /usr/local/nginx/www:/usr/share/nginx
+      - /usr/local/nginx/log:/data/log/nginx
+      - /usr/local/nginx/www:/data/www
     ports:
       - "8080:80"
-  php:
-    build: ./php/
-    volumes:
-      - /usr/local/nginx/www:/var/www/
-      - /usr/local/php/conf/:/usr/local/etc/
-    ports:
-      - "9000:9000"
+    depends_on:
+      - php
+    links:
+      - php:php-fpm
+
 ```
 
 ```
@@ -263,5 +268,13 @@ root@ee7cc70778e5:/var/www/html# printf "\n" | pecl install -o -f redis \
      
 % docker rm -f tmp_php
 % docker rmi tmp_php
+```
+
+#### php + nginx
+
+```
+vim /usr/local/nginx/conf/conf.d/gohost.conf
+
+
 ```
 
