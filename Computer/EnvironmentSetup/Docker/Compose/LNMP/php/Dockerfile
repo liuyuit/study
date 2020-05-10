@@ -8,8 +8,8 @@ RUN apt-get update \
         libpng-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
-    && pecl install redis \
-    && pecl install xdebug \
-    && docker-php-ext-enable redis xdebug
+#    && pecl install redis \
+#    && pecl install xdebug \
+#    && docker-php-ext-enable redis xdebug
 EXPOSE 9000
 CMD ["php-fpm"]
