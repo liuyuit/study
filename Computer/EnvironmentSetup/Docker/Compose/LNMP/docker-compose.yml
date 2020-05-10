@@ -16,5 +16,5 @@ services:
       - /usr/local/nginx/www:/var/www
     ports:
       - "8080:80"
-    #links:
-     # - "php:php"
+    links:
+      - "php"
