@@ -20,3 +20,13 @@ services:
       - php
     links:
       - php:php-fpm
+  mysql
+    build: ./mysql/
+    volumes:
+      - /usr/local/nginx/mysql/conf/:/etc/mysql/
+    ports:
+      - "8080:80"
+    depends_on:
+      - php
+    links:
+      - php:php-fpm
