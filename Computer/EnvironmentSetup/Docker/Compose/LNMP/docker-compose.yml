@@ -20,11 +20,13 @@ services:
       - php
     links:
       - php:php-fpm
-  mysql
+  mysql:
     build: ./mysql/
     volumes:
-      - /usr/local/nginx/mysql/conf/:/etc/mysql/
+      - /usr/local/mysql/conf/:/etc/mysql/
     command: --default-authentication-plugin=mysql_native_password
     restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
     ports:
       - "3306:3306"
