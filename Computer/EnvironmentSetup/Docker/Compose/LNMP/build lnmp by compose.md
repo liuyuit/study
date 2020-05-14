@@ -357,11 +357,59 @@ docker-compose  up -d
 
 容器之间连接直接用 mysql 。
 
+## redis
 
+#### references
 
+> https://hub.docker.com/_/redis
+>
+> https://www.cnblogs.com/zhoudi94/p/12467739.html
 
+下载配置文件
 
+```
+http://download.redis.io/redis-stable/redis.conf
+```
 
+dockerfile
+
+```
+FROM redis:6.0.1
+EXPOSE 3306
+CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
+```
+
+docker-compose.yml
+
+```
+version: "3"
+services:
+  redis:
+    build: ./redis/
+    volumes:
+      - /usr/local/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"
+```
+
+```
+% docker-compose up -d
+```
+
+测试
+
+```
+% docker exec -it lnmp_redis_1 /bin/bash
+root@829b6480bed0:/data# redis-cli
+127.0.0.1:6379> info server
+# Server
+executable:/data/redis-server
+config_file:/usr/local/etc/redis/redis.conf
+127.0.0.1:6379> set test 1
+OK
+127.0.0.1:6379> get test
+"1"
+```
 
 
 
