@@ -297,7 +297,7 @@ CMD ["php-fpm"]
 
 > https://github.com/mlocati/docker-php-extension-installer
 
-
+> docker-php-ext-install 等命令只能在Dockerfile 中使用，在容器中不能使用。
 
 #### php + nginx
 
@@ -459,3 +459,17 @@ ERROR: Encountered errors while bringing up the project.
 ```
 
 将 docker desk 重启就好了
+
+#### php 安装扩展不能自动启用
+
+```
+FROM php:7.4-fpm
+# 修改 apt-get 源
+COPY conf/sources.list /etc/apt/sources.list
+RUN apt-get update \
+    && docker-php-ext-install pdo_mysql
+EXPOSE 9000
+CMD ["php-fpm"]
+```
+
+使用
