@@ -12,6 +12,7 @@ RUN apt-get update \
     && rm -rf /tmp/pear \
     && docker-php-ext-enable redis \
     && pecl install  xdebug \
-    && docker-php-ext-enable xdebug
+    && docker-php-ext-enable xdebug \
+    && docker-php-ext-install pdo_mysql 
 EXPOSE 9000
 CMD ["php-fpm"]
