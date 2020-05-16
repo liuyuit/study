@@ -4,8 +4,6 @@ services:
     build: ./php/
     volumes:
       - /usr/local/nginx/www:/data/www/
-      - /usr/local/php/conf/:/usr/local/etc/
-      - /usr/local/php/conf/php/conf.d/:/usr/local/etc/php/conf.d/
     ports:
       - "9000:9000"
   nginx:

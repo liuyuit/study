@@ -512,8 +512,37 @@ docker-php-ext-gd.ini  docker-php-ext-redis.ini
 因为我用的是 docker-desktop for mac 所以所有的挂载的目录都需要 file sharing 中添加。而我原本只添加了 `/usr/local/php/conf/` ，现在还需要再次添加 `/usr/local/php/conf/php/conf.d`。然后
 
 ```
-% docker-compose build
+docker-compose up -d 
 ```
 
+查看 [docker官网](https://hub.docker.com/_/php) 发现，官方并没有推荐挂载 conf 目录，而是通过在 dockerfile 中 copy 命令来自定义配置。
 
+```
+COPY config/opcache.ini $PHP_INI_DIR/conf.d/
+```
+
+所以问题可能出在 docker-composer.yml 中
+
+```
+    volumes:
+      - /usr/local/php/conf/:/usr/local/etc/
+```
+
+把这个挂载去掉再试就可以了
+
+
+
+#### RedisException: Connection refused
+
+这是因为绑定了固定的 127.0.0.1 ip
+
+```
+%  vim /usr/local/redis/conf/redis.conf
+```
+
+找到这一行注释掉就可以了
+
+```
+bind 127.0.0.1 ::1
+```
 
