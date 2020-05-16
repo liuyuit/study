@@ -496,18 +496,20 @@ docker run -d --name tmp_php tmp_php
 docker exec -it tmp_php /bin/bash
 
 root@2b735c9035b5:/var/www/html# ls /usr/local/etc/php/conf.d/
-docker-php-ext-gd.ini  docker-php-ext-mysqli.ini  docker-php-ext-pdo_mysql.ini	docker-php-ext-redis.ini  docker-php-ext-sodium.ini  docker-php-ext-xdebug.ini
+docker-php-ext-gd.ini  docker-php-ext-mysqli.ini  docker-php-ext-pdo_mysql.ini	
 ```
 
-通过 docker-compose.yml
+通过 docker-compose.yml 启动的 container
 
 ```
-
+ % docker exec -it lnmp_php_1 /bin/bash
+ # ls /usr/local/etc/php/conf.d/
+docker-php-ext-gd.ini  docker-php-ext-redis.ini  
 ```
 
+可以看到后者少了一个 `docker-php-ext-mysqli.ini` 文件
 
-
-
+因为我用的是 docker-de
 
 
 
