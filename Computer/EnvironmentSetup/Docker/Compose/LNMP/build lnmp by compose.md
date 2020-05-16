@@ -507,9 +507,13 @@ docker-php-ext-gd.ini  docker-php-ext-mysqli.ini  docker-php-ext-pdo_mysql.ini
 docker-php-ext-gd.ini  docker-php-ext-redis.ini  
 ```
 
-可以看到后者少了一个 `docker-php-ext-mysqli.ini` 文件，可以看出出问题的原因是 docker 对我宿主机的 `/usr/local/php/conf/`
+可以看到后者少了一个 `docker-php-ext-mysqli.ini` 文件，可以看出出问题的原因是 docker 对我宿主机的 `/usr/local/php/conf/php/conf.d` 目录没有写入权限。
 
-因为我用的是 docker-desktop for mac 所以所有的挂载的目录都需要 file sharing 中添加。而我原本只添加了 `/usr/local/php/conf/`
+因为我用的是 docker-desktop for mac 所以所有的挂载的目录都需要 file sharing 中添加。而我原本只添加了 `/usr/local/php/conf/` ，现在还需要再次添加 `/usr/local/php/conf/php/conf.d`。然后
+
+```
+% docker-compose build
+```
 
 
 
