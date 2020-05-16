@@ -413,12 +413,42 @@ docker-compose.yml
 ```
 version: "3"
 services:
+  php:
+    build: ./php/
+    volumes:
+      - /usr/local/nginx/www:/data/www/
+    ports:
+      - "9000:9000"
+  nginx:
+    build: ./nginx/
+    volumes:
+      - /usr/local/nginx/conf/conf.d/:/etc/nginx/conf.d
+      - /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
+      - /usr/local/nginx/log:/data/log/nginx
+      - /usr/local/nginx/www:/data/www
+    ports:
+      - "8080:80"
+    depends_on:
+      - php
+    links:
+      - php:php-fpm
+  mysql:
+    build: ./mysql/
+    volumes:
+      - /usr/local/mysql/conf/:/etc/mysql/
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "3306:3306"
   redis:
     build: ./redis/
     volumes:
       - /usr/local/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
     ports:
       - "6379:6379"
+
 ```
 
 ```
@@ -439,6 +469,43 @@ OK
 127.0.0.1:6379> get test
 "1"
 ```
+
+## 测试
+
+测试脚本
+
+```
+<?php
+$db = new PDO('mysql:host=mysql:3306;dbname=test', 'root', '123456');
+try {
+    foreach ($db->query('select * from test') as $row){
+        print_r($row);
+    }
+    $db = null; //关闭数据库
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+
+//连接本地的 Redis 服务
+$redis = new Redis();
+$redis->connect('redis', 6379);
+//$redis->auth('my pass');
+echo "Connection to server successfully";
+//设置 redis 字符串数据
+$redis->set("tutorial-name", "Redis tutorial");
+// 获取存储的数据并输出
+echo "Stored string in redis:: " . $redis->get("tutorial-name");
+
+```
+
+访问
+
+```
+http://test.com:8080/test_mysql_redis.php
+```
+
+成功
 
 
 
@@ -530,8 +597,6 @@ COPY config/opcache.ini $PHP_INI_DIR/conf.d/
 
 把这个挂载去掉再试就可以了
 
-
-
 #### RedisException: Connection refused
 
 这是因为绑定了固定的 127.0.0.1 ip
@@ -546,3 +611,24 @@ COPY config/opcache.ini $PHP_INI_DIR/conf.d/
 bind 127.0.0.1 ::1
 ```
 
+#### Fatal error: Uncaught RedisException: DENIED Redis is running in protected mode because protected mode is enabled
+
+> https://blog.csdn.net/a532672728/article/details/78035559
+
+php 脚本连接 redis 出了这个错
+
+```
+Fatal error: Uncaught RedisException: DENIED Redis is running in protected mode because protected mode is enabled
+```
+
+修改配置文件改成下面的样子即可
+
+```
+ % vim /usr/local/redis/conf/redis.conf
+```
+
+```
+protected-mode no
+```
+
+但是容器里怎么重启redis服务一直不知道怎么做。只好删掉容器和镜像重新运行。
