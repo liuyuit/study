@@ -472,4 +472,23 @@ EXPOSE 9000
 CMD ["php-fpm"]
 ```
 
-使用
+Docker-compose.yml
+
+```yml
+version: "3"
+services:
+  php:
+    build: ./php/
+    volumes:
+      - /usr/local/nginx/www:/data/www/
+      - /usr/local/php/conf/:/usr/local/etc/
+    ports:
+      - "9000:9000"
+```
+
+如果使用 dockerfile 创建镜像并运行是没问题的，如果是用 docker-compose.yml 运行的容器，那么 .so 文件依然会被安装，但不会自动启用这个扩展
+
+```
+
+```
+
