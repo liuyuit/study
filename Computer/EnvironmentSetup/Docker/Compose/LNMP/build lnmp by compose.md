@@ -488,7 +488,26 @@ services:
 
 如果使用 dockerfile 创建镜像并运行是没问题的，如果是用 docker-compose.yml 运行的容器，那么 .so 文件依然会被安装，但不会自动启用这个扩展
 
+通过 dockerfile
+
+```
+docker build -t tmp_php php
+docker run -d --name tmp_php tmp_php
+docker exec -it tmp_php /bin/bash
+
+root@2b735c9035b5:/var/www/html# ls /usr/local/etc/php/conf.d/
+docker-php-ext-gd.ini  docker-php-ext-mysqli.ini  docker-php-ext-pdo_mysql.ini	docker-php-ext-redis.ini  docker-php-ext-sodium.ini  docker-php-ext-xdebug.ini
+```
+
+通过 docker-compose.yml
+
 ```
 
 ```
+
+
+
+
+
+
 
