@@ -137,3 +137,9 @@ docker 下有三种网络
 
 使用 host 可以解决和宿主机通信的问题。
 
+```
+docker run -d --name tmp_ubuntu --network host ubuntu:14.04  ping www.baidu.com
+docker exec -it tmp_ubuntu /bin/bash
+
+```
+
