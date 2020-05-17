@@ -140,6 +140,9 @@ docker 下有三种网络
 ```
 docker run -d --name tmp_ubuntu --network host ubuntu:14.04  ping www.baidu.com
 docker exec -it tmp_ubuntu /bin/bash
-
+root@docker-desktop:/# ping test.com
+PING test.com (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.078 ms
 ```
 
+尝试 ping 宿主机绑定的虚拟域名，发现可以 ping 通。
