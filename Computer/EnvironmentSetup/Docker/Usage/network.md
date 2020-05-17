@@ -88,3 +88,52 @@ networks:
     driver: bridge
 ```
 
+## 容器和主机互通的方法
+
+#### references
+
+> http://jingsam.github.io/2018/10/16/host-in-docker.html
+
+
+
+#### 使用主机IP
+
+linux 下会自动创建 docker0 虚拟网卡
+
+使用如下命令去查询 ip 地址
+
+```
+$ ip addr show docker0
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether 02:42:d5:4c:f2:1e brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:d5ff:fe4c:f21e/64 scope link
+       valid_lft forever preferred_lft forever
+```
+
+mac 下没有这个网卡。但是可以用默认 IP `192.168.65.1`，也可以使用`host.docker.internal`这个特殊的DNS名称来解析宿主机IP。
+
+```
+ % docker run -d --name tmp_ubuntu ubuntu:14.04  ping www.baidu.com
+ % docker exec -it tmp_ubuntu /bin/bash
+ 
+ root@e9761d5257c5:/# ping host.docker.internal
+PING host.docker.internal (192.168.65.2) 56(84) bytes of data.
+64 bytes from 192.168.65.2: icmp_seq=1 ttl=37 time=2.76 ms
+64 bytes from 192.168.65.2: icmp_seq=2 ttl=37 time=3.22 ms
+```
+
+#### 使用host网络
+
+docker 下有三种网络 
+
+- bridge（默认）
+  - 桥接网络
+- host 
+  - 和宿主机共享网络
+- none
+  - 没有网络
+
+使用 host 可以解决和宿主机通信的问题。
+
