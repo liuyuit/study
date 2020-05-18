@@ -169,6 +169,10 @@ docker build -t php_tmp ./php
 docker run -d --name php_tmp php_tmp
 ```
 
+```
+
+```
+
 查看配置文件所在路径
 
 ```
