@@ -1,8 +1,9 @@
 FROM php:7.4-fpm
 # 修改 apt-get 源
 COPY conf/sources.list /etc/apt/sources.list
-# 设置本地配置文件
+# 设置配置文件
 COPY conf/php.ini /usr/local/etc/php/php.ini
+COPY conf/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN apt-get update \
     && apt-get install -y \
         libfreetype6-dev \
