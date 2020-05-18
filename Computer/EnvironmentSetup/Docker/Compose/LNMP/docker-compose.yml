@@ -4,7 +4,6 @@ services:
     build: ./php/
     volumes:
       - /usr/local/nginx/www:/data/www/
-      - /usr/local/php/conf/:/usr/local/etc/
     ports:
       - "9000:9000"
   nginx:
@@ -30,3 +29,9 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
     ports:
       - "3306:3306"
+  redis:
+    build: ./redis/
+    volumes:
+      - /usr/local/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"

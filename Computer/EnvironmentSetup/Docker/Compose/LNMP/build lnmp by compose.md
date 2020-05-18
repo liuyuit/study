@@ -270,6 +270,35 @@ root@ee7cc70778e5:/var/www/html# printf "\n" | pecl install -o -f redis \
 % docker rmi tmp_php
 ```
 
+dockerfile
+
+```
+FROM php:7.4-fpm
+# 修改 apt-get 源
+COPY conf/sources.list /etc/apt/sources.list
+RUN apt-get update \
+    && apt-get install -y \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libpng-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd \
+    && printf "\n" | pecl install -o -f redis \
+    && rm -rf /tmp/pear \
+    && docker-php-ext-enable redis \
+    && pecl install  xdebug \
+    && docker-php-ext-enable xdebug \
+    && docker-php-ext-install pdo_mysql
+EXPOSE 9000
+CMD ["php-fpm"]
+```
+
+查看 docker-php-ext-install 支持的扩展
+
+> https://github.com/mlocati/docker-php-extension-installer
+
+> docker-php-ext-install 等命令只能在Dockerfile 中使用，在容器中不能使用。
+
 #### php + nginx
 
 ```
@@ -357,11 +386,126 @@ docker-compose  up -d
 
 容器之间连接直接用 mysql 。
 
+## redis
+
+#### references
+
+> https://hub.docker.com/_/redis
+>
+> https://www.cnblogs.com/zhoudi94/p/12467739.html
+
+下载配置文件
+
+```
+http://download.redis.io/redis-stable/redis.conf
+```
+
+dockerfile
+
+```
+FROM redis:6.0.1
+EXPOSE 3306
+CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
+```
+
+docker-compose.yml
+
+```
+version: "3"
+services:
+  php:
+    build: ./php/
+    volumes:
+      - /usr/local/nginx/www:/data/www/
+    ports:
+      - "9000:9000"
+  nginx:
+    build: ./nginx/
+    volumes:
+      - /usr/local/nginx/conf/conf.d/:/etc/nginx/conf.d
+      - /usr/local/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
+      - /usr/local/nginx/log:/data/log/nginx
+      - /usr/local/nginx/www:/data/www
+    ports:
+      - "8080:80"
+    depends_on:
+      - php
+    links:
+      - php:php-fpm
+  mysql:
+    build: ./mysql/
+    volumes:
+      - /usr/local/mysql/conf/:/etc/mysql/
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "3306:3306"
+  redis:
+    build: ./redis/
+    volumes:
+      - /usr/local/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"
+
+```
+
+```
+% docker-compose up -d
+```
+
+测试
+
+```
+% docker exec -it lnmp_redis_1 /bin/bash
+root@829b6480bed0:/data# redis-cli
+127.0.0.1:6379> info server
+# Server
+executable:/data/redis-server
+config_file:/usr/local/etc/redis/redis.conf
+127.0.0.1:6379> set test 1
+OK
+127.0.0.1:6379> get test
+"1"
+```
+
+## 测试
+
+测试脚本
+
+```
+<?php
+$db = new PDO('mysql:host=mysql:3306;dbname=test', 'root', '123456');
+try {
+    foreach ($db->query('select * from test') as $row){
+        print_r($row);
+    }
+    $db = null; //关闭数据库
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 
 
+//连接本地的 Redis 服务
+$redis = new Redis();
+$redis->connect('redis', 6379);
+//$redis->auth('my pass');
+echo "Connection to server successfully";
+//设置 redis 字符串数据
+$redis->set("tutorial-name", "Redis tutorial");
+// 获取存储的数据并输出
+echo "Stored string in redis:: " . $redis->get("tutorial-name");
 
+```
 
+访问
 
+```
+http://test.com:8080/test_mysql_redis.php
+```
+
+成功
 
 
 
@@ -382,3 +526,109 @@ ERROR: Encountered errors while bringing up the project.
 ```
 
 将 docker desk 重启就好了
+
+#### php 安装扩展不能自动启用
+
+```
+FROM php:7.4-fpm
+# 修改 apt-get 源
+COPY conf/sources.list /etc/apt/sources.list
+RUN apt-get update \
+    && docker-php-ext-install pdo_mysql
+EXPOSE 9000
+CMD ["php-fpm"]
+```
+
+Docker-compose.yml
+
+```yml
+version: "3"
+services:
+  php:
+    build: ./php/
+    volumes:
+      - /usr/local/nginx/www:/data/www/
+      - /usr/local/php/conf/:/usr/local/etc/
+    ports:
+      - "9000:9000"
+```
+
+如果使用 dockerfile 创建镜像并运行是没问题的，如果是用 docker-compose.yml 运行的容器，那么 .so 文件依然会被安装，但不会自动启用这个扩展
+
+通过 dockerfile
+
+```
+docker build -t tmp_php php
+docker run -d --name tmp_php tmp_php
+docker exec -it tmp_php /bin/bash
+
+root@2b735c9035b5:/var/www/html# ls /usr/local/etc/php/conf.d/
+docker-php-ext-gd.ini  docker-php-ext-mysqli.ini  docker-php-ext-pdo_mysql.ini	
+```
+
+通过 docker-compose.yml 启动的 container
+
+```
+ % docker exec -it lnmp_php_1 /bin/bash
+ # ls /usr/local/etc/php/conf.d/
+docker-php-ext-gd.ini  docker-php-ext-redis.ini  
+```
+
+可以看到后者少了一个 `docker-php-ext-mysqli.ini` 文件，可以看出出问题的原因是 docker 对我宿主机的 `/usr/local/php/conf/php/conf.d` 目录没有写入权限。
+
+因为我用的是 docker-desktop for mac 所以所有的挂载的目录都需要 file sharing 中添加。而我原本只添加了 `/usr/local/php/conf/` ，现在还需要再次添加 `/usr/local/php/conf/php/conf.d`。然后
+
+```
+docker-compose up -d 
+```
+
+查看 [docker官网](https://hub.docker.com/_/php) 发现，官方并没有推荐挂载 conf 目录，而是通过在 dockerfile 中 copy 命令来自定义配置。
+
+```
+COPY config/opcache.ini $PHP_INI_DIR/conf.d/
+```
+
+所以问题可能出在 docker-composer.yml 中
+
+```
+    volumes:
+      - /usr/local/php/conf/:/usr/local/etc/
+```
+
+把这个挂载去掉再试就可以了
+
+#### RedisException: Connection refused
+
+这是因为绑定了固定的 127.0.0.1 ip
+
+```
+%  vim /usr/local/redis/conf/redis.conf
+```
+
+找到这一行注释掉就可以了
+
+```
+bind 127.0.0.1 ::1
+```
+
+#### Fatal error: Uncaught RedisException: DENIED Redis is running in protected mode because protected mode is enabled
+
+> https://blog.csdn.net/a532672728/article/details/78035559
+
+php 脚本连接 redis 出了这个错
+
+```
+Fatal error: Uncaught RedisException: DENIED Redis is running in protected mode because protected mode is enabled
+```
+
+修改配置文件改成下面的样子即可
+
+```
+ % vim /usr/local/redis/conf/redis.conf
+```
+
+```
+protected-mode no
+```
+
+但是容器里怎么重启redis服务一直不知道怎么做。只好删掉容器和镜像重新运行。
