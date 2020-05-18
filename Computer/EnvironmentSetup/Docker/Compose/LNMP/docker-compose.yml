@@ -14,7 +14,7 @@ services:
       - /usr/local/nginx/log:/data/log/nginx
       - /usr/local/nginx/www:/data/www
     ports:
-      - "8080:80"
+      - "80:80"
     depends_on:
       - php
     links:
