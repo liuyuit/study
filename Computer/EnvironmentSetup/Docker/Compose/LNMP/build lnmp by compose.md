@@ -169,6 +169,11 @@ docker build -t php_tmp ./php
 docker run -d --name php_tmp php_tmp
 ```
 
+```
+docker cp lnmp_php_1:/usr/local/etc/php/php.ini-development php/conf/php.ini
+docker cp php/conf/php.ini lnmp_php_1:/usr/local/etc/php/php.ini
+```
+
 查看配置文件所在路径
 
 ```

@@ -4,6 +4,7 @@ services:
     build: ./php/
     volumes:
       - /usr/local/nginx/www:/data/www/
+      - /usr/local/php/conf/php.ini:/usr/local/etc/php/php.ini
     ports:
       - "9000:9000"
   nginx:
@@ -14,7 +15,7 @@ services:
       - /usr/local/nginx/log:/data/log/nginx
       - /usr/local/nginx/www:/data/www
     ports:
-      - "8080:80"
+      - "80:80"
     depends_on:
       - php
     links:
