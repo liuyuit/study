@@ -34,13 +34,17 @@ Timeout 表示超时时间
 expect ~/Documents/ProgramData/iterm2/shell/jf-sdk-api-122.112.137.125.ssh
 ```
 
+> 使用这种方式第一次登录服务器会卡死，先使用 ssh 命令登录一次这个服务器，然后可以用这个方式登录。
+
 ## ssh
 
-对于不需要记住密码，可以用ssh
+对于不需要记住密码的服务器，先将 ssh 密钥文件放入 ～/.ssh 目录下，可以用ssh命令
 
 在command输入
 
 ```
-ssh -p 350 ly@106.75.8.7
+ssh -p port_number user@ip
+# example
+ssh -p 22 root@45.211.23.34
 ```
 
