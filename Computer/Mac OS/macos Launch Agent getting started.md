@@ -101,3 +101,4 @@ vim ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 3
 % tail -n 10 /Users/liuyu/var/log/launch_agent/auto_sync_git_repostories_stderr.log
 ```
+
