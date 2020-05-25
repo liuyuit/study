@@ -26,6 +26,14 @@ liuyu@usercomputerdeMacBook-Air bin % crontab -l
 */1 * * * * /bin/sh  /Users/liuyu/Documents/git/document/Study/Other/Script/sh/auto_push_git_repositories.sh >> /Users/liuyu/sh.txt 2>&1
 ```
 
+关闭日志输出
+
+```
+*/1 * * * * /bin/sh  /Users/liuyu/Documents/git/document/Study/Other/Script/sh/auto_push_git_repositories.sh >> /dev/null 2>&1
+```
+
+
+
 ## 完全磁盘访问权限
 
 做完上面一步后发现日志文件内容是
