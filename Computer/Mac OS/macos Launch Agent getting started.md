@@ -104,7 +104,7 @@ vim ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 
 ## Operation not permitted
 
-> 
+> https://blog.csdn.net/jcl314159/article/details/82710452
 >
 > [https://cl9000.github.io/2017/04/09/Mac-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1-launchctl/](https://cl9000.github.io/2017/04/09/Mac-定时任务-launchctl/)
 
@@ -116,4 +116,12 @@ vim ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 
 于是为 launchctl 和 launchd 添加了完全磁盘访问权限。还是不行。
 
-只能去 mac 恢复模式
+只能去 mac 恢复模式，关闭安全模式，关闭之后可以运行，但是恢复之后又不行了。
+
+只能用 crontab 执行了。为以下项目添加了完全磁盘访问权限可以正常使用了
+
+```
+/usr/sbin/cron
+/usr/bin/crontab
+```
+
