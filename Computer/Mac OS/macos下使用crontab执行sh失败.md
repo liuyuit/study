@@ -80,5 +80,7 @@ liuyu@usercomputerdeMacBook-Air sh % xattr -d com.apple.macl ./auto_push_git_rep
 
 遗憾的是，这两个命令都不能删除 @ 。所以 crontab 还是不能执行。
 
+尝试重新编辑同名文件来删除 @。
+
 尝试使用 launchctl 来执行定时任务。
 
