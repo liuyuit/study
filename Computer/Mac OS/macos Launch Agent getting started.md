@@ -102,3 +102,14 @@ vim ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 % tail -n 10 /Users/liuyu/var/log/launch_agent/auto_sync_git_repostories_stderr.log
 ```
 
+## Operation not permitted
+
+升级到macos 10.15 之后，查看标准错误输出日志
+
+```
+/bin/sh: /Users/liuyu/Documents/git/document/Study/Other/Script/sh/auto_push_git_repositories.sh: Operation not permitted
+```
+
+于是为 launchctl 和 launchd 添加了完全磁盘访问权限。还是不行。
+
+只能去 mac 恢复模式
