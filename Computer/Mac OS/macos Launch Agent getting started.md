@@ -104,6 +104,10 @@ vim ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 
 ## Operation not permitted
 
+> 
+>
+> [https://cl9000.github.io/2017/04/09/Mac-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1-launchctl/](https://cl9000.github.io/2017/04/09/Mac-定时任务-launchctl/)
+
 升级到macos 10.15 之后，查看标准错误输出日志
 
 ```
