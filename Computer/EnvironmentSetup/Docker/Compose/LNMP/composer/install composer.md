@@ -13,9 +13,11 @@
 ```
 % vim Dockerfile
 FROM composer:1.10.6
+
+% docker build -t my-composer:1.0 ./
 ```
 
 ```
-docker 
+% docker run -it-v 
 ```
 
