@@ -1,1 +1,1 @@
-FROM docker pull composer:1.10.6
+FROM composer:1.10.6
