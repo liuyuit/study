@@ -24,6 +24,6 @@ FROM composer:1.10.6
 设置别名
 
 ```
-echo "alias composer='docker run -it --name composer -v \$PWD:/srv --privileged=true composer'" >> ~/.bash_profile && source ~/.bash_profile
+echo "alias composer='docker run -it --name composer -v \$PWD:/srv --privileged=true my-composer:1.0'" >> ~/.bash_profile && source ~/.bash_profile
 ```
 
