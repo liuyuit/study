@@ -13,6 +13,7 @@
 ```
 % vim Dockerfile
 FROM composer:1.10.6
+RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/composer
 
 % docker build -t my-composer:1.0 ./
 ```
