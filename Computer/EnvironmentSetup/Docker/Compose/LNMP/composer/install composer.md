@@ -18,6 +18,12 @@ FROM composer:1.10.6
 ```
 
 ```
-% docker run -it-v 
+% docker run -it --name composer -v /docker/www:/app --privileged=true composer <要执行的composer命令>
+```
+
+设置别名
+
+```
+
 ```
 
