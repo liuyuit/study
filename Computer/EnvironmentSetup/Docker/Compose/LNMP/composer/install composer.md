@@ -25,7 +25,7 @@ RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/compos
 设置别名
 
 ```
-% echo "alias composer='docker run -it --name composer -v \$PWD:/app --privileged=true my-composer:1.0'" >> ~/.bash_profile && source ~/.bash_profile
+% echo "alias composer='docker run -i -t --rm --privileged=true  -v \$PWD:/app my-composer:1.0 composer'" >> ~/.bash_profile && source ~/.bash_profile
 ```
 
 将当前目录挂载到容器的工作目录
