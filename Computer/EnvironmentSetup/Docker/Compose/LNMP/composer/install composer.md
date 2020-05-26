@@ -11,6 +11,7 @@
 和其他容器不同，compser 不需要后台运行
 
 ```
-
+% vim Dockerfile
+FROM composer:1.10.6
 ```
 
