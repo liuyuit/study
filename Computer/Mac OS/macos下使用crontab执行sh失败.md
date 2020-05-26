@@ -26,6 +26,14 @@ liuyu@usercomputerdeMacBook-Air bin % crontab -l
 */1 * * * * /bin/sh  /Users/liuyu/Documents/git/document/Study/Other/Script/sh/auto_push_git_repositories.sh >> /Users/liuyu/sh.txt 2>&1
 ```
 
+关闭日志输出
+
+```
+*/1 * * * * /bin/sh  /Users/liuyu/Documents/git/document/Study/Other/Script/sh/auto_push_git_repositories.sh >> /dev/null 2>&1
+```
+
+
+
 ## 完全磁盘访问权限
 
 做完上面一步后发现日志文件内容是
@@ -79,6 +87,8 @@ liuyu@usercomputerdeMacBook-Air sh % xattr -d com.apple.macl ./auto_push_git_rep
 ```
 
 遗憾的是，这两个命令都不能删除 @ 。所以 crontab 还是不能执行。
+
+尝试重新编辑同名文件来删除 @。
 
 尝试使用 launchctl 来执行定时任务。
 

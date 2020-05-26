@@ -11,6 +11,7 @@ RUN apt-get update \
         libpng-dev \
         inetutils-ping=2:1.9.4-7 \
         vim \ 
+        psmisc \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd  pdo_mysql \
     && printf "\n" | pecl install -o -f redis \
