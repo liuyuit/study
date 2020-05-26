@@ -516,7 +516,21 @@ http://test.com:8080/test_mysql_redis.php
 
 项目必须要放在 nginx 挂载的目录 `/usr/local/nginx/www/` 下。
 
+然后将软链接设置到常用目录下。
 
+```
+ln -s /usr/local/nginx/www/Study ~/Documents/git/document
+```
+
+如果将软链文件设置到  `/usr/local/nginx/www/` 下，docker 将不能解析软链文件
+
+```
+% vim  /usr/local/nginx/conf/conf.d/algorithms.com.conf
+liuyu@liuyudeMacBook-Pro composer % docker exec -it lnmp_php_1 /bin/bash
+root@88595f8f4471:/data/www# ls -l
+total 8
+lrwxr-xr-x 1 root root  41 May 26 15:12 Study -> /Users/liuyu/Documents/git/document/Study
+```
 
 
 
