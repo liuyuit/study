@@ -512,6 +512,12 @@ http://test.com:8080/test_mysql_redis.php
 
 成功
 
+#### 项目软链
+
+项目必须要放在 nginx 挂载的目录 `/usr/local/nginx/www/` 下。
+
+
+
 
 
 ## error
