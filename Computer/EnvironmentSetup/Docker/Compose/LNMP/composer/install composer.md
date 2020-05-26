@@ -33,5 +33,11 @@ FROM composer:1.10.6
 
 ```
 % composer create-project symfony/framwork-standard-edition SomeProject
+
+```
+
+```
+# composer init
+# composer install
 ```
 
