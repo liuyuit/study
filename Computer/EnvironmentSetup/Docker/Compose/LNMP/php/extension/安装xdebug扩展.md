@@ -30,4 +30,19 @@ xdebug.show_local_vars=1
 http://test.com:8080/test_mysql_redis.php
 ```
 
-然后 debug 失败了，不知道为什么，明天继续。
+然后 debug 失败了
+
+
+
+#### Operation now in progress (29).
+
+```
+# cat /var/log/xdebug_remote.log
+```
+
+```
+[19410] I: Connecting to configured address/port: host.docker.internal:9009.
+[19410] W: Creating socket for 'host.docker.internal:9009', poll success, but error: Operation now in progress (29).
+[19410] E: Could not connect to client. :-(
+```
+
