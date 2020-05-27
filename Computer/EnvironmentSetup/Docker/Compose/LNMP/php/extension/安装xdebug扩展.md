@@ -46,3 +46,10 @@ http://test.com:8080/test_mysql_redis.php
 [19410] E: Could not connect to client. :-(
 ```
 
+需要改成
+
+```
+xdebug.remote_connect_back=0
+```
+
+成功
