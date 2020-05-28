@@ -1,7 +1,9 @@
 <?php
 
 function countExample(){
-    $count = new Count('ABCDR', 'ABRCDADABRA');
+    $alphabets = 'ABCDR';
+    $string = 'ABRCDADABRA';
+    new Count($alphabets, $string);
 }
 
 class Count
