@@ -60,10 +60,10 @@ class Alphabet
 
     /**
      * 获取字母表中该索引对应的字符
-     * @param $indices
+     * @param int $index
      * @return string
      */
-    function toChar($indices){
+    function toChar($index){
         return '';
     }
 
