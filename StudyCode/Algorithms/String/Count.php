@@ -11,7 +11,7 @@ class Count
 
         $N = strlen($chars);
         for ($i = 0; $i < $N;$i++){
-            
+            $alpha->
         }
     }
 }
@@ -22,7 +22,15 @@ class Alphabet
     {
     }
 
+    /**
+     * 获取字母表中字符数量
+     * @return int
+     */
     function R(){
         return 2;
+    }
+
+    function contains(){
+        
     }
 }
