@@ -1,5 +1,8 @@
 <?php
 
+function countExample(){
+    $count = new Count('ABCDR', 'ABRCDADABRA');
+}
 
 class Count
 {
@@ -17,7 +20,7 @@ class Count
         }
 
         for ($c = 0; $c < $R; $c++){
-            echo $alpha->toChar($c) . ' ' .
+            echo $alpha->toChar($c) . ' ' . $count[$c] . "\r\n";
         }
     }
 }
