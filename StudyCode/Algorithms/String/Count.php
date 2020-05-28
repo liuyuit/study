@@ -30,7 +30,10 @@ class Alphabet
         return 2;
     }
 
+    /**
+     *
+     */
     function contains(){
-        
+
     }
 }
