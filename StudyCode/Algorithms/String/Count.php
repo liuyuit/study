@@ -6,7 +6,8 @@ class Count
     public function __construct($alphabets, $chars)
     {
         $alpha = new Alphabet($alphabets);
-        $R = $alpha->R();  // 用来表示
+        $R = $alpha->R();  // 基数，字母表中的字符数量
+        
     }
 }
 
