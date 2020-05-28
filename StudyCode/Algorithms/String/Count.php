@@ -17,7 +17,7 @@ class Count
         }
 
         for ($c = 0; $c < $R; $c++){
-            echo
+            echo 
         }
     }
 }
