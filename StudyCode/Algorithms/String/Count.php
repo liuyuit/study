@@ -17,7 +17,7 @@ class Count
         }
 
         for ($c = 0; $c < $R; $c++){
-            
+            echo
         }
     }
 }
@@ -57,4 +57,6 @@ class Alphabet
     function toIndex($char){
         return 1;
     }
+
+    function toChar()
 }
