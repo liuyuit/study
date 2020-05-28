@@ -3,16 +3,16 @@
 
 class Count
 {
-    public function __construct($alphabets, $chars)
+    public function __construct($alphabets, $string)
     {
         $alpha = new Alphabet($alphabets);
         $R = $alpha->R();  // 基数，字母表中的字符数量
         $count = [];
 
-        $N = strlen($chars);
+        $N = strlen($string);
         for ($i = 0; $i < $N;$i++){
-            if ($alpha->contains($chars[$i])){
-                $count[]
+            if ($alpha->contains($string[$i])){
+                $count[$alpha->toIndex($string[$i])]++;
             }
         }
     }
