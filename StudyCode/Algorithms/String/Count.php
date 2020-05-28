@@ -5,13 +5,14 @@ class Count
 {
     public function __construct($alphabets, $chars)
     {
-        $alph = new Alphabet();
+        $alpha = new Alphabet($alphabets);
+        
     }
 }
 
 class Alphabet
 {
-    public function __construct()
+    public function __construct($alphabets)
     {
     }
 }
