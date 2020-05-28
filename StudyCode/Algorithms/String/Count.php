@@ -9,7 +9,7 @@ class Count
         $R = $alpha->R();  // 基数，字母表中的字符数量
         $count = [];
 
-        
+        $N = $chars
     }
 }
 
