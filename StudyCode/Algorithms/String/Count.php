@@ -10,10 +10,14 @@ class Count
         $count = [];
 
         $N = strlen($string);
-        for ($i = 0; $i < $N;$i++){
+        for ($i = 0; $i < $N; $i++){
             if ($alpha->contains($string[$i])){
                 $count[$alpha->toIndex($string[$i])]++;
             }
+        }
+
+        for ($c = 0; $c < $R; $c++){
+            
         }
     }
 }
