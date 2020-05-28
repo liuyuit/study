@@ -45,7 +45,12 @@ class Alphabet
         return true;
     }
 
-    function toIndex(){
-        
+    /**
+     * 获取 $char 的索引，值在 0-R 之间
+     * @param $char
+     * @return int
+     */
+    function toIndex($char){
+        return 1;
     }
 }
