@@ -7,6 +7,8 @@ class Count
     {
         $alpha = new Alphabet($alphabets);
         $R = $alpha->R();  // 基数，字母表中的字符数量
+        $count = [];
+
         
     }
 }
