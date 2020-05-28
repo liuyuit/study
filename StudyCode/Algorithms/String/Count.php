@@ -58,8 +58,13 @@ class Alphabet
         return 1;
     }
 
-    
+    /**
+     * 获取字母表中该索引对应的字符
+     * @param $indices
+     * @return string
+     */
     function toChar($indices){
-
+        return '';
     }
+
 }
