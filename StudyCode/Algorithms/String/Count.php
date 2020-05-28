@@ -3,8 +3,8 @@
 
 class Count
 {
-    public function __construct()
+    public function __construct($alphabets, $chars)
     {
-        
+
     }
 }
