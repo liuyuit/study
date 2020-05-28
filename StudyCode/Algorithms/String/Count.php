@@ -58,5 +58,8 @@ class Alphabet
         return 1;
     }
 
-    function toChar()
+    
+    function toChar($indices){
+
+    }
 }
