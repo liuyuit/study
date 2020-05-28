@@ -11,13 +11,19 @@ class Count
 
         $N = strlen($chars);
         for ($i = 0; $i < $N;$i++){
-            $alpha->
+            if ($alpha->contains($chars[$i])){
+                $count[]
+            }
         }
     }
 }
 
 class Alphabet
 {
+
+    /*
+     * 根据给定的字符串创建一个字母表
+     */
     public function __construct($alphabets)
     {
     }
@@ -31,9 +37,11 @@ class Alphabet
     }
 
     /**
-     *
+     * $char 是否在字母表中
+     * @param $char
+     * @return bool
      */
-    function contains(){
-
+    function contains($char){
+        return true;
     }
 }
