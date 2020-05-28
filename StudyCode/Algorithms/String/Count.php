@@ -1,5 +1,6 @@
 <?php
 
+countExample();
 function countExample(){
     $alphabets = 'ABCDR';
     $string = 'ABRCDADABRA';
