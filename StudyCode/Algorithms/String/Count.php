@@ -44,4 +44,8 @@ class Alphabet
     function contains($char){
         return true;
     }
+
+    function toIndex(){
+        
+    }
 }
