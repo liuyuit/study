@@ -56,7 +56,7 @@ class Alphabet
      * 获取字母表中字符数量
      * @return int
      */
-    function R(){
+    public function R(){
         return 2;
     }
 
@@ -65,7 +65,7 @@ class Alphabet
      * @param $char
      * @return bool
      */
-    function contains($char){
+    public function contains($char){
         return true;
     }
 
@@ -74,7 +74,7 @@ class Alphabet
      * @param $char
      * @return int
      */
-    function toIndex($char){
+    public function toIndex($char){
         return 1;
     }
 
@@ -83,8 +83,11 @@ class Alphabet
      * @param int $index
      * @return string
      */
-    function toChar($index){
+    public function toChar($index){
         return '';
     }
 
+    public function toIndices(){
+
+    }
 }
