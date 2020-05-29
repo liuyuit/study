@@ -40,7 +40,11 @@ class Count2
 
         $indices = $alpha->toIndices($string);
         for ($i = 0; $i < $N; $i++){
-            
+            $count[$indices[$i]]++;
+        }
+
+        for ($c = 0; $c < $R; $c++){
+            echo $alpha->toChar($c) . ' ' . $count[$c] . "\r\n";
         }
     }
 }
