@@ -37,7 +37,8 @@ class Count2
         $count = [];
 
         $N = strlen($string);
-        
+
+        $indises = $alpha->
     }
 }
 
