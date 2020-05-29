@@ -39,7 +39,9 @@ class Count2
         $N = strlen($string);
 
         $indices = $alpha->toIndices($string);
-        for ()
+        for ($i = 0; $i < $N; $i++){
+            
+        }
     }
 }
 
