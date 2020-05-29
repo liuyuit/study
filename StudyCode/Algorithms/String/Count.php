@@ -38,7 +38,8 @@ class Count2
 
         $N = strlen($string);
 
-        $indises = $alpha->
+        $indices = $alpha->toIndices($string);
+        for ()
     }
 }
 
@@ -87,7 +88,12 @@ class Alphabet
         return '';
     }
 
-    public function toIndices(){
-
+    /**
+     * 获取字符串每个字符所对应索引的数组
+     * @param string $string
+     * @return array
+     */
+    public function toIndices($string){
+        return [];
     }
 }
