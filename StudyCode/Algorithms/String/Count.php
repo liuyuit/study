@@ -28,6 +28,19 @@ class Count
     }
 }
 
+class Count2
+{
+    public function __construct($alphabets, $string)
+    {
+        $alpha = new Alphabet($alphabets);
+        $R = $alpha->R();  // 基数，字母表中的字符数量
+        $count = [];
+
+        $N = strlen($string);
+        
+    }
+}
+
 class Alphabet
 {
 
