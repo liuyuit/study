@@ -51,12 +51,23 @@ class Count2
 
 class Alphabet
 {
+    private array $alphabets = []; //  (int)index => (string)char  
+    private array $indices = [];  // (string)char => (int)index
+    private int $R = 0; // 字母表中所包含的字符总数
 
-    /*
-     * 根据给定的字符串创建一个字母表
+    /**
+     * (string)char
+     * Alphabet constructor.
+     * @param $alphabets
      */
     public function __construct($alphabets)
     {
+        $this->alphabets = $alphabets;
+
+        foreach($alphabets as $index => $char){
+            $this->indices[$char] = $index;
+            $this->R++;
+        }
     }
 
     /**
@@ -66,7 +77,7 @@ class Alphabet
      * @return int
      */
     public function R(){
-        return 2;
+        return $this->R;
     }
 
     /**
@@ -75,7 +86,7 @@ class Alphabet
      * @return bool
      */
     public function contains($char){
-        return true;
+        return isset($this->indices[$char]);
     }
 
     /**
@@ -84,7 +95,7 @@ class Alphabet
      * @return int
      */
     public function toIndex($char){
-        return 1;
+        return $this->indices[$char];
     }
 
     /**
@@ -93,7 +104,7 @@ class Alphabet
      * @return string
      */
     public function toChar($index){
-        return '';
+        return $this->alphabets[$index];
     }
 
     /**
