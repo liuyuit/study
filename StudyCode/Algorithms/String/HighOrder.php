@@ -20,13 +20,13 @@ function highOrderExample(){
        'Moore' => 3,
    ];
 
-    
+    new HighOrder($students);
 }
 
 class HighOrder
 {
-    public function __construct()
+    public function __construct($students)
     {
-
+        
     }
 }
