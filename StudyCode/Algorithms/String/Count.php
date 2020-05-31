@@ -18,7 +18,11 @@ class Count
         $N = strlen($string);
         for ($i = 0; $i < $N; $i++){
             if ($alpha->contains($string[$i])){
-                $count[$alpha->toIndex($string[$i])]++;
+                if (isset($count[$alpha->toIndex($string[$i])])){
+                    $count[$alpha->toIndex($string[$i])]++;
+                } else {
+                    $count[$alpha->toIndex($string[$i])] = 1;
+                }
             }
         }
 
