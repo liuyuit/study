@@ -58,13 +58,13 @@ class Alphabet
     /**
      * (string)char
      * Alphabet constructor.
-     * @param $alphabets
+     * @param $alphabetStr
      */
-    public function __construct($alphabets)
+    public function __construct($alphabetStr)
     {
-        $this->alphabets = $alphabets;
+        $this->alphabets = $alphabetStr;
 
-        foreach($alphabets as $index => $char){
+        foreach($alphabetStr as $index => $char){
             $this->indices[$char] = $index;
             $this->R++;
         }
