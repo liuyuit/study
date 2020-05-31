@@ -7,6 +7,10 @@ function highOrderExample(){
        'Anderson' => 2,
        'Brown' => 3,
        'Davis' => 3,
+       'Garcia' => 3,
+       'Harris' => 3,
+       'jackson' => 3,
+       'jackson' => 3,
    ];
 
 }
