@@ -118,6 +118,7 @@ class Alphabet
         $length = strlen($string);
         for ($i = 0; $i < $length; $i++){
             $indices[] = $string[$i];
+            
         }
 
         return [];
