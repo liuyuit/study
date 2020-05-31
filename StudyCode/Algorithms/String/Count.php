@@ -64,12 +64,11 @@ class Alphabet
     {
         $length = strlen($alphabetStr);
         for ($i = 0; $i < $length; $i++){
-            $this->alphabets = $alphabetStr[$i];
+            $this->alphabets[] = $alphabetStr[$i];
         }
 
-        foreach($alphabetStr as $index => $char){
+        foreach($this->alphabets as $index => $char){
             $this->indices[$char] = $index;
-            $this->R++;
         }
     }
 
