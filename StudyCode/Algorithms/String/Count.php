@@ -63,6 +63,7 @@ class Alphabet
     public function __construct($alphabetStr)
     {
         $length = strlen($alphabetStr);
+        $this->R = $length;
         for ($i = 0; $i < $length; $i++){
             $this->alphabets[] = $alphabetStr[$i];
         }
