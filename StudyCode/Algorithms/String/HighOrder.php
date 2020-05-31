@@ -1,13 +1,14 @@
 <?php
 
-countExample();
-function countExample(){
+highOrderExample();
+
+function highOrderExample(){
     $alphabets = 'ABCDR';
     $string = 'ABRCDADABRA';
-    new Count($alphabets, $string);
+    new HighOrder($alphabets, $string);
 }
 
-class Count
+class HighOrder
 {
     public function __construct($alphabets, $string)
     {
