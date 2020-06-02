@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:5.6-fpm
 # 修改 apt-get 源
 COPY conf/sources.list /etc/apt/sources.list
 # 设置配置文件
