@@ -17,7 +17,7 @@ RUN apt-get update
 #    && printf "\n" | pecl install -o -f redis-4.3.0 \
 #    && rm -rf /tmp/pear \
 #    && docker-php-ext-enable redis \
-#    && pecl install  xdebug \
+#    && pecl install  xdebug-2.5.5 \
 #    && docker-php-ext-enable xdebug 
 EXPOSE 9000
 CMD ["php-fpm"]
