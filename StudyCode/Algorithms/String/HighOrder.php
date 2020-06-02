@@ -27,6 +27,6 @@ class HighOrder
 {
     public function __construct($students)
     {
-        
+
     }
 }
