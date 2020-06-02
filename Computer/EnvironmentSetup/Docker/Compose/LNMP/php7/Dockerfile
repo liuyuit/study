@@ -1,4 +1,4 @@
-FROM php:5.6-fpm
+FROM php:7.4-fpm
 # 修改 apt-get 源
 COPY conf/sources.list /etc/apt/sources.list
 # 设置配置文件
@@ -14,10 +14,10 @@ RUN apt-get update
         psmisc \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd  pdo_mysql \
-    && printf "\n" | pecl install -o -f redis-4.3.0 \
+    && printf "\n" | pecl install -o -f redis-5.2.2 \
     && rm -rf /tmp/pear \
     && docker-php-ext-enable redis \
-    && pecl install  xdebug-2.5.5 \
+    && pecl install  xdebug \
     && docker-php-ext-enable xdebug 
 EXPOSE 9000
 CMD ["php-fpm"]
