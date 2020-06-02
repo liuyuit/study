@@ -4,7 +4,7 @@ COPY conf/sources.list /etc/apt/sources.list
 # 设置配置文件
 COPY conf/php.ini /usr/local/etc/php/php.ini
 COPY conf/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-RUN apt-get update 
+RUN apt-get update \
     && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
@@ -17,7 +17,7 @@ RUN apt-get update
     && printf "\n" | pecl install -o -f redis-5.2.2 \
     && rm -rf /tmp/pear \
     && docker-php-ext-enable redis \
-    && pecl install  xdebug \
+    && pecl install  xdebug-2.9.6 \
     && docker-php-ext-enable xdebug 
 EXPOSE 9000
 CMD ["php-fpm"]
