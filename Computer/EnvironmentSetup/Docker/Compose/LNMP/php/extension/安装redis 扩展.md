@@ -2,7 +2,7 @@
 
 ## 选择扩展版本
 
-访问 http://pecl.php.net/package/xdebug
+访问 http://pecl.php.net/package/redis
 
 进入 change log 页面 http://pecl.php.net/package-changelog.php?package=xdebug&release=2.9.5
 
