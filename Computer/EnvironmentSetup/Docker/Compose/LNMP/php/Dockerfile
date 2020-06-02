@@ -14,7 +14,7 @@ RUN apt-get update
 #        psmisc \
 #    && docker-php-ext-configure gd --with-freetype --with-jpeg \
 #    && docker-php-ext-install -j$(nproc) gd  pdo_mysql \
-#    && printf "\n" | pecl install -o -f redis \
+#    && printf "\n" | pecl install -o -f redis-4.3.0 \
 #    && rm -rf /tmp/pear \
 #    && docker-php-ext-enable redis \
 #    && pecl install  xdebug \
