@@ -53,3 +53,9 @@ xdebug.remote_connect_back=0
 ```
 
 成功
+
+## 选择扩展版本
+
+访问 http://pecl.php.net/package/xdebug
+
+进入 change log 页面 
