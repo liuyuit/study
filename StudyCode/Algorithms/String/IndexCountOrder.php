@@ -28,6 +28,12 @@ class IndexCountOrder
     public function __construct($students)
     {
         $count = [];
-        
+
+        /**
+         * @var int $r 学生组号
+         */
+        foreach ($students as $name => $r){
+                        
+        }
     }
 }
