@@ -41,6 +41,11 @@ class IndexCountOrder
             }
         }
 
-        foreach ()
+        /**
+         * 
+         */
+        foreach ($count as $r => $groupCount){
+
+        }
     }
 }
