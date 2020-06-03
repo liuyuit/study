@@ -30,10 +30,17 @@ class IndexCountOrder
         $count = [];
 
         /**
+         * 频率统计
          * @var int $r 学生组号
          */
         foreach ($students as $name => $r){
-            $count[$r + 1]
+            if (isset($count[$r + 1])){
+                $count[$r + 1]++;
+            } else {
+                $count[$r + 1] = 1;
+            }
         }
+
+        foreach ()
     }
 }
