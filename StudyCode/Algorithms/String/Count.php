@@ -18,7 +18,11 @@ class Count
         $N = strlen($string);
         for ($i = 0; $i < $N; $i++){
             if ($alpha->contains($string[$i])){
-                $count[$alpha->toIndex($string[$i])]++;
+                if (isset($count[$alpha->toIndex($string[$i])])){
+                    $count[$alpha->toIndex($string[$i])]++;
+                } else {
+                    $count[$alpha->toIndex($string[$i])] = 1;
+                }
             }
         }
 
@@ -51,12 +55,26 @@ class Count2
 
 class Alphabet
 {
+    private array $alphabets = []; //  (int)index => (string)char，字母表
+    private array $indices = [];  // (string)char => (int)index， 索引表，通过字符查索引
+    private int $R = 0; // 字母表中所包含的字符总数
 
-    /*
-     * 根据给定的字符串创建一个字母表
+    /**
+     * (string)char
+     * Alphabet constructor.
+     * @param $alphabetStr
      */
-    public function __construct($alphabets)
+    public function __construct($alphabetStr)
     {
+        $length = strlen($alphabetStr);
+        $this->R = $length;
+        for ($i = 0; $i < $length; $i++){
+            $this->alphabets[] = $alphabetStr[$i];
+        }
+
+        foreach($this->alphabets as $index => $char){
+            $this->indices[$char] = $index;
+        }
     }
 
     /**
@@ -66,7 +84,7 @@ class Alphabet
      * @return int
      */
     public function R(){
-        return 2;
+        return $this->R;
     }
 
     /**
@@ -75,7 +93,7 @@ class Alphabet
      * @return bool
      */
     public function contains($char){
-        return true;
+        return isset($this->indices[$char]);
     }
 
     /**
@@ -84,7 +102,7 @@ class Alphabet
      * @return int
      */
     public function toIndex($char){
-        return 1;
+        return $this->indices[$char];
     }
 
     /**
@@ -93,7 +111,7 @@ class Alphabet
      * @return string
      */
     public function toChar($index){
-        return '';
+        return $this->alphabets[$index];
     }
 
     /**
@@ -102,6 +120,13 @@ class Alphabet
      * @return array
      */
     public function toIndices($string){
-        return [];
+        $indices = [];
+
+        $length = strlen($string);
+        for ($i = 0; $i < $length; $i++){
+            $indices[] = $string[$i];
+        }
+
+        return $indices;
     }
 }

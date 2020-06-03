@@ -7,6 +7,13 @@ services:
       - /usr/local/php/conf/php.ini:/usr/local/etc/php/php.ini
     ports:
       - "9000:9000"
+  php7:
+      build: ./php7/
+      volumes:
+        - /usr/local/nginx/www:/data/www/
+        - /usr/local/php/conf/php.ini:/usr/local/etc/php/php.ini
+      ports:
+        - "9001:9000"
   nginx:
     build: ./nginx/
     volumes:
