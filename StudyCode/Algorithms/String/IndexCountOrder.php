@@ -33,7 +33,7 @@ class IndexCountOrder
          * @var int $r 学生组号
          */
         foreach ($students as $name => $r){
-                        
+            $count[$r + 1]
         }
     }
 }
