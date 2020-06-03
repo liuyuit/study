@@ -20,13 +20,14 @@ function highOrderExample(){
        'Moore' => 3,
    ];
 
-    new HighOrder($students);
+    new IndexCountOrder($students);
 }
 
-class HighOrder
+class IndexCountOrder
 {
     public function __construct($students)
     {
-
+        $count = [];
+        
     }
 }
