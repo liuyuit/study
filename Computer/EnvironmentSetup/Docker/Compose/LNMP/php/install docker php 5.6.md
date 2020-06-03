@@ -18,3 +18,17 @@ collation-server = utf8_unicode_ci
 character-set-server = utf8
 ```
 
+改了之后又报错
+
+```
+[PDOException] SQLSTATE[HY000] [2002] Connection refused
+```
+
+再加一行配置
+
+```
+[mysqld]
+default_authentication_plugin = mysql_native_password
+```
+
+这下可以了
