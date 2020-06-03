@@ -41,8 +41,12 @@ class IndexCountOrder
             }
         }
 
+        $GroupNumber = count($count); // 组
+
         /**
-         * 
+         * 将频率转化为索引
+         * @var int $r 学生组号
+         * @var int $groupCount 一个组的人数
          */
         foreach ($count as $r => $groupCount){
 
