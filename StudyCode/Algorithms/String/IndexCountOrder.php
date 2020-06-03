@@ -41,15 +41,15 @@ class IndexCountOrder
             }
         }
 
-        $GroupNumber = count($count); // 组
+        $groupNumber = count($count); // 总共有多少个组
 
         /**
          * 将频率转化为索引
          * @var int $r 学生组号
          * @var int $groupCount 一个组的人数
          */
-        foreach ($count as $r => $groupCount){
-
+        for ($r = 0; $r < $groupCount; $r++){
+            $count[$r + 1] += $count[$r];
         }
     }
 }
