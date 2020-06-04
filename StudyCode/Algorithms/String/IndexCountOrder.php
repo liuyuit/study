@@ -56,7 +56,10 @@ class IndexCountOrder
 
         $aux = [];
         foreach ($students as $name => $r){
-            
+            $aux[$count[$r]] = $r;
+            $count[$r]++;
         }
+
+        print_r($aux);
     }
 }
