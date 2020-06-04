@@ -58,6 +58,9 @@ class IndexCountOrder
             $count[$r + 1] += $count[$r];
         }
 
+        /**
+         * @var array $aux 排序后学生的序号 => 学生名字，
+         */
         $aux = [];
         foreach ($students as $name => $r){
             $aux[$count[$r]] = $name;
