@@ -69,7 +69,7 @@ class IndexCountOrder
         }
 
         /**
-         * 将
+         * 将学生按顺序放入到数组中
          * @var array $orderedStudents 学生序号 => 学生名字，最终的排序后的学生数组
          */
         $orderedStudents = [];
