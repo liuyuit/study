@@ -35,9 +35,9 @@ class IndexCountOrder
          */
         foreach ($students as $name => $r){
             if (isset($count[$r + 1])){
-                $count[$r + 1]++;
+                $count[$r]++;
             } else {
-                $count[$r + 1] = 1;
+                $count[$r] = 1;
             }
         }
 
