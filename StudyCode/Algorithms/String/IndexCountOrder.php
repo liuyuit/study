@@ -59,7 +59,8 @@ class IndexCountOrder
         }
 
         /**
-         * @var array $aux 排序后学生的序号 => 学生名字，
+         * 数据分类，将学生名字与他排序后的序号对应起来
+         * @var array $aux 排序后学生的序号 => 学生名字
          */
         $aux = [];
         foreach ($students as $name => $r){
@@ -67,6 +68,10 @@ class IndexCountOrder
             $count[$r]++;
         }
 
+        /**
+         * 将
+         * @var array $orderedStudents 学生序号 => 学生名字，最终的排序后的学生数组
+         */
         $orderedStudents = [];
         for($i = 0; $i < $studentNumber; $i++){
             $orderedStudents[$aux[$i]] = $students[$aux[$i]];
