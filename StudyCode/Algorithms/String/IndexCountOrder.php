@@ -48,7 +48,13 @@ class IndexCountOrder
          * @var int $r 学生组号
          */
         for ($r = 0; $r < $groupCount; $r++){
+            if (!isset($count[$r])){
+                $count[$r] = 0;
+            }
             $count[$r + 1] += $count[$r];
         }
+
+        $aux = [];
+        
     }
 }
