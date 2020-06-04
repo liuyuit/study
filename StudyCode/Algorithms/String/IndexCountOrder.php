@@ -47,7 +47,7 @@ class IndexCountOrder
          * 将频率转化为索引
          * @var int $r 学生组号
          */
-        for ($r = 0; $r < $groupCount - 1; $r++){
+        for ($r = 0; $r < $groupCount; $r++){
             if (!isset($count[$r])){
                 $count[$r] = 0;
             }
