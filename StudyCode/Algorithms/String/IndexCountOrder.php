@@ -77,7 +77,6 @@ class IndexCountOrder
             $orderedStudents[$aux[$i]] = $students[$aux[$i]];
         }
 
-
         print_r($orderedStudents);
     }
 }
