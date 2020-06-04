@@ -51,6 +51,9 @@ class IndexCountOrder
             if (!isset($count[$r])){
                 $count[$r] = 0;
             }
+            if (!isset($count[$r + 1])){
+                $count[$r + 1] = 0;
+            }
             $count[$r + 1] += $count[$r];
         }
 
