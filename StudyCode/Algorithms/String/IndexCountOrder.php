@@ -63,6 +63,8 @@ class IndexCountOrder
             $count[$r]++;
         }
 
+        $order
+
         print_r($aux);
     }
 }
