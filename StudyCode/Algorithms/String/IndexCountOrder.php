@@ -28,6 +28,7 @@ class IndexCountOrder
     public function __construct($students)
     {
         $count = [];
+        $studentNumber = count($students);
 
         /**
          * 频率统计
@@ -63,8 +64,12 @@ class IndexCountOrder
             $count[$r]++;
         }
 
-        $order
+        $orderedStudents = [];
+        for($i = 0; $i < $studentNumber; $i++){
+            $orderedStudents[$aux[$i]] = $students[$aux[$i]];
+        }
 
-        print_r($aux);
+
+        print_r($orderedStudents);
     }
 }
