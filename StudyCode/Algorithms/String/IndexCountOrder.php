@@ -1,6 +1,6 @@
 <?php
 // 将 ascii 码转化为字符
-echo chr(12); //
+echo chr(121); // y
 echo "\r\n";
 // 将字符转化为 ascii 码
 echo ord('a'); //
