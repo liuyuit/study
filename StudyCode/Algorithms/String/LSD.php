@@ -14,6 +14,7 @@ class LSD
      */
     public function __construct($a, $W)
     {
-        
+        $N = count($a);
+        $R = 256;
     }
 }
