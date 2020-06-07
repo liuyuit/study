@@ -14,7 +14,8 @@ class LSD
      */
     public function __construct($a, $W)
     {
-        $N = count($a);
-        $R = 256;
+        $N = count($a); // 待排序字符串总数
+        $R = 256; // 
+        $aux = [];
     }
 }
