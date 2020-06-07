@@ -1,5 +1,9 @@
 <?php
+// 将
+echo chr(12);
 
+
+exit;
 highOrderExample();
 
 function highOrderExample(){
