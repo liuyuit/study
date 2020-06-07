@@ -3,7 +3,7 @@
 echo chr(12); //
 echo "\r\n";
 // 将字符转化为 ascii 码
-echo 
+echo ord('a'); //
 
 
 exit;
