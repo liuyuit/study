@@ -1,5 +1,4 @@
 <?php
-
 highOrderExample();
 
 function highOrderExample(){
