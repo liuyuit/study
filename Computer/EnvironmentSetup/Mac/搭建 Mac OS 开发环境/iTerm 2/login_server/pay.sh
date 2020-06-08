@@ -1,6 +1,6 @@
-set port 22
+set port 37650
 set user root
-set host 122.112.230.232
+set host 122.112.142.157
 set password juf123.#
 set timeout -1
 
