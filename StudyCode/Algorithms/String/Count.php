@@ -55,9 +55,9 @@ class Count2
 
 class Alphabet
 {
-    private array $alphabets = []; //  (int)index => (string)char，字母表
-    private array $indices = [];  // (string)char => (int)index， 索引表，通过字符查索引
-    private int $R = 0; // 字母表中所包含的字符总数
+    private $alphabets = []; //  (int)index => (string)char，字母表
+    private $indices = [];  // (string)char => (int)index， 索引表，通过字符查索引
+    private $R = 0; // 字母表中所包含的字符总数
 
     /**
      * (string)char
