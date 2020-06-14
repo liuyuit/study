@@ -83,6 +83,11 @@ vim ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 /Users/liuyu/Library/LaunchAgents/com.auto.sync.git.repostory.plist: Operation now in progress
 
 % launchctl load ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
+
+% launchctl unload ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
+/Users/liuyu/Library/LaunchAgents/com.auto.sync.git.repostory.plist: Operation now in progress
+
+% launchctl load ~/Library/LaunchAgents/com.auto.sync.git.repostory.plist
 ```
 
 ## Start
