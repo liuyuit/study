@@ -38,8 +38,11 @@ class LSD
             // 将元素分类
             for ($i = 0; $i < $N; $i++){
                 $ascii = ord($a[$i][$d]);
-                $a[$i];
+                $aux[$count[$ascii]++] = $a[$i];
             }
+
+            // 原属
+            for ()
         }
     }
 
