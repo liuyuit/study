@@ -41,8 +41,10 @@ class LSD
                 $aux[$count[$ascii]++] = $a[$i];
             }
 
-            // 原属
-            for ()
+            // 回写
+            for ($i = 0; $i < $N; $i++){
+                
+            }
         }
     }
 
