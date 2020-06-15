@@ -5,7 +5,20 @@
 
 LSDExample();
 function LSDExample(){
+    $a = [
+        'Anderson',
+        'Brown',
+        'Davis',
+        'Garcia',
+        'Harris',
+        'jackson',
+        'Johnson',
+        'Jones',
+        'Martin',
+        'Moore',
+    ];
 
+    new LSD($a, 5);
 }
 
 class LSD
@@ -43,9 +56,11 @@ class LSD
 
             // 回写
             for ($i = 0; $i < $N; $i++){
-                
+                $a[$i] = $aux[$i];
             }
         }
+
+        print_r($a);
     }
 
     /**
