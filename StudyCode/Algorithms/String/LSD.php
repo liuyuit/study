@@ -19,7 +19,8 @@ class LSD
         $aux = []; //
 
         for ($d = $W -1; $d > 0; $d--){
-
+            $count = $this->iniArray($R + 1);
+            
         }
     }
 
