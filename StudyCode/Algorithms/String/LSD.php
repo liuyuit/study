@@ -32,9 +32,10 @@ class LSD
 
             // 将频率转换为索引
             for ($r = 0; $r < $R; $r++){
-                $count[$r + 1] =  
+                $count[$r + 1] += $count[$r];
             }
 
+            
         }
     }
 
