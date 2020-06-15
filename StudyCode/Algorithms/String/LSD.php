@@ -26,7 +26,8 @@ class LSD
 
             // 计算字符串中第 $d 个字符的出现频率
             for ($i = 0; $i < $N; $i++){
-                
+                $ascii = ord($a[$i][$d]); // 第 $i 个字符串的第 $d 个字符所对应的 ascii 码
+                $count[$ascii]++;
             }
 
         }
