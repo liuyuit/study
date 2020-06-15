@@ -35,7 +35,11 @@ class LSD
                 $count[$r + 1] += $count[$r];
             }
 
-            // 
+            // 将元素分类
+            for ($i = 0; $i < $N; $i++){
+                $ascii = ord($a[$i][$d]);
+                $a[$i];
+            }
         }
     }
 
