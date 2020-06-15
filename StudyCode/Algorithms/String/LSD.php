@@ -1,5 +1,5 @@
 <?php
-// 将字符转化为 ascci 
+// 将字符转化为 ascii 码，在原文的 java 代码中字符和数字相加会自动将字符转化为相应的 ascii 码，在这里需要用 ord 函数来做到。
 // ord('');
 
 
@@ -24,6 +24,8 @@ class LSD
         for ($d = $W -1; $d > 0; $d--){
             $count = $this->iniArray($R + 1);
 
+            // 计算出现频率
+            
         }
     }
 
