@@ -24,8 +24,11 @@ class LSD
         for ($d = $W -1; $d > 0; $d--){
             $count = $this->iniArray($R + 1);
 
-            // 计算出现频率
-            
+            // 计算字符串中第 $d 个字符的出现频率
+            for ($i = 0; $i < $N; $i++){
+                
+            }
+
         }
     }
 
