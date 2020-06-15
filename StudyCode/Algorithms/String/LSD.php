@@ -1,4 +1,7 @@
 <?php
+// 将字符转化为 ascci 
+// ord('');
+
 
 LSDExample();
 function LSDExample(){
@@ -20,7 +23,7 @@ class LSD
 
         for ($d = $W -1; $d > 0; $d--){
             $count = $this->iniArray($R + 1);
-            
+
         }
     }
 
