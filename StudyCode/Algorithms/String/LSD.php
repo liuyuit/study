@@ -62,7 +62,7 @@ class LSD
 
             // 回写
             $tmp = [];
-            for ($i = 0; $i <= $N; $i++){
+            for ($i = 0; $i < $N; $i++){
                 if (!empty($aux[$i])){
                     $tmp[] = $aux[$i];
                 }
