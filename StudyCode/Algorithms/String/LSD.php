@@ -35,7 +35,7 @@ class LSD
 //        $aux = $this->iniStringArray($R + 1); //
         $aux = [];
 
-        for ($d = $W -1; $d > 0; $d--){
+        for ($d = $W -1; $d >= 0; $d--){
             $count = $this->iniArray($R + 1);
 
             // 计算字符串中第 $d 个字符的出现频率
@@ -49,10 +49,9 @@ class LSD
 
             // 将频率转换为索引
             for ($r = 0; $r < $R; $r++){
-                if ($r > 99){
+//                if ($r > 99){
                     $count[$r + 1] += $count[$r];
-
-                }
+//                }
             }
 
             // 将元素分类
