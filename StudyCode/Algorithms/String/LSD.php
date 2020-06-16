@@ -34,6 +34,7 @@ class LSD
         $R = 256; // 字符分组的总数，也是 ascii 码的总数
         $aux = [];
 
+        // 从右至左将每个位置的字符
         for ($d = $W -1; $d >= 0; $d--){
             $count = $this->iniArray($R + 1);
 
