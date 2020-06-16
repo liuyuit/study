@@ -32,7 +32,8 @@ class LSD
     {
         $N = count($a); // 待排序字符串总数
         $R = 256; // 字符分组的总数，也是 ascii 码的总数
-        $aux = $this->iniStringArray($R + 1); //
+//        $aux = $this->iniStringArray($R + 1); //
+        $aux = [];
 
         for ($d = $W -1; $d > 0; $d--){
             $count = $this->iniArray($R + 1);
@@ -55,11 +56,13 @@ class LSD
             }
 
             // 回写
-
-
+            $tmp = [];
             for ($i = 0; $i < $N; $i++){
-                $a[$i] = $aux[$i];
+                if (!empty($aux[$i])){
+                    $tmp[] = $aux[$i];
+                }
             }
+            $a = $tmp;
         }
 
         print_r($a);
