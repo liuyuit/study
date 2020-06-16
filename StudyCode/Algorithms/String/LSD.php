@@ -80,18 +80,4 @@ class LSD
 
         return $array;
     }
-
-    /**
-     * 初始化一个有 $count 个元素的索引数组，每个元素的值都是 0
-     * @param $count
-     * @return array
-     */
-    protected function iniStringArray($count){
-        $array = [];
-        for ($i = 0; $i < $count; $i++){
-            $array[$i] = '';
-        }
-
-        return $array;
-    }
 }
