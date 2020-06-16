@@ -12,7 +12,7 @@ function highOrderExample(){
        'Davis' => 1,
        'Garcia' => 3,
        'Harris' => 2,
-       'jackson' => 3,
+       'Jackson' => 3,
        'Johnson' => 3,
        'Jones' => 1,
        'Martin' => 1,

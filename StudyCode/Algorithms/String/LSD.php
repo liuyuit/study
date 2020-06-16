@@ -11,7 +11,7 @@ function LSDExample(){
         'Davis',
         'Garcia',
         'Harris',
-        'jackson',
+        'Jackson',
         'Johnson',
         'Jones',
         'Martin',
@@ -32,7 +32,6 @@ class LSD
     {
         $N = count($a); // 待排序字符串总数
         $R = 256; // 字符分组的总数，也是 ascii 码的总数
-//        $aux = $this->iniStringArray($R + 1); //
         $aux = [];
 
         for ($d = $W -1; $d >= 0; $d--){
@@ -49,9 +48,7 @@ class LSD
 
             // 将频率转换为索引
             for ($r = 0; $r < $R; $r++){
-//                if ($r > 99){
-                    $count[$r + 1] += $count[$r];
-//                }
+                $count[$r + 1] += $count[$r];
             }
 
             // 将元素分类
@@ -61,11 +58,9 @@ class LSD
             }
 
             // 回写
-            $tmp = [];
             for ($i = 0; $i < $N; $i++){
-                $tmp[] = $aux[$i];
+                $a[$i] = $aux[$i];
             }
-            $a = $tmp;
         }
 
         print_r($a);
