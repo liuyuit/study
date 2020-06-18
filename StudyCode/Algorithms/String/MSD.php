@@ -11,14 +11,15 @@ function MSDExample(){
         'seashells',
         'by',
         'the',
-        'Jackson',
-        'Johnson',
-        'Jones',
-        'Martin',
-        'Moore',
+        'shells',
+        'she',
+        'shells',
+        'are',
+        'surely',
+        'seashells',
     ];
 
-    new MSD($a, 5);
+    new MSD($a, 2);
 }
 
 class MSD
