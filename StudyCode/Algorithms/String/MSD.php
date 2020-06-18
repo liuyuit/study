@@ -24,6 +24,16 @@ function MSDExample(){
 
 class MSD
 {
+    private static  $R = 256;   // 基数
+    private static  $M = 256;   // 小数组切换的阈值
+    private static  $aux = [];   // 数据分类的辅助数组
+
+
+    
+
+
+
+
     /**
      * MSD constructor.
      * @param $a array 索引数组，元素是要排序的字符串
