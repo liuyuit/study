@@ -83,23 +83,7 @@ class MSD
             return -1;
         }
     }
-
-
-    /**
-     * MSD constructor.
-     * @param $a array 索引数组，元素是要排序的字符串
-     * @param $W int 根据字符串前 W 个字符排序
-     */
-    public function __construct($a, $W)
-    {
-        $N = count($a); // 待排序字符串总数
-        $R = 256; // 字符分组的总数，也是 ascii 码的总数
-        $aux = [];
-
-
-
-        print_r($a);
-    }
+    
 
     /**
      * 初始化一个有 $count 个元素的索引数组，每个元素的值都是空字符串
