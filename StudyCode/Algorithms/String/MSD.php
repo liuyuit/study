@@ -29,6 +29,17 @@ class MSD
     private static  $aux = [];   // 数据分类的辅助数组
 
 
+
+    /**
+     * @param $a array
+     */
+    public static function sort($a){
+        $N = count($a);
+        static::$aux = static::iniArray($N);
+        
+    }
+
+
     /**
      * 如果被检查的字符串到达末尾了，就返回 -1，否则返回相应位置的字符
      * @param $string string
@@ -42,15 +53,6 @@ class MSD
             return -1;
         }
     }
-
-    /**
-     * @param $a array
-     */
-    public static function sort($a){
-
-    }
-
-
 
 
     /**
@@ -102,7 +104,7 @@ class MSD
      * @param $count
      * @return array
      */
-    protected function iniArray($count){
+    private static function iniArray($count){
         $array = [];
         for ($i = 0; $i < $count; $i++){
             $array[$i] = '';
