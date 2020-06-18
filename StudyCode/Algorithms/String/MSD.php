@@ -36,9 +36,39 @@ class MSD
     public static function sort($a){
         $N = count($a);
         static::$aux = static::iniArray($N);
-        
+        static::sortExecute($a, 0,$N - 1, 0);
     }
 
+    private static function sortExecute($a, $lo, $hi, $d){
+        // 从右至左将每个位置的字符作为键，用键索引法将字符串排序 W 遍。
+        for ($d = $W -1; $d >= 0; $d--){
+
+            // 计算字符串中第 $d 个字符的出现频率
+            for ($i = 0; $i < $N; $i++){
+                $ascii = ord($a[$i][$d]); // 第 $i 个字符串的第 $d 个字符所对应的 ascii 码
+                // $ascii 对应字符的出现频率
+                // + 1 是因为在将频率转换为索引这一步骤中，如果数组中第一个非零元素 $count[$r] 所代表的频率是 1，那么 $count[$r] 所代表的起始索引是 0。
+                // $count[$r] 所代表的起始索引不应该加上它自身
+                $count[$ascii + 1]++;
+            }
+
+            // 将频率转换为索引
+            for ($r = 0; $r < $R; $r++){
+                $count[$r + 1] += $count[$r];
+            }
+
+            // 将元素分类
+            for ($i = 0; $i < $N; $i++){
+                $ascii = ord($a[$i][$d]);
+                $aux[$count[$ascii]++] = $a[$i];
+            }
+
+            // 回写
+            for ($i = 0; $i < $N; $i++){
+                $a[$i] = $aux[$i];
+            }
+        }
+    }
 
     /**
      * 如果被检查的字符串到达末尾了，就返回 -1，否则返回相应位置的字符
@@ -66,35 +96,7 @@ class MSD
         $R = 256; // 字符分组的总数，也是 ascii 码的总数
         $aux = [];
 
-        // 从右至左将每个位置的字符作为键，用键索引法将字符串排序 W 遍。
-        for ($d = $W -1; $d >= 0; $d--){
-            $count = $this->iniArray($R + 1);
 
-            // 计算字符串中第 $d 个字符的出现频率
-            for ($i = 0; $i < $N; $i++){
-                $ascii = ord($a[$i][$d]); // 第 $i 个字符串的第 $d 个字符所对应的 ascii 码
-                // $ascii 对应字符的出现频率
-                // + 1 是因为在将频率转换为索引这一步骤中，如果数组中第一个非零元素 $count[$r] 所代表的频率是 1，那么 $count[$r] 所代表的起始索引是 0。
-                // $count[$r] 所代表的起始索引不应该加上它自身
-                $count[$ascii + 1]++;
-            }
-
-            // 将频率转换为索引
-            for ($r = 0; $r < $R; $r++){
-                $count[$r + 1] += $count[$r];
-            }
-
-            // 将元素分类
-            for ($i = 0; $i < $N; $i++){
-                $ascii = ord($a[$i][$d]);
-                $aux[$count[$ascii]++] = $a[$i];
-            }
-
-            // 回写
-            for ($i = 0; $i < $N; $i++){
-                $a[$i] = $aux[$i];
-            }
-        }
 
         print_r($a);
     }
