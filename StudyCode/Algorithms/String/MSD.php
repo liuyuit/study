@@ -29,7 +29,13 @@ class MSD
     private static  $aux = [];   // 数据分类的辅助数组
 
 
-    
+    /**
+     * @param $string string
+     * @param $d int
+     */
+    private static function charAt($string, $d){
+        
+    }
 
 
 
