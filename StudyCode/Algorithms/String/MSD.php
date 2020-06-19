@@ -19,7 +19,6 @@ function MSDExample(){
         'seashells',
     ];
 
-    new MSD($a, 2);
 }
 
 class MSD
@@ -83,7 +82,7 @@ class MSD
             return -1;
         }
     }
-    
+
 
     /**
      * 初始化一个有 $count 个元素的索引数组，每个元素的值都是空字符串
