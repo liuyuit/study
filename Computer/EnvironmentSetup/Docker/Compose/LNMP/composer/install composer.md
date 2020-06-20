@@ -21,7 +21,7 @@ RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/compos
 ```
 
 ```
-% docker run -it --name composer -v /docker/www:/app --privileged=true my-composer:1.0 composer <要执行的composer命令>
+% docker run -it --name composer -v /docker/www:/app --privileged=true my-composer:1.0 composer -v
 ```
 
 设置别名
@@ -29,6 +29,10 @@ RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/compos
 ```
 % echo "alias composer='docker run -i -t --rm --privileged=true  -v \$PWD:/app my-composer:1.0 composer'" >> ~/.bash_profile && source ~/.bash_profile
 ```
+
+这条命令是将容器的工作目录映射到宿主机当前目录。
+
+原本执行 composer 命令会改动容器的 /app 目录下的文件，但映射之后会改变当前目录的文件
 
 将当前目录挂载到容器的工作目录
 

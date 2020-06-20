@@ -39,6 +39,12 @@ class MSD
     }
 
     private static function sortExecute($a, $lo, $hi, $d){
+        if ($hi <= $lo + static::$M){
+            static::sortExecute($a, $lo, $hi, $d);
+            return;
+        }
+
+
         // 从右至左将每个位置的字符作为键，用键索引法将字符串排序 W 遍。
         for ($d = $W -1; $d >= 0; $d--){
 
