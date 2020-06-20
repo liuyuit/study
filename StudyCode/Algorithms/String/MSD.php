@@ -40,7 +40,9 @@ class MSD
 
     private static function sortExecute($a, $lo, $hi, $d){
         $count = static::iniArray(static::$R);
-        
+        for ($i = $lo; $i <= $hi; $i++){
+            $count[static::charAt($a, $d) + 2]++;
+        }
 
     }
 
