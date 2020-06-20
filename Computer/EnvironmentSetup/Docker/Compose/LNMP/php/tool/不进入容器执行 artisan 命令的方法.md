@@ -41,6 +41,7 @@ source ~/.bash_profile
 使用别名
 
 ```
-
+% artisan make:test LoginTest
+Test created successfully.
 ```
 
