@@ -23,6 +23,12 @@ phpunit
 **设置别名**
 
 ```
-% echo "alias artisan="docker run -i -t --rm --privileged=true -w "/data/www/$(basename `pwd`)"  -v $PWD:/data/www/"$(basename `pwd`)" lnmp_php7 php artisan"" >> ~/.bash_profile && source ~/.bash_profile
+
+```
+
+
+
+```
+alias artisan="docker run -i -t --rm --privileged=true -w "/data/www/$(basename `pwd`)"  -v $PWD:/data/www/"$(basename `pwd`)" lnmp_php7 php artisan"
 ```
 
