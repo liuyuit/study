@@ -23,12 +23,24 @@ phpunit
 **设置别名**
 
 ```
-
+% vim ~/.bash_profile
 ```
 
-
+在末尾加上这一行
 
 ```
 alias artisan="docker run -i -t --rm --privileged=true -w "/data/www/$(basename `pwd`)"  -v $PWD:/data/www/"$(basename `pwd`)" lnmp_php7 php artisan"
+```
+
+重新加载
+
+```
+source ~/.bash_profile
+```
+
+使用别名
+
+```
+
 ```
 
