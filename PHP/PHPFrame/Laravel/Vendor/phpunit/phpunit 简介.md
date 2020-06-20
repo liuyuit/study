@@ -10,3 +10,7 @@
 composer create-project --prefer-dist laravel/laravel phpunit
 ```
 
+```
+% artisan make:test UserTest
+```
+
