@@ -2,11 +2,13 @@
 
 ## point
 
-
+He had dark eyes.
 
 He was  of medium height/weiht.
 
-He had 
+He had. 
+
+He wore a black T-shirt.
 
 
 
