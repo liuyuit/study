@@ -39,22 +39,35 @@ class MSD
     }
 
     private static function sortExecute($a, $lo, $hi, $d){
+        // 以第 $d 个字符为键，将 $a 中 $lo 到 $hi 的元素用键索引法进行排序
         $count = static::iniArray(static::$R);
+        // 计算频率
         for ($i = $lo; $i <= $hi; $i++){
-            $count[static::charAt($a, $d) + 2]++;
+            $count[static::charAt($a, $d) + 2]++;  // 键 => 频率
         }
 
+        // 计算索引,
+        for ($r = 0; $r <= static::$R; $r++){
+            /* @var array $count ascii 码 => 这个键的频率 */
+            $count[$r + 1] += $count[$r + 1];
+        }
+
+        // 数据分类
+        for ($i = $lo; $i < $hi; $i++){
+            $ascii = static::charAt($a[$i], $d);
+            static::$aux[$count[$ascii + 1]++] = $a[$i];
+        }
     }
 
     /**
-     * 如果被检查的字符串到达末尾了，就返回 -1，否则返回相应位置的字符
+     * 获取字符串相应位置的字符所对应的 ascii 码，字符串到达末尾了，就返回 -1
      * @param $string string
      * @param $d int
      * @return int|mixed
      */
     private static function charAt($string, $d){
         if (strlen($string) < $d){
-            return $string[$d];
+            return ord($string[$d]);
         } else {
             return -1;
         }
