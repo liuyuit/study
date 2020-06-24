@@ -18,13 +18,18 @@ function MSDExample(){
         'surely',
         'seashells',
     ];
-
+    $N = count($a);
+//    static::$aux = static::iniArray($N);
+//    static::$R = 256;
+    MSD::sortExecute($a, 0,$N - 1, 0);
+    exit;
+    echo MSD::$R;exit;
+    MSD::sort($a);
 }
 
 class MSD
 {
-    private static  $R = 256;   // 基数
-    private static  $M = 256;   // 小数组切换的阈值
+    public static  $R = 256;   // 基数
     private static  $aux = [];   // 数据分类的辅助数组
 
 
@@ -35,12 +40,14 @@ class MSD
     public static function sort($a){
         $N = count($a);
         static::$aux = static::iniArray($N);
+        static::$R = 256;
         static::sortExecute($a, 0,$N - 1, 0);
     }
 
-    private static function sortExecute($a, $lo, $hi, $d){
+    public static function sortExecute($a, $lo, $hi, $d){
         // 以第 $d 个字符为键，将 $a 中 $lo 到 $hi 的元素用键索引法进行排序
-        $count = static::iniArray(static::$R);
+        $count = MSD::$R;
+//        $count = static::iniArray(MSD::$R);
         // 计算频率
         for ($i = $lo; $i <= $hi; $i++){
             $count[static::charAt($a, $d) + 2]++;  // 键 => 频率
@@ -56,6 +63,16 @@ class MSD
         for ($i = $lo; $i < $hi; $i++){
             $ascii = static::charAt($a[$i], $d);
             static::$aux[$count[$ascii + 1]++] = $a[$i];
+        }
+
+        // 回写
+        for ($i = $lo; $i <= $hi; $i++){
+            $a[$i] = static::$aux[$i - $lo];
+        }
+
+        // 递归地以每个字符为键进行排序
+        for ($r = 0; $r < static::$R; $r++){
+            static::sortExecute($a, $lo + $count[$r], $lo + $count[$r + 1] - 1, $d + 1);
         }
     }
 
