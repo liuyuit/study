@@ -2,19 +2,9 @@
 
 ## point
 
-What's the man looked like?
+Can you make it?
 
-He had dark eyes.
-
-He was  of medium height/weiht.
-
-He had. 
-
-He wore a black T-shirt.
-
-He was middle-aged
-
-He had a beard.
+Shall we say  
 
 
 
