@@ -4,7 +4,7 @@
 
 Can you make it?
 
-Shall we say about 6 p.m. at the new resturant down the road
+Shall we say about 6 p.m. at the new resturant down the road?
 
 
 
