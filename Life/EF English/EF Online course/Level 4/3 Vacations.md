@@ -8,7 +8,13 @@ There are many places to go sightseeing.
 
 
 
-音节较多的单词比较级用
+音节超过三个单词比较级前面加 more，否则加 er 后缀
+
+more expensive
+
+nicer
+
+better
 
 
 
