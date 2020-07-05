@@ -2,9 +2,21 @@
 
 ## point
 
+What is there to do there?
+
+There are many places to go sightseeing.
 
 
 
+音节较多的单词比较级用
+
+
+
+只能有一个动词
+
+take subway faster and cheaper.
+
+takeing subway is faster and cheaper.
 
 
 
