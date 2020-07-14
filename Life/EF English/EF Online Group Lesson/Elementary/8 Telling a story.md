@@ -2,11 +2,13 @@
 
 ## Key point
 
-Would you rather go  shoping or sing karaoke?
+a fairy tale
 
-I'd rather sing karaoke. 
+An ugly frog
 
+a beautiful prinsess
 
+a scary ghost story.
 
 ## Dialog
 
