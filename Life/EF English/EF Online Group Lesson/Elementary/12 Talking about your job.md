@@ -6,7 +6,8 @@ What do think about your job?
 
 - challenging 
 - boring
-- Exting
+- exting
+- dangerous
 - 
 
 
