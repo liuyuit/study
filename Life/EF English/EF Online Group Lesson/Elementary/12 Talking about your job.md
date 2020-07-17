@@ -8,6 +8,9 @@ What do think about your job?
 - boring
 - exting
 - dangerous
+- Stressfull
+- great
+- awful
 - 
 
 
