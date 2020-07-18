@@ -2,11 +2,11 @@
 
 ## Key point
 
+when did your get engaged
 
+What important events hapened to your last years
 
-
-
-
+graduated from high school/college
 
 ## Dialog
 
