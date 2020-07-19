@@ -1,4 +1,4 @@
-# Discussing your bad habits
+# Discussing your bad habit
 
 ## Key point
 
