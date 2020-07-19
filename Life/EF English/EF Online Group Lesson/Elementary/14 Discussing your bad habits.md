@@ -1,12 +1,10 @@
-# Talking about your life events
+# Discussing your bad habits
 
 ## Key point
 
-when did your get engaged
+you should quitting
 
-What important events hapened to your last years
-
-graduated from high school/college
+eat a lot of junk food
 
 ## Dialog
 
