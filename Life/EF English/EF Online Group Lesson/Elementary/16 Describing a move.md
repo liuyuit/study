@@ -1,245 +1,57 @@
-# Makeing an appiontment
+# Describing a movie
 
 ## Key point
 
-available resourse
+what's the best comedy you have ever seen?
 
-Are you available?
+the best comedy I've ever seen was "Gungfu Panda".
 
-who do you make appointments with?
+movie genre.  
 
-What appointments are in your panner?
+comedy is funny .
 
-let me check my schedule.
+drama ,lots of things happend
+
+Science fiction movie
 
 ## Dialog
 
-<iframe name="easyXDM_default3251_provider" id="easyXDM_default3251_provider" src="https://cns.ef-cdn.com/Juno/EvcContent/11/55/Making_an_appointment/index.html?api_v=0.0.13&amp;accessKey=2c8e376b-85a2-495c-90f7-0e9b577e02f2&amp;attendanceToken=c4ff23d2-61de-4072-8b18-26ac81f34b78&amp;xdm_e=https%3A%2F%2Fevc.ef.com.cn&amp;xdm_c=default3251&amp;xdm_p=1" frameborder="0" style="box-sizing: border-box; width: 770.656px; height: 578px;"></iframe>
+<iframe name="easyXDM_default5309_provider" id="easyXDM_default5309_provider" src="https://cns.ef-cdn.com/Juno/EvcContent/11/37/Describing_a_movie/index.html?api_v=0.0.13&amp;accessKey=e0733c25-d432-4edb-a45f-4cf0438a2f43&amp;attendanceToken=8ae331a5-dbb5-4cd4-a2ea-186092bfc885&amp;xdm_e=https%3A%2F%2Fevc.ef.com.cn&amp;xdm_c=default5309&amp;xdm_p=1" frameborder="0" style="box-sizing: border-box; width: 770.656px; height: 578px;"></iframe>
 
-Greetings,
+Science Fiction - space 
 
- 
 
-My name is Yoshihito Yame. I am from the Eastern Cape, South Africa.
 
- 
+drama - serious narrative tone - instead of comedic
 
-I am very friendly and I also enjoy new experiences.
 
- 
 
-IF YOU HAVE ANY ENGLISH QUESTIONS, YOU CAN CONTACT ME VIA: [yoshihito.yame@etteachers.com](mailto:yoshihito.yame@etteachers.com).
+Movie Genre = type of film (horror, comedy, action, cartoon)
 
- 
 
-**I LIKE IT WHEN:**
 
- 
+I have not seen many Drama movies
 
-**"Frank" said:  I have a planner online with my to-do-list ..**
 
- 
 
-**"" said:**
+Japanese Animation
 
- 
 
-**Vocabulary:**
 
+Strange = odd, out of the ordinary, weird,
 
 
-**AVAILABLE - it means when are you free?**
 
- 
+scary = makes you afraid, frightening,  
 
-**Pronunciation:**
 
- 
 
-**Corrections:**
+Insidious 
 
 
 
-**You said:**
+Terminator 
 
 
 
-**You should have said:**
-
-
-
-**RICK**
-
-
-
-**You said: Maybe we have a lunch ...**
-
-
-
-**You should have said: Maybe we could have lunch ...**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**RAY**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**TONGYONGZHONG**
-
-
-
-**You said: Let me see my planner ...**
-
-
-
-**You should have said: Let me look at my planner ...**
-
-
-
-**You said: Oh let me see my planner ...**
-
-
-
-**You should have said: Let me look at my planner ...**
-
-
-
-**You said: I should ask my boss this question ...**
-
-
-
-**You should have said: I should ask my boss for permission ...**
-
-
-
-**You said: If the weather is sunny we will take the appointment ...**
-
-
-
-**You should have said: If the weather is sunny, we will have the appointment ...**
-
-
-
-
-
-**MA**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-FRANK
-
-
-
-**You said: I'm available 24th ...**
-
-
-
-**You should have said: I'm available on the 24th ...**
-
-
-
-**You said:  I make appointment with my co-work ...**
-
-
-
-**You should have said: I made appointment with my co-worker ...**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**LENA**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
-
-
-
-**You said:**
-
-
-
-**You should have said:**
+I think it was very interesting 
