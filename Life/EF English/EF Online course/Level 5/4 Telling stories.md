@@ -4,7 +4,11 @@
 
 How was your trip?
 
-How 
+What was the best part of the trip?
+
+How long did you stay there?
+
+I stayed there for three days.
 
 
 
