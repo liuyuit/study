@@ -3,6 +3,7 @@
 // ord('c');
 
 
+
 MSDExample();
 function MSDExample(){
     $a = [
@@ -18,19 +19,17 @@ function MSDExample(){
         'surely',
         'seashells',
     ];
-    $N = count($a);
-//    static::$aux = static::iniArray($N);
-//    static::$R = 256;
-    MSD::sortExecute($a, 0,$N - 1, 0);
-    exit;
-    echo MSD::$R;exit;
+//    $N = count($a);
+//    MSD::sortExecute($a, 0,$N - 1, 0);
+//    exit;
+//    echo MSD::$R;exit;
     MSD::sort($a);
 }
 
 class MSD
 {
     public static  $R = 256;   // 基数
-    private static  $aux = [];   // 数据分类的辅助数组
+    public static  $aux = [];   // 数据分类的辅助数组
 
 
 
@@ -38,37 +37,44 @@ class MSD
      * @param $a array
      */
     public static function sort($a){
+        echo static::$R;exit;
+
         $N = count($a);
         static::$aux = static::iniArray($N);
-        static::$R = 256;
         static::sortExecute($a, 0,$N - 1, 0);
     }
 
     public static function sortExecute($a, $lo, $hi, $d){
         // 以第 $d 个字符为键，将 $a 中 $lo 到 $hi 的元素用键索引法进行排序
-        $count = MSD::$R;
-//        $count = static::iniArray(MSD::$R);
+        $count = self::$R;
+        $count = static::iniArray(static::$R);
+        $b =1;
         // 计算频率
         for ($i = $lo; $i <= $hi; $i++){
-            $count[static::charAt($a, $d) + 2]++;  // 键 => 频率
+            $count[static::charAt($a[$i], $d) + 2]++;  // 键 => 频率
         }
+        $b =1;
 
+        $countR = static::$R;
         // 计算索引,
-        for ($r = 0; $r <= static::$R; $r++){
+        for ($r = 0; $r <= $countR; $r++){
             /* @var array $count ascii 码 => 这个键的频率 */
-            $count[$r + 1] += $count[$r + 1];
+            $count[$r + 1] += $count[$r];
         }
+        $b =1;
 
         // 数据分类
         for ($i = $lo; $i < $hi; $i++){
             $ascii = static::charAt($a[$i], $d);
             static::$aux[$count[$ascii + 1]++] = $a[$i];
         }
+        $b =1;
 
         // 回写
         for ($i = $lo; $i <= $hi; $i++){
             $a[$i] = static::$aux[$i - $lo];
         }
+        $b =1;
 
         // 递归地以每个字符为键进行排序
         for ($r = 0; $r < static::$R; $r++){
@@ -83,7 +89,7 @@ class MSD
      * @return int|mixed
      */
     private static function charAt($string, $d){
-        if (strlen($string) < $d){
+        if ($d < strlen($string)){
             return ord($string[$d]);
         } else {
             return -1;
