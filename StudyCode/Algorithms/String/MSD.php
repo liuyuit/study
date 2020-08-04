@@ -1,7 +1,7 @@
 <?php
 // 在原文的 java 代码中字符和数字相加会自动将字符转化为相应的 ascii 码，在这里需要用 ord 函数来将字符转化为 ascii 码，
 // ord('c');
-
+echo phpinfo();exit;
 
 
 MSDExample();

@@ -27,6 +27,7 @@ services:
       - php
     links:
       - php:php-fpm
+      - php7:php-fpm7
   mysql:
     build: ./mysql/
     volumes:
