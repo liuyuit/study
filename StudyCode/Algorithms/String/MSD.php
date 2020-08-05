@@ -1,7 +1,7 @@
 <?php
 // 在原文的 java 代码中字符和数字相加会自动将字符转化为相应的 ascii 码，在这里需要用 ord 函数来将字符转化为 ascii 码，
 // ord('c');
-echo phpinfo();exit;
+//echo phpinfo();exit;
 
 
 MSDExample();
@@ -37,7 +37,6 @@ class MSD
      * @param $a array
      */
     public static function sort($a){
-        echo static::$R;exit;
 
         $N = count($a);
         static::$aux = static::iniArray($N);
@@ -46,7 +45,6 @@ class MSD
 
     public static function sortExecute($a, $lo, $hi, $d){
         // 以第 $d 个字符为键，将 $a 中 $lo 到 $hi 的元素用键索引法进行排序
-        $count = self::$R;
         $count = static::iniArray(static::$R);
         $b =1;
         // 计算频率
@@ -55,9 +53,7 @@ class MSD
         }
         $b =1;
 
-        $countR = static::$R;
-        // 计算索引,
-        for ($r = 0; $r <= $countR; $r++){
+        for ($r = 0; $r <= static::$R; $r++){
             /* @var array $count ascii 码 => 这个键的频率 */
             $count[$r + 1] += $count[$r];
         }
