@@ -19,61 +19,71 @@ function MSDExample(){
         'surely',
         'seashells',
     ];
-//    $N = count($a);
-//    MSD::sortExecute($a, 0,$N - 1, 0);
-//    exit;
-//    echo MSD::$R;exit;
     MSD::sort($a);
+    print_r($a);
 }
 
 class MSD
 {
     public static  $R = 256;   // 基数
     public static  $aux = [];   // 数据分类的辅助数组
-
+    public static  $M = 0;
 
 
     /**
      * @param $a array
      */
-    public static function sort($a){
+    public static function sort(&$a){
 
         $N = count($a);
         static::$aux = static::iniArray($N);
         static::sortExecute($a, 0,$N - 1, 0);
     }
 
-    public static function sortExecute($a, $lo, $hi, $d){
+    /**
+     * 将数组的一个子数组进行排序
+     * @param $a array 待排序数组
+     * @param $lo int 子数组在 $a 中的起始索引
+     * @param $hi int 子数组在 $a 中的结束索引
+     * @param $d int 将字符串的 $d 个字符作为键，用键索引法将子数组用键索引法进行排序
+     * @return mixed
+     */
+    public static function sortExecute(&$a, $lo, $hi, $d){
+        if ($hi <= $lo + static::$M){
+            return;
+        }
+
         // 以第 $d 个字符为键，将 $a 中 $lo 到 $hi 的元素用键索引法进行排序
         $count = static::iniArray(static::$R);
-        $b =1;
         // 计算频率
+        // 2 => 3 表示，第 $d 个字符的 ascii code 为 2的字符串 有 3 个
         for ($i = $lo; $i <= $hi; $i++){
             $count[static::charAt($a[$i], $d) + 2]++;  // 键 => 频率
         }
-        $b =1;
 
         for ($r = 0; $r <= static::$R; $r++){
+            // 将频率转换为索引。最后的结果数组中，97 => 1 表示第 $d 个字符的 ascii code 为 97的字符串从索引 1 开始依次向后排（第一个符合条件的字符串的索引是 1，第二个是 2）。
             /* @var array $count ascii 码 => 这个键的频率 */
             $count[$r + 1] += $count[$r];
         }
-        $b =1;
 
         // 数据分类
-        for ($i = $lo; $i < $hi; $i++){
+        // 按照字符串第 $d 个字符的 ascii code 的索引，来给字符串排序。
+        //　在第一轮循环中，字符串只会按照首字母来排序，首字母相同的字符串的相对位置和初始相对位置相同。
+        // 之后的几轮循环，会依次对后面的字符进行排序。
+        for ($i = $lo; $i <= $hi; $i++){
             $ascii = static::charAt($a[$i], $d);
             static::$aux[$count[$ascii + 1]++] = $a[$i];
         }
-        $b =1;
 
         // 回写
         for ($i = $lo; $i <= $hi; $i++){
             $a[$i] = static::$aux[$i - $lo];
         }
-        $b =1;
 
         // 递归地以每个字符为键进行排序
         for ($r = 0; $r < static::$R; $r++){
+            // 进行排序的子数组的范围为第 $d 个字符相同的字符串所组成的子数组。
             static::sortExecute($a, $lo + $count[$r], $lo + $count[$r + 1] - 1, $d + 1);
         }
     }
