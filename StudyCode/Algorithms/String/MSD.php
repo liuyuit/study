@@ -50,46 +50,17 @@ class MSD
      * @return mixed
      */
     public static function sortExecute(&$a, $lo, $hi, $d){
-        if ($hi <= $lo + static::$M){
-            // 子数组的大小小于 $M 就使用插入排序
-            // $insersion->sort($a, $lo, $hi, $d);
+        if ($hi <= $lo){
             return;
         }
 
-        // 以第 $d 个字符为键，将 $a 中 $lo 到 $hi 的元素用键索引法进行排序
-        $count = static::iniArray(static::$R);
-        // 计算频率
-        // 2 => 3 表示，第 $d 个字符的 ascii code 为 2的字符串 有 3 个
-        for ($i = $lo; $i <= $hi; $i++){
-            $count[static::charAt($a[$i], $d) + 2]++;  // 键 => 频率
-        }
+        $lt = $lo;
+        $gt = $hi;
+        $v = static::charAt($a[$lo], $d);
+        $i = $lo + 1;
 
-        for ($r = 0; $r <= static::$R; $r++){
-            // 将频率转换为索引。最后的结果数组中，97 => 1 表示第 $d 个字符的 ascii code 为 97的字符串从索引 1 开始依次向后排（第一个符合条件的字符串的索引是 1，第二个是 2）。
-            /* @var array $count ascii 码 => 这个键的频率 */
-            $count[$r + 1] += $count[$r];
-        }
+        while($i <= $gt){
 
-        // 数据分类
-        // 按照字符串第 $d 个字符的 ascii code 的索引，来给字符串排序。
-        //　在第一轮循环中，字符串只会按照首字母来排序，首字母相同的字符串的相对位置和初始相对位置相同。
-        // 之后的几轮循环，会依次对后面的字符进行排序。
-        for ($i = $lo; $i <= $hi; $i++){
-            $ascii = static::charAt($a[$i], $d);
-            static::$aux[$count[$ascii + 1]++] = $a[$i];
-        }
-
-        // 回写
-        for ($i = $lo; $i <= $hi; $i++){
-            $a[$i] = static::$aux[$i - $lo];
-        }
-
-        // 递归地以每个字符为键进行排序
-        for ($r = 0; $r < static::$R; $r++){
-            // 进行排序的子数组的范围为前 $d 个字符相同的字符串所组成的子数组。
-            // $lo + $count[$r] 的值为字符串第 $d 个字符的 ascii code 的索引的起始值，
-            // $lo + $count[$r + 1] - 1 的值为字符串第 $d 个字符的 ascii code 的索引的结束值，
-            static::sortExecute($a, $lo + $count[$r], $lo + $count[$r + 1] - 1, $d + 1);
         }
     }
 
@@ -105,6 +76,18 @@ class MSD
         } else {
             return -1;
         }
+    }
+
+    /**
+     * 将数组中的两个元素交换位置
+     * @param $array array
+     * @param $v int|String
+     * @param $w int|String
+     */
+    private static function exch(&$array, $v, $w){
+        $tmp = $array[$v];
+        $array[$v] = $array[$w];
+        $array[$w] = $tmp;
     }
 
 
