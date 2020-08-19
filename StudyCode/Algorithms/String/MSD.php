@@ -42,6 +42,7 @@ class MSD
 
     /**
      * 将数组的一个子数组进行排序
+     * 除了第一次循环，其它每次循环的子数组都是由前 $d 个字符相同的字符串组成
      * @param $a array 待排序数组
      * @param $lo int 子数组在 $a 中的起始索引
      * @param $hi int 子数组在 $a 中的结束索引
@@ -50,6 +51,8 @@ class MSD
      */
     public static function sortExecute(&$a, $lo, $hi, $d){
         if ($hi <= $lo + static::$M){
+            // 子数组的大小小于 $M 就使用插入排序
+            // $insersion->sort($a, $lo, $hi, $d);
             return;
         }
 
@@ -83,7 +86,9 @@ class MSD
 
         // 递归地以每个字符为键进行排序
         for ($r = 0; $r < static::$R; $r++){
-            // 进行排序的子数组的范围为第 $d 个字符相同的字符串所组成的子数组。
+            // 进行排序的子数组的范围为前 $d 个字符相同的字符串所组成的子数组。
+            // $lo + $count[$r] 的值为字符串第 $d 个字符的 ascii code 的索引的起始值，
+            // $lo + $count[$r + 1] - 1 的值为字符串第 $d 个字符的 ascii code 的索引的结束值，
             static::sortExecute($a, $lo + $count[$r], $lo + $count[$r + 1] - 1, $d + 1);
         }
     }
