@@ -41,12 +41,11 @@ class Quick3String
     }
 
     /**
-     * 将数组的一个子数组进行排序
-     * 除了第一次循环，其它每次循环的子数组都是由前 $d 个字符相同的字符串组成
+     * 将数组(子数组)的第一个字符作为切分字符，用切分字符将数组分为三个子数组，分别是小于切分字符的和等于切分字符的还有大于切分字符的。
      * @param $a array 待排序数组
      * @param $lo int 子数组在 $a 中的起始索引
      * @param $hi int 子数组在 $a 中的结束索引
-     * @param $d int 将字符串的 $d 个字符作为键，用键索引法将子数组用键索引法进行排序
+     * @param $d int 将字符串的 $d 个字符进行对比来排序，
      * @return mixed
      */
     public static function sortExecute(&$a, $lo, $hi, $d){
@@ -54,30 +53,32 @@ class Quick3String
             return;
         }
 
-        $lt = $lo;
+        $lt = $lo; // 切分字符在 $a 的索引值，是动态变化的。
         $gt = $hi;
-        $v = static::charAt($a[$lo], $d);
+        $v = static::charAt($a[$lo], $d); // 切分字符的 子数组的第一个字符作为切分字符，
         $i = $lo + 1;
 
         while($i <= $gt){
             $t = static::charAt($a[$i], $d);
-            if ($t < $v){
-                static::exch($a, $lt++, $i++);
-            } elseif ($t > $v){
-                static::exch($a, $i, $gt--);
+            if ($t < $v){ // 当前字符小于切分字符，需要将当前字符与切分字符交换位置。
+                static::exch($a, $lt++, $i++); // $lt++ 是切分字符新的索引值。
+            } elseif ($t > $v){ // 当前字符大于切分字符，需要将当前字符与大于切分字符子数组的前一个字符的交换位置。
+                static::exch($a, $i, $gt--); // $gt-- 是大于切分字符子数组的前一个字符的索引值。$i 的值不变化，在下一轮循环中，继续比较新交换过来的 $i.
             } else {
                 $i++;
             }
         }
 
         // $a[$lo ... $lt -1] < $v = $a[$lt ... $gt] < $a[$gt + 1 ... $hi]
-        static::sortExecute($a, $lo, $lt -1, $d);
+        static::sortExecute($a, $lo, $lt -1, $d); // $lo 是包含所有小于切分字符的子数组的起始索引， $lt -1 是包含所有小于切分字符的子数组的结束索引
 
-        if ($v >= 0){
-            static::sortExecute($a, $lt, $gt, $d + 1);
+        if ($v >= 0) {
+            static::sortExecute($a, $lt, $gt, $d + 1); // 如果切分字符存在，那么将包含所有小于切分字符的字符串的子数组再次迭代。
+        } else {
+            $b = 1;
         }
 
-        static::sortExecute($a, $gt + 1, $hi, $d);
+        static::sortExecute($a, $gt + 1, $hi, $d); // $lo 是包含所有小于切分字符的子数组的起始索引， $lt -1 是包含所有小于切分字符的子数组的结束索引
     }
 
     /**
