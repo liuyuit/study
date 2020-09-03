@@ -74,8 +74,6 @@ class Quick3String
 
         if ($v >= 0) {
             static::sortExecute($a, $lt, $gt, $d + 1); // 如果切分字符存在，那么将包含所有小于切分字符的字符串的子数组再次迭代。
-        } else {
-            $b = 1;
         }
 
         static::sortExecute($a, $gt + 1, $hi, $d); // $lo 是包含所有小于切分字符的子数组的起始索引， $lt -1 是包含所有小于切分字符的子数组的结束索引
