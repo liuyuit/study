@@ -19,7 +19,7 @@ function TrieSTExample(){
         'surely',
         'seashells',
     ];
-    TrieST::sort($a);
+//    TrieST::sort($a);
     print_r($a);
 }
 
@@ -31,13 +31,17 @@ class TrieST
 
     public function get($key){
         $x = $this->executeGet($this->root, $key, 0);
+        if ($x == null){
+            return null;
+        }
+        return $x->val;
     }
 
     /**
-     * @param $x
+     * @param $x Node
      * @param $key
      * @param $d
-     * @return null
+     * @return Node|null
      */
     private function executeGet($x, $key, $d){
         if ($x == null){
@@ -71,10 +75,31 @@ class TrieST
         return $x;
     }
 
+    public function size(){
+        return $this->executeSize($this->root);
+    }
 
+    /**
+     * 统计一个单词查找数的所有键的数量
+     * @param $x Node
+     * @return int
+     */
+    protected function executeSize($x){
+        if ($x == null){
+            return 0;
+        }
 
+        $cnt = 0;
+        if ($x->val != null){
+            $cnt++; // 有值的结点代表一个键值对
+        }
 
+        for ($c = 0; $c < $this->R; $c++){ // 每一个结点都有 R 条链接
+            $cnt += $this->executeSize($x->next[$c]); // 把每一个子结点当作一棵子树的根结点，递归地查找子树的键值对数量
+        }
 
+        return $cnt;
+    }
 
     /**
      * 获取字符串相应位置的字符所对应的 ascii 码，字符串到达末尾了，就返回 -1
@@ -88,33 +113,6 @@ class TrieST
         } else {
             return -1;
         }
-    }
-
-    /**
-     * 将数组中的两个元素交换位置
-     * @param $array array
-     * @param $v int|String
-     * @param $w int|String
-     */
-    private static function exch(&$array, $v, $w){
-        $tmp = $array[$v];
-        $array[$v] = $array[$w];
-        $array[$w] = $tmp;
-    }
-
-
-    /**
-     * 初始化一个有 $count 个元素的索引数组，每个元素的值都是空字符串
-     * @param $count
-     * @return array
-     */
-    private static function iniArray($count){
-        $array = [];
-        for ($i = 0; $i < $count; $i++){
-            $array[$i] = 0;
-        }
-
-        return $array;
     }
 }
 
