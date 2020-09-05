@@ -101,6 +101,20 @@ class TrieST
         return $cnt;
     }
 
+    protected function collect($x, $pre, $q){
+        if ($x == null){
+            return;
+        }
+
+        if ($x->val != null){
+            $q[] = $pre;
+        }
+
+        for ($c = 0; $c < $this->R; $c++){
+            $this->collect($x->next[$c], $pre + $c, $q);
+        }
+    }
+
     /**
      * 获取字符串相应位置的字符所对应的 ascii 码，字符串到达末尾了，就返回 -1
      * @param $string string
