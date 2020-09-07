@@ -101,13 +101,23 @@ class TrieST
         return $cnt;
     }
 
-    protected function collect($x, $pre, $q){
+    public function keys(){
+        return $this->keysWithPrefix('');
+    }
+
+    public function keysWithPrefix($pre){
+        $q = []; // queue
+        $this->collect($this->get($this->root, $pre, 0), $pre, $q);
+        return $q;
+    }
+
+    protected function collect($x, $pre, &$q){
         if ($x == null){
             return;
         }
 
         if ($x->val != null){
-            $q[] = $pre;
+            array_unshift($q, $pre);
         }
 
         for ($c = 0; $c < $this->R; $c++){
