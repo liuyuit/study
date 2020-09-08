@@ -107,7 +107,7 @@ class TrieST
 
     public function keysWithPrefix($pre){
         $q = []; // queue
-        $this->collect($this->get($this->root, $pre, 0), $pre, $q);
+        $this->collect($this->executeGet($this->root, $pre, 0), $pre, $q);
         return $q;
     }
 
