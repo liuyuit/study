@@ -125,6 +125,36 @@ class TrieST
         }
     }
 
+    public function keysThatMatch($pat){
+        $q = [];
+        $this->matchCollect($this->root,'', $pat, $q);
+        return $q;
+    }
+
+    public function matchCollect($x, $pre, $pat, &$q){
+        $d = strlen($pre);
+
+        if ($x == null){
+            return;
+        }
+
+        if ($d == strlen($pat) && $x->val != null){
+             array_unshift($q, $pre);
+        }
+
+        if ($d == strlen($pre)){
+            return;
+        }
+
+        $next = $this->charAt($pat, $d);
+
+        for ($c = 0; $c < $this->R; $c++){
+            if ($next == '.' || $next == $c){
+                $this->matchCollect($x->next[$c], $pre + $c, $pat, $q);
+            }
+        }
+    }
+
     /**
      * 获取字符串相应位置的字符所对应的 ascii 码，字符串到达末尾了，就返回 -1
      * @param $string string
