@@ -155,6 +155,28 @@ class TrieST
         }
     }
 
+    public function longestPrefixOf($s){
+        $length = $this->search($this->root, $s, 0, 0);
+        return substr($s, 0, $length);
+    }
+
+    private function search(Node $x, $s, $d, $length){
+        if ($x == null){
+            return $length;
+        }
+
+        if ($x->val != null){
+            $length = $d;
+        }
+
+        if ($d == strlen($s)){
+            return $length;
+        }
+
+        $c = $this->charAt($s, $d);
+        return $this->search($x->next[$c], $s, $d + 1, $length);
+    }
+
     /**
      * 获取字符串相应位置的字符所对应的 ascii 码，字符串到达末尾了，就返回 -1
      * @param $string string
