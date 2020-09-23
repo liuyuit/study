@@ -177,6 +177,44 @@ class TrieST
         return $this->search($x->next[$c], $s, $d + 1, $length);
     }
 
+    public function delete($key){
+        $this->root = $this->executeDelete($this->root, $key, 0);
+    }
+
+    /**
+     * @param $x Node
+     * @param $key string 要删除的 key
+     * @param $d int 字符串 $key 的第几个字符
+     * @return null
+     */
+    private function executeDelete(Node $x, $key, $d){
+        if ($x == null){
+            return null;
+        }
+
+        if ($d == strlen($key)){ // 已经找到键所对应的结点，只需将值设为 null 即可
+            $x->val = null;
+        } else {  // 没有找到键所对应的结点，继续找下一个字符对应的结点
+            $c = $this->charAt($key, $d);
+            $x->next[$c] = $this->executeDelete($x->next[$c], $key, $d + 1);
+        }
+
+        // 删除 key 对应结点的值后，如果它的链接均为空，那么需要删除这个结点。
+        // 同理，如果删除 key 对应结点的值后，导致父结点的所有链接为空也要删除父结点
+        if ($x->val != null){ // 当前结点不为空，不需要再删除父结点
+            return $x;
+        }
+
+        // 如果 $x->val == null 并且他的所有链接都为空,就可以删除这个结点
+        for ($c = 0; $c < $this->R; $c++){
+            if ($x->next[$c] != null){
+                return $x;
+            }
+        }
+
+        return null;
+    }
+
     /**
      * 获取字符串相应位置的字符所对应的 ascii 码，字符串到达末尾了，就返回 -1
      * @param $string string
