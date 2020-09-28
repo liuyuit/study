@@ -11,24 +11,36 @@ class TST
 {
     protected $root; // 根结点
 
-    public function push($key, $val){
-        $this->root = $this->executedPush($this->root, $key, $val, 0);
+    public function put($key, $val){
+        $this->root = $this->executePut($this->root, $key, $val, 0);
     }
 
     /**
      * @param $x Node
-     * @param $kye
+     * @param $key
      * @param $val
      * @param $d
+     * @return Node
      */
-    public function executedPush($x, $kye, $val, $d){
-        $c = $this->charAt($kye, $d);
+    public function executePut($x, $key, $val, $d){
+        $c = $this->charAt($key, $d);
 
-        if ($x === null){
+        if ($x === null){ // 进入到一个空结点，需要先创建结点。但这并不代表已经查找命中。还可能是到达目标结点之前的结点就为空
             $x = new Node();
             $x->c = $c;
         }
 
+        if ($c < $x->c){ // 当前键的字母小于结点字母，进入左链接
+            $x->left = $this->executePut($x->left, $key, $val, $d);
+        } elseif ($c > $x->c){ // 当前键的字母大于结点字母，进入右链接
+            $x->right = $this->executePut($x->right, $key, $val, $d);
+        } elseif($d < strlen($key) -1){ // 当前键的字母等于结点字母，
+            $x->mid = $this->executePut($x->mid, $key, $val, $d + 1);
+        } else {
+            $x->val = $val;
+        }
+
+        return $x;
     }
 
     /**
