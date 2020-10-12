@@ -34,9 +34,9 @@ class TST
             $x->left = $this->executePut($x->left, $key, $val, $d);
         } elseif ($c > $x->c){ // 当前键的字母大于结点字母，进入右链接
             $x->right = $this->executePut($x->right, $key, $val, $d);
-        } elseif($d < strlen($key) -1){ // 当前键的字母等于结点字母，
+        } elseif($d < strlen($key) -1){ // 当前键的字母等于结点字母，但还不是最后一个字母，进入中间连接
             $x->mid = $this->executePut($x->mid, $key, $val, $d + 1);
-        } else {
+        } else { // 当前键的字母等于结点字母，并且是最后一个字母，查找已命中，将当前节点赋值即可
             $x->val = $val;
         }
 
