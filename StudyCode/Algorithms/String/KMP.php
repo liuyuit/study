@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2020/10/19
- * Time: 17:58
+ * ord('a');//=>97 返回小写a 的ascii码值97
+ * chr(97);//=>a 返回ascii码表上的97对应的 小写a
  */
 
 function example(){
@@ -37,8 +35,8 @@ class KMP
                 $this->dfa[$c][$j] = $this->dfa[$c][$X]; // 复制失败情况下的值
             }
 
-            $this->dfa[$pat[$j]][$j] = $j + 1; // 设置匹配成功情况下的值
-            $X = $this->dfa[$pat[$j]][$X]; // 更新重启状态
+            $this->dfa[static::charAt($pat, $j)][$j] = $j + 1; // 设置匹配成功情况下的值
+            $X = $this->dfa[static::charAt($pat, $j)][$X]; // 更新重启状态
         }
     }
 
@@ -61,7 +59,7 @@ class KMP
         $element = [];
 
         for ($i = 0; $i < $n; $i++){
-            $element[] = '';
+            $element[] = 0;
         }
 
         $array = [];
@@ -70,6 +68,20 @@ class KMP
         }
 
         return $array;
+    }
+
+    /**
+     * 获取字符串相应位置的字符所对应的 ascii 码，字符串到达末尾了，就返回 -1
+     * @param $string string
+     * @param $d int
+     * @return int|mixed
+     */
+    private static function charAt($string, $d){
+        if ($d < strlen($string)){
+            return ord($string[$d]);
+        } else {
+            return -1;
+        }
     }
 
 }
