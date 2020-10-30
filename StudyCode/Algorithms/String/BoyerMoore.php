@@ -26,7 +26,7 @@ class BoyerMoore
 
     public function __construct($pat)
     {
-        // 由模式字符串构造 DFA;
+        // 计算跳跃表
         $this->pat = $pat;
         $M = strlen($pat);
         $R = 256;
@@ -45,41 +45,25 @@ class BoyerMoore
         // 在 txt 上模拟 DFA 的运行
         $N = strlen($txt);
         $M = strlen($this->pat);
-        for ($i = 0, $j = 0; $i < $N && $j <$M; $i++){
-            $ascii = static::charAt($txt, $i);
-            $j = $this->right[$ascii][$j];
+
+        for ($i = 0; $i <= $N - $M; $i += $skip){
+            // 模式字符串和文本在位置 i 匹配吗
+            $skip = 0;
+            for ($j = $M - 1; $j >= 0; $j--){
+                if (static::charAt($this->pat, $j) != static::charAt($txt, $i + $j)){
+                    $skip = $j - $txt->right[static::charAt($txt, $i + $j)];
+                    if ($skip < 1){
+                        $skip = 1;
+                    }
+                    break;
+                }
+            }
+
+            if ($skip == 0){
+                return $i;
+            }
         }
-
-        if ($j == $M){
-            return $i - $M; // 找到匹配（到达模式字符串的结尾）
-        } else {
-            return $N; // 未找到匹配（到达文本字符串的结尾）+
-        }
-    }
-
-    private function iniArray($m){
-
-        $array = [];
-        for ($i = 0; $i < $m; $i++){
-            $array[$i] = -1;
-        }
-
-        return $array;
-    }
-
-    private function iniArray1($m, $n){
-        $element = [];
-
-        for ($i = 0; $i < $n; $i++){
-            $element[] = 0;
-        }
-
-        $array = [];
-        for ($i = 0; $i < $m; $i++){
-            $array[$i] = $element;
-        }
-
-        return $array;
+        return $N;
     }
 
     /**
