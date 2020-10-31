@@ -9,15 +9,14 @@ function example(){
     $txt = 'aabaacaaabraaca1';
     $obj = new BoyerMoore($pat);
     $offset = $obj->search($txt);
-    var_dump($offset);
+    print_r($offset);
 }
 
 example();
 
 
 /**
- * 用确定有限自动状态机的方式来做子字符串查找
- * Class KMP
+ * @link http://www.ruanyifeng.com/blog/2013/05/boyer-moore_string_search_algorithm.html
  */
 class BoyerMoore
 {
@@ -37,7 +36,9 @@ class BoyerMoore
         }
 
         for($j = 0; $j < $M; $j++){
-            $this->right[static::charAt($this->pat, $j)] = $j; // 包含在模式字符串中的字符的值为它在其中出现的最右位置
+            // 包含在模式字符串中的字符的值为它在其中出现的最右的位置(从 0 开始)
+            // 如果 pat 中存在相同字符，那么最右侧字符的位置将会覆盖前面的
+            $this->right[static::charAt($this->pat, $j)] = $j;
         }
     }
 
@@ -46,16 +47,18 @@ class BoyerMoore
         $N = strlen($txt);
         $M = strlen($this->pat);
 
-        for ($i = 0; $i <= $N - $M; $i += $skip){
+        for ($i = 0; $i <= $N - $M; $i += $skip){ // 从 txt 的第一个字符开始， pat 从左向右移动
             // 模式字符串和文本在位置 i 匹配吗
-            $skip = 0;
-            for ($j = $M - 1; $j >= 0; $j--){
-                if (static::charAt($this->pat, $j) != static::charAt($txt, $i + $j)){
-                    $skip = $j - $txt->right[static::charAt($txt, $i + $j)];
+            $skip = 0; // 下一次匹配，要移动的距离
+            for ($j = $M - 1; $j >= 0; $j--){  // 从 pat 的最后一个字符开始匹配
+                if (static::charAt($this->pat, $j) != static::charAt($txt, $i + $j)){  // pat 和 txt 相对应的字符不匹配
+                    // 下一次匹配要移动的距离  = 不匹配字符的位置 - 这个字符在 pat 中的位置。
+                    // 如果 pat 中不存在这个字符，那就减去 -1
+                    $skip = $j - $this->right[static::charAt($txt, $i + $j)];
                     if ($skip < 1){
                         $skip = 1;
+                        break;
                     }
-                    break;
                 }
             }
 
