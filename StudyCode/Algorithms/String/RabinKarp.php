@@ -17,55 +17,54 @@ example();
 
 class RabinKarp
 {
-    private $right = [];
-    private $pat = '';
-    private $R = 256;
-    private $Q = 997; // 除留取余法的除数。也是 hash table 的元素个数。特点是必须要是一个素数，这样会让 hash 值分布得更加分散
+    private $pat; // 模式字符串（仅拉斯维加斯算法需要）
+    private $patHash; // 模式字符串的散列值
+    private $M; // 模式字符串的长度
+    private $Q; // 一个很大的素数
+    private $R = 256; // 字母表的大小
+    private $RM ; // R^(M - 1) % Q
+//    private $Q = 997; // 除留取余法的除数。也是 hash table 的元素个数。特点是必须要是一个素数，这样会让 hash 值分布得更加分散
 
     public function __construct($pat)
     {
         // 计算跳跃表
         $this->pat = $pat;
-        $M = strlen($pat);
-        $R = 256;
-        $this->right = [];
+        $this->M = strlen($pat);
+        $this->Q = $this->longRandomPrime();
+        $this->RM = 1;
 
-        for ($c = 0; $c < $R; $c++){
-            $this->right[$c] = -1;   // 不属于模式字符串的字符对应的值都是 -1
+        for ($i = 1; $i <= $this->M - 1; $i++){
+            $this->RM = ($this->R * $this->RM) % $this->Q;
         }
 
-        for($j = 0; $j < $M; $j++){
-            // 包含在模式字符串中的字符的值为它在其中出现的最右的位置(从 0 开始)
-            // 如果 pat 中存在相同字符，那么最右侧字符的位置将会覆盖前面的
-            $this->right[static::charAt($this->pat, $j)] = $j;
-        }
+        $this->patHash = $this->hash($pat, $this->M);
+    }
+
+    public function check($i){
+        trim($i); // 防止编辑器报错
+        return true;
     }
 
     public function search($txt){
-        // 在 txt 上模拟 DFA 的运行
         $N = strlen($txt);
-        $M = strlen($this->pat);
+        $txtHash = $this->hash($txt, $this->M);
 
-        for ($i = 0; $i <= $N - $M; $i += $skip){ // 从 txt 的第一个字符开始， pat 从左向右移动
-            // 模式字符串和文本在位置 i 匹配吗
-            $skip = 0; // 下一次匹配，要移动的距离
-            for ($j = $M - 1; $j >= 0; $j--){  // 从 pat 的最后一个字符开始匹配
-                if (static::charAt($this->pat, $j) != static::charAt($txt, $i + $j)){  // pat 和 txt 相对应的字符不匹配
-                    // 下一次匹配要移动的距离  = 不匹配字符的位置 - 这个字符在 pat 中的位置。
-                    // 如果 pat 中不存在这个字符，那就减去 -1
-                    $skip = $j - $this->right[static::charAt($txt, $i + $j)];
-                    if ($skip < 1){
-                        $skip = 1;
-                        break;
-                    }
+        if ($this->patHash == $txtHash && $this->check(0)){
+            return 0; // 一开始就匹配成功
+        }
+
+        for ($i = $this->M; $i < $N; $i++){
+            $txtHash = ($txtHash + $this->Q - $this->RM * static::charAt($txt, $i - $this->M) % $this->Q) % $this->Q;
+            $txtHash = ($txtHash * $this->R + static::charAt($txt, $i)) % $this->Q;
+
+            if ($this->patHash == $txtHash){
+                if ($this->check($i - $this->M + 1)){
+                    return $i - $this->M + 1; // 找到匹配
                 }
             }
-
-            if ($skip == 0){
-                return $i;
-            }
         }
-        return $N;
+
+        return $N; // 未找到匹配
     }
 
     private function hash($key, $M){
@@ -90,6 +89,10 @@ class RabinKarp
         } else {
             return -1;
         }
+    }
+
+    private function longRandomPrime(){
+        return 997;
     }
 
 }
