@@ -73,12 +73,21 @@ ln -s /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld
 chkconfig --add mysqld
 chkconfig --level 2345 mysqld on
 ```
-
 启动
 
 ```
 service mysqld start
 ```
+
+设置启动文件软链
+
+```
+# cd /usr/local/mysql/bin/
+# ln -s ../support-files/mysql.server ./mysql.server
+# mysql.server  start # 使用 mysql 自带启动脚本启动 mysql 服务器程序
+```
+
+
 
 更改密码
 
@@ -103,5 +112,19 @@ Query OK, 0 rows affected, 1 warning (0.00 sec)
 
 mysql> flush privileges;
 Query OK, 0 rows affected (0.00 sec)
+```
+
+version
+
+```
+[root@VM-8-4-centos demo]# mysqld --version
+mysqld  Ver 5.7.32 for linux-glibc2.12 on x86_64 (MySQL Community Server (GPL))
+```
+
+```
+[root@VM-8-4-centos demo]# cat /etc/redhat-release
+CentOS Linux release 7.6.1810 (Core)
+[root@VM-8-4-centos demo]# uname -a
+Linux VM-8-4-centos 3.10.0-1127.19.1.el7.x86_64 #1 SMP Tue Aug 25 17:23:54 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
