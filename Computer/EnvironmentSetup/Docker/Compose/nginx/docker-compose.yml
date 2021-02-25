@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  nginx:
+    container_name: cps_nginx
+    build:
+      context: ./docker/nginx
+    volumes:
+      - /etc/nginx:/etc/nginx
+      - /var/log/nginx:/var/log/nginx
+      - ./:/var/www
+    ports:
+      - "8080:80"
