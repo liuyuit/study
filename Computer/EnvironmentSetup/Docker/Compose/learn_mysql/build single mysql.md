@@ -12,13 +12,19 @@ version: '3.1'
 services:
 
   db:
-    image: mysql:mysql:5.7.33
+    image: mysql:5.7.33
     command: --default-authentication-plugin=mysql_native_password
     restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql # 挂载数据卷
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
       - 33060:3306
+volumes:
+  mysql_data:  # 定义数据卷
+    external: false
+
 ```
 
 ```
