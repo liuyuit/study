@@ -23,4 +23,5 @@ services:
       - /usr/local/etc/php:/usr/local/etc/php
 ```
 
+如果容器目录不为空，宿主机目录的内容将会覆盖容器目录。之后就可以在宿主机或容器中修改挂载目录
 
