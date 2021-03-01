@@ -17,12 +17,12 @@ MySQL 服务器上对表中数据的存储和读取是存储引擎在做的。�
 #### 指定行格式的语法
 
 ```
-mysql> create table record_format_demo(
-    -> c1 varchar(10),
-    -> c2 varchar(10) not null,
-    -> c3 char(10),
-    -> c4 varchar(10)
-    -> ) charset=ascii ROW_FORMAT=COMPACT;
+create table record_format_demo(
+ c1 varchar(10),
+ c2 varchar(10) not null,
+ c3 char(10),
+ c4 varchar(10)
+) charset=ascii ROW_FORMAT=COMPACT;
 Query OK, 0 rows affected (0.03 sec)
 ```
 
@@ -132,8 +132,8 @@ CHAR(M) 占用的空间为该字符集最大可能空间，例如 utf8mb4 的一
 
 ```
 mysql> create table varchar_size_demo(
-    -> c varchar(65532)
-    -> ) charset=ascii ROW_FORMAT=Compact;
+   c varchar(65532)
+   ) charset=ascii ROW_FORMAT=Compact;
 Query OK, 0 rows affected (0.02 sec)
 
 mysql> insert into varchar_size_demo(c) values(repeat('a',65532));

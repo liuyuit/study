@@ -21,11 +21,11 @@
 
 ```
 mysql> create table page_demo(
-    -> c1 int,
-    -> c2 int,
-    -> c3 varchar(10000),
-    -> primary key (c1)
-    -> )charset=ascii row_format=Compact;
+     c1 int,
+     c2 int,
+    c3 varchar(10000),
+    primary key (c1)
+     )charset=ascii row_format=Compact;
 Query OK, 0 rows affected (0.02 sec)
 
 mysql> insert into page_demo (c1,c2,c3) values(1,100, 'aaaa'),(2, 200, 'bbbb'),(3,300,'cccc'),(4, 400, 'dddd');

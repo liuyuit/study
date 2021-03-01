@@ -117,9 +117,9 @@ Query OK, 1 row affected (0.00 sec)
 mysql> use demo
 Database changed
 
-mysql> create table engine_demo_table(
-    -> i int
-    -> ) engine=MyISAM;
+create table engine_demo_table(
+ i int
+) engine=MyISAM;
 Query OK, 0 rows affected (0.00 sec)
 ```
 

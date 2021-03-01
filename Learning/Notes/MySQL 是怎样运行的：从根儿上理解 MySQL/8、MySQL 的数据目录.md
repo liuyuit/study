@@ -91,8 +91,8 @@ drwxr-x--- 2 mysql mysql    12288 Dec 18 11:04 sys
 
 ```
 mysql> create table test(
-    -> c1 int
-    -> );
+     c1 int
+     );
 Query OK, 0 rows affected (0.02 sec)
 ```
 
