@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ruleset name="MyStandard">
+    <description>基于PSR2，去掉部分规则</description>
+    <arg name="tab-width" value="4"/>
+
+    <rule ref="PSR2">
+        <!-- 不限制行的长度 -->
+        <exclude name="Generic.Files.LineLength"/>
+        <!-- 跳过的目录 -->
+        <exclude-pattern>bootstrap/cache/*</exclude-pattern>
+        <exclude-pattern>node_modules/*</exclude-pattern>
+        <exclude-pattern>public/*</exclude-pattern>
+        <exclude-pattern>resources/*</exclude-pattern>
+        <exclude-pattern>storage/*</exclude-pattern>
+        <exclude-pattern>vendor/*</exclude-pattern>
+    </rule>
+
+    <!-- Laravel Migration & Seeder 没有命名空间 -->
+    <rule ref="PSR1.Classes.ClassDeclaration">
+        <exclude-pattern>database/*</exclude-pattern>
+    </rule>
+</ruleset>
