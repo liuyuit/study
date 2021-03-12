@@ -113,6 +113,50 @@ result
 }
 ```
 
+## Enum
+
+```
+ php artisan make:enum Api/ErrorCode
+```
+
+```
+<?php
+
+namespace App\Enums\Api;
+
+use BenSampo\Enum\Enum;
+
+/**
+ * 有特定意义的错误码
+ *
+ * @method static static UNAUTHORIZED()
+ * @method static static SERVICE_UNAVAILABLE()
+ */
+final class ErrorCode extends Enum
+{
+    const UNAUTHORIZED =   -1001; // token 授权未通过
+    const SERVICE_UNAVAILABLE =   -1002; // 外部服务不稳定
+    const NOT_FOUNT =   -1003; // 资源未找到
+    const VALIDATION =   -1004; // 表单验证失败
+    const DEFAULT =   -2; // 默认，无特殊意义
+
+    public static function getDescription($value): string
+    {
+        if ($value === static::UNAUTHORIZED) {
+            return 'token 授权未通过，请重新登录';
+        } elseif ($value === static::SERVICE_UNAVAILABLE) {
+            return '外部服务不稳定，请重试';
+        } elseif ($value === static::NOT_FOUNT) {
+            return '资源未找到，请重试';
+        } elseif ($value === static::VALIDATION) {
+            return '表单验证失败, 请检查输入';
+        }
+
+        return parent::getDescription($value);
+    }
+}
+```
+
 ## Exception
 
 ```
@@ -121,15 +165,22 @@ php artisan make:exception  Api/BaseException
 
 ```
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 3/3/2021
+ * Time: 10:58 AM
+ */
+
 namespace App\Exceptions\Api;
 
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class BaseException extends HttpException
 {
-    public function __construct(string $message = null, int $code = 0, array $headers = [], \Throwable $previous = null)
+    public function __construct(string $message = null, int $code = 0, int $statusCode = -2, array $headers = [], \Throwable $previous = null)
     {
-        parent::__construct(200, $message, $previous, $headers, $code);
+        parent::__construct($statusCode, $message, $previous, $headers, $code);
     }
 }
 ```
@@ -143,9 +194,14 @@ php artisan make:exception  Api/ValidationException
 
 namespace App\Exceptions\Api;
 
+use App\Enums\Api\ErrorCode;
+
 class ValidationException extends BaseException
 {
-    //
+    public function __construct(string $message = null, int $code = 0, array $headers = [], \Throwable $previous = null)
+    {
+        parent::__construct($message, $code, ErrorCode::VALIDATION, $headers, $previous);
+    }
 }
 ```
 
@@ -158,14 +214,38 @@ php artisan make:exception Api/NotFoundException
 
 namespace App\Exceptions\Api;
 
+use App\Enums\Api\ErrorCode;
+
 class NotFoundException extends BaseException
 {
     public function __construct(string $message = '未找到资源', int $code = 0, array $headers = [], \Throwable $previous = null)
     {
-        parent::__construct($message, $code, $headers, $previous);
+        parent::__construct($message, $code, ErrorCode::NOT_FOUNT, $headers, $previous);
     }
 }
 ```
+
+```
+php artisan make:exception Api/UnauthorizedException
+```
+
+```
+<?php
+
+namespace App\Exceptions\Api;
+
+use App\Enums\Api\ErrorCode;
+
+class UnauthorizedException extends BaseException
+{
+    public function __construct(string $message = '授权未通过，请重新登录', int $code = 0, array $headers = [], \Throwable $previous = null)
+    {
+        parent::__construct($message, $code, ErrorCode::UNAUTHORIZED, $headers, $previous);
+    }
+}
+```
+
+
 
 #### provider
 
@@ -191,7 +271,7 @@ class ExceptionHandlerServiceProvider extends ServiceProvider
     {
         app('Dingo\Api\Exception\Handler')->register(function (\App\Exceptions\Api\BaseException $exception) {
             if (!config('app.debug')) {
-                return apiError($exception->getMessage());
+                return apiError($exception->getMessage(), $exception->getStatusCode());
             }
 
             $debug = [
@@ -200,7 +280,7 @@ class ExceptionHandlerServiceProvider extends ServiceProvider
                 'tract'  => $exception->getTrace(),
             ];
 
-            return apiError($exception->getMessage(), -2, ['debug' => $debug]);
+            return apiError($exception->getMessage(), $exception->getStatusCode(), ['debug' => $debug]);
         });
     }
 
@@ -358,5 +438,19 @@ result
     "msg": "platform 不能为空。",
     "data": []
 }
+```
+
+exception
+
+```
+throw new UnauthorizedException();
+
+result
+{
+    "code": -1001,
+    "msg": "授权未通过，请重新登录",
+    "data": {
+    }
+}    
 ```
 
