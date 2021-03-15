@@ -1,0 +1,23 @@
+{
+  "require": {
+
+    "tlanyan/hello-composer": "*"
+
+  },
+
+  "minimum-stability": "dev",
+
+  "repositories": {
+
+    "local": {
+
+      "type": "path",
+
+      "url": "E:\\Study\\PHP\\Code\\composer\\tlanyan\\hello-composer"
+
+    }
+
+  },
+  "name": "liuyu/tset",
+  "description": "test project for composer"
+}

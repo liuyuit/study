@@ -1,0 +1,32 @@
+[
+    {
+        "name": "tlanyan/hello-composer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "E:/Study/PHP/Code/composer/tlanyan/hello-composer",
+            "reference": "f82b38dc82537a74f4b3f98e03b8424416f73ac1"
+        },
+        "require": {
+            "php": ">=7.0"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "tlanyan\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "tlanyan",
+                "email": "tlanyan@hotmail.com"
+            }
+        ],
+        "description": "Hello, Composer!"
+    }
+]

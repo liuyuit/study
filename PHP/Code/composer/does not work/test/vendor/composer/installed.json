@@ -1,0 +1,29 @@
+[
+    {
+        "name": "liuyuit/hello-composer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "E:/Study/PHP/Code/composer/hello-composer",
+            "reference": "a72bdfca7cce462484581a26e28085b65c5ca85f"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "liuyuit\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "liuyu",
+                "email": "liuyuit@aliyun.com"
+            }
+        ],
+        "description": "Hello, Compose!"
+    }
+]

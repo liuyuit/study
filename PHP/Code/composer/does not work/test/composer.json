@@ -1,0 +1,14 @@
+{
+    "name": "liuyu/composer-test",
+    "description": "test project",
+    "require": {
+	"liuyuit/hello-composer": "*"
+    },
+    "minimum-stability": "dev",
+    "repositories": {
+        "local": {
+                "type": "path",
+                "url": "E:\\Study\\PHP\\Code\\composer\\hello-composer"
+          }
+    }
+}

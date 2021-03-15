@@ -1,0 +1,23 @@
+{
+  "name": "xingxing5511001001/hello",
+  "description": "this is test",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "xxxx",
+      "email": "xxx@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "files": [
+      "src/p.php"
+    ],
+    "psr-4": {
+      "hello\\": "src/"
+    }
+  }
+}

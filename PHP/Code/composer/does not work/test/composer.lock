@@ -1,0 +1,43 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5fa69089885557600155d3c39ba629a9",
+    "packages": [
+        {
+            "name": "liuyuit/hello-composer",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "E:/Study/PHP/Code/composer/hello-composer",
+                "reference": "a72bdfca7cce462484581a26e28085b65c5ca85f"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "liuyuit\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "liuyu",
+                    "email": "liuyuit@aliyun.com"
+                }
+            ],
+            "description": "Hello, Compose!"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

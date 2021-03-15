@@ -1,0 +1,46 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d47d4246a4695b40ec47d88d8122d992",
+    "packages": [
+        {
+            "name": "tlanyan/hello-composer",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "E:/Study/PHP/Code/composer/tlanyan/hello-composer",
+                "reference": "f82b38dc82537a74f4b3f98e03b8424416f73ac1"
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tlanyan\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "tlanyan",
+                    "email": "tlanyan@hotmail.com"
+                }
+            ],
+            "description": "Hello, Composer!"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

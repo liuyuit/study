@@ -1,0 +1,19 @@
+{
+    "name": "liuyuit/hello-composer",
+    "description": "Hello, Compose!",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "liuyu",
+            "email": "liuyuit@aliyun.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+		"liuyuit\\": "src/"
+	}
+    }
+}
