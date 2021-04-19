@@ -2,6 +2,8 @@
 
 ![img](https://github.com/liuyuit/Study/blob/master/Life/EF%20English/Activity%20Lesson/Beginner%20Listening%20%26%20Pronunciation%20-%20Mini/images/Phonemic-Chart.jpg)
 
+![img](./images/Phonemic-Chart.jpg)
+
 # monophthong
 
 > IPA表中单元音发音时的口腔动作（嘴型、舌头的前后位置、下巴的上下位置）在同一行和列中存在规律。
