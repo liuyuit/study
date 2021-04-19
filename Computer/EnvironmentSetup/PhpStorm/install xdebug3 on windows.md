@@ -27,6 +27,9 @@ xdebug.idekey				=PHPSTORM
 xdebug.mode					=debug
 xdebug.client_port			=9009
 xdebug.start_with_request	=yes
+
+# 在容器内部使用 host.docker.internal 表示宿主机 ip
+# xdebug.client_host			=host.docker.internal
 ```
 
 
@@ -35,7 +38,7 @@ xdebug.start_with_request	=yes
 
 File-->Setting-->Language & FrameWorks-->Debug、Servces
 
-- File-->Setting-->Language & FrameWorks-->Debug、Servces
+- File-->Setting-->Language & FrameWorks-->Debug
 
   debug prot : 9009
 
@@ -69,5 +72,32 @@ File-->Setting-->Language & FrameWorks-->Debug、Servces
 
   server:cps.ggxx.local
 
+- 
+
+#### 远程调试
+
+- File-->Setting-->Language & FrameWorks-->Servces
+
+  choose use path mapping
+
+  | File/Derectory                | Abusolut path on the server |
+  | ----------------------------- | --------------------------- |
+  | /Users/liuyu/var/www/material | /var/www                    |
+
+  
+
+#### docker
+
+File-->Setting-->Language & FrameWorks->PHP
+
+- CLI Interpreter
+
+  add form docker
+
+- Docker container
+
+  | Container path | Host path                     |
+  | -------------- | ----------------------------- |
+  | /var/www       | /Users/liuyu/var/www/material |
 - 
 
