@@ -1,1 +1,4 @@
-identity-card/.git/
+identity-card/.git
+identity-card/vendor/
+signature-helper/.git/
+signature-helper/vendor/

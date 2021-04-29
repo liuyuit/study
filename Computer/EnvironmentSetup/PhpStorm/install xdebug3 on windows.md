@@ -25,19 +25,23 @@ php.ini
 zend_extension				=php_xdebug-3.0.3-7.4-vc15-nts.dll
 xdebug.idekey				=PHPSTORM
 xdebug.mode					=debug
+; 远程调试时要填，填入开发机 ip（通过命令 ipconfig）。
+;xdebug.client_host		= 10.3.25.7
 xdebug.client_port			=9009
 xdebug.start_with_request	=yes
 ```
 
-
+重启 ngixn 或其他 web 服务
 
 ## phpstorm setting
 
 File-->Setting-->Language & FrameWorks-->Debug、Servces
 
-- File-->Setting-->Language & FrameWorks-->Debug、Servces
+- File-->Setting-->Language & FrameWorks-->Debug
 
-  debug prot : 9009
+  Xdebug ( on the right side) 
+
+  ​	debug prot : 9009 
 
 - File-->Setting-->Language & FrameWorks-->Debug-->DbGp proxy
 
@@ -70,4 +74,14 @@ File-->Setting-->Language & FrameWorks-->Debug、Servces
   server:cps.ggxx.local
 
 - 
+
+## remote debug
+
+File-->Setting-->Language & FrameWorks-->Servces
+
+click use path mappings button
+
+| File/Directory                                               | Absolute path on the server          |
+| ------------------------------------------------------------ | ------------------------------------ |
+| C:\phpStudy\PHPTutorial\WWW\xy_cps  （本地开发机项目根目录） | /data/www/xy_cps/ (远程机项目根目录) |
 

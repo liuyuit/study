@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "2c2a5a46-7948-4ffb-882b-38731905bd01",
+		"name": "String",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/Count.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"Count.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IndexCountOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/IndexCountOrder.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"IndexCountOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LSD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/LSD.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"LSD.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MSD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/MSD.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"MSD.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quick3String",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/Quick3String.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"Quick3String.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViolentSubstringSearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/ViolentSubstringSearch.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"ViolentSubstringSearch.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViolentSubstringSearchBack",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/ViolentSubstringSearchBack.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"ViolentSubstringSearchBack.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KMP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/KMP.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"KMP.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BoyerMoore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/BoyerMoore.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"BoyerMoore.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RabinKarp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/RabinKarp.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"RabinKarp.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNACode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/String/DNACode.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"String",
+						"DNACode.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

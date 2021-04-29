@@ -1,0 +1,19 @@
+{
+    "name": "liuyuit/signature-helper",
+    "description": "a signature helper composer package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "liuyu",
+            "email": "liuyuit@aliyun.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "liuyuit\\SignatureHelper\\": "src/"
+        }
+    }
+}

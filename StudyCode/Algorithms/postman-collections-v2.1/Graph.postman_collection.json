@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "ddf3d3e4-6870-46cd-a95b-95ce7f8906c7",
+		"name": "Graph",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CC.php",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/CC.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"CC.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Graph",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/Graph.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"Graph.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestSearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/TestSearch.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"TestSearch.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestPaths",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/TestPaths.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"TestPaths.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cycle.php",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/Cycle.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"Cycle.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cycle.php",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{studycode}}/Graph/Cycle.php",
+							"host": [
+								"{{studycode}}"
+							],
+							"path": [
+								"Graph",
+								"Cycle.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.11.5"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Sep 2019 12:40:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.1"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "has cycle"
+				}
+			]
+		},
+		{
+			"name": "TwoColor.php",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/TwoColor.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"TwoColor.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cycle.php",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{studycode}}/Graph/Cycle.php",
+							"host": [
+								"{{studycode}}"
+							],
+							"path": [
+								"Graph",
+								"Cycle.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.11.5"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Sep 2019 12:40:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.1"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "has cycle"
+				}
+			]
+		},
+		{
+			"name": "SymbolGraphTest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/SymbolGraphTest.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"SymbolGraphTest.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Digraph",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/Digraph.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"Digraph.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DirectedDFS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/DirectedDFS.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"DirectedDFS.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DirectedCycle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/DirectedCycle.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"DirectedCycle.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DirectedFirstOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/DirectedFirstOrder.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"DirectedFirstOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KosarajuSCC.php",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/CC.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"CC.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransitiveClosure.php",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Graph/TransitiveClosure.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Graph",
+						"TransitiveClosure.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

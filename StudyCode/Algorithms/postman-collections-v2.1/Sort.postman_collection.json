@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "202357a1-93e4-4cf2-987c-0f9028e09a01",
+		"name": "Sort",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BubbleSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/BubbleSort.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"BubbleSort.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HeapSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/HeapSort.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"HeapSort.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/InsertSort.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"InsertSort.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MaxQueue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/MaxQueue.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"MaxQueue.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MergeSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/MergeSort.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"MergeSort.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Queue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/Queue.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"Queue.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MyQuickSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/MyQuickSort .php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"MyQuickSort .php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QuickSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/QuickSort.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"QuickSort.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SelectionSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/SelectionSort.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"SelectionSort.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShellSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/ShellSort.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"ShellSort.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stack",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Sort/Stack.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Sort",
+						"Stack.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

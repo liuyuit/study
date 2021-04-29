@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "01ea477a-0b93-4df6-accd-706e36289789",
+		"name": "Search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SequentialSearchST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/SequentialSearchST.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"SequentialSearchST.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BinarySearchST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/BinarySearchST.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"BinarySearchST.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/BST.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"BST.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RedBlackBST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/RedBlackBST.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"RedBlackBST.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SeparateChainingHashST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/SeparateChainingHashST.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"SeparateChainingHashST.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LinerProbingHashST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/LinerProbingHashST.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"LinerProbingHashST.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BinarySearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/BinarySearch.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"BinarySearch.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/SET.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"SET.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TwoSum",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/TwoSum.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"TwoSum.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnionFind",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{studycode}}/Search/UnionFind.php",
+					"host": [
+						"{{studycode}}"
+					],
+					"path": [
+						"Search",
+						"UnionFind.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
