@@ -41,11 +41,8 @@ xdebug.start_with_request	=yes
 File-->Setting-->Language & FrameWorks-->Debug、Servces
 
 - File-->Setting-->Language & FrameWorks-->Debug
-<<<<<<< HEAD
 
-  Xdebug ( on the right side) 
-=======
->>>>>>> 407f8acf9a0e0766972a4b4bcc0204c528fa49ef
+Xdebug ( on the right side) 
 
   ​	debug prot : 9009 
 
@@ -81,7 +78,6 @@ File-->Setting-->Language & FrameWorks-->Debug、Servces
 
 - 
 
-<<<<<<< HEAD
 ## remote debug
 
 File-->Setting-->Language & FrameWorks-->Servces
@@ -91,7 +87,6 @@ click use path mappings button
 | File/Directory                                               | Absolute path on the server          |
 | ------------------------------------------------------------ | ------------------------------------ |
 | C:\phpStudy\PHPTutorial\WWW\xy_cps  （本地开发机项目根目录） | /data/www/xy_cps/ (远程机项目根目录) |
-=======
 #### 远程调试
 
 - File-->Setting-->Language & FrameWorks-->Servces
@@ -118,5 +113,4 @@ File-->Setting-->Language & FrameWorks->PHP
   | -------------- | ----------------------------- |
   | /var/www       | /Users/liuyu/var/www/material |
 - 
->>>>>>> 407f8acf9a0e0766972a4b4bcc0204c528fa49ef
 

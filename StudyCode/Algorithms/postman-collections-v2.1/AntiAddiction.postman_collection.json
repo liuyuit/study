@@ -1,0 +1,509 @@
+{
+	"info": {
+		"_postman_id": "f7816a3f-4820-45b9-97e9-5fdc6c65c08f",
+		"name": "AntiAddiction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "websocket",
+			"item": [
+				{
+					"name": "private.html",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.cps.ggxx.local/storage/test/websocket/private.html",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cps",
+								"ggxx",
+								"local"
+							],
+							"path": [
+								"storage",
+								"test",
+								"websocket",
+								"private.html"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "websockets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.cps.ggxx.local/websockets/",
+							"protocol": "http",
+							"host": [
+								"api",
+								"cps",
+								"ggxx",
+								"local"
+							],
+							"path": [
+								"websockets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "docs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://beyondco.de/docs/laravel-websockets/debugging/dashboard",
+							"protocol": "https",
+							"host": [
+								"beyondco",
+								"de"
+							],
+							"path": [
+								"docs",
+								"laravel-websockets",
+								"debugging",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "send-evnet",
+			"item": [
+				{
+					"name": "user-banned",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_keyword",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{apiurl}}/anti-addiction/sent-event/user-banned",
+							"host": [
+								"{{apiurl}}"
+							],
+							"path": [
+								"anti-addiction",
+								"sent-event",
+								"user-banned"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "report-identity-card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "{{uid}}",
+							"type": "text"
+						},
+						{
+							"key": "sub_uid",
+							"value": "{{sub_uid}}",
+							"type": "text"
+						},
+						{
+							"key": "sub_username",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "gid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "lid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "equipment_id",
+							"value": "865736036464728",
+							"type": "text"
+						},
+						{
+							"key": "equipment_idfv",
+							"value": "865736036464728",
+							"type": "text"
+						},
+						{
+							"key": "platform",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "identity_card_no",
+							"value": "370686199201240033",
+							"type": "text"
+						},
+						{
+							"key": "identity_card_type",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "true_name",
+							"value": "李成森",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiurl}}/anti-addiction/report-identity-card",
+					"host": [
+						"{{apiurl}}"
+					],
+					"path": [
+						"anti-addiction",
+						"report-identity-card"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "report-identity-card",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "access_token",
+									"value": "{{access_token}}",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "{{uid}}",
+									"type": "text"
+								},
+								{
+									"key": "sub_uid",
+									"value": "{{sub_uid}}",
+									"type": "text"
+								},
+								{
+									"key": "sub_username",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "gid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "lid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "equipment_id",
+									"value": "865736036464728",
+									"type": "text"
+								},
+								{
+									"key": "equipment_idfv",
+									"value": "865736036464728",
+									"type": "text"
+								},
+								{
+									"key": "platform",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "identity_card_no",
+									"value": "370686199201240033",
+									"type": "text"
+								},
+								{
+									"key": "identity_card_type",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "true_name",
+									"value": "李成森",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{apiurl}}/anti-addiction/report-identity-card",
+							"host": [
+								"{{apiurl}}"
+							],
+							"path": [
+								"anti-addiction",
+								"report-identity-card"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.15"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Mar 2021 06:08:37 GMT"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 0,\n    \"msg\": \"成功\",\n    \"data\": {\n        \"verify_after_login\": 0,\n        \"verify_before_pay\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "play",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "{{uid}}",
+							"type": "text"
+						},
+						{
+							"key": "sub_uid",
+							"value": "{{sub_uid}}",
+							"type": "text"
+						},
+						{
+							"key": "sub_username",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "gid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "lid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "equipment_id",
+							"value": "865736036464728",
+							"type": "text"
+						},
+						{
+							"key": "equipment_idfv",
+							"value": "865736036464728",
+							"type": "text"
+						},
+						{
+							"key": "platform",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiurl}}/anti-addiction/test-play",
+					"host": [
+						"{{apiurl}}"
+					],
+					"path": [
+						"anti-addiction",
+						"test-play"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pay",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "{{uid}}",
+							"type": "text"
+						},
+						{
+							"key": "sub_uid",
+							"value": "{{sub_uid}}",
+							"type": "text"
+						},
+						{
+							"key": "sub_username",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "gid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "lid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "equipment_id",
+							"value": "865736036464728",
+							"type": "text"
+						},
+						{
+							"key": "equipment_idfv",
+							"value": "865736036464728",
+							"type": "text"
+						},
+						{
+							"key": "platform",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiurl}}/anti-addiction/test-pay",
+					"host": [
+						"{{apiurl}}"
+					],
+					"path": [
+						"anti-addiction",
+						"test-pay"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -49,3 +49,6 @@ redo 日志文件组也是由 512 kb 的block 组成，前 4 个 block （2048kb
 
 ## Log Sequence Number
 
+设计`InnoDB`的大叔为记录已经写入的`redo`日志量，设计了一个称之为`Log Sequence Number`的全局变量
+
+`lsn`增长的量就是该`mtr`生成的`redo`日志占用的字节数
