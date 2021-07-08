@@ -1,0 +1,3546 @@
+{
+	"info": {
+		"_postman_id": "679951b9-e7c2-4fca-8ff9-083184e31725",
+		"name": "pay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pay-page",
+			"item": [
+				{
+					"name": "android",
+					"item": [
+						{
+							"name": "index.html",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{payurl}}/storage/pay-page/android/index.html?access_token={{access_token}}&uid={{uid}}&sub_uid={{sub_uid}}&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=测试1&role_id=123456221&role_name=测试角色名&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=1&is_ali_app_installed=1&cp_pass_through=1616485274585&product_id=1&product_desc=购买100元宝&product_name=倚天剑&app_name=商战传奇02&useId=none&SdkVersion=1.0.0",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"storage",
+										"pay-page",
+										"android",
+										"index.html"
+									],
+									"query": [
+										{
+											"key": "access_token",
+											"value": "{{access_token}}"
+										},
+										{
+											"key": "uid",
+											"value": "{{uid}}"
+										},
+										{
+											"key": "sub_uid",
+											"value": "{{sub_uid}}"
+										},
+										{
+											"key": "gid",
+											"value": "1"
+										},
+										{
+											"key": "lid",
+											"value": "1"
+										},
+										{
+											"key": "platform",
+											"value": "1"
+										},
+										{
+											"key": "equipment_id",
+											"value": "865736036464728"
+										},
+										{
+											"key": "equipment_idfv",
+											"value": "e8435006-3ee9-4efd-ab8a-51dcfe93743d"
+										},
+										{
+											"key": "server_id",
+											"value": "10"
+										},
+										{
+											"key": "server_name",
+											"value": "测试1"
+										},
+										{
+											"key": "role_id",
+											"value": "123456221"
+										},
+										{
+											"key": "role_name",
+											"value": "测试角色名"
+										},
+										{
+											"key": "money",
+											"value": "1.0"
+										},
+										{
+											"key": "gold",
+											"value": "0"
+										},
+										{
+											"key": "cp_order_no",
+											"value": "1616485274585"
+										},
+										{
+											"key": "is_wechat_app_installed",
+											"value": "1"
+										},
+										{
+											"key": "is_ali_app_installed",
+											"value": "1"
+										},
+										{
+											"key": "cp_pass_through",
+											"value": "1616485274585"
+										},
+										{
+											"key": "product_id",
+											"value": "1"
+										},
+										{
+											"key": "product_desc",
+											"value": "购买100元宝"
+										},
+										{
+											"key": "product_name",
+											"value": "倚天剑"
+										},
+										{
+											"key": "app_name",
+											"value": "商战传奇02"
+										},
+										{
+											"key": "useId",
+											"value": "none"
+										},
+										{
+											"key": "SdkVersion",
+											"value": "1.0.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test-index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://spay.020richang.com/storage/pay-page/android/index.html?equipment_id=A000009AB9226A&uid=24&sub_uid=65&gid=1&lid=1&server_id=10&server_name=测试1&role_id=123456221&role_name=测试角色名&product_id=12&product_name=倚天剑&product_desc=购买100元宝&money=0.01&username=A000069&cp_order_no=1616485274585&cp_pass_though=1616485274585&is_wechat_app_installed=1&is_ali_app_installed=0",
+									"protocol": "http",
+									"host": [
+										"spay",
+										"020richang",
+										"com"
+									],
+									"path": [
+										"storage",
+										"pay-page",
+										"android",
+										"index.html"
+									],
+									"query": [
+										{
+											"key": "equipment_id",
+											"value": "A000009AB9226A"
+										},
+										{
+											"key": "uid",
+											"value": "24"
+										},
+										{
+											"key": "sub_uid",
+											"value": "65"
+										},
+										{
+											"key": "gid",
+											"value": "1"
+										},
+										{
+											"key": "lid",
+											"value": "1"
+										},
+										{
+											"key": "server_id",
+											"value": "10"
+										},
+										{
+											"key": "server_name",
+											"value": "测试1"
+										},
+										{
+											"key": "role_id",
+											"value": "123456221"
+										},
+										{
+											"key": "role_name",
+											"value": "测试角色名"
+										},
+										{
+											"key": "product_id",
+											"value": "12"
+										},
+										{
+											"key": "product_name",
+											"value": "倚天剑"
+										},
+										{
+											"key": "product_desc",
+											"value": "购买100元宝"
+										},
+										{
+											"key": "money",
+											"value": "0.01"
+										},
+										{
+											"key": "username",
+											"value": "A000069"
+										},
+										{
+											"key": "cp_order_no",
+											"value": "1616485274585"
+										},
+										{
+											"key": "cp_pass_though",
+											"value": "1616485274585"
+										},
+										{
+											"key": "is_wechat_app_installed",
+											"value": "1"
+										},
+										{
+											"key": "is_ali_app_installed",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ios",
+					"item": [
+						{
+							"name": "index.html",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{payurl}}/storage/pay-page/android/index.html?access_token={{access_token}}&uid={{uid}}&sub_uid={{sub_uid}}&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=测试1&role_id=123456221&role_name=测试角色名&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=购买100元宝&product_name=倚天剑&app_name=商战传奇02",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"storage",
+										"pay-page",
+										"android",
+										"index.html"
+									],
+									"query": [
+										{
+											"key": "access_token",
+											"value": "{{access_token}}"
+										},
+										{
+											"key": "uid",
+											"value": "{{uid}}"
+										},
+										{
+											"key": "sub_uid",
+											"value": "{{sub_uid}}"
+										},
+										{
+											"key": "gid",
+											"value": "1"
+										},
+										{
+											"key": "lid",
+											"value": "1"
+										},
+										{
+											"key": "platform",
+											"value": "1"
+										},
+										{
+											"key": "equipment_id",
+											"value": "865736036464728"
+										},
+										{
+											"key": "equipment_idfv",
+											"value": "e8435006-3ee9-4efd-ab8a-51dcfe93743d"
+										},
+										{
+											"key": "server_id",
+											"value": "10"
+										},
+										{
+											"key": "server_name",
+											"value": "测试1"
+										},
+										{
+											"key": "role_id",
+											"value": "123456221"
+										},
+										{
+											"key": "role_name",
+											"value": "测试角色名"
+										},
+										{
+											"key": "money",
+											"value": "1.0"
+										},
+										{
+											"key": "gold",
+											"value": "0"
+										},
+										{
+											"key": "cp_order_no",
+											"value": "1616485274585"
+										},
+										{
+											"key": "is_wechat_app_installed",
+											"value": "0"
+										},
+										{
+											"key": "is_ali_app_installed",
+											"value": "0"
+										},
+										{
+											"key": "cs_pass_though",
+											"value": "1616485274585"
+										},
+										{
+											"key": "product_id",
+											"value": "1"
+										},
+										{
+											"key": "product_desc",
+											"value": "购买100元宝"
+										},
+										{
+											"key": "product_name",
+											"value": "倚天剑"
+										},
+										{
+											"key": "app_name",
+											"value": "商战传奇02"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test-index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://spay.020richang.com/storage/pay-page/android/index.html?uid=24&sub_uid=65&gid=1&lid=1&equipment_id=A000009AB9226A&server_id=10&server_name=测试1&role_id=123456221&role_name=测试角色名&product_id=12&product_name=倚天剑&product_desc=购买100元宝&money=0.01&username=A000069&cp_order_no=1616485274585&cp_pass_though=1616485274585&is_wechat_app_installed=1&is_ali_app_installed=0",
+									"protocol": "http",
+									"host": [
+										"spay",
+										"020richang",
+										"com"
+									],
+									"path": [
+										"storage",
+										"pay-page",
+										"android",
+										"index.html"
+									],
+									"query": [
+										{
+											"key": "uid",
+											"value": "24"
+										},
+										{
+											"key": "sub_uid",
+											"value": "65"
+										},
+										{
+											"key": "gid",
+											"value": "1"
+										},
+										{
+											"key": "lid",
+											"value": "1"
+										},
+										{
+											"key": "equipment_id",
+											"value": "A000009AB9226A"
+										},
+										{
+											"key": "server_id",
+											"value": "10"
+										},
+										{
+											"key": "server_name",
+											"value": "测试1"
+										},
+										{
+											"key": "role_id",
+											"value": "123456221"
+										},
+										{
+											"key": "role_name",
+											"value": "测试角色名"
+										},
+										{
+											"key": "product_id",
+											"value": "12"
+										},
+										{
+											"key": "product_name",
+											"value": "倚天剑"
+										},
+										{
+											"key": "product_desc",
+											"value": "购买100元宝"
+										},
+										{
+											"key": "money",
+											"value": "0.01"
+										},
+										{
+											"key": "username",
+											"value": "A000069"
+										},
+										{
+											"key": "cp_order_no",
+											"value": "1616485274585"
+										},
+										{
+											"key": "cp_pass_though",
+											"value": "1616485274585"
+										},
+										{
+											"key": "is_wechat_app_installed",
+											"value": "1"
+										},
+										{
+											"key": "is_ali_app_installed",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "recharge",
+					"item": [
+						{
+							"name": "test-index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://sapi.020richang.com/storage/member-center/v1/vertical/recharge.html?platform=0&equipment_id=A000009AB9226A&equipment_idfv=bd947ce9-9e83-4e52-bba7-25af726411b5&SdkVersion=1.0&sourceType=gamebox78d49693ee0ac30&access_token=12607cfe362640c&account=13265307516&uid=12&sub_uid=56&verify_before_pay=0&platform=0&equipment_id=A000009AB9226A&equipment_idfv=bd947ce9-9e83-4e52-bba7-25af726411b5&SdkVersion=1.0&sourceType=gamebox78d49693ee0ac30&access_token=12607cfe362640c&account=13265307516&verify_before_pay=0&gid=1&lid=1&uid=1&sub_uid=1",
+									"protocol": "http",
+									"host": [
+										"sapi",
+										"020richang",
+										"com"
+									],
+									"path": [
+										"storage",
+										"member-center",
+										"v1",
+										"vertical",
+										"recharge.html"
+									],
+									"query": [
+										{
+											"key": "platform",
+											"value": "0"
+										},
+										{
+											"key": "equipment_id",
+											"value": "A000009AB9226A"
+										},
+										{
+											"key": "equipment_idfv",
+											"value": "bd947ce9-9e83-4e52-bba7-25af726411b5"
+										},
+										{
+											"key": "SdkVersion",
+											"value": "1.0"
+										},
+										{
+											"key": "sourceType",
+											"value": "gamebox78d49693ee0ac30"
+										},
+										{
+											"key": "access_token",
+											"value": "12607cfe362640c"
+										},
+										{
+											"key": "account",
+											"value": "13265307516"
+										},
+										{
+											"key": "uid",
+											"value": "12"
+										},
+										{
+											"key": "sub_uid",
+											"value": "56"
+										},
+										{
+											"key": "verify_before_pay",
+											"value": "0"
+										},
+										{
+											"key": "platform",
+											"value": "0"
+										},
+										{
+											"key": "equipment_id",
+											"value": "A000009AB9226A"
+										},
+										{
+											"key": "equipment_idfv",
+											"value": "bd947ce9-9e83-4e52-bba7-25af726411b5"
+										},
+										{
+											"key": "SdkVersion",
+											"value": "1.0"
+										},
+										{
+											"key": "sourceType",
+											"value": "gamebox78d49693ee0ac30"
+										},
+										{
+											"key": "access_token",
+											"value": "12607cfe362640c"
+										},
+										{
+											"key": "account",
+											"value": "13265307516"
+										},
+										{
+											"key": "verify_before_pay",
+											"value": "0"
+										},
+										{
+											"key": "gid",
+											"value": "1"
+										},
+										{
+											"key": "lid",
+											"value": "1"
+										},
+										{
+											"key": "uid",
+											"value": "1"
+										},
+										{
+											"key": "sub_uid",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "local",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{payurl}}/storage/member-center/v1/vertical/recharge.html?gid=1&lid=1&platform=0&equipment_id=865736036464728&equipment_idfv=bd947ce9-9e83-4e52-bba7-25af726411b5&SdkVersion=1.0&sourceType=gamebox78d49693ee0ac30&access_token=12607cfe362640c&account=13265307516&uid={{uid}}&sub_uid={{sub_uid}}&verify_before_pay=0&platform=0&equipment_id=865736036464728&equipment_idfv=bd947ce9-9e83-4e52-bba7-25af726411b5&SdkVersion=1.0&sourceType=gamebox78d49693ee0ac30&access_token=12607cfe362640c&account=13265307516&verify_before_pay=0",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"storage",
+										"member-center",
+										"v1",
+										"vertical",
+										"recharge.html"
+									],
+									"query": [
+										{
+											"key": "gid",
+											"value": "1"
+										},
+										{
+											"key": "lid",
+											"value": "1"
+										},
+										{
+											"key": "platform",
+											"value": "0"
+										},
+										{
+											"key": "equipment_id",
+											"value": "865736036464728"
+										},
+										{
+											"key": "equipment_idfv",
+											"value": "bd947ce9-9e83-4e52-bba7-25af726411b5"
+										},
+										{
+											"key": "SdkVersion",
+											"value": "1.0"
+										},
+										{
+											"key": "sourceType",
+											"value": "gamebox78d49693ee0ac30"
+										},
+										{
+											"key": "access_token",
+											"value": "12607cfe362640c"
+										},
+										{
+											"key": "account",
+											"value": "13265307516"
+										},
+										{
+											"key": "uid",
+											"value": "{{uid}}"
+										},
+										{
+											"key": "sub_uid",
+											"value": "{{sub_uid}}"
+										},
+										{
+											"key": "verify_before_pay",
+											"value": "0"
+										},
+										{
+											"key": "platform",
+											"value": "0"
+										},
+										{
+											"key": "equipment_id",
+											"value": "865736036464728"
+										},
+										{
+											"key": "equipment_idfv",
+											"value": "bd947ce9-9e83-4e52-bba7-25af726411b5"
+										},
+										{
+											"key": "SdkVersion",
+											"value": "1.0"
+										},
+										{
+											"key": "sourceType",
+											"value": "gamebox78d49693ee0ac30"
+										},
+										{
+											"key": "access_token",
+											"value": "12607cfe362640c"
+										},
+										{
+											"key": "account",
+											"value": "13265307516"
+										},
+										{
+											"key": "verify_before_pay",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "voucher",
+			"item": [
+				{
+					"name": "asy-callback",
+					"item": [
+						{
+							"name": "now-wechat",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "appId=152531408852384&channelOrderNo=4200000982202103250451027451&deviceType=0601&discountAmt=0&funcode=N001&mhtCharset=UTF-8&mhtCurrencyType=156&mhtOrderAmt=1&mhtOrderName=0.01&mhtOrderNo=20210325165801216721&mhtOrderStartTime=20210325165801&mhtOrderTimeOut=3600&mhtOrderType=05&mhtReserved=gid%253D1%2526role_id%253D123456221%2526server_id%253D10&nowPayOrderNo=200601202103251658019670413&oriMhtOrderAmt=1&payChannelType=13&payConsumerId=oSuWV1RlcYxKQ5DQHYj3Z4JScNI0&payTime=20210325165812&signType=MD5&signature=99e98d188ac73e2261afd85df5a29792&transStatus=A001&version=1.0.0"
+								},
+								"url": {
+									"raw": "{{payurl}}/voucher/asy-callback/2",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"voucher",
+										"asy-callback",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "appId=152531408852384&channelOrderNo=4200000982202103250451027451&deviceType=0601&discountAmt=0&funcode=N001&mhtCharset=UTF-8&mhtCurrencyType=156&mhtOrderAmt=1&mhtOrderName=0.01&mhtOrderNo=20210325165801216721&mhtOrderStartTime=20210325165801&mhtOrderTimeOut=3600&mhtOrderType=05&mhtReserved=gid%253D1%2526role_id%253D123456221%2526server_id%253D10&nowPayOrderNo=200601202103251658019670413&oriMhtOrderAmt=1&payChannelType=13&payConsumerId=oSuWV1RlcYxKQ5DQHYj3Z4JScNI0&payTime=20210325165812&signType=MD5&signature=99e98d188ac73e2261afd85df5a29792&transStatus=A001&version=1.0.0"
+								},
+								"url": {
+									"raw": "http://spay.020richang.com/asy-callback/2",
+									"protocol": "http",
+									"host": [
+										"spay",
+										"020richang",
+										"com"
+									],
+									"path": [
+										"asy-callback",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pre-order",
+					"item": [
+						{
+							"name": "local",
+							"item": [
+								{
+									"name": "ali_app",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Connection",
+												"value": "keep-alive"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json, text/javascript, */*; q=0.01"
+											},
+											{
+												"key": "X-Requested-With",
+												"value": "XMLHttpRequest"
+											},
+											{
+												"key": "User-Agent",
+												"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded; charset=UTF-8"
+											},
+											{
+												"key": "Origin",
+												"value": "http://pay.cps.ggxx.local"
+											},
+											{
+												"key": "Referer",
+												"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+											},
+											{
+												"key": "Cookie",
+												"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "payment_gateway",
+													"value": "6",
+													"type": "text"
+												},
+												{
+													"key": "lid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "gid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "platform",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728",
+													"type": "text"
+												},
+												{
+													"key": "voucher_money",
+													"value": "392.01",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/voucher/pre-order",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"voucher",
+												"pre-order"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "wechat_app",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Connection",
+												"value": "keep-alive"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json, text/javascript, */*; q=0.01"
+											},
+											{
+												"key": "X-Requested-With",
+												"value": "XMLHttpRequest"
+											},
+											{
+												"key": "User-Agent",
+												"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded; charset=UTF-8"
+											},
+											{
+												"key": "Origin",
+												"value": "http://pay.cps.ggxx.local"
+											},
+											{
+												"key": "Referer",
+												"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+											},
+											{
+												"key": "Cookie",
+												"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "payment_gateway",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "lid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "gid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "platform",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728",
+													"type": "text"
+												},
+												{
+													"key": "voucher_money",
+													"value": "392.01",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/voucher/pre-order",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"voucher",
+												"pre-order"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ali",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Connection",
+												"value": "keep-alive"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json, text/javascript, */*; q=0.01"
+											},
+											{
+												"key": "X-Requested-With",
+												"value": "XMLHttpRequest"
+											},
+											{
+												"key": "User-Agent",
+												"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded; charset=UTF-8"
+											},
+											{
+												"key": "Origin",
+												"value": "http://pay.cps.ggxx.local"
+											},
+											{
+												"key": "Referer",
+												"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+											},
+											{
+												"key": "Cookie",
+												"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "payment_gateway",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "lid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "gid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "platform",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728",
+													"type": "text"
+												},
+												{
+													"key": "voucher_money",
+													"value": "392.01",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/voucher/pre-order",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"voucher",
+												"pre-order"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "vouchers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "platform",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "{{uid}}",
+									"type": "text"
+								},
+								{
+									"key": "sub_uid",
+									"value": "{{sub_uid}}",
+									"type": "text"
+								},
+								{
+									"key": "equipment_id",
+									"value": "865736036464728",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{payurl}}/voucher/vouchers",
+							"host": [
+								"{{payurl}}"
+							],
+							"path": [
+								"voucher",
+								"vouchers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "purchasable-games",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "platform",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "{{uid}}",
+									"type": "text"
+								},
+								{
+									"key": "sub_uid",
+									"value": "{{sub_uid}}",
+									"type": "text"
+								},
+								{
+									"key": "equipment_id",
+									"value": "865736036464728",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{payurl}}/voucher/purchasable-games",
+							"host": [
+								"{{payurl}}"
+							],
+							"path": [
+								"voucher",
+								"purchasable-games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pre-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json, text/javascript, */*; q=0.01"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded; charset=UTF-8"
+							},
+							{
+								"key": "Origin",
+								"value": "http://pay.cps.ggxx.local"
+							},
+							{
+								"key": "Referer",
+								"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+							},
+							{
+								"key": "Cookie",
+								"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "payment_gateway",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "lid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "platform",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sub_uid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "equipment_id",
+									"value": "865736036464728",
+									"type": "text"
+								},
+								{
+									"key": "voucher_money",
+									"value": "392.01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{payurl}}/voucher/pre-order",
+							"host": [
+								"{{payurl}}"
+							],
+							"path": [
+								"voucher",
+								"pre-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "asy-callback",
+					"item": [
+						{
+							"name": "ali",
+							"item": [
+								{
+									"name": "test",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "gmt_create",
+													"value": "2021-04-25 14:29:53",
+													"type": "text"
+												},
+												{
+													"key": "charset",
+													"value": "utf-8",
+													"type": "text"
+												},
+												{
+													"key": "seller_email",
+													"value": "czzkvr2017@163.com",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "支付中心-付费商品",
+													"type": "text"
+												},
+												{
+													"key": "sign",
+													"value": "gUxiAkEkPGJZO0gvzHkFuvbss0W2N6aaeOQHth42pFGI+g6p/FtUxQ2SOoacoOZ3ToMUKWcTGhQX1C+ItDPyAvxlI6CmmCLvrUW2DrpYCsJzDwu2urt7wMCuGTMnitW66Md1YWB0c728OS5/NEUYSlCiCCqs7TOn99d2U2/MI/w=",
+													"type": "text"
+												},
+												{
+													"key": "buyer_id",
+													"value": "2088712184260258",
+													"type": "text"
+												},
+												{
+													"key": "invoice_amount",
+													"value": "0.01",
+													"type": "text"
+												},
+												{
+													"key": "notify_id",
+													"value": "2021042500222142954060251421604498",
+													"type": "text"
+												},
+												{
+													"key": "fund_bill_list",
+													"value": "[{\"amount\":\"0.01\",\"fundChannel\":\"ALIPAYACCOUNT\"}]",
+													"type": "text"
+												},
+												{
+													"key": "notify_type",
+													"value": "trade_status_sync",
+													"type": "text"
+												},
+												{
+													"key": "trade_status",
+													"value": "TRADE_SUCCESS",
+													"type": "text"
+												},
+												{
+													"key": "receipt_amount",
+													"value": "0.01",
+													"type": "text"
+												},
+												{
+													"key": "buyer_pay_amount",
+													"value": "0.01",
+													"type": "text"
+												},
+												{
+													"key": "app_id",
+													"value": "2017031406209437",
+													"type": "text"
+												},
+												{
+													"key": "sign_type",
+													"value": "RSA",
+													"type": "text"
+												},
+												{
+													"key": "seller_id",
+													"value": "2088621196662274",
+													"type": "text"
+												},
+												{
+													"key": "gmt_payment",
+													"value": "2021-04-25 14:29:53",
+													"type": "text"
+												},
+												{
+													"key": "notify_time",
+													"value": "2021-04-25 14:29:54",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1.0",
+													"type": "text"
+												},
+												{
+													"key": "out_trade_no",
+													"value": "20210425142945346350",
+													"type": "text"
+												},
+												{
+													"key": "total_amount",
+													"value": "0.01",
+													"type": "text"
+												},
+												{
+													"key": "trade_no",
+													"value": "2021042522001460251441976247",
+													"type": "text"
+												},
+												{
+													"key": "auth_app_id",
+													"value": "2017031406209437",
+													"type": "text"
+												},
+												{
+													"key": "buyer_logon_id",
+													"value": "176****1121",
+													"type": "text"
+												},
+												{
+													"key": "point_amount",
+													"value": "0.00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://spay.020richang.com/product/asy-callback/1",
+											"protocol": "http",
+											"host": [
+												"spay",
+												"020richang",
+												"com"
+											],
+											"path": [
+												"product",
+												"asy-callback",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "local",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "gmt_create",
+													"value": "2021-04-20 11:07:57",
+													"type": "text"
+												},
+												{
+													"key": "charset",
+													"value": "utf-8",
+													"type": "text"
+												},
+												{
+													"key": "seller_email",
+													"value": "czzkvr2017@163.com",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "支付中心-付费商品",
+													"type": "text"
+												},
+												{
+													"key": "sign",
+													"value": "Mte/dZ788+1jymSjrDfMRCTJ8tN5p1O7lMDRIqGYqLCetp+BMN6ogofr+gaUZZ10XeIy3+SDhckuhImbQxuX+xxy8eUdfwxIdAJm5dw75fsAkxX3gQi9hxX04GTxJQAlXxJalDUHEO2dUlrWiPar0nsStTQq3mEmRXgOKHCTEic=",
+													"type": "text"
+												},
+												{
+													"key": "buyer_id",
+													"value": "2088712184260258",
+													"type": "text"
+												},
+												{
+													"key": "invoice_amount",
+													"value": "0.01",
+													"type": "text"
+												},
+												{
+													"key": "notify_id",
+													"value": "2021042000222110757060251414089310",
+													"type": "text"
+												},
+												{
+													"key": "fund_bill_list",
+													"value": "[{\"amount\":\"0.01\",\"fundChannel\":\"ALIPAYACCOUNT\"}]",
+													"type": "text"
+												},
+												{
+													"key": "notify_type",
+													"value": "trade_status_sync",
+													"type": "text"
+												},
+												{
+													"key": "trade_status",
+													"value": "TRADE_SUCCESS",
+													"type": "text"
+												},
+												{
+													"key": "receipt_amount",
+													"value": "0.01",
+													"type": "text"
+												},
+												{
+													"key": "buyer_pay_amount",
+													"value": "0.01",
+													"type": "text"
+												},
+												{
+													"key": "app_id",
+													"value": "2017031406209437",
+													"type": "text"
+												},
+												{
+													"key": "sign_type",
+													"value": "RSA",
+													"type": "text"
+												},
+												{
+													"key": "seller_id",
+													"value": "2088621196662274",
+													"type": "text"
+												},
+												{
+													"key": "gmt_payment",
+													"value": "2021-04-20 11:07:57",
+													"type": "text"
+												},
+												{
+													"key": "notify_time",
+													"value": "2021-04-20 11:21:41",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1.0",
+													"type": "text"
+												},
+												{
+													"key": "out_trade_no",
+													"value": "20210420110743115503",
+													"type": "text"
+												},
+												{
+													"key": "total_amount",
+													"value": "0.01",
+													"type": "text"
+												},
+												{
+													"key": "trade_no",
+													"value": "2021042022001460251436071244",
+													"type": "text"
+												},
+												{
+													"key": "auth_app_id",
+													"value": "2017031406209437",
+													"type": "text"
+												},
+												{
+													"key": "buyer_logon_id",
+													"value": "176****1121",
+													"type": "text"
+												},
+												{
+													"key": "point_amount",
+													"value": "0.00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/product/asy-callback/1",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"product",
+												"asy-callback",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "local-pre-order",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Connection",
+												"value": "keep-alive"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json, text/javascript, */*; q=0.01"
+											},
+											{
+												"key": "X-Requested-With",
+												"value": "XMLHttpRequest"
+											},
+											{
+												"key": "User-Agent",
+												"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded; charset=UTF-8"
+											},
+											{
+												"key": "Origin",
+												"value": "http://pay.cps.ggxx.local"
+											},
+											{
+												"key": "Referer",
+												"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+											},
+											{
+												"key": "Cookie",
+												"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "payment_gateway",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "lid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "gid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "platform",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728",
+													"type": "text"
+												},
+												{
+													"key": "server_id",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "server_name",
+													"value": "测试1",
+													"type": "text"
+												},
+												{
+													"key": "role_id",
+													"value": "123456221",
+													"type": "text"
+												},
+												{
+													"key": "role_name",
+													"value": "测试角色名",
+													"type": "text"
+												},
+												{
+													"key": "product_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "product_name",
+													"value": "倚天剑",
+													"type": "text"
+												},
+												{
+													"key": "product_desc",
+													"value": "购买100元宝",
+													"type": "text"
+												},
+												{
+													"key": "gold",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "money",
+													"value": "392.01",
+													"type": "text"
+												},
+												{
+													"key": "app_name",
+													"value": "商战传奇02",
+													"type": "text"
+												},
+												{
+													"key": "cp_order_no",
+													"value": "1616485274585",
+													"type": "text"
+												},
+												{
+													"key": "voucher_id",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/product/pre-order",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"product",
+												"pre-order"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "now-wechat",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "appId=152531408852384&channelOrderNo=4200000982202103250451027451&deviceType=0601&discountAmt=0&funcode=N001&mhtCharset=UTF-8&mhtCurrencyType=156&mhtOrderAmt=1&mhtOrderName=0.01&mhtOrderNo=20210325165801216721&mhtOrderStartTime=20210325165801&mhtOrderTimeOut=3600&mhtOrderType=05&mhtReserved=gid%253D1%2526role_id%253D123456221%2526server_id%253D10&nowPayOrderNo=200601202103251658019670413&oriMhtOrderAmt=1&payChannelType=13&payConsumerId=oSuWV1RlcYxKQ5DQHYj3Z4JScNI0&payTime=20210325165812&signType=MD5&signature=99e98d188ac73e2261afd85df5a29792&transStatus=A001&version=1.0.0"
+								},
+								"url": {
+									"raw": "{{payurl}}/product/asy-callback/2",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"product",
+										"asy-callback",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "appId=152531408852384&channelOrderNo=4200000982202103250451027451&deviceType=0601&discountAmt=0&funcode=N001&mhtCharset=UTF-8&mhtCurrencyType=156&mhtOrderAmt=1&mhtOrderName=0.01&mhtOrderNo=20210325165801216721&mhtOrderStartTime=20210325165801&mhtOrderTimeOut=3600&mhtOrderType=05&mhtReserved=gid%253D1%2526role_id%253D123456221%2526server_id%253D10&nowPayOrderNo=200601202103251658019670413&oriMhtOrderAmt=1&payChannelType=13&payConsumerId=oSuWV1RlcYxKQ5DQHYj3Z4JScNI0&payTime=20210325165812&signType=MD5&signature=99e98d188ac73e2261afd85df5a29792&transStatus=A001&version=1.0.0"
+								},
+								"url": {
+									"raw": "http://spay.020richang.com/asy-callback/2",
+									"protocol": "http",
+									"host": [
+										"spay",
+										"020richang",
+										"com"
+									],
+									"path": [
+										"asy-callback",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pre-order",
+					"item": [
+						{
+							"name": "local",
+							"item": [
+								{
+									"name": "wechat",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Connection",
+												"value": "keep-alive"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json, text/javascript, */*; q=0.01"
+											},
+											{
+												"key": "X-Requested-With",
+												"value": "XMLHttpRequest"
+											},
+											{
+												"key": "User-Agent",
+												"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded; charset=UTF-8"
+											},
+											{
+												"key": "Origin",
+												"value": "http://pay.cps.ggxx.local"
+											},
+											{
+												"key": "Referer",
+												"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+											},
+											{
+												"key": "Cookie",
+												"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "payment_gateway",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "lid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "gid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "platform",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728",
+													"type": "text"
+												},
+												{
+													"key": "server_id",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "server_name",
+													"value": "测试1",
+													"type": "text"
+												},
+												{
+													"key": "role_id",
+													"value": "123456221",
+													"type": "text"
+												},
+												{
+													"key": "role_name",
+													"value": "测试角色名",
+													"type": "text"
+												},
+												{
+													"key": "product_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "product_name",
+													"value": "倚天剑",
+													"type": "text"
+												},
+												{
+													"key": "product_desc",
+													"value": "购买100元宝",
+													"type": "text"
+												},
+												{
+													"key": "gold",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "money",
+													"value": "68",
+													"type": "text"
+												},
+												{
+													"key": "app_name",
+													"value": "商战传奇02",
+													"type": "text"
+												},
+												{
+													"key": "cp_order_no",
+													"value": "1616485274585",
+													"type": "text"
+												},
+												{
+													"key": "voucher_id",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/product/pre-order",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"product",
+												"pre-order"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "now-wechat",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Connection",
+												"value": "keep-alive"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json, text/javascript, */*; q=0.01"
+											},
+											{
+												"key": "X-Requested-With",
+												"value": "XMLHttpRequest"
+											},
+											{
+												"key": "User-Agent",
+												"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded; charset=UTF-8"
+											},
+											{
+												"key": "Origin",
+												"value": "http://pay.cps.ggxx.local"
+											},
+											{
+												"key": "Referer",
+												"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+											},
+											{
+												"key": "Cookie",
+												"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "payment_gateway",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "lid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "gid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "platform",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728",
+													"type": "text"
+												},
+												{
+													"key": "server_id",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "server_name",
+													"value": "测试1",
+													"type": "text"
+												},
+												{
+													"key": "role_id",
+													"value": "123456221",
+													"type": "text"
+												},
+												{
+													"key": "role_name",
+													"value": "测试角色名",
+													"type": "text"
+												},
+												{
+													"key": "product_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "product_name",
+													"value": "倚天剑",
+													"type": "text"
+												},
+												{
+													"key": "product_desc",
+													"value": "购买100元宝",
+													"type": "text"
+												},
+												{
+													"key": "gold",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "money",
+													"value": "68",
+													"type": "text"
+												},
+												{
+													"key": "app_name",
+													"value": "商战传奇02",
+													"type": "text"
+												},
+												{
+													"key": "cp_order_no",
+													"value": "1616485274585",
+													"type": "text"
+												},
+												{
+													"key": "voucher_id",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/product/pre-order",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"product",
+												"pre-order"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "pay-page",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1607d3e7b09f21&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=测试1&role_id=123456221&role_name=测试角色名&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=1&is_ali_app_installed=1&cp_pass_through=1616485274585&product_id=1&product_desc=购买100元宝&product_name=倚天剑&app_name=商战传奇02&useId=none&SdkVersion=1.0.0",
+											"protocol": "http",
+											"host": [
+												"pay",
+												"cps",
+												"ggxx",
+												"local"
+											],
+											"path": [
+												"storage",
+												"pay-page",
+												"android",
+												"index.html"
+											],
+											"query": [
+												{
+													"key": "access_token",
+													"value": "1607d3e7b09f21"
+												},
+												{
+													"key": "uid",
+													"value": "1"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1"
+												},
+												{
+													"key": "gid",
+													"value": "1"
+												},
+												{
+													"key": "lid",
+													"value": "1"
+												},
+												{
+													"key": "platform",
+													"value": "1"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728"
+												},
+												{
+													"key": "equipment_idfv",
+													"value": "e8435006-3ee9-4efd-ab8a-51dcfe93743d"
+												},
+												{
+													"key": "server_id",
+													"value": "10"
+												},
+												{
+													"key": "server_name",
+													"value": "测试1"
+												},
+												{
+													"key": "role_id",
+													"value": "123456221"
+												},
+												{
+													"key": "role_name",
+													"value": "测试角色名"
+												},
+												{
+													"key": "money",
+													"value": "1.0"
+												},
+												{
+													"key": "gold",
+													"value": "0"
+												},
+												{
+													"key": "cp_order_no",
+													"value": "1616485274585"
+												},
+												{
+													"key": "is_wechat_app_installed",
+													"value": "1"
+												},
+												{
+													"key": "is_ali_app_installed",
+													"value": "1"
+												},
+												{
+													"key": "cp_pass_through",
+													"value": "1616485274585"
+												},
+												{
+													"key": "product_id",
+													"value": "1"
+												},
+												{
+													"key": "product_desc",
+													"value": "购买100元宝"
+												},
+												{
+													"key": "product_name",
+													"value": "倚天剑"
+												},
+												{
+													"key": "app_name",
+													"value": "商战传奇02"
+												},
+												{
+													"key": "useId",
+													"value": "none"
+												},
+												{
+													"key": "SdkVersion",
+													"value": "1.0.0"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ali",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Connection",
+												"value": "keep-alive"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json, text/javascript, */*; q=0.01"
+											},
+											{
+												"key": "X-Requested-With",
+												"value": "XMLHttpRequest"
+											},
+											{
+												"key": "User-Agent",
+												"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded; charset=UTF-8"
+											},
+											{
+												"key": "Origin",
+												"value": "http://pay.cps.ggxx.local"
+											},
+											{
+												"key": "Referer",
+												"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+											},
+											{
+												"key": "Cookie",
+												"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "payment_gateway",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "lid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "gid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "platform",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728",
+													"type": "text"
+												},
+												{
+													"key": "server_id",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "server_name",
+													"value": "测试1",
+													"type": "text"
+												},
+												{
+													"key": "role_id",
+													"value": "123456221",
+													"type": "text"
+												},
+												{
+													"key": "role_name",
+													"value": "测试角色名",
+													"type": "text"
+												},
+												{
+													"key": "product_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "product_name",
+													"value": "倚天剑",
+													"type": "text"
+												},
+												{
+													"key": "product_desc",
+													"value": "购买100元宝",
+													"type": "text"
+												},
+												{
+													"key": "gold",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "money",
+													"value": "392.01",
+													"type": "text"
+												},
+												{
+													"key": "app_name",
+													"value": "商战传奇02",
+													"type": "text"
+												},
+												{
+													"key": "cp_order_no",
+													"value": "1616485274585",
+													"type": "text"
+												},
+												{
+													"key": "voucher_id",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/product/pre-order",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"product",
+												"pre-order"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ali_app",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Connection",
+												"value": "keep-alive"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json, text/javascript, */*; q=0.01"
+											},
+											{
+												"key": "X-Requested-With",
+												"value": "XMLHttpRequest"
+											},
+											{
+												"key": "User-Agent",
+												"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded; charset=UTF-8"
+											},
+											{
+												"key": "Origin",
+												"value": "http://pay.cps.ggxx.local"
+											},
+											{
+												"key": "Referer",
+												"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+											},
+											{
+												"key": "Accept-Language",
+												"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+											},
+											{
+												"key": "Cookie",
+												"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "payment_gateway",
+													"value": "6",
+													"type": "text"
+												},
+												{
+													"key": "lid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "gid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "platform",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "sub_uid",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "equipment_id",
+													"value": "865736036464728",
+													"type": "text"
+												},
+												{
+													"key": "server_id",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "server_name",
+													"value": "测试1",
+													"type": "text"
+												},
+												{
+													"key": "role_id",
+													"value": "123456221",
+													"type": "text"
+												},
+												{
+													"key": "role_name",
+													"value": "测试角色名",
+													"type": "text"
+												},
+												{
+													"key": "product_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "product_name",
+													"value": "倚天剑",
+													"type": "text"
+												},
+												{
+													"key": "product_desc",
+													"value": "购买100元宝",
+													"type": "text"
+												},
+												{
+													"key": "gold",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "money",
+													"value": "392.01",
+													"type": "text"
+												},
+												{
+													"key": "app_name",
+													"value": "商战传奇02",
+													"type": "text"
+												},
+												{
+													"key": "cp_order_no",
+													"value": "1616485274585",
+													"type": "text"
+												},
+												{
+													"key": "voucher_id",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/product/pre-order",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"product",
+												"pre-order"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "pre-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json, text/javascript, */*; q=0.01"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded; charset=UTF-8"
+							},
+							{
+								"key": "Origin",
+								"value": "http://pay.cps.ggxx.local"
+							},
+							{
+								"key": "Referer",
+								"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+							},
+							{
+								"key": "Cookie",
+								"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "payment_gateway",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "lid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "platform",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sub_uid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "equipment_id",
+									"value": "865736036464728",
+									"type": "text"
+								},
+								{
+									"key": "server_id",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "server_name",
+									"value": "测试1",
+									"type": "text"
+								},
+								{
+									"key": "role_id",
+									"value": "123456221",
+									"type": "text"
+								},
+								{
+									"key": "role_name",
+									"value": "测试角色名",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_name",
+									"value": "倚天剑",
+									"type": "text"
+								},
+								{
+									"key": "product_desc",
+									"value": "购买100元宝",
+									"type": "text"
+								},
+								{
+									"key": "gold",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "money",
+									"value": "6.00",
+									"type": "text"
+								},
+								{
+									"key": "app_name",
+									"value": "商战传奇02",
+									"type": "text"
+								},
+								{
+									"key": "cp_order_no",
+									"value": "1616485274585",
+									"type": "text"
+								},
+								{
+									"key": "voucher_id",
+									"value": "23",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "captcha",
+									"value": "9766",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{payurl}}/product/pre-order",
+							"host": [
+								"{{payurl}}"
+							],
+							"path": [
+								"product",
+								"pre-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sent-captch-to-use-voucher",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json, text/javascript, */*; q=0.01"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded; charset=UTF-8"
+							},
+							{
+								"key": "Origin",
+								"value": "http://pay.cps.ggxx.local"
+							},
+							{
+								"key": "Referer",
+								"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+							},
+							{
+								"key": "Cookie",
+								"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uid",
+									"value": "{{uid}}",
+									"type": "text"
+								},
+								{
+									"key": "access_token",
+									"value": "{{access_token}}",
+									"type": "text"
+								},
+								{
+									"key": "captcha_length",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{payurl}}/product/use-voucher/sent-captcha",
+							"host": [
+								"{{payurl}}"
+							],
+							"path": [
+								"product",
+								"use-voucher",
+								"sent-captcha"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "card",
+			"item": [
+				{
+					"name": "asy-callback",
+					"item": [
+						{
+							"name": "test",
+							"item": [
+								{
+									"name": "ali_app",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "gmt_create",
+													"value": "2021-06-09 15:46:00",
+													"type": "text"
+												},
+												{
+													"key": "charset",
+													"value": "utf-8",
+													"type": "text"
+												},
+												{
+													"key": "seller_email",
+													"value": "czzkvr2017@163.com",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "支付中心-付费商品",
+													"type": "text"
+												},
+												{
+													"key": "sign",
+													"value": "h3Z5iFgXKL2wdgwxXUC/k421OQUu5pMNr692PDAypmuvWOhI4fs2Wc9AAipY07kBZgrsHsghMgsbBmrG4myqV99RoD97vhNRXRcfPLr7O9ns+ausRfWPr7iToaeXygJdLYlzky7Y/jbZtcCguVbNPRmV6KZG7/n/3sPxJ2cXrh4=",
+													"type": "text"
+												},
+												{
+													"key": "buyer_id",
+													"value": "2088602348665215",
+													"type": "text"
+												},
+												{
+													"key": "invoice_amount",
+													"value": "0.10",
+													"type": "text"
+												},
+												{
+													"key": "notify_id",
+													"value": "2021060900222154601065211425100389",
+													"type": "text"
+												},
+												{
+													"key": "fund_bill_list",
+													"value": "[{\"amount\":\"0.10\",\"fundChannel\":\"PCREDIT\"}]",
+													"type": "text"
+												},
+												{
+													"key": "notify_type",
+													"value": "trade_status_sync",
+													"type": "text"
+												},
+												{
+													"key": "trade_status",
+													"value": "TRADE_SUCCESS",
+													"type": "text"
+												},
+												{
+													"key": "receipt_amount",
+													"value": "0.10",
+													"type": "text"
+												},
+												{
+													"key": "app_id",
+													"value": "2017031406209437",
+													"type": "text"
+												},
+												{
+													"key": "buyer_pay_amount",
+													"value": "0.10",
+													"type": "text"
+												},
+												{
+													"key": "sign_type",
+													"value": "RSA",
+													"type": "text"
+												},
+												{
+													"key": "seller_id",
+													"value": "2088621196662274",
+													"type": "text"
+												},
+												{
+													"key": "gmt_payment",
+													"value": "2021-06-09 15:46:01",
+													"type": "text"
+												},
+												{
+													"key": "notify_time",
+													"value": "2021-06-09 15:49:36",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1.0",
+													"type": "text"
+												},
+												{
+													"key": "out_trade_no",
+													"value": "20210609154555589103",
+													"type": "text"
+												},
+												{
+													"key": "total_amount",
+													"value": "0.10",
+													"type": "text"
+												},
+												{
+													"key": "trade_no",
+													"value": "2021060922001465211409642055",
+													"type": "text"
+												},
+												{
+													"key": "auth_app_id",
+													"value": "2017031406209437",
+													"type": "text"
+												},
+												{
+													"key": "buyer_logon_id",
+													"value": "135****6494",
+													"type": "text"
+												},
+												{
+													"key": "point_amount",
+													"value": "0.00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://spay.020richang.com/card/asy-callback/6",
+											"protocol": "http",
+											"host": [
+												"spay",
+												"020richang",
+												"com"
+											],
+											"path": [
+												"card",
+												"asy-callback",
+												"6"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "local",
+							"item": [
+								{
+									"name": "ali_app",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "gmt_create",
+													"value": "2021-06-09 15:46:00",
+													"type": "text"
+												},
+												{
+													"key": "charset",
+													"value": "utf-8",
+													"type": "text"
+												},
+												{
+													"key": "seller_email",
+													"value": "czzkvr2017@163.com",
+													"type": "text"
+												},
+												{
+													"key": "subject",
+													"value": "支付中心-付费商品",
+													"type": "text"
+												},
+												{
+													"key": "sign",
+													"value": "h3Z5iFgXKL2wdgwxXUC/k421OQUu5pMNr692PDAypmuvWOhI4fs2Wc9AAipY07kBZgrsHsghMgsbBmrG4myqV99RoD97vhNRXRcfPLr7O9ns+ausRfWPr7iToaeXygJdLYlzky7Y/jbZtcCguVbNPRmV6KZG7/n/3sPxJ2cXrh4=",
+													"type": "text"
+												},
+												{
+													"key": "buyer_id",
+													"value": "2088602348665215",
+													"type": "text"
+												},
+												{
+													"key": "invoice_amount",
+													"value": "0.10",
+													"type": "text"
+												},
+												{
+													"key": "notify_id",
+													"value": "2021060900222154601065211425100389",
+													"type": "text"
+												},
+												{
+													"key": "fund_bill_list",
+													"value": "[{\"amount\":\"0.10\",\"fundChannel\":\"PCREDIT\"}]",
+													"type": "text"
+												},
+												{
+													"key": "notify_type",
+													"value": "trade_status_sync",
+													"type": "text"
+												},
+												{
+													"key": "trade_status",
+													"value": "TRADE_SUCCESS",
+													"type": "text"
+												},
+												{
+													"key": "receipt_amount",
+													"value": "0.10",
+													"type": "text"
+												},
+												{
+													"key": "app_id",
+													"value": "2017031406209437",
+													"type": "text"
+												},
+												{
+													"key": "buyer_pay_amount",
+													"value": "0.10",
+													"type": "text"
+												},
+												{
+													"key": "sign_type",
+													"value": "RSA",
+													"type": "text"
+												},
+												{
+													"key": "seller_id",
+													"value": "2088621196662274",
+													"type": "text"
+												},
+												{
+													"key": "gmt_payment",
+													"value": "2021-06-09 15:46:01",
+													"type": "text"
+												},
+												{
+													"key": "notify_time",
+													"value": "2021-06-09 15:49:36",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1.0",
+													"type": "text"
+												},
+												{
+													"key": "out_trade_no",
+													"value": "20210609154555589103",
+													"type": "text"
+												},
+												{
+													"key": "total_amount",
+													"value": "0.10",
+													"type": "text"
+												},
+												{
+													"key": "trade_no",
+													"value": "2021060922001465211409642055",
+													"type": "text"
+												},
+												{
+													"key": "auth_app_id",
+													"value": "2017031406209437",
+													"type": "text"
+												},
+												{
+													"key": "buyer_logon_id",
+													"value": "135****6494",
+													"type": "text"
+												},
+												{
+													"key": "point_amount",
+													"value": "0.00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{payurl}}/card/asy-callback/6",
+											"host": [
+												"{{payurl}}"
+											],
+											"path": [
+												"card",
+												"asy-callback",
+												"6"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "now-wechat",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "appId=152531408852384&channelOrderNo=4200000982202103250451027451&deviceType=0601&discountAmt=0&funcode=N001&mhtCharset=UTF-8&mhtCurrencyType=156&mhtOrderAmt=1&mhtOrderName=0.01&mhtOrderNo=20210325165801216721&mhtOrderStartTime=20210325165801&mhtOrderTimeOut=3600&mhtOrderType=05&mhtReserved=gid%253D1%2526role_id%253D123456221%2526server_id%253D10&nowPayOrderNo=200601202103251658019670413&oriMhtOrderAmt=1&payChannelType=13&payConsumerId=oSuWV1RlcYxKQ5DQHYj3Z4JScNI0&payTime=20210325165812&signType=MD5&signature=99e98d188ac73e2261afd85df5a29792&transStatus=A001&version=1.0.0"
+								},
+								"url": {
+									"raw": "{{payurl}}/card/asy-callback/2",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"card",
+										"asy-callback",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "appId=152531408852384&channelOrderNo=4200000982202103250451027451&deviceType=0601&discountAmt=0&funcode=N001&mhtCharset=UTF-8&mhtCurrencyType=156&mhtOrderAmt=1&mhtOrderName=0.01&mhtOrderNo=20210325165801216721&mhtOrderStartTime=20210325165801&mhtOrderTimeOut=3600&mhtOrderType=05&mhtReserved=gid%253D1%2526role_id%253D123456221%2526server_id%253D10&nowPayOrderNo=200601202103251658019670413&oriMhtOrderAmt=1&payChannelType=13&payConsumerId=oSuWV1RlcYxKQ5DQHYj3Z4JScNI0&payTime=20210325165812&signType=MD5&signature=99e98d188ac73e2261afd85df5a29792&transStatus=A001&version=1.0.0"
+								},
+								"url": {
+									"raw": "http://spay.020richang.com/card/asy-callback/2",
+									"protocol": "http",
+									"host": [
+										"spay",
+										"020richang",
+										"com"
+									],
+									"path": [
+										"card",
+										"asy-callback",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pre-order",
+					"item": [
+						{
+							"name": "now-wechat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json, text/javascript, */*; q=0.01"
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded; charset=UTF-8"
+									},
+									{
+										"key": "Origin",
+										"value": "http://pay.cps.ggxx.local"
+									},
+									{
+										"key": "Referer",
+										"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+									},
+									{
+										"key": "Cookie",
+										"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "payment_gateway",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "lid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "gid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "platform",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "uid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sub_uid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "equipment_id",
+											"value": "865736036464728",
+											"type": "text"
+										},
+										{
+											"key": "pass_card_pack_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{payurl}}/card/pre-order",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"card",
+										"pre-order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ali-app",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json, text/javascript, */*; q=0.01"
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded; charset=UTF-8"
+									},
+									{
+										"key": "Origin",
+										"value": "http://pay.cps.ggxx.local"
+									},
+									{
+										"key": "Referer",
+										"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+									},
+									{
+										"key": "Cookie",
+										"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "payment_gateway",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "lid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "gid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "platform",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "uid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sub_uid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "equipment_id",
+											"value": "865736036464728",
+											"type": "text"
+										},
+										{
+											"key": "pass_card_pack_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{payurl}}/card/pre-order",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"card",
+										"pre-order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "wechat-app",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json, text/javascript, */*; q=0.01"
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded; charset=UTF-8"
+									},
+									{
+										"key": "Origin",
+										"value": "http://pay.cps.ggxx.local"
+									},
+									{
+										"key": "Referer",
+										"value": "http://pay.cps.ggxx.local/storage/pay-page/android/index.html?access_token=1605ade7139f72&uid=1&sub_uid=1&gid=1&lid=1&platform=1&equipment_id=865736036464728&equipment_idfv=e8435006-3ee9-4efd-ab8a-51dcfe93743d&server_id=10&server_name=%E6%B5%8B%E8%AF%951&role_id=123456221&role_name=%E6%B5%8B%E8%AF%95%E8%A7%92%E8%89%B2%E5%90%8D&money=1.0&gold=0&cp_order_no=1616485274585&is_wechat_app_installed=0&is_ali_app_installed=0&cs_pass_though=1616485274585&product_id=1&product_desc=%E8%B4%AD%E4%B9%B0100%E5%85%83%E5%AE%9D&product_name=%E5%80%9A%E5%A4%A9%E5%89%91&app_name=%E5%95%86%E6%88%98%E4%BC%A0%E5%A5%8702"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+									},
+									{
+										"key": "Cookie",
+										"value": "XSRF-TOKEN=eyJpdiI6IkFpcWQ5UStyV2JMMktpNzRGY0p1ZXc9PSIsInZhbHVlIjoiUHFHT01XNTJINzVadk9zTDZlWUVQUFV5MzFubXNybytWODFxMkRJcWYzWWt5S2wraW5Rb2xiNEtCK0c0bkpCSGFzOERmellWQXBablZrNmtVZGZ2M0JUcmcrUHphM1lPc3BTUmpwVllIMWF2QWw4ekREY2d0NE1GaWNMVDMyZ3QiLCJtYWMiOiJkOGZkYWI1NTc4Y2ZjMGE4OTk4OTEwYTI5Mjc5YTRmNTUyMjQwZmY3ZmUzYmFlMTM0MjY5YTZkZGI3NWYzNmYyIn0%3D; laravel_session=eyJpdiI6InZmWjlVV3R6T3pzQ0xVSkpCMnRGN1E9PSIsInZhbHVlIjoiK2Ixd3p5YjVUYTEvNjlJSkJwTExLQ2hRUEgwM2NkZUU2djFGWW1MMk5hV0NnYXlGRkQrSmVwMndEYW4wL2g1Q204OWFhTUZIb0VtL25zeStLNFUwbkZoeis5b3BFS2luL05vcDdEYmJKVmtibXo1c2ZnMHIydXF4MElZejNSamYiLCJtYWMiOiI2MTc0M2M5ODQ5ZDQyMWI0NTRkMTkwMmQxYTAyYjc5MWNlZjVmMjY3NTE5ZWI1ZGEwNjg5NTVhNjQ2NTVkZGYwIn0%3D; htzhEz9RKqpmP4qYzILfkjCnRqnXH4jh0BytZjRw=eyJpdiI6Im45M2daZEdqT3kvRm9ZZFpJSFhaYmc9PSIsInZhbHVlIjoiNkxJaFVkRXl1Tk95aVlJakxFVTRabDJNWloweTJBcXp6YUVQYmlhTHZzODc1TSs2NEN2VXdSQXREL2hmTTZEOVpiMXRwNVA3TmY1M1pEOXpGWkJzSG9haC9XeTVqRFhUR0xJTG1IcFlYc2VPMHhTSERna21wMVNDQi9EejdHL2pOcWZ4WHhxTE8wTytJZ0VaNnVkYnBDSDV4bXlXZCtwZmlkK1ErUTY3djUyOE9qRmxXMkpMRzRiNzRmU0FibVBsaU5LOEJsMFFYSjdmejJ1aEN5YnpCUkkwVUpDMk02YS90Um5rSHgvTTFWN1pHNm44WTFrY0lpRGFLZmxCNlhEc2NiZWc1bk00SFVFSXJoK2tLdGpIVzJoMjltWUcwVGFiKzUzY05sbCtTcjAweTk0OUlseW9PVlhuZFJvTDk2WG0xdUY5TWFuajlwdUtzeTNwY2xPelVxQ09XQzRGZ2l4bS93cS96V21EYzZHV3MycHZpSEM4YUFKVDBrVUdLNTlZYzd3a2pHVzk2azRDZU9sUkg1YVplY1RIWDY3ckVWNEhKRGZEaGF6SWhEZlJhdlJIcFJBcUwrSGhmc09nK3FCd1dhVWZXVktaaml0a2lOZXd3eldZS3c9PSIsIm1hYyI6ImMyYWRhOTA2MTFkYTA1YzAwNzJlMjY1MWQzNTljYjIwN2RmYjY1MDI0NjE5YWM5ZGYzYjBjZmM0ZWIzNDUzMDUifQ%3D%3D"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "payment_gateway",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "lid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "gid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "platform",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "uid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sub_uid",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "equipment_id",
+											"value": "865736036464728",
+											"type": "text"
+										},
+										{
+											"key": "pass_card_pack_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{payurl}}/card/pre-order",
+									"host": [
+										"{{payurl}}"
+									],
+									"path": [
+										"card",
+										"pre-order"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "card-packs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"sub_uid\", data.data.sub_uid);\r",
+									"pm.environment.set(\"access_code\", data.data.access_code);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "access_token",
+									"value": "{{access_token}}",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "{{uid}}",
+									"type": "text"
+								},
+								{
+									"key": "lid",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "equipment_id",
+									"value": "865736036464728",
+									"type": "text"
+								},
+								{
+									"key": "platform",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{payurl}}/card/card-packs",
+							"host": [
+								"{{payurl}}"
+							],
+							"path": [
+								"card",
+								"card-packs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{payurl}}/gateway?gid=1&callback=callbackfunc",
+					"host": [
+						"{{payurl}}"
+					],
+					"path": [
+						"gateway"
+					],
+					"query": [
+						{
+							"key": "gid",
+							"value": "1"
+						},
+						{
+							"key": "callback",
+							"value": "callbackfunc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gateway-for-app",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{payurl}}/gateway-for-app?callback=callbackfunc",
+					"host": [
+						"{{payurl}}"
+					],
+					"path": [
+						"gateway-for-app"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "callbackfunc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

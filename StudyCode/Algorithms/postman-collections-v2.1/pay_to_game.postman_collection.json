@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "702ed434-a37b-4fee-85ee-a9803ce02e4e",
+		"name": "pay_to_game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://test-api.gamedachen.com/charge/ggxx?act=recharge&account=fca40cb6063330a7c7222def50a3c95a&gameid=708&sid=10086&money=1.00&orderno=20210609184408445318&clientip=106.75.138.129&partnerid=xyoffical&other=20210609184355772777791177&paytype=0&ts=1623292048&sign=6d006294771b678724959e8d57cf9b4f",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "act",
+							"value": "recharge",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "fca40cb6063330a7c7222def50a3c95a",
+							"type": "text"
+						},
+						{
+							"key": "gameid",
+							"value": "708",
+							"type": "text"
+						},
+						{
+							"key": "sid",
+							"value": "10086",
+							"type": "text"
+						},
+						{
+							"key": "money",
+							"value": "1.00",
+							"type": "text"
+						},
+						{
+							"key": "orderno",
+							"value": "20210609184408445318",
+							"type": "text"
+						},
+						{
+							"key": "clientip",
+							"value": "106.75.138.129",
+							"type": "text"
+						},
+						{
+							"key": "partnerid",
+							"value": "xyoffical",
+							"type": "text"
+						},
+						{
+							"key": "other",
+							"value": "20210609184355772777791177",
+							"type": "text"
+						},
+						{
+							"key": "paytype",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "ts",
+							"value": "1623292048",
+							"type": "text"
+						},
+						{
+							"key": "sign",
+							"value": "6d006294771b678724959e8d57cf9b4f",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://test-api.gamedachen.com/charge/ggxx?act=recharge&account=fca40cb6063330a7c7222def50a3c95a&gameid=708&sid=10086&money=1.00&orderno=20210609184408445318&clientip=106.75.138.129&partnerid=xyoffical&other=20210609184355772777791177&paytype=0&ts=1623292048&sign=6d006294771b678724959e8d57cf9b4f",
+					"protocol": "http",
+					"host": [
+						"test-api",
+						"gamedachen",
+						"com"
+					],
+					"path": [
+						"charge",
+						"ggxx"
+					],
+					"query": [
+						{
+							"key": "act",
+							"value": "recharge"
+						},
+						{
+							"key": "account",
+							"value": "fca40cb6063330a7c7222def50a3c95a"
+						},
+						{
+							"key": "gameid",
+							"value": "708"
+						},
+						{
+							"key": "sid",
+							"value": "10086"
+						},
+						{
+							"key": "money",
+							"value": "1.00"
+						},
+						{
+							"key": "orderno",
+							"value": "20210609184408445318"
+						},
+						{
+							"key": "clientip",
+							"value": "106.75.138.129"
+						},
+						{
+							"key": "partnerid",
+							"value": "xyoffical"
+						},
+						{
+							"key": "other",
+							"value": "20210609184355772777791177"
+						},
+						{
+							"key": "paytype",
+							"value": "0"
+						},
+						{
+							"key": "ts",
+							"value": "1623292048"
+						},
+						{
+							"key": "sign",
+							"value": "6d006294771b678724959e8d57cf9b4f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

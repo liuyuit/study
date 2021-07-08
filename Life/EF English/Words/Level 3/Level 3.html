@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Level3</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h4><a name="单元-1-爱好和兴趣" class="md-header-anchor"></a><strong><span>单元</span></strong><span> </span><strong><span>1</span></strong><span> 爱好和兴趣</span></h4><figure><table><thead><tr><th style='text-align:left;' >&nbsp;</th><th style='text-align:left;' ><span>词汇</span></th><th style='text-align:left;' ><span>语音拼写</span></th><th style='text-align:left;' ><span>词性</span></th><th style='text-align:left;' ><span>翻译/定义</span></th></tr></thead><tbody><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>saxophone</span></td><td style='text-align:left;' ><span>[英式]ˈsæksəfəʊn [美式]ˈsæksəfoʊn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>萨克斯管</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>trumpet</span></td><td style='text-align:left;' ><span>[英式]ˈtrʌmpɪt [美式]ˈtrʌmpɪt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>小号</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>violin</span></td><td style='text-align:left;' ><span>[英式]ˌvaɪəˈlɪn [美式]ˌvaɪəˈlɪn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>小提琴</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>collect</span></td><td style='text-align:left;' ><span>[英式]kəˈlekt [美式]kəˈlekt</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>收集</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>drawing</span></td><td style='text-align:left;' ><span>[英式]ˈdrɔːɪŋ [美式]ˈdrɔːɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>图画</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>reading</span></td><td style='text-align:left;' ><span>[英式]ˈriːdɪŋ [美式]ˈriːdɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>阅读</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>sewing</span></td><td style='text-align:left;' ><span>[英式]ˈsəʊɪŋ [美式]ˈsoʊɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>缝纫</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>camping</span></td><td style='text-align:left;' ><span>[英式]ˈkæmpɪŋ [美式]ˈkæmpɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>露营</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>fishing</span></td><td style='text-align:left;' ><span>[英式]ˈfɪʃɪŋ [美式]ˈfɪʃɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>钓鱼, 渔业</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>never</span></td><td style='text-align:left;' ><span>[英式]ˈnevə(r) [美式]ˈnevər</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>从未, 永不, 决不</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>interest</span></td><td style='text-align:left;' ><span>[英式]ˈɪntrəst [美式]ˈɪntrəst</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>兴趣, 爱好</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>hobby</span></td><td style='text-align:left;' ><span>[英式]ˈhɒbi [美式]ˈhɑːbi</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>爱好, 喜好</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>photography</span></td><td style='text-align:left;' ><span>[英式]fəˈtɒɡrəfi [美式]fəˈtɑːɡrəfi</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>摄影</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>running</span></td><td style='text-align:left;' ><span>[英式]ˈrʌnɪŋ [美式]ˈrʌnɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>赛跑</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>cooking</span></td><td style='text-align:left;' ><span>[英式]ˈkʊkɪŋ [美式]ˈkʊkɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>烹调</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>painting</span></td><td style='text-align:left;' ><span>[英式]ˈpeɪntɪŋ [美式]ˈpeɪntɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>油画</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>always</span></td><td style='text-align:left;' ><span>[英式]ˈɔːlweɪz [美式]ˈɔːlweɪz</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>总是, 永远</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>usually</span></td><td style='text-align:left;' ><span>[英式]ˈjuːʒuəli [美式]ˈjuːʒuəli</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>经常, 通常</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>rarely</span></td><td style='text-align:left;' ><span>[英式]ˈreəli [美式]ˈrerli</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>很少, 难得</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>exhibition</span></td><td style='text-align:left;' ><span>[英式]ˌeksɪˈbɪʃn [美式]ˌeksɪˈbɪʃn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>展览</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>festival</span></td><td style='text-align:left;' ><span>[英式]ˈfestɪvl [美式]ˈfestɪvl</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>节日, 表演</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>often</span></td><td style='text-align:left;' ><span>[英式]ˈɒfn [美式]ˈɔːfn</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>常常, 时常</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>sometimes</span></td><td style='text-align:left;' ><span>[英式]ˈsʌmtaɪmz [美式]ˈsʌmtaɪmz</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>有时, 往往, 时常</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>traveling</span></td><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>旅行</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>writing</span></td><td style='text-align:left;' ><span>[英式]ˈraɪtɪŋ [美式]ˈraɪtɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>书写, 写, 写作</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>cello</span></td><td style='text-align:left;' ><span>[英式]ˈtʃeləʊ [美式]ˈtʃeloʊ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>大提琴</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>drums</span></td><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>鼓</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>flute</span></td><td style='text-align:left;' ><span>[英式]fluːt [美式]fluːt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>长笛</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>piano</span></td><td style='text-align:left;' ><span>[英式]piˈænəʊ [美式]piˈænoʊ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>钢琴</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>guitar</span></td><td style='text-align:left;' ><span>[英式]ɡɪˈtɑː(r) [美式]ɡɪˈtɑːr</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>吉他</span></td></tr></tbody></table></figure><h4><a name="单元-2-地点" class="md-header-anchor"></a><strong><span>单元</span></strong><span> </span><strong><span>2</span></strong><span> 地点</span></h4><figure><table><thead><tr><th style='text-align:left;' >&nbsp;</th><th style='text-align:left;' ><span>词汇</span></th><th style='text-align:left;' ><span>语音拼写</span></th><th style='text-align:left;' ><span>词性</span></th><th style='text-align:left;' ><span>翻译/定义</span></th></tr></thead><tbody><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>address</span></td><td style='text-align:left;' ><span>[英式]əˈdres [美式]əˈdres</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>地址</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>east</span></td><td style='text-align:left;' ><span>[英式]iːst [美式]iːst</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>东部, 东方, 东面</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>ferry</span></td><td style='text-align:left;' ><span>[英式]ˈferi [美式]ˈferi</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>渡船</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>north</span></td><td style='text-align:left;' ><span>[英式]nɔːθ [美式]nɔːrθ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>北, 北方</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>south</span></td><td style='text-align:left;' ><span>[英式]saʊθ [美式]saʊθ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>南方, 南部</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>streetcar</span></td><td style='text-align:left;' ><span>[英式]ˈstriːtkɑː(r) [美式]ˈstriːtkɑːr</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>电车</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>west</span></td><td style='text-align:left;' ><span>[英式]west [美式]west</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>西方, 西部</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>beach</span></td><td style='text-align:left;' ><span>[英式]biːtʃ [美式]biːtʃ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>海滩</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>coast</span></td><td style='text-align:left;' ><span>[英式]kəʊst [美式]koʊst</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>海岸</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>desert</span></td><td style='text-align:left;' ><span>[英式]ˈdezət [美式]ˈdezərt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>戈壁, 沙漠</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>forest</span></td><td style='text-align:left;' ><span>[英式]ˈfɒrɪst [美式]ˈfɔːrɪst</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>森林</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>hill</span></td><td style='text-align:left;' ><span>[英式]hɪl [美式]hɪl</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>小山, 山丘</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>hometown</span></td><td style='text-align:left;' ><span>[英式]ˈhəʊmtaʊn [美式]ˈhoʊmtaʊn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>家乡</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>lake</span></td><td style='text-align:left;' ><span>[英式]leɪk [美式]leɪk</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>湖, 湖水</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>mountain</span></td><td style='text-align:left;' ><span>[英式]ˈmaʊntən [美式]ˈmaʊntn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>山, 山脉</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>ocean</span></td><td style='text-align:left;' ><span>[英式]ˈəʊʃn [美式]ˈoʊʃn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>海洋, 海</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>river</span></td><td style='text-align:left;' ><span>[英式]ˈrɪvə(r) [美式]ˈrɪvər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>河, 河流, 江</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>valley</span></td><td style='text-align:left;' ><span>[英式]ˈvæli [美式]ˈvæli</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>山谷, 溪谷, 流域</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>between</span></td><td style='text-align:left;' ><span>[英式]bɪˈtwiːn [美式]bɪˈtwiːn</span></td><td style='text-align:left;' ><span>prep.</span></td><td style='text-align:left;' ><span>在......中间, 在......之间</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>behind</span></td><td style='text-align:left;' ><span>[英式]bɪˈhaɪnd [美式]bɪˈhaɪnd</span></td><td style='text-align:left;' ><span>prep.</span></td><td style='text-align:left;' ><span>在......后面</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>across</span></td><td style='text-align:left;' ><span>[英式]əˈkrɒs [美式]əˈkrɔːs</span></td><td style='text-align:left;' ><span>prep.</span></td><td style='text-align:left;' ><span>穿过, 走过</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>right</span></td><td style='text-align:left;' ><span>[英式]raɪt [美式]raɪt</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>右边地</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>straight</span></td><td style='text-align:left;' ><span>[英式]streɪt [美式]streɪt</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>笔直的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>correct</span></td><td style='text-align:left;' ><span>[英式]kəˈrekt [美式]kəˈrekt</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>正确的, 准确的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>right</span></td><td style='text-align:left;' ><span>[英式]raɪt [美式]raɪt</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>正确的, 对的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>far</span></td><td style='text-align:left;' ><span>[英式]fɑː(r) [美式]fɑːr</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>很远地</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>mile</span></td><td style='text-align:left;' ><span>[英式]maɪl [美式]maɪl</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>英里</span></td></tr></tbody></table></figure><h4><a name="单元-3-酒店" class="md-header-anchor"></a><strong><span>单元</span></strong><span> </span><strong><span>3</span></strong><span> 酒店</span></h4><figure><table><thead><tr><th style='text-align:left;' >&nbsp;</th><th style='text-align:left;' ><span>词汇</span></th><th style='text-align:left;' ><span>语音拼写</span></th><th style='text-align:left;' ><span>词性</span></th><th style='text-align:left;' ><span>翻译/定义</span></th></tr></thead><tbody><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>downtown</span></td><td style='text-align:left;' ><span>[英式]ˌdaʊnˈtaʊn [美式]ˌdaʊnˈtaʊn</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>市中心</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>around</span></td><td style='text-align:left;' ><span>[英式]əˈraʊnd [美式]əˈraʊnd</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>大约</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>pretty</span></td><td style='text-align:left;' ><span>[英式]ˈprɪti [美式]ˈprɪti</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>很, 极, 非常</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>close</span></td><td style='text-align:left;' ><span>[英式]kləʊs [美式]kloʊs</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>近的；接近的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>expensive</span></td><td style='text-align:left;' ><span>[英式]ɪkˈspensɪv [美式]ɪkˈspensɪv</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>贵的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>comfortable</span></td><td style='text-align:left;' ><span>[英式]ˈkʌmftəbl [美式]ˈkʌmftəbl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>舒适的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>key</span></td><td style='text-align:left;' ><span>[英式]kiː [美式]kiː</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>钥匙</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>card</span></td><td style='text-align:left;' ><span>[英式]kɑːd [美式]kɑːrd</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>名片</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>amount</span></td><td style='text-align:left;' ><span>[英式]əˈmaʊnt [美式]əˈmaʊnt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>总额</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>perfect</span></td><td style='text-align:left;' ><span>[英式]ˈpɜːfɪkt [美式]ˈpɜːrfɪkt</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>完美的, 无暇的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>rate</span></td><td style='text-align:left;' ><span>[英式]reɪt [美式]reɪt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>速率, 速度</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>reasonable</span></td><td style='text-align:left;' ><span>[英式]ˈriːznəbl [美式]ˈriːznəbl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>合理的, 适当的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>recommend</span></td><td style='text-align:left;' ><span>[英式]ˌrekəˈmend [美式]ˌrekəˈmend</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>建议, 推荐</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>reservation</span></td><td style='text-align:left;' ><span>[英式]ˌrezəˈveɪʃn [美式]ˌrezərˈveɪʃn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>预订</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>reserve</span></td><td style='text-align:left;' ><span>[英式]rɪˈzɜːv [美式]rɪˈzɜːrv</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>预约</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>actually</span></td><td style='text-align:left;' ><span>[英式]ˈæktʃuəli [美式]ˈæktʃuəli</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>事实上, 到底</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>clerk</span></td><td style='text-align:left;' ><span>[英式]klɑːk [美式]klɜːrk</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>记账员</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>elevator</span></td><td style='text-align:left;' ><span>[英式]ˈelɪveɪtə(r) [美式]ˈelɪveɪtər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>电梯</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>lobby</span></td><td style='text-align:left;' ><span>[英式]ˈlɒbi [美式]ˈlɑːbi</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>门厅,(入口的)厅堂, 前厅</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>luggage</span></td><td style='text-align:left;' ><span>[英式]ˈlʌɡɪdʒ [美式]ˈlʌɡɪdʒ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>行李</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>passport</span></td><td style='text-align:left;' ><span>[英式]ˈpɑːspɔːt [美式]ˈpæspɔːrt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>护照</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>suitcase</span></td><td style='text-align:left;' ><span>[英式]ˈsuːtkeɪs [美式]ˈsuːtkeɪs</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>手提箱</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>umbrella</span></td><td style='text-align:left;' ><span>[英式]ʌmˈbrelə [美式]ʌmˈbrelə</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>雨伞, 伞状物</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>hotel</span></td><td style='text-align:left;' ><span>[英式]həʊˈtel [美式]hoʊˈtel</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>宾馆, 旅馆, 旅店</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>bill</span></td><td style='text-align:left;' ><span>[英式]bɪl [美式]bɪl</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>账单</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>high</span></td><td style='text-align:left;' ><span>[英式]haɪ [美式]haɪ</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>高的, 比一般高的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>pay</span></td><td style='text-align:left;' ><span>[英式]peɪ [美式]peɪ</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>支付</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>receipt</span></td><td style='text-align:left;' ><span>[英式]rɪˈsiːt [美式]rɪˈsiːt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>收据</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>review</span></td><td style='text-align:left;' ><span>[英式]rɪˈvjuː [美式]rɪˈvjuː</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>检查, 评审</span></td></tr></tbody></table></figure><h4><a name="单元-4-假日和庆典" class="md-header-anchor"></a><strong><span>单元</span></strong><span> </span><strong><span>4</span></strong><span> 假日和庆典</span></h4><figure><table><thead><tr><th style='text-align:left;' >&nbsp;</th><th style='text-align:left;' ><span>词汇</span></th><th style='text-align:left;' ><span>语音拼写</span></th><th style='text-align:left;' ><span>词性</span></th><th style='text-align:left;' ><span>翻译/定义</span></th></tr></thead><tbody><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>cake</span></td><td style='text-align:left;' ><span>[英式]keɪk [美式]keɪk</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>蛋糕, 糕饼</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>gift</span></td><td style='text-align:left;' ><span>[英式]ɡɪft [美式]ɡɪft</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>礼物</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>snack</span></td><td style='text-align:left;' ><span>[英式]snæk [美式]snæk</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>小吃</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>soda</span></td><td style='text-align:left;' ><span>[英式]ˈsəʊdə [美式]ˈsoʊdə</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>汽水</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>wine</span></td><td style='text-align:left;' ><span>[英式]waɪn [美式]waɪn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>葡萄酒, 果酒, 酒</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>amazing</span></td><td style='text-align:left;' ><span>[英式]əˈmeɪzɪŋ [美式]əˈmeɪzɪŋ</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>令人惊奇的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>beer</span></td><td style='text-align:left;' ><span>[英式]bɪə(r) [美式]bɪr</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>啤酒</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>busy</span></td><td style='text-align:left;' ><span>[英式]ˈbɪzi [美式]ˈbɪzi</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>忙碌的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>free</span></td><td style='text-align:left;' ><span>[英式]friː [美式]friː</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>有空的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>poor</span></td><td style='text-align:left;' ><span>[英式]pɔː(r) [美式]pɔːr</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>不幸的, 可怜的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>awful</span></td><td style='text-align:left;' ><span>[英式]ˈɔːfl [美式]ˈɔːfl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>可怕的, 糟糕的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>crowded</span></td><td style='text-align:left;' ><span>[英式]ˈkraʊdɪd [美式]ˈkraʊdɪd</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>拥挤的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>during</span></td><td style='text-align:left;' ><span>[英式]ˈdjʊərɪŋ [美式]ˈdʊrɪŋ</span></td><td style='text-align:left;' ><span>prep.</span></td><td style='text-align:left;' ><span>在......期间</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>serious</span></td><td style='text-align:left;' ><span>[英式]ˈsɪəriəs [美式]ˈsɪriəs</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>严谨的, 郑重的，严肃的，认真的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>same</span></td><td style='text-align:left;' ><span>[英式]seɪm [美式]seɪm</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>相同的, 同样的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>quiet</span></td><td style='text-align:left;' ><span>[英式]ˈkwaɪət [美式]ˈkwaɪət</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>安静的, 宁静的, 静止的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>noisy</span></td><td style='text-align:left;' ><span>[英式]ˈnɔɪzi [美式]ˈnɔɪzi</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>喧闹的, 嘈杂的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>wonderful</span></td><td style='text-align:left;' ><span>[英式]ˈwʌndəfl [美式]ˈwʌndərfl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>奇妙的, 令人惊奇的, 极好的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>incredible</span></td><td style='text-align:left;' ><span>[英式]ɪnˈkredəbl [美式]ɪnˈkredəbl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>不可信的;不可思议的,惊人的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>definitely</span></td><td style='text-align:left;' ><span>[英式]ˈdefɪnətli [美式]ˈdefɪnətli</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>肯定地</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>entertaining</span></td><td style='text-align:left;' ><span>[英式]ˌentəˈteɪnɪŋ [美式]ˌentərˈteɪnɪŋ</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>令人愉快的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>exactly</span></td><td style='text-align:left;' ><span>[英式]ɪɡˈzæktli [美式]ɪɡˈzæktli</span></td><td style='text-align:left;' ><span>adv.</span></td><td style='text-align:left;' ><span>确切地、准确地</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>different</span></td><td style='text-align:left;' ><span>[英式]ˈdɪfrənt [美式]ˈdɪfrənt</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>不同的, 各种各样的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>dull</span></td><td style='text-align:left;' ><span>[英式]dʌl [美式]dʌl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>无聊的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>funny</span></td><td style='text-align:left;' ><span>[英式]ˈfʌni [美式]ˈfʌni</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>有趣的, 滑稽的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>gorgeous</span></td><td style='text-align:left;' ><span>[英式]ˈɡɔːdʒəs [美式]ˈɡɔːrdʒəs</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>华丽的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>hideous</span></td><td style='text-align:left;' ><span>[英式]ˈhɪdiəs [美式]ˈhɪdiəs</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>狰狞</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>last</span></td><td style='text-align:left;' ><span>[英式]lɑːst [美式]læst</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>持续</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>ordinary</span></td><td style='text-align:left;' ><span>[英式]ˈɔːdnri [美式]ˈɔːrdneri</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>普通的, 平常的, 平凡的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>special</span></td><td style='text-align:left;' ><span>[英式]ˈspeʃl [美式]ˈspeʃl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>特殊的, 特别的, 专门的</span></td></tr></tbody></table></figure><h4><a name="单元-5-金钱和购买" class="md-header-anchor"></a><strong><span>单元</span></strong><span> </span><strong><span>5</span></strong><span> 金钱和购买</span></h4><figure><table><thead><tr><th style='text-align:left;' >&nbsp;</th><th style='text-align:left;' ><span>词汇</span></th><th style='text-align:left;' ><span>语音拼写</span></th><th style='text-align:left;' ><span>词性</span></th><th style='text-align:left;' ><span>翻译/定义</span></th></tr></thead><tbody><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>refund</span></td><td style='text-align:left;' ><span>[英式]ˈriːfʌnd [美式]ˈriːfʌnd</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>退款; 偿还金</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>ugly</span></td><td style='text-align:left;' ><span>[英式]ˈʌɡli [美式]ˈʌɡli</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>丑陋的, 难看的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>safe</span></td><td style='text-align:left;' ><span>[英式]seɪf [美式]seɪf</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>无危险的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>dangerous</span></td><td style='text-align:left;' ><span>[英式]ˈdeɪndʒərəs [美式]ˈdeɪndʒərəs</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>危险的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>expensive</span></td><td style='text-align:left;' ><span>[英式]ɪkˈspensɪv [美式]ɪkˈspensɪv</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>贵的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>cheap</span></td><td style='text-align:left;' ><span>[英式]tʃiːp [美式]tʃiːp</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>便宜的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>credit</span></td><td style='text-align:left;' ><span>[英式]ˈkredɪt [美式]ˈkredɪt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>赊欠, 赊购</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>problem</span></td><td style='text-align:left;' ><span>[英式]ˈprɒbləm [美式]ˈprɑːbləm</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>问题, 困难</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>matter</span></td><td style='text-align:left;' ><span>[英式]ˈmætə(r) [美式]ˈmætər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>麻烦, 问题</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>plain</span></td><td style='text-align:left;' ><span>[英式]pleɪn [美式]pleɪn</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>清楚的, 简单的, 平常的, 明白的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>powerful</span></td><td style='text-align:left;' ><span>[英式]ˈpaʊəfl [美式]ˈpaʊərfl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>强有力的, 强大的, 有权的, 强健的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>reliable</span></td><td style='text-align:left;' ><span>[英式]rɪˈlaɪəbl [美式]rɪˈlaɪəbl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>可信赖的; 可靠的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>weak</span></td><td style='text-align:left;' ><span>[英式]wiːk [美式]wiːk</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>弱的, 无实力的, 容易被击败的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>cash</span></td><td style='text-align:left;' ><span>[英式]kæʃ [美式]kæʃ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>现金</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>broken</span></td><td style='text-align:left;' ><span>[英式]ˈbrəʊkən [美式]ˈbroʊkən</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>被破坏的, 受伤的, 断裂的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>exchange</span></td><td style='text-align:left;' ><span>[英式]ɪksˈtʃeɪndʒ [美式]ɪksˈtʃeɪndʒ</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>交换, 换货</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>hole</span></td><td style='text-align:left;' ><span>[英式]həʊl [美式]hoʊl</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>孔</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>return</span></td><td style='text-align:left;' ><span>[英式]rɪˈtɜːn [美式]rɪˈtɜːrn</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>退还, 返还, 归还</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>stained</span></td><td style='text-align:left;' ><span>[英式]steɪnd [美式]steɪnd</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>玷污的,褪色的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>decrease</span></td><td style='text-align:left;' ><span>[英式]dɪˈkriːs [美式]dɪˈkriːs</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>减少, 下降</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>education</span></td><td style='text-align:left;' ><span>[英式]ˌedʒuˈkeɪʃn [美式]ˌedʒuˈkeɪʃn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>教育</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>housing</span></td><td style='text-align:left;' ><span>[英式]ˈhaʊzɪŋ [美式]ˈhaʊzɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>房屋</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>increase</span></td><td style='text-align:left;' ><span>[英式]ɪnˈkriːs [美式]ɪnˈkriːs</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>增加, 增多</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>technology</span></td><td style='text-align:left;' ><span>[英式]tekˈnɒlədʒi [美式]tekˈnɑːlədʒi</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>技术, 工艺</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>fancy</span></td><td style='text-align:left;' ><span>[英式]ˈfænsi [美式]ˈfænsi</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>奇特的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>attractive</span></td><td style='text-align:left;' ><span>[英式]əˈtræktɪv [美式]əˈtræktɪv</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>吸引人的, 诱人的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>damaged</span></td><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>破坏, 损坏</span></td></tr></tbody></table></figure><h4><a name="单元-6-工作和公司" class="md-header-anchor"></a><strong><span>单元</span></strong><span> </span><strong><span>6</span></strong><span> 工作和公司</span></h4><figure><table><thead><tr><th style='text-align:left;' >&nbsp;</th><th style='text-align:left;' ><span>词汇</span></th><th style='text-align:left;' ><span>语音拼写</span></th><th style='text-align:left;' ><span>词性</span></th><th style='text-align:left;' ><span>翻译/定义</span></th></tr></thead><tbody><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>editor</span></td><td style='text-align:left;' ><span>[英式]ˈedɪtə(r) [美式]ˈedɪtər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>编辑</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>last</span></td><td style='text-align:left;' ><span>[英式]lɑːst [美式]læst</span></td><td style='text-align:left;' ><span>det.</span></td><td style='text-align:left;' ><span>最后的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>pay</span></td><td style='text-align:left;' ><span>[英式]peɪ [美式]peɪ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>薪水, 工资</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>programmer</span></td><td style='text-align:left;' ><span>[英式]ˈprəʊɡræmə(r) [美式]ˈproʊɡræmər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>程序员</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>supervisor</span></td><td style='text-align:left;' ><span>[英式]ˈsuːpəvaɪzə(r) [美式]ˈsuːpərvaɪzər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>监督人,主管人</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>writer</span></td><td style='text-align:left;' ><span>[英式]ˈraɪtə(r) [美式]ˈraɪtər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>作者, 作家, 著者</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>introduce</span></td><td style='text-align:left;' ><span>[英式]ˌɪntrəˈdjuːs [美式]ˈduːs</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>介绍, 引荐</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>finance</span></td><td style='text-align:left;' ><span>[英式]ˈfaɪnæns [美式]ˈfaɪnæns</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>资金</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>legal</span></td><td style='text-align:left;' ><span>[英式]ˈliːɡl [美式]ˈliːɡl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>法律上的, 有关法律的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>president</span></td><td style='text-align:left;' ><span>[英式]ˈprezɪdənt [美式]ˈprezɪdənt</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>总统, 主席</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>purchasing</span></td><td style='text-align:left;' ><span>[英式]ˈpɜːtʃəsɪŋ [美式]ˈpɜːrtʃəsɪŋ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>购买, 采购</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>interview</span></td><td style='text-align:left;' ><span>[英式]ˈɪntəvjuː [美式]ˈɪntərvjuː</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>面试</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>production</span></td><td style='text-align:left;' ><span>[英式]prəˈdʌkʃn [美式]prəˈdʌkʃn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>产品, 作品, 成果</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>résumé</span></td><td style='text-align:left;' ><span>[英式]ˈrezjumeɪ [美式]ˈrezəmeɪ</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>摘要, 概要, 简历</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>title</span></td><td style='text-align:left;' ><span>[英式]ˈtaɪtl [美式]ˈtaɪtl</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>标题</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>director</span></td><td style='text-align:left;' ><span>[英式]dəˈrektə(r) [美式]dəˈrektər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>主任, 主管</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>manager</span></td><td style='text-align:left;' ><span>[英式]ˈmænɪdʒə(r) [美式]ˈmænɪdʒər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>主管, 经理, 负责人</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>illustrator</span></td><td style='text-align:left;' ><span>[英式]ˈɪləstreɪtə(r) [美式]ˈɪləstreɪtər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>插画师</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>before</span></td><td style='text-align:left;' ><span>[英式]bɪˈfɔː(r) [美式]bɪˈfɔːr</span></td><td style='text-align:left;' ><span>conj.</span></td><td style='text-align:left;' ><span>在......之前, 在......面前</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>after</span></td><td style='text-align:left;' ><span>[英式]ˈɑːftə(r) [美式]ˈæftər</span></td><td style='text-align:left;' ><span>conj.</span></td><td style='text-align:left;' ><span>after</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>operation</span></td><td style='text-align:left;' ><span>[英式]ˌɒpəˈreɪʃn [美式]ˌɑːpəˈreɪʃn</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>经营, 营运</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>responsible</span></td><td style='text-align:left;' ><span>[英式]rɪˈspɒnsəbl [美式]rɪˈspɑːnsəbl</span></td><td style='text-align:left;' ><span>adj.</span></td><td style='text-align:left;' ><span>有责任的</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>server</span></td><td style='text-align:left;' ><span>[英式]ˈsɜːvə(r) [美式]ˈsɜːrvər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>服务器</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>welcome</span></td><td style='text-align:left;' ><span>[英式]ˈwelkəm [美式]ˈwelkəm</span></td><td style='text-align:left;' ><span>verb</span></td><td style='text-align:left;' ><span>迎接, 欢迎</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>actor</span></td><td style='text-align:left;' ><span>[英式]ˈæktə(r) [美式]ˈæktər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>男演员</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>banker</span></td><td style='text-align:left;' ><span>[英式]ˈbæŋkə(r) [美式]ˈbæŋkər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>银行家,银行雇员</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>cleaner</span></td><td style='text-align:left;' ><span>[英式]ˈkliːnə(r) [美式]ˈkliːnər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>清洁工,清洁剂,干洗店</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>designer</span></td><td style='text-align:left;' ><span>[英式]dɪˈzaɪnə(r) [美式]dɪˈzaɪnər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>设计师</span></td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>driver</span></td><td style='text-align:left;' ><span>[英式]ˈdraɪvə(r) [美式]ˈdraɪvər</span></td><td style='text-align:left;' ><span>noun</span></td><td style='text-align:left;' ><span>司机</span></td></tr></tbody></table></figure><p>&nbsp;</p></div>
+</body>
+</html>
